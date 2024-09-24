@@ -1,0 +1,884 @@
+[0.000000] (-) TimerEvent: {}
+[0.000110] (ntrip) JobQueued: {'identifier': 'ntrip', 'dependencies': OrderedDict()}
+[0.000162] (sonar_msgs) JobQueued: {'identifier': 'sonar_msgs', 'dependencies': OrderedDict()}
+[0.000181] (xsens_mti_ros2_driver) JobQueued: {'identifier': 'xsens_mti_ros2_driver', 'dependencies': OrderedDict()}
+[0.000198] (sonar_subs) JobQueued: {'identifier': 'sonar_subs', 'dependencies': OrderedDict([('sonar_msgs', '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs')])}
+[0.000220] (sonar_msgs) JobStarted: {'identifier': 'sonar_msgs'}
+[0.015491] (ntrip) JobStarted: {'identifier': 'ntrip'}
+[0.019469] (xsens_mti_ros2_driver) JobStarted: {'identifier': 'xsens_mti_ros2_driver'}
+[0.024692] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'cmake'}
+[0.024868] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/sonar_msgs', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/sonar_msgs'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.030245] (ntrip) JobProgress: {'identifier': 'ntrip', 'progress': 'cmake'}
+[0.031065] (ntrip) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/ntrip', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/ntrip'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/ntrip', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/ntrip'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.034227] (xsens_mti_ros2_driver) JobProgress: {'identifier': 'xsens_mti_ros2_driver', 'progress': 'cmake'}
+[0.034360] (xsens_mti_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.099321] (-) TimerEvent: {}
+[0.199766] (-) TimerEvent: {}
+[0.300311] (-) TimerEvent: {}
+[0.384189] (sonar_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.385301] (ntrip) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.385510] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.400433] (-) TimerEvent: {}
+[0.500817] (-) TimerEvent: {}
+[0.601553] (-) TimerEvent: {}
+[0.611654] (sonar_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.613304] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.613590] (ntrip) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.626975] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.627313] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.627492] (ntrip) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.701750] (-) TimerEvent: {}
+[0.717514] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.717825] (ntrip) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.718022] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.724971] (sonar_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.725236] (ntrip) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.725328] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.725934] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.726256] (ntrip) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.726406] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.727137] (ntrip) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.727388] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.727508] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.731547] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.731747] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.731876] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.801837] (-) TimerEvent: {}
+[0.820679] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.820922] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.821031] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.828483] (ntrip) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.828816] (sonar_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.829022] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.829113] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.829269] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.829494] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.829606] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.829750] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.829994] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.843366] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.843512] (ntrip) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.843582] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.901971] (-) TimerEvent: {}
+[1.002255] (-) TimerEvent: {}
+[1.025412] (ntrip) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.025780] (sonar_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.025971] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.102422] (-) TimerEvent: {}
+[1.166486] (sonar_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[1.168600] (ntrip) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.168771] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.202507] (-) TimerEvent: {}
+[1.236266] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.236603] (ntrip) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.238332] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.245141] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.245307] (ntrip) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.245423] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.259648] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.259832] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.259953] (ntrip) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.281856] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.282072] (ntrip) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.282206] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.302604] (-) TimerEvent: {}
+[1.308034] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.308296] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.308431] (ntrip) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.350326] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.382105] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.382315] (ntrip) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.387516] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.387704] (ntrip) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.402708] (-) TimerEvent: {}
+[1.503038] (-) TimerEvent: {}
+[1.508576] (ntrip) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.511042] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.543883] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.544061] (ntrip) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.591973] (xsens_mti_ros2_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.592275] (ntrip) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.603119] (-) TimerEvent: {}
+[1.609707] (ntrip) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.609878] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.668885] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.703248] (-) TimerEvent: {}
+[1.707844] (ntrip) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.708009] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.708648] (ntrip) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.708734] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.789752] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.790817] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.792164] (ntrip) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.793298] (ntrip) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.803348] (-) TimerEvent: {}
+[1.872797] (ntrip) StdoutLine: {'line': b'-- Found mavros_msgs: 2.8.0 (/opt/ros/humble/share/mavros_msgs/cmake)\n'}
+[1.875788] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.903440] (-) TimerEvent: {}
+[1.920067] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[2.003551] (-) TimerEvent: {}
+[2.006603] (ntrip) StdoutLine: {'line': b'-- Found nmea_msgs: 2.0.0 (/opt/ros/humble/share/nmea_msgs/cmake)\n'}
+[2.069485] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.071676] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.088636] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found nmea_msgs: 2.0.0 (/opt/ros/humble/share/nmea_msgs/cmake)\n'}
+[2.103315] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found mavros_msgs: 2.8.0 (/opt/ros/humble/share/mavros_msgs/cmake)\n'}
+[2.103606] (-) TimerEvent: {}
+[2.105017] (ntrip) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.117190] (ntrip) StdoutLine: {'line': b'-- Generating done\n'}
+[2.118738] (ntrip) StdoutLine: {'line': b'-- Build files have been written to: /home/nuc1/Desktop/2024_UWR/build/ntrip\n'}
+[2.131125] (ntrip) CommandEnded: {'returncode': 0}
+[2.131855] (ntrip) JobProgress: {'identifier': 'ntrip', 'progress': 'build'}
+[2.133126] (ntrip) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc1/Desktop/2024_UWR/build/ntrip', '--', '-j8', '-l8'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/ntrip', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/ntrip'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[2.157734] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.186172] (ntrip) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o\x1b[0m\n'}
+[2.189760] (ntrip) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ntrip.dir/src/client.cpp.o\x1b[0m\n'}
+[2.190019] (ntrip) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o\x1b[0m\n'}
+[2.203722] (-) TimerEvent: {}
+[2.231118] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.273187] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[2.277473] (sonar_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.303817] (-) TimerEvent: {}
+[2.324651] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[2.324952] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.325107] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.325243] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.349391] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.403947] (-) TimerEvent: {}
+[2.421646] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.471088] (sonar_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.474260] (sonar_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.478777] (sonar_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.504071] (-) TimerEvent: {}
+[2.525318] (sonar_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[2.528918] (sonar_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/nuc1/Desktop/2024_UWR/build/sonar_msgs\n'}
+[2.539225] (sonar_msgs) CommandEnded: {'returncode': 0}
+[2.540147] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'build'}
+[2.540519] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', '--', '-j8', '-l8'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[2.604232] (-) TimerEvent: {}
+[2.606686] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.690922] (sonar_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.704650] (-) TimerEvent: {}
+[2.710546] (sonar_msgs) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.719219] (sonar_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_sonar_msgs\n'}
+[2.804762] (-) TimerEvent: {}
+[2.905278] (-) TimerEvent: {}
+[3.005571] (-) TimerEvent: {}
+[3.105877] (-) TimerEvent: {}
+[3.116472] (sonar_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[3.117271] (sonar_msgs) StdoutLine: {'line': b'creating sonar_msgs.egg-info\n'}
+[3.117507] (sonar_msgs) StdoutLine: {'line': b'writing sonar_msgs.egg-info/PKG-INFO\n'}
+[3.117719] (sonar_msgs) StdoutLine: {'line': b'writing dependency_links to sonar_msgs.egg-info/dependency_links.txt\n'}
+[3.117954] (sonar_msgs) StdoutLine: {'line': b'writing top-level names to sonar_msgs.egg-info/top_level.txt\n'}
+[3.118237] (sonar_msgs) StdoutLine: {'line': b"writing manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[3.122604] (sonar_msgs) StdoutLine: {'line': b"reading manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[3.123129] (sonar_msgs) StdoutLine: {'line': b"writing manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[3.161017] (sonar_msgs) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_sonar_msgs_egg\n'}
+[3.205944] (-) TimerEvent: {}
+[3.234350] (sonar_msgs) StdoutLine: {'line': b'[  5%] Built target sonar_msgs__cpp\n'}
+[3.248278] (sonar_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.249503] (sonar_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.249740] (sonar_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.256944] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.306040] (-) TimerEvent: {}
+[3.320577] (sonar_msgs) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/conf_scal__functions.c.o\x1b[0m\n'}
+[3.320774] (sonar_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/three_sonar_depth__functions.c.o\x1b[0m\n'}
+[3.407949] (-) TimerEvent: {}
+[3.410723] (sonar_msgs) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libsonar_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[3.475441] (sonar_msgs) StdoutLine: {'line': b'[ 20%] Built target sonar_msgs__rosidl_generator_c\n'}
+[3.493444] (sonar_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.499974] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.501853] (sonar_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.505326] (sonar_msgs) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[3.508036] (-) TimerEvent: {}
+[3.549776] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.552675] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.594203] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.594675] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.594911] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.595178] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.608121] (-) TimerEvent: {}
+[3.629939] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.708226] (-) TimerEvent: {}
+[3.743962] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.750869] (sonar_msgs) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[3.763749] (sonar_msgs) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[3.799860] (sonar_msgs) StdoutLine: {'line': b'[ 35%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[3.808317] (-) TimerEvent: {}
+[3.816052] (sonar_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[3.863958] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[3.869579] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver\n'}
+[3.910053] (-) TimerEvent: {}
+[3.910433] (sonar_msgs) StdoutLine: {'line': b'[ 41%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[3.919100] (xsens_mti_ros2_driver) CommandEnded: {'returncode': 0}
+[3.919662] (xsens_mti_ros2_driver) JobProgress: {'identifier': 'xsens_mti_ros2_driver', 'progress': 'build'}
+[3.919700] (xsens_mti_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver', '--', '-j8', '-l8'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[4.001708] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[4.010147] (-) TimerEvent: {}
+[4.020958] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[4.055859] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_xsens_mti_ros2_driver\n'}
+[4.110247] (-) TimerEvent: {}
+[4.207870] (sonar_msgs) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[4.210339] (-) TimerEvent: {}
+[4.221860] (sonar_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/three_sonar_depth__type_support_c.cpp.o\x1b[0m\n'}
+[4.255097] (sonar_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/three_sonar_depth__type_support.c.o\x1b[0m\n'}
+[4.300513] (sonar_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[4.313940] (-) TimerEvent: {}
+[4.363029] (sonar_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/conf_scal__type_support.c.o\x1b[0m\n'}
+[4.371176] (sonar_msgs) StdoutLine: {'line': b'[ 56%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.414037] (-) TimerEvent: {}
+[4.473266] (sonar_msgs) StdoutLine: {'line': b'[ 58%] \x1b[32m\x1b[1mLinking C shared library libsonar_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.478765] (sonar_msgs) StdoutLine: {'line': b'[ 58%] Built target sonar_msgs__rosidl_typesupport_c\n'}
+[4.487179] (sonar_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/conf_scal__type_support_c.cpp.o\x1b[0m\n'}
+[4.500726] (sonar_msgs) StdoutLine: {'line': b'[ 64%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[4.514126] (-) TimerEvent: {}
+[4.574995] (sonar_msgs) StdoutLine: {'line': b'[ 64%] Built target sonar_msgs__rosidl_typesupport_introspection_c\n'}
+[4.614224] (-) TimerEvent: {}
+[4.638973] (sonar_msgs) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[4.714321] (-) TimerEvent: {}
+[4.716255] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  7%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_generator_c.dir/rosidl_generator_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__functions.c.o\x1b[0m\n'}
+[4.765310] (xsens_mti_ros2_driver) StdoutLine: {'line': b'running egg_info\n'}
+[4.767031] (sonar_msgs) StdoutLine: {'line': b'[ 66%] Built target sonar_msgs__rosidl_typesupport_cpp\n'}
+[4.769475] (xsens_mti_ros2_driver) StdoutLine: {'line': b'creating xsens_mti_ros2_driver.egg-info\n'}
+[4.769732] (xsens_mti_ros2_driver) StdoutLine: {'line': b'writing xsens_mti_ros2_driver.egg-info/PKG-INFO\n'}
+[4.770020] (xsens_mti_ros2_driver) StdoutLine: {'line': b'writing dependency_links to xsens_mti_ros2_driver.egg-info/dependency_links.txt\n'}
+[4.770296] (xsens_mti_ros2_driver) StdoutLine: {'line': b'writing top-level names to xsens_mti_ros2_driver.egg-info/top_level.txt\n'}
+[4.770619] (xsens_mti_ros2_driver) StdoutLine: {'line': b"writing manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'\n"}
+[4.778951] (xsens_mti_ros2_driver) StdoutLine: {'line': b"reading manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'\n"}
+[4.779207] (xsens_mti_ros2_driver) StdoutLine: {'line': b"writing manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'\n"}
+[4.805583] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 10%] \x1b[32m\x1b[1mLinking C shared library libxsens_mti_ros2_driver__rosidl_generator_c.so\x1b[0m\n'}
+[4.814421] (-) TimerEvent: {}
+[4.832062] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 10%] Built target ament_cmake_python_build_xsens_mti_ros2_driver_egg\n'}
+[4.832363] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 10%] Built target xsens_mti_ros2_driver__cpp\n'}
+[4.855003] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 13%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.860810] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 15%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.864279] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 18%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.891705] (sonar_msgs) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[4.914517] (-) TimerEvent: {}
+[4.919889] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 18%] Built target xsens_mti_ros2_driver__rosidl_generator_c\n'}
+[4.952320] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.955856] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.965624] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.014619] (-) TimerEvent: {}
+[5.081271] (sonar_msgs) StdoutLine: {'line': b'[ 69%] Built target sonar_msgs__rosidl_typesupport_introspection_cpp\n'}
+[5.114712] (-) TimerEvent: {}
+[5.117772] (sonar_msgs) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[5.214813] (-) TimerEvent: {}
+[5.315234] (-) TimerEvent: {}
+[5.337779] (sonar_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.343141] (sonar_msgs) StdoutLine: {'line': b'[ 74%] Built target sonar_msgs__rosidl_typesupport_fastrtps_c\n'}
+[5.417943] (-) TimerEvent: {}
+[5.490083] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_mti_ros2_driver/msg/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[5.518037] (-) TimerEvent: {}
+[5.536570] (sonar_msgs) StdoutLine: {'line': b'[ 74%] Built target sonar_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[5.545831] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[5.566018] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_mti_ros2_driver/msg/detail/dds_fastrtps/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[5.574828] (sonar_msgs) StdoutLine: {'line': b'[ 74%] Built target sonar_msgs\n'}
+[5.579935] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_mti_ros2_driver/msg/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[5.618270] (-) TimerEvent: {}
+[5.622924] (sonar_msgs) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.636131] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 39%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_c.so\x1b[0m\n'}
+[5.657766] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.c.o\x1b[0m\n'}
+[5.670946] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support_c.cpp.o\x1b[0m\n'}
+[5.709691] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking C shared library libxsens_mti_ros2_driver__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[5.718359] (-) TimerEvent: {}
+[5.722953] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 47%] Built target xsens_mti_ros2_driver__rosidl_typesupport_c\n'}
+[5.758030] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 47%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_c\n'}
+[5.818458] (-) TimerEvent: {}
+[5.918789] (-) TimerEvent: {}
+[5.970833] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[6.018890] (-) TimerEvent: {}
+[6.032002] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 50%] Built target xsens_mti_ros2_driver__rosidl_typesupport_cpp\n'}
+[6.118951] (-) TimerEvent: {}
+[6.144307] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.147831] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[6.192046] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 55%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp\n'}
+[6.211372] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[6.219044] (-) TimerEvent: {}
+[6.254862] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 57%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c\n'}
+[6.289145] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 57%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp\n'}
+[6.308843] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 57%] Built target xsens_mti_ros2_driver\n'}
+[6.320947] (-) TimerEvent: {}
+[6.337270] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/main.cpp.o\x1b[0m\n'}
+[6.340987] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 63%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.342155] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o\x1b[0m\n'}
+[6.343640] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o\x1b[0m\n'}
+[6.345364] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o\x1b[0m\n'}
+[6.350791] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o\x1b[0m\n'}
+[6.351763] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o\x1b[0m\n'}
+[6.354336] (sonar_msgs) StdoutLine: {'line': b'[ 76%] Built target sonar_msgs__py\n'}
+[6.421041] (-) TimerEvent: {}
+[6.421397] (sonar_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_conf_scal_s.c.o\x1b[0m\n'}
+[6.421583] (sonar_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_three_sonar_depth_s.c.o\x1b[0m\n'}
+[6.524952] (-) TimerEvent: {}
+[6.625388] (-) TimerEvent: {}
+[6.725867] (-) TimerEvent: {}
+[6.792178] (sonar_msgs) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/libsonar_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[6.828943] (-) TimerEvent: {}
+[6.926000] (sonar_msgs) StdoutLine: {'line': b'[ 84%] Built target sonar_msgs__rosidl_generator_py\n'}
+[6.929042] (-) TimerEvent: {}
+[6.977874] (sonar_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.982042] (sonar_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.994992] (sonar_msgs) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[7.029147] (-) TimerEvent: {}
+[7.129577] (-) TimerEvent: {}
+[7.198855] (sonar_msgs) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.215023] (sonar_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.229671] (-) TimerEvent: {}
+[7.281823] (sonar_msgs) StdoutLine: {'line': b'[ 97%] Built target sonar_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[7.294565] (sonar_msgs) StdoutLine: {'line': b'[ 97%] Built target sonar_msgs__rosidl_typesupport_c__pyext\n'}
+[7.325191] (sonar_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[7.329767] (-) TimerEvent: {}
+[7.425022] (sonar_msgs) StdoutLine: {'line': b'[100%] Built target sonar_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[7.429868] (-) TimerEvent: {}
+[7.459624] (sonar_msgs) CommandEnded: {'returncode': 0}
+[7.529977] (-) TimerEvent: {}
+[7.630394] (-) TimerEvent: {}
+[7.730711] (-) TimerEvent: {}
+[7.767307] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 76%] Built target xsens_mti_ros2_driver__py\n'}
+[7.772944] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'install'}
+[7.782933] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[7.796453] (sonar_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.796666] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/rosidl_interfaces/sonar_msgs\n'}
+[7.796872] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[7.797009] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[7.797198] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.h\n'}
+[7.797313] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.797500] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/conf_scal.h\n'}
+[7.797626] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[7.797802] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__functions.c\n'}
+[7.797924] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__struct.h\n'}
+[7.798115] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__functions.c\n'}
+[7.798238] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.h\n'}
+[7.798420] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.h\n'}
+[7.798545] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__functions.h\n'}
+[7.798942] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__functions.h\n'}
+[7.799087] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.h\n'}
+[7.805946] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/library_path.sh\n'}
+[7.806144] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/library_path.dsv\n'}
+[7.806263] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_c.so\n'}
+[7.806373] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_c.so" to ""\n'}
+[7.806480] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[7.806583] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[7.806688] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.806793] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[7.806903] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_fastrtps_c.h\n'}
+[7.807018] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_fastrtps_c.h\n'}
+[7.807126] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[7.807228] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[7.807335] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[7.807436] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[7.807538] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.hpp\n'}
+[7.807653] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/conf_scal.hpp\n'}
+[7.807750] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[7.807844] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__struct.hpp\n'}
+[7.808493] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.hpp\n'}
+[7.808638] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__builder.hpp\n'}
+[7.808756] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__traits.hpp\n'}
+[7.808865] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__traits.hpp\n'}
+[7.809000] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__builder.hpp\n'}
+[7.809113] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[7.809220] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[7.809325] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.809428] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[7.809542] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.809649] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/dds_fastrtps\n'}
+[7.809758] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.809866] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.809991] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[7.810106] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[7.810209] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[7.810315] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[7.810421] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.c\n'}
+[7.810525] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.c\n'}
+[7.810632] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_introspection_c.h\n'}
+[7.810736] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_introspection_c.h\n'}
+[7.810838] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.810954] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_c.so\n'}
+[7.811065] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[7.811170] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_c.so\n'}
+[7.814131] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_c.so" to ""\n'}
+[7.814254] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[7.814361] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[7.814480] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[7.814582] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.814689] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.cpp\n'}
+[7.814805] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.cpp\n'}
+[7.814925] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.815047] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[7.815156] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[7.815263] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_cpp.so\n'}
+[7.815373] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[7.815481] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/pythonpath.sh\n'}
+[7.815581] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/pythonpath.dsv\n'}
+[7.818942] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info\n'}
+[7.819141] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[7.819260] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[7.819368] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[7.819479] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[7.819586] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs\n'}
+[7.819688] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.819791] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.820052] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/libsonar_msgs__rosidl_generator_py.so\n'}
+[7.820188] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.820301] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[7.820421] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[7.820528] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg\n'}
+[7.820633] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth.py\n'}
+[7.820740] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal.py\n'}
+[7.820845] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth_s.c\n'}
+[7.820972] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal_s.c\n'}
+[7.821081] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/__init__.py\n'}
+[7.821189] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[7.821290] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/__init__.py\n'}
+[7.821394] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_generator_py.dir/rosidl_generator_py/xsens_mti_ros2_driver/msg/_xs_status_word_s.c.o\x1b[0m\n'}
+[7.831942] (-) TimerEvent: {}
+[7.875841] (sonar_msgs) StdoutLine: {'line': b"Listing '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs'...\n"}
+[7.876062] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/__init__.py'...\n"}
+[7.876202] (sonar_msgs) StdoutLine: {'line': b"Listing '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg'...\n"}
+[7.876310] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/__init__.py'...\n"}
+[7.876414] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal.py'...\n"}
+[7.876520] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth.py'...\n"}
+[7.883204] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.883757] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.884104] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.884688] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.885013] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.885580] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.885788] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_py.so\n'}
+[7.886266] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_py.so" to ""\n'}
+[7.886466] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ThreeSonarDepth.idl\n'}
+[7.886633] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ConfScal.idl\n'}
+[7.886852] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ThreeSonarDepth.msg\n'}
+[7.887057] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ConfScal.msg\n'}
+[7.887335] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/package_run_dependencies/sonar_msgs\n'}
+[7.887604] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/parent_prefix_path/sonar_msgs\n'}
+[7.887809] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/ament_prefix_path.sh\n'}
+[7.888013] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/ament_prefix_path.dsv\n'}
+[7.888214] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/path.sh\n'}
+[7.888412] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/path.dsv\n'}
+[7.888617] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.bash\n'}
+[7.888813] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.sh\n'}
+[7.889021] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.zsh\n'}
+[7.889226] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.dsv\n'}
+[7.889420] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.dsv\n'}
+[7.889696] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/packages/sonar_msgs\n'}
+[7.889998] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cExport.cmake\n'}
+[7.890212] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[7.890468] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[7.890667] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[7.890929] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cppExport.cmake\n'}
+[7.891155] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[7.891388] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[7.891641] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[7.891857] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[7.892109] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cExport.cmake\n'}
+[7.892328] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[7.892583] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[7.892809] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[7.893040] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[7.893258] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[7.893486] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport.cmake\n'}
+[7.893706] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[7.893945] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[7.894173] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[7.894407] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[7.894645] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[7.894884] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[7.895112] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[7.895306] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[7.895498] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgsConfig.cmake\n'}
+[7.895666] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgsConfig-version.cmake\n'}
+[7.895904] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.xml\n'}
+[7.899670] (sonar_msgs) CommandEnded: {'returncode': 0}
+[7.932031] (-) TimerEvent: {}
+[7.994401] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/libxsens_mti_ros2_driver__rosidl_generator_py.so\x1b[0m\n'}
+[8.032128] (-) TimerEvent: {}
+[8.049934] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 81%] Built target xsens_mti_ros2_driver__rosidl_generator_py\n'}
+[8.073244] (sonar_msgs) JobEnded: {'identifier': 'sonar_msgs', 'rc': 0}
+[8.073698] (sonar_subs) JobStarted: {'identifier': 'sonar_subs'}
+[8.093180] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[8.093383] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[8.094358] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[8.132227] (-) TimerEvent: {}
+[8.232573] (-) TimerEvent: {}
+[8.270225] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[8.332668] (-) TimerEvent: {}
+[8.358740] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[8.363983] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[8.366751] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext\n'}
+[8.420819] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_c__pyext\n'}
+[8.422111] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext\n'}
+[8.432758] (-) TimerEvent: {}
+[8.533081] (-) TimerEvent: {}
+[8.633388] (-) TimerEvent: {}
+[8.733691] (-) TimerEvent: {}
+[8.833947] (-) TimerEvent: {}
+[8.934245] (-) TimerEvent: {}
+[8.955565] (sonar_subs) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/sonar_subs', 'build', '--build-base', '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/build', 'install', '--record', '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nuc1/Desktop/2024_UWR/src/sonar_subs', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_SG:en', 'USER': 'nuc1', 'XDG_SESSION_TYPE': 'wayland', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/nuc1', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1550', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/home/nuc1/Desktop/ros2_ws_imu/install', 'ROS_DISTRO': 'humble', 'LOGNAME': 'nuc1', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'nuc1', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90', 'GNOME_SETUP_DISPLAY': ':1', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/.mutter-Xwaylandauth.YMKLU2', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.97', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/nuc1/Desktop/2024_UWR/build/sonar_subs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip'}, 'shell': False}
+[9.034346] (-) TimerEvent: {}
+[9.134675] (-) TimerEvent: {}
+[9.234956] (-) TimerEvent: {}
+[9.335270] (-) TimerEvent: {}
+[9.362203] (sonar_subs) StdoutLine: {'line': b'running egg_info\n'}
+[9.363147] (sonar_subs) StdoutLine: {'line': b'creating ../../build/sonar_subs/sonar_subs.egg-info\n'}
+[9.363435] (sonar_subs) StdoutLine: {'line': b'writing ../../build/sonar_subs/sonar_subs.egg-info/PKG-INFO\n'}
+[9.363743] (sonar_subs) StdoutLine: {'line': b'writing dependency_links to ../../build/sonar_subs/sonar_subs.egg-info/dependency_links.txt\n'}
+[9.363935] (sonar_subs) StdoutLine: {'line': b'writing entry points to ../../build/sonar_subs/sonar_subs.egg-info/entry_points.txt\n'}
+[9.364111] (sonar_subs) StdoutLine: {'line': b'writing requirements to ../../build/sonar_subs/sonar_subs.egg-info/requires.txt\n'}
+[9.364276] (sonar_subs) StdoutLine: {'line': b'writing top-level names to ../../build/sonar_subs/sonar_subs.egg-info/top_level.txt\n'}
+[9.364490] (sonar_subs) StdoutLine: {'line': b"writing manifest file '../../build/sonar_subs/sonar_subs.egg-info/SOURCES.txt'\n"}
+[9.367094] (sonar_subs) StdoutLine: {'line': b"reading manifest file '../../build/sonar_subs/sonar_subs.egg-info/SOURCES.txt'\n"}
+[9.367332] (sonar_subs) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[9.368534] (sonar_subs) StdoutLine: {'line': b"writing manifest file '../../build/sonar_subs/sonar_subs.egg-info/SOURCES.txt'\n"}
+[9.368780] (sonar_subs) StdoutLine: {'line': b'running build\n'}
+[9.368914] (sonar_subs) StdoutLine: {'line': b'running build_py\n'}
+[9.369107] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build\n'}
+[9.369227] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib\n'}
+[9.369339] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[9.369514] (sonar_subs) StdoutLine: {'line': b'copying sonar_subs/read_sonar.py -> /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[9.369629] (sonar_subs) StdoutLine: {'line': b'copying sonar_subs/__init__.py -> /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[9.369789] (sonar_subs) StdoutLine: {'line': b'running install\n'}
+[9.371117] (sonar_subs) StdoutLine: {'line': b'running install_lib\n'}
+[9.371362] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[9.371554] (sonar_subs) StdoutLine: {'line': b'copying /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs/read_sonar.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[9.371728] (sonar_subs) StdoutLine: {'line': b'copying /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs/__init__.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[9.372462] (sonar_subs) StdoutLine: {'line': b'byte-compiling /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs/read_sonar.py to read_sonar.cpython-310.pyc\n'}
+[9.373661] (sonar_subs) StdoutLine: {'line': b'byte-compiling /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs/__init__.py to __init__.cpython-310.pyc\n'}
+[9.373883] (sonar_subs) StdoutLine: {'line': b'running install_data\n'}
+[9.374069] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index\n'}
+[9.374233] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index/resource_index\n'}
+[9.374397] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index/resource_index/packages\n'}
+[9.374577] (sonar_subs) StdoutLine: {'line': b'copying resource/sonar_subs -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index/resource_index/packages\n'}
+[9.374678] (sonar_subs) StdoutLine: {'line': b'copying package.xml -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs\n'}
+[9.374782] (sonar_subs) StdoutLine: {'line': b'running install_egg_info\n'}
+[9.377302] (sonar_subs) StdoutLine: {'line': b'Copying ../../build/sonar_subs/sonar_subs.egg-info to /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs-0.0.0-py3.10.egg-info\n'}
+[9.378636] (sonar_subs) StdoutLine: {'line': b'running install_scripts\n'}
+[9.411448] (sonar_subs) StdoutLine: {'line': b'Installing sonar_reader script to /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/sonar_subs\n'}
+[9.411880] (sonar_subs) StdoutLine: {'line': b"writing list of installed files to '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/install.log'\n"}
+[9.435380] (-) TimerEvent: {}
+[9.449038] (sonar_subs) CommandEnded: {'returncode': 0}
+[9.454670] (sonar_subs) JobEnded: {'identifier': 'sonar_subs', 'rc': 0}
+[9.535492] (-) TimerEvent: {}
+[9.635811] (-) TimerEvent: {}
+[9.736150] (-) TimerEvent: {}
+[9.836492] (-) TimerEvent: {}
+[9.936835] (-) TimerEvent: {}
+[10.037187] (-) TimerEvent: {}
+[10.137526] (-) TimerEvent: {}
+[10.237853] (-) TimerEvent: {}
+[10.338190] (-) TimerEvent: {}
+[10.438513] (-) TimerEvent: {}
+[10.538836] (-) TimerEvent: {}
+[10.639145] (-) TimerEvent: {}
+[10.739427] (-) TimerEvent: {}
+[10.839709] (-) TimerEvent: {}
+[10.939979] (-) TimerEvent: {}
+[11.040267] (-) TimerEvent: {}
+[11.140548] (-) TimerEvent: {}
+[11.240821] (-) TimerEvent: {}
+[11.341070] (-) TimerEvent: {}
+[11.441355] (-) TimerEvent: {}
+[11.541653] (-) TimerEvent: {}
+[11.641984] (-) TimerEvent: {}
+[11.742288] (-) TimerEvent: {}
+[11.842582] (-) TimerEvent: {}
+[11.942887] (-) TimerEvent: {}
+[12.043225] (-) TimerEvent: {}
+[12.143514] (-) TimerEvent: {}
+[12.243812] (-) TimerEvent: {}
+[12.344144] (-) TimerEvent: {}
+[12.444450] (-) TimerEvent: {}
+[12.544741] (-) TimerEvent: {}
+[12.645054] (-) TimerEvent: {}
+[12.745364] (-) TimerEvent: {}
+[12.845668] (-) TimerEvent: {}
+[12.945994] (-) TimerEvent: {}
+[13.046299] (-) TimerEvent: {}
+[13.146582] (-) TimerEvent: {}
+[13.246870] (-) TimerEvent: {}
+[13.347188] (-) TimerEvent: {}
+[13.447487] (-) TimerEvent: {}
+[13.547790] (-) TimerEvent: {}
+[13.592932] (ntrip) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ntrip\x1b[0m\n'}
+[13.647941] (-) TimerEvent: {}
+[13.748255] (-) TimerEvent: {}
+[13.848540] (-) TimerEvent: {}
+[13.948841] (-) TimerEvent: {}
+[14.049240] (-) TimerEvent: {}
+[14.149533] (-) TimerEvent: {}
+[14.198813] (ntrip) StdoutLine: {'line': b'[100%] Built target ntrip\n'}
+[14.210350] (ntrip) CommandEnded: {'returncode': 0}
+[14.242778] (ntrip) JobProgress: {'identifier': 'ntrip', 'progress': 'install'}
+[14.243666] (ntrip) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nuc1/Desktop/2024_UWR/build/ntrip'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/ntrip', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/ntrip'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[14.249648] (-) TimerEvent: {}
+[14.251298] (ntrip) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[14.251537] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/lib/ntrip/ntrip\n'}
+[14.254792] (ntrip) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/ntrip/lib/ntrip/ntrip" to ""\n'}
+[14.254965] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip//launch\n'}
+[14.255032] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip//launch/ntrip_launch.py\n'}
+[14.255345] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ament_index/resource_index/package_run_dependencies/ntrip\n'}
+[14.255590] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ament_index/resource_index/parent_prefix_path/ntrip\n'}
+[14.255812] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/environment/ament_prefix_path.sh\n'}
+[14.255937] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/environment/ament_prefix_path.dsv\n'}
+[14.256155] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/environment/path.sh\n'}
+[14.256381] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/environment/path.dsv\n'}
+[14.256583] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/local_setup.bash\n'}
+[14.256768] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/local_setup.sh\n'}
+[14.256865] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/local_setup.zsh\n'}
+[14.257003] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/local_setup.dsv\n'}
+[14.257104] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/package.dsv\n'}
+[14.257305] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ament_index/resource_index/packages/ntrip\n'}
+[14.257486] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/cmake/ntripConfig.cmake\n'}
+[14.257587] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/cmake/ntripConfig-version.cmake\n'}
+[14.257714] (ntrip) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/ntrip/share/ntrip/package.xml\n'}
+[14.259612] (ntrip) CommandEnded: {'returncode': 0}
+[14.303192] (ntrip) JobEnded: {'identifier': 'ntrip', 'rc': 0}
+[14.349775] (-) TimerEvent: {}
+[14.450066] (-) TimerEvent: {}
+[14.550384] (-) TimerEvent: {}
+[14.650696] (-) TimerEvent: {}
+[14.751001] (-) TimerEvent: {}
+[14.851286] (-) TimerEvent: {}
+[14.951576] (-) TimerEvent: {}
+[15.051864] (-) TimerEvent: {}
+[15.152165] (-) TimerEvent: {}
+[15.252451] (-) TimerEvent: {}
+[15.352703] (-) TimerEvent: {}
+[15.452994] (-) TimerEvent: {}
+[15.553287] (-) TimerEvent: {}
+[15.653570] (-) TimerEvent: {}
+[15.753862] (-) TimerEvent: {}
+[15.854164] (-) TimerEvent: {}
+[15.954447] (-) TimerEvent: {}
+[16.054725] (-) TimerEvent: {}
+[16.155010] (-) TimerEvent: {}
+[16.255335] (-) TimerEvent: {}
+[16.355953] (-) TimerEvent: {}
+[16.456760] (-) TimerEvent: {}
+[16.557115] (-) TimerEvent: {}
+[16.657449] (-) TimerEvent: {}
+[16.757807] (-) TimerEvent: {}
+[16.858174] (-) TimerEvent: {}
+[16.958502] (-) TimerEvent: {}
+[17.058820] (-) TimerEvent: {}
+[17.159175] (-) TimerEvent: {}
+[17.259481] (-) TimerEvent: {}
+[17.359815] (-) TimerEvent: {}
+[17.460188] (-) TimerEvent: {}
+[17.560516] (-) TimerEvent: {}
+[17.660848] (-) TimerEvent: {}
+[17.761221] (-) TimerEvent: {}
+[17.861545] (-) TimerEvent: {}
+[17.961885] (-) TimerEvent: {}
+[18.062264] (-) TimerEvent: {}
+[18.162583] (-) TimerEvent: {}
+[18.262941] (-) TimerEvent: {}
+[18.363289] (-) TimerEvent: {}
+[18.463631] (-) TimerEvent: {}
+[18.563995] (-) TimerEvent: {}
+[18.664336] (-) TimerEvent: {}
+[18.764660] (-) TimerEvent: {}
+[18.865016] (-) TimerEvent: {}
+[18.965467] (-) TimerEvent: {}
+[19.065786] (-) TimerEvent: {}
+[19.166164] (-) TimerEvent: {}
+[19.266491] (-) TimerEvent: {}
+[19.366807] (-) TimerEvent: {}
+[19.467211] (-) TimerEvent: {}
+[19.567541] (-) TimerEvent: {}
+[19.667930] (-) TimerEvent: {}
+[19.768313] (-) TimerEvent: {}
+[19.868635] (-) TimerEvent: {}
+[19.968986] (-) TimerEvent: {}
+[20.069307] (-) TimerEvent: {}
+[20.169630] (-) TimerEvent: {}
+[20.269991] (-) TimerEvent: {}
+[20.370317] (-) TimerEvent: {}
+[20.470651] (-) TimerEvent: {}
+[20.571054] (-) TimerEvent: {}
+[20.671368] (-) TimerEvent: {}
+[20.771734] (-) TimerEvent: {}
+[20.872081] (-) TimerEvent: {}
+[20.972623] (-) TimerEvent: {}
+[21.073166] (-) TimerEvent: {}
+[21.173738] (-) TimerEvent: {}
+[21.274192] (-) TimerEvent: {}
+[21.374542] (-) TimerEvent: {}
+[21.474998] (-) TimerEvent: {}
+[21.575384] (-) TimerEvent: {}
+[21.675709] (-) TimerEvent: {}
+[21.776065] (-) TimerEvent: {}
+[21.876411] (-) TimerEvent: {}
+[21.976736] (-) TimerEvent: {}
+[22.077094] (-) TimerEvent: {}
+[22.177429] (-) TimerEvent: {}
+[22.246529] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable xsens_mti_node\x1b[0m\n'}
+[22.277607] (-) TimerEvent: {}
+[22.378035] (-) TimerEvent: {}
+[22.478422] (-) TimerEvent: {}
+[22.578880] (-) TimerEvent: {}
+[22.679333] (-) TimerEvent: {}
+[22.779775] (-) TimerEvent: {}
+[22.880143] (-) TimerEvent: {}
+[22.980496] (-) TimerEvent: {}
+[23.080824] (-) TimerEvent: {}
+[23.181206] (-) TimerEvent: {}
+[23.281511] (-) TimerEvent: {}
+[23.381865] (-) TimerEvent: {}
+[23.482155] (-) TimerEvent: {}
+[23.500249] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[100%] Built target xsens_mti_node\n'}
+[23.517086] (xsens_mti_ros2_driver) CommandEnded: {'returncode': 0}
+[23.582330] (-) TimerEvent: {}
+[23.596692] (xsens_mti_ros2_driver) JobProgress: {'identifier': 'xsens_mti_ros2_driver', 'progress': 'install'}
+[23.597053] (xsens_mti_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1550'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1550,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1550'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/d1696a5f_7c53_4800_8f5e_622164394a90'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YMKLU2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.97'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=893fceaaab5125fc7e356ac166f23783'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/ros2_ws_imu/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_msgs:/home/nuc1/Desktop/ros2_ws_imu/install/ntrip:/home/nuc1/Desktop/ros2_ws_imu/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[23.605805] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[23.606096] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/ament_index/resource_index/rosidl_interfaces/xsens_mti_ros2_driver\n'}
+[23.606262] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver\n'}
+[23.606413] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg\n'}
+[23.606506] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_generator_c__visibility_control.h\n'}
+[23.606584] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/xs_status_word.h\n'}
+[23.606641] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail\n'}
+[23.606785] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.h\n'}
+[23.606871] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__functions.c\n'}
+[23.606996] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__struct.h\n'}
+[23.607069] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__functions.h\n'}
+[23.607214] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/library_path.sh\n'}
+[23.607360] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/library_path.dsv\n'}
+[23.607624] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_c.so\n'}
+[23.608361] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_c.so" to ""\n'}
+[23.608465] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver\n'}
+[23.608621] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg\n'}
+[23.608714] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[23.608780] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail\n'}
+[23.608866] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_fastrtps_c.h\n'}
+[23.609077] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.so\n'}
+[23.609288] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[23.609416] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver\n'}
+[23.609489] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg\n'}
+[23.609550] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/xs_status_word.hpp\n'}
+[23.609650] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail\n'}
+[23.609713] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__struct.hpp\n'}
+[23.609786] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__builder.hpp\n'}
+[23.609886] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__traits.hpp\n'}
+[23.610101] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver\n'}
+[23.610181] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg\n'}
+[23.610234] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[23.610321] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail\n'}
+[23.610375] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/dds_fastrtps\n'}
+[23.610442] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[23.610601] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.so\n'}
+[23.611113] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[23.611270] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver\n'}
+[23.611336] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg\n'}
+[23.611395] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail\n'}
+[23.611453] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_introspection_c.h\n'}
+[23.611537] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.c\n'}
+[23.611595] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[23.611723] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_c.so\n'}
+[23.612143] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_c.so" to ""\n'}
+[23.612247] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_c.so\n'}
+[23.612615] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_c.so" to ""\n'}
+[23.612737] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver\n'}
+[23.612806] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg\n'}
+[23.612883] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail\n'}
+[23.613000] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.cpp\n'}
+[23.613055] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/include/xsens_mti_ros2_driver/xsens_mti_ros2_driver/msg/detail/xs_status_word__rosidl_typesupport_introspection_cpp.hpp\n'}
+[23.613133] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.so\n'}
+[23.613521] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[23.613637] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_cpp.so\n'}
+[23.614086] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_typesupport_cpp.so" to ""\n'}
+[23.614206] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/pythonpath.sh\n'}
+[23.614273] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/pythonpath.dsv\n'}
+[23.614401] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info\n'}
+[23.614555] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/PKG-INFO\n'}
+[23.614664] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/dependency_links.txt\n'}
+[23.614752] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/top_level.txt\n'}
+[23.614835] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver-1.0.2-py3.10.egg-info/SOURCES.txt\n'}
+[23.615014] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver\n'}
+[23.615101] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[23.615232] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/libxsens_mti_ros2_driver__rosidl_generator_py.so\n'}
+[23.615366] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[23.615481] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[23.615639] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_c.c\n'}
+[23.615744] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[23.615844] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[23.616087] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg\n'}
+[23.616255] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/_xs_status_word.py\n'}
+[23.616338] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/_xs_status_word_s.c\n'}
+[23.616424] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/__init__.py\n'}
+[23.616504] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/__init__.py\n'}
+[23.650099] (xsens_mti_ros2_driver) StdoutLine: {'line': b"Listing '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver'...\n"}
+[23.650311] (xsens_mti_ros2_driver) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/__init__.py'...\n"}
+[23.650376] (xsens_mti_ros2_driver) StdoutLine: {'line': b"Listing '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg'...\n"}
+[23.650445] (xsens_mti_ros2_driver) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/__init__.py'...\n"}
+[23.650500] (xsens_mti_ros2_driver) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/msg/_xs_status_word.py'...\n"}
+[23.654711] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[23.655147] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[23.655400] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[23.655808] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[23.656163] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[23.656601] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[23.656842] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_py.so\n'}
+[23.657232] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/libxsens_mti_ros2_driver__rosidl_generator_py.so" to ""\n'}
+[23.657413] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/msg/XsStatusWord.idl\n'}
+[23.657563] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/msg/XsStatusWord.msg\n'}
+[23.657754] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/xsens_mti_ros2_driver/xsens_mti_node\n'}
+[23.665112] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/xsens_mti_ros2_driver/xsens_mti_node" to ""\n'}
+[23.665362] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/launch\n'}
+[23.665552] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/launch/combined.py\n'}
+[23.665635] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/launch/xsens_mti_node.launch.py\n'}
+[23.665700] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/launch/display.launch.py\n'}
+[23.665797] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/param\n'}
+[23.665861] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/param/xsens_mti_node.yaml\n'}
+[23.665993] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/rviz\n'}
+[23.666049] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/rviz/display.rviz\n'}
+[23.666115] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf\n'}
+[23.666188] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_10.stl\n'}
+[23.670817] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_6xx.urdf\n'}
+[23.671050] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_6xx.stl\n'}
+[23.674979] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_10.urdf\n'}
+[23.675188] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_1.urdf\n'}
+[23.675343] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/urdf/MTi_1.stl\n'}
+[23.676489] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/ament_index/resource_index/package_run_dependencies/xsens_mti_ros2_driver\n'}
+[23.676671] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/ament_index/resource_index/parent_prefix_path/xsens_mti_ros2_driver\n'}
+[23.676823] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/ament_prefix_path.sh\n'}
+[23.677021] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/ament_prefix_path.dsv\n'}
+[23.677143] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/path.sh\n'}
+[23.677251] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/environment/path.dsv\n'}
+[23.677384] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.bash\n'}
+[23.677516] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.sh\n'}
+[23.677598] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.zsh\n'}
+[23.677727] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/local_setup.dsv\n'}
+[23.677871] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.dsv\n'}
+[23.678197] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/ament_index/resource_index/packages/xsens_mti_ros2_driver\n'}
+[23.678405] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_cExport.cmake\n'}
+[23.678524] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_cExport-noconfig.cmake\n'}
+[23.678677] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[23.678819] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[23.679080] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_cppExport.cmake\n'}
+[23.679246] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[23.679354] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[23.679451] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cExport.cmake\n'}
+[23.679603] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[23.679843] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cExport.cmake\n'}
+[23.680001] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[23.680179] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[23.680316] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[23.680420] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cppExport.cmake\n'}
+[23.680529] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driver__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[23.680701] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_pyExport.cmake\n'}
+[23.680855] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/export_xsens_mti_ros2_driver__rosidl_generator_pyExport-noconfig.cmake\n'}
+[23.681069] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/rosidl_cmake-extras.cmake\n'}
+[23.681203] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[23.681345] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[23.681521] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[23.681635] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[23.681780] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[23.681864] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[23.682103] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driverConfig.cmake\n'}
+[23.682215] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/cmake/xsens_mti_ros2_driverConfig-version.cmake\n'}
+[23.682337] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.xml\n'}
+[23.682392] (-) TimerEvent: {}
+[23.684567] (xsens_mti_ros2_driver) CommandEnded: {'returncode': 0}
+[23.777497] (xsens_mti_ros2_driver) JobEnded: {'identifier': 'xsens_mti_ros2_driver', 'rc': 0}
+[23.778398] (-) EventReactorShutdown: {}

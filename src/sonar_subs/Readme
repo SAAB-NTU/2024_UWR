@@ -1,0 +1,97 @@
+Here’s a step-by-step guide to help you get your sonar running correctly based on the methods we've discussed:
+
+### Key everything below the "```bash"
+
+### Step 1: **Set Up Your ROS 2 Workspace**
+1. **Source ROS 2 Environment:**
+   Ensure that your ROS 2 Humble environment is sourced:
+   ```bash
+   source /opt/ros/humble/setup.bash
+   ```
+
+2. **Navigate to Your ROS 2 Workspace:**
+   Move to your ROS 2 workspace directory:
+   ```bash
+   cd ~/ros2_ws
+   ```
+
+3. **Source Your Workspace:**
+   Source the ROS 2 workspace to ensure it is ready for use:
+   ```bash
+   source install/setup.bash
+   ```
+
+### Step 2: **Connect and Verify Sonar Devices**
+1. **Physically Connect Sonar Sensors:**
+   Connect your sonar devices to the USB ports on your computer.
+
+2. **Check Device Detection:**
+   Verify that the system detects the sonar devices by listing the connected USB devices:
+   ```bash
+   lsusb
+   ```
+
+3. **Identify the Device Ports:**
+   Check which `/dev/ttyACM*` ports are assigned to the sonars:
+   ```bash
+   ls -l /dev/ttyACM*
+   ```
+
+### Step 3: **Set Permissions for USB Devices**
+1. **Add User to `dialout` Group:**
+   If you encounter permission errors when accessing the `/dev/ttyACM*` devices, add your user to the `dialout` group to grant the necessary permissions:
+   ```bash
+   sudo usermod -aG dialout $USER
+   ```
+
+2. **Log Out and Log Back In:**
+   Log out of your session and log back in to apply the group changes, or reboot the system.
+
+3. **Check Device Permissions:**
+   After logging back in, confirm that the sonar devices have the correct permissions:
+   ```bash
+   ls -l /dev/ttyACM*
+   ```
+
+### Step 4: **Modify and Build Your ROS 2 Package**
+1. **Update the `read_sonar.py` Script:**
+   Ensure your `read_sonar.py` script is configured to handle your sonar devices correctly:
+   - Use the correct device ports (e.g., `/dev/ttyACM1`, `/dev/ttyACM2`).
+   - Add checks to ensure that data from the sonar devices is not `None` before attempting to process it.
+
+2. **Build the ROS 2 Package:**
+   After modifying the script, rebuild the package to apply any changes:
+   ```bash
+   colcon build
+   ```
+
+3. **Source the Workspace Again:**
+   After building the package, re-source the workspace:
+   ```bash
+   source install/setup.bash
+   ```
+
+### Step 5: **Run the ROS 2 Node**
+1. **Run the Sonar Node:**
+   Launch your ROS 2 sonar node to start collecting data from the sonar devices:
+   ```bash
+   ros2 run sonar_subs sonar_reader
+   ```
+
+2. **Monitor the Output:**
+   Check the terminal output to ensure that data is being correctly received from the sonar sensors and that no errors are being thrown. Look for messages indicating successful data collection and publishing.
+
+### Step 6: **Debugging (if necessary)**
+1. **Address Permission Issues (if any):**
+   If you still encounter permission errors, try manually setting the permissions for the `/dev/ttyACM*` devices:
+   ```bash
+   sudo chmod 666 /dev/ttyACM1
+   ```
+
+2. **Review Logs for Errors:**
+   Enable debugging in ROS 2 to review logs for more detailed error information if the node fails to work as expected:
+   ```bash
+   export RCUTILS_LOGGING_SEVERITY=DEBUG
+   ```
+
+By following this guide, you should be able to successfully set up and run your sonar sensors in a ROS 2 environment. If you encounter any specific issues, revisit each step to ensure all configurations and permissions are correctly set.
