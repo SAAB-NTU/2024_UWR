@@ -42,6 +42,7 @@ rclcpp::Time XsensTimeHandler::convertUtcTimeToRosTime(const XsDataPacket &packe
     else set time to now
     */
     // RCLCPP_INFO(rclcpp::get_logger("xsens_time_handler"), "time_option = %u", m_time_option);
+    /*
     if (m_time_option == 0 && packet.containsUtcTime())
     {
         // RCLCPP_INFO(rclcpp::get_logger("xsens_time_handler"), "time_option is mti_utc");
@@ -114,7 +115,8 @@ rclcpp::Time XsensTimeHandler::convertUtcTimeToRosTime(const XsDataPacket &packe
     {
         // RCLCPP_INFO(rclcpp::get_logger("xsens_time_handler"), "time_option is host controller time");
         return rclcpp::Clock().now(); // returns rclcpp time
-    }
+    } */
+    return rclcpp::Clock().now();
 }
 
 void XsensTimeHandler::setTimeOption(const int&option)
