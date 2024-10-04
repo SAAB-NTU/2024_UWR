@@ -1,0 +1,35 @@
+-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/uwr/Desktop/2024_UWR/src/kalman_filter/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/uwr/Desktop/2024_UWR/build/kalman_filter
+[ 50%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf.cpp.o[0m
+[100%] [32m[1mLinking CXX executable kf[0m
+/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+(.text+0x1b): undefined reference to `main'
+/usr/bin/ld: CMakeFiles/kf.dir/src/kf.cpp.o: in function `kf_v3::kf_v3()':
+kf.cpp:(.text+0x4ef): undefined reference to `SonarProcess::SonarProcess(int const&)'
+/usr/bin/ld: kf.cpp:(.text+0x519): undefined reference to `SonarProcess::SonarProcess(int const&)'
+/usr/bin/ld: kf.cpp:(.text+0x543): undefined reference to `SonarProcess::SonarProcess(int const&)'
+/usr/bin/ld: kf.cpp:(.text+0xaaa): undefined reference to `SonarProcess::SonarProcess(int const&)'
+/usr/bin/ld: kf.cpp:(.text+0xaf2): undefined reference to `SonarProcess::SonarProcess(int const&)'
+/usr/bin/ld: CMakeFiles/kf.dir/src/kf.cpp.o:kf.cpp:(.text+0xb41): more undefined references to `SonarProcess::SonarProcess(int const&)' follow
+/usr/bin/ld: CMakeFiles/kf.dir/src/kf.cpp.o: in function `kf_v3::set_dist(double)':
+kf.cpp:(.text+0x2181): undefined reference to `SonarProcess::MovingAvg(float const&)'
+/usr/bin/ld: CMakeFiles/kf.dir/src/kf.cpp.o: in function `Iir::PoleFilterBase<Iir::Butterworth::AnalogLowPass>::PoleFilterBase()':
+kf.cpp:(.text._ZN3Iir14PoleFilterBaseINS_11Butterworth13AnalogLowPassEEC2Ev[_ZN3Iir14PoleFilterBaseINS_11Butterworth13AnalogLowPassEEC5Ev]+0x28): undefined reference to `Iir::Butterworth::AnalogLowPass::AnalogLowPass()'
+/usr/bin/ld: CMakeFiles/kf.dir/src/kf.cpp.o: in function `Iir::PoleFilter<Iir::Butterworth::LowPassBase, Iir::DirectFormII, 4, 4>::PoleFilter()':
+kf.cpp:(.text._ZN3Iir10PoleFilterINS_11Butterworth11LowPassBaseENS_12DirectFormIIELi4ELi4EEC2Ev[_ZN3Iir10PoleFilterINS_11Butterworth11LowPassBaseENS_12DirectFormIIELi4ELi4EEC5Ev]+0xc1): undefined reference to `Iir::Cascade::setCascadeStorage(Iir::Cascade::Storage const&)'
+/usr/bin/ld: CMakeFiles/kf.dir/src/kf.cpp.o: in function `Iir::Butterworth::LowPass<4, Iir::DirectFormII>::setup(double, double)':
+kf.cpp:(.text._ZN3Iir11Butterworth7LowPassILi4ENS_12DirectFormIIEE5setupEdd[_ZN3Iir11Butterworth7LowPassILi4ENS_12DirectFormIIEE5setupEdd]+0x3b): undefined reference to `Iir::Butterworth::LowPassBase::setup(int, double)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:97: kf] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

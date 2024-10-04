@@ -1,0 +1,156 @@
+[35m[1mConsolidate compiler generated dependencies of target kf[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:341:63:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ has non-pointer type ‘[01m[Kconst ThreeSonarDepth[m[K’ {aka ‘[01m[Kconst sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> >[m[K’}
+  341 |             RCLCPP_INFO(this->get_logger(),"Distance: %f", msg[01;31m[K->[m[Kdistance_1 / 1000);
+      |                                                               [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:351:28:[m[K [01;31m[Kerror: [m[K‘[01m[KVector3Stamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Vector3Stamped[m[K’?
+  351 |             geometry_msgs::[01;31m[KVector3Stamped[m[K vector3_msg, vel_msg;
+      |                            [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3_stamped.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:43[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:19[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp:135:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Vector3Stamped[m[K’ declared here
+  135 | using [01;36m[KVector3Stamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:352:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector3_msg[m[K’ was not declared in this scope
+  352 |             [01;31m[Kvector3_msg[m[K.header.stamp = msg.header.stamp;
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:364:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_msg[m[K’ was not declared in this scope
+  364 |             [01;31m[Kvel_msg[m[K.header.stamp = msg.header.stamp;
+      |             [01;31m[K^~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:369:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krosbag2_cpp::Writer::write(const char [10], rclcpp::Time&, const ThreeSonarDepth&)[m[K’
+  369 |             [01;31m[Kwriter_->write("SONAR_raw", measure_time_now, msg)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT> void rosbag2_cpp::Writer::write(const MessageT&, const string&, const rclcpp::Time&)[m[K’
+  191 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:369:41:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((kf_node*)this)->kf_node::measure_time_now[m[K’ (type ‘[01m[Krclcpp::Time[m[K’) to type ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  369 |             writer_->write("SONAR_raw", [01;36m[Kmeasure_time_now[m[K, msg);
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>)[m[K’
+  122 |   void [01;36m[Kwrite[m[K(std::shared_ptr<rosbag2_storage::SerializedBagMessage> message);
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:134:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>, const string&, const string&, const string&)[m[K’
+  134 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:135:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [10][m[K’ to ‘[01m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage>[m[K’
+  135 |     [01;36m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage> message[m[K,
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(const rclcpp::SerializedMessage&, const string&, const string&, const rclcpp::Time&)[m[K’
+  156 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rclcpp::SerializedMessage>, const string&, const string&, const rclcpp::Time&)[m[K’
+  174 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:373:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krosbag2_cpp::Writer::write(const char [5], rclcpp::Time&, geometry_msgs::msg::PoseStamped&)[m[K’
+  373 |             [01;31m[Kwriter_->write("Pose", measure_time_now, pose_msg)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT> void rosbag2_cpp::Writer::write(const MessageT&, const string&, const rclcpp::Time&)[m[K’
+  191 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:373:36:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((kf_node*)this)->kf_node::measure_time_now[m[K’ (type ‘[01m[Krclcpp::Time[m[K’) to type ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  373 |             writer_->write("Pose", [01;36m[Kmeasure_time_now[m[K, pose_msg);
+      |                                    [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>)[m[K’
+  122 |   void [01;36m[Kwrite[m[K(std::shared_ptr<rosbag2_storage::SerializedBagMessage> message);
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:134:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>, const string&, const string&, const string&)[m[K’
+  134 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:135:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [5][m[K’ to ‘[01m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage>[m[K’
+  135 |     [01;36m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage> message[m[K,
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(const rclcpp::SerializedMessage&, const string&, const string&, const rclcpp::Time&)[m[K’
+  156 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rclcpp::SerializedMessage>, const string&, const string&, const rclcpp::Time&)[m[K’
+  174 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:376:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krosbag2_cpp::Writer::write(const char [17], rclcpp::Time&, sonar_msgs::msg::ConfScal&)[m[K’
+  376 |             [01;31m[Kwriter_->write("Confidence_SONAR",measure_time_now,c1)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT> void rosbag2_cpp::Writer::write(const MessageT&, const string&, const rclcpp::Time&)[m[K’
+  191 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:376:47:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((kf_node*)this)->kf_node::measure_time_now[m[K’ (type ‘[01m[Krclcpp::Time[m[K’) to type ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  376 |             writer_->write("Confidence_SONAR",[01;36m[Kmeasure_time_now[m[K,c1);
+      |                                               [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>)[m[K’
+  122 |   void [01;36m[Kwrite[m[K(std::shared_ptr<rosbag2_storage::SerializedBagMessage> message);
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:134:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>, const string&, const string&, const string&)[m[K’
+  134 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:135:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [17][m[K’ to ‘[01m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage>[m[K’
+  135 |     [01;36m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage> message[m[K,
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(const rclcpp::SerializedMessage&, const string&, const string&, const rclcpp::Time&)[m[K’
+  156 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rclcpp::SerializedMessage>, const string&, const string&, const rclcpp::Time&)[m[K’
+  174 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:377:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krosbag2_cpp::Writer::write(const char [9], rclcpp::Time&, sonar_msgs::msg::KfValues&)[m[K’
+  377 |             [01;31m[Kwriter_->write("K_values",measure_time_now,k_vals)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT> void rosbag2_cpp::Writer::write(const MessageT&, const string&, const rclcpp::Time&)[m[K’
+  191 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:377:39:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((kf_node*)this)->kf_node::measure_time_now[m[K’ (type ‘[01m[Krclcpp::Time[m[K’) to type ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  377 |             writer_->write("K_values",[01;36m[Kmeasure_time_now[m[K,k_vals);
+      |                                       [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>)[m[K’
+  122 |   void [01;36m[Kwrite[m[K(std::shared_ptr<rosbag2_storage::SerializedBagMessage> message);
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:134:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>, const string&, const string&, const string&)[m[K’
+  134 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:135:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [9][m[K’ to ‘[01m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage>[m[K’
+  135 |     [01;36m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage> message[m[K,
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(const rclcpp::SerializedMessage&, const string&, const string&, const rclcpp::Time&)[m[K’
+  156 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rclcpp::SerializedMessage>, const string&, const string&, const rclcpp::Time&)[m[K’
+  174 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

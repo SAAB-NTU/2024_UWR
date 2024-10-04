@@ -15,6 +15,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/ThreeSonarDepth.msg"
   # Add your custom message here
   "msg/ConfScal.msg"
+  "msg/KfValues.msg"
   DEPENDENCIES std_msgs
 )
 

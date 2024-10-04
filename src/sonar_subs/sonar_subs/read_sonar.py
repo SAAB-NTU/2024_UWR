@@ -24,10 +24,11 @@ def main_2():
     sonar_driver1 = Ping1D()
     sonar_driver1.connect_serial(device_name=sonar_port1)
     sonar_driver1.set_ping_interval(ping_interval)
-
+    sonar_driver1.set_range(0,10000) #In mm
     sonar_port2 = node.declare_parameter("sonar1/sonar_port", "/dev/ttyACM1").value
     sonar_driver2 = Ping1D()
     sonar_driver2.connect_serial(device_name=sonar_port2)
+    sonar_driver2.set_range(0,10000) #In mm
     sonar_driver2.set_ping_interval(ping_interval)
 
     #sonar_port3 = node.declare_parameter("sonar2/sonar_port", "/dev/ttyACM3").value

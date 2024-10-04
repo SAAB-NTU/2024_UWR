@@ -1,0 +1,23 @@
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_bag_processing.cpp:2[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/bag_processing.h:9:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    9 | std::string bag_create_file(std::string path_param, [01;31m[Kros[m[K::Time current_time);
+      |                                                     [01;31m[K^~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/bag_processing.h:9:63:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kcurrent_time[m[K’
+    9 | std::string bag_create_file(std::string path_param, ros::Time [01;31m[Kcurrent_time[m[K);
+      |                                                               [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_bag_processing.cpp:5:53:[m[K [01;31m[Kerror: [m[K‘[01m[Kros[m[K’ has not been declared
+    5 | std::string bag_create_file(std::string path_param, [01;31m[Kros[m[K::Time current_time)
+      |                                                     [01;31m[K^~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_bag_processing.cpp:5:63:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K,[m[K’ or ‘[01m[K...[m[K’ before ‘[01m[Kcurrent_time[m[K’
+    5 | std::string bag_create_file(std::string path_param, ros::Time [01;31m[Kcurrent_time[m[K)
+      |                                                               [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_bag_processing.cpp:[m[K In function ‘[01m[Kstd::string bag_create_file(std::string, int)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_bag_processing.cpp:8:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_time[m[K’ was not declared in this scope
+    8 |     int year = [01;31m[Kcurrent_time[m[K.toBoost().date().year();
+      |                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_bag_processing.cpp:5:58:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[KTime[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+    5 | std::string bag_create_file(std::string path_param, [01;35m[Kros::Time[m[K current_time)
+      |                                                     [01;35m[K~~~~~^~~~[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:90: CMakeFiles/kf.dir/src/kf_v3_bag_processing.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

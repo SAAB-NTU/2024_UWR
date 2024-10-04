@@ -1,0 +1,12 @@
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:8:10:[m[K [01;31m[Kfatal error: [m[Ksonar_msgs/msg/ThreeSonarDepth.hpp: No such file or directory
+    8 | #include [01;31m[K<sonar_msgs/msg/ThreeSonarDepth.hpp>[m[K   // Replace with ROS2 message types, ensure these are available in your ROS2 package
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kdouble SonarProcess::MovingAvg(const float&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:58:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   58 |     if ([01;35m[Kmoving_avg_window.size() == window_size[m[K) {
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,334 @@
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:214:48:[m[K [01;31m[Kerror: [m[K‘[01m[KshartedPtr[m[K’ in namespace ‘[01m[Ksonar_msgs::msg[m[K’ does not name a type
+  214 |     void sonar_callback(const sonar_msgs::msg::[01;31m[KshartedPtr[m[K& msg) {
+      |                                                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:398:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_stamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs::msg[m[K’; did you mean ‘[01m[KPoseStamped[m[K’?
+  398 |     rclcpp::Publisher<geometry_msgs::msg::[01;31m[Kpose_stamped[m[K>::SharedPtr pose_pub;
+      |                                           [01;31m[K^~~~~~~~~~~~[m[K
+      |                                           [32m[KPoseStamped[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:398:55:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  398 |     rclcpp::Publisher<geometry_msgs::msg::pose_stamped[01;31m[K>[m[K::SharedPtr pose_pub;
+      |                                                       [01;31m[K^[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:398:58:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  398 |     rclcpp::Publisher<geometry_msgs::msg::pose_stamped>::[01;31m[KSharedPtr[m[K pose_pub;
+      |                                                          [01;31m[K^~~~~~~~~[m[K
+      |                                                                   [32m[K;[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:398:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ does not name a type
+  398 |     rclcpp::Publisher<geometry_msgs::msg::pose_stamped>::SharedPtr [01;31m[Kpose_pub[m[K;
+      |                                                                    [01;31m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:399:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kconf_scal[m[K’ is not a member of ‘[01m[Ksonar_msgs::msg[m[K’; did you mean ‘[01m[KConfScal[m[K’?
+  399 |     rclcpp::Publisher<sonar_msgs::msg::[01;31m[Kconf_scal[m[K>::SharedPtr confidence_pub;
+      |                                        [01;31m[K^~~~~~~~~[m[K
+      |                                        [32m[KConfScal[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:399:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  399 |     rclcpp::Publisher<sonar_msgs::msg::conf_scal[01;31m[K>[m[K::SharedPtr confidence_pub;
+      |                                                 [01;31m[K^[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:399:52:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  399 |     rclcpp::Publisher<sonar_msgs::msg::conf_scal>::[01;31m[KSharedPtr[m[K confidence_pub;
+      |                                                    [01;31m[K^~~~~~~~~[m[K
+      |                                                             [32m[K;[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:399:52:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint kf_node::SharedPtr[m[K’
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:398:58:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint kf_node::SharedPtr[m[K’
+  398 |     rclcpp::Publisher<geometry_msgs::msg::pose_stamped>::[01;36m[KSharedPtr[m[K pose_pub;
+      |                                                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:399:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kconfidence_pub[m[K’ does not name a type
+  399 |     rclcpp::Publisher<sonar_msgs::msg::conf_scal>::SharedPtr [01;31m[Kconfidence_pub[m[K;
+      |                                                              [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:400:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kkf_values[m[K’ is not a member of ‘[01m[Ksonar_msgs::msg[m[K’; did you mean ‘[01m[KKfValues[m[K’?
+  400 |     rclcpp::Publisher<sonar_msgs::msg::[01;31m[Kkf_values[m[K>::SharedPtr k_vals_pub;
+      |                                        [01;31m[K^~~~~~~~~[m[K
+      |                                        [32m[KKfValues[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:400:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  400 |     rclcpp::Publisher<sonar_msgs::msg::kf_values[01;31m[K>[m[K::SharedPtr k_vals_pub;
+      |                                                 [01;31m[K^[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:400:52:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  400 |     rclcpp::Publisher<sonar_msgs::msg::kf_values>::[01;31m[KSharedPtr[m[K k_vals_pub;
+      |                                                    [01;31m[K^~~~~~~~~[m[K
+      |                                                             [32m[K;[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:400:52:[m[K [01;31m[Kerror: [m[Kredeclaration of ‘[01m[Kint kf_node::SharedPtr[m[K’
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:398:58:[m[K [01;36m[Knote: [m[Kprevious declaration ‘[01m[Kint kf_node::SharedPtr[m[K’
+  398 |     rclcpp::Publisher<geometry_msgs::msg::pose_stamped>::[01;36m[KSharedPtr[m[K pose_pub;
+      |                                                          [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:400:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kk_vals_pub[m[K’ does not name a type
+  400 |     rclcpp::Publisher<sonar_msgs::msg::kf_values>::SharedPtr [01;31m[Kk_vals_pub[m[K;
+      |                                                              [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:413:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kconf_scal[m[K’ in namespace ‘[01m[Ksonar_msgs[m[K’ does not name a type
+  413 |     sonar_msgs::[01;31m[Kconf_scal[m[K c1;
+      |                 [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:433:17:[m[K [01;31m[Kerror: [m[K‘[01m[KkValues[m[K’ in namespace ‘[01m[Ksonar_msgs[m[K’ does not name a type
+  433 |     sonar_msgs::[01;31m[KkValues[m[K k_vals;
+      |                 [01;31m[K^~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In constructor ‘[01m[Kkf_node::kf_node()[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ was not declared in this scope
+   63 |         [01;31m[Kpose_pub[m[K = this->create_publisher<geometry_msgs::msg::PoseStamped>("pose_topic", 10);
+      |         [01;31m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:64:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kconfidence_pub[m[K’ was not declared in this scope
+   64 |         [01;31m[Kconfidence_pub[m[K = this->create_publisher<sonar_msgs::msg::conf_scal>("confidence_topic", 10);
+      |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:64:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kconf_scal[m[K’ is not a member of ‘[01m[Ksonar_msgs::msg[m[K’; did you mean ‘[01m[KConfScal[m[K’?
+   64 |         confidence_pub = this->create_publisher<sonar_msgs::msg::[01;31m[Kconf_scal[m[K>("confidence_topic", 10);
+      |                                                                  [01;31m[K^~~~~~~~~[m[K
+      |                                                                  [32m[KConfScal[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:64:76:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kkf_node::create_publisher<<expression error> >(const char [17], int)[m[K’
+   64 |         confidence_pub = [01;31m[Kthis->create_publisher<sonar_msgs::msg::conf_scal>("confidence_topic", 10)[m[K;
+      |                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:64:76:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   64 |         confidence_pub = [01;31m[Kthis->create_publisher<sonar_msgs::msg::conf_scal>("confidence_topic", 10)[m[K;
+      |                          [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:65:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kk_vals_pub[m[K’ was not declared in this scope
+   65 |         [01;31m[Kk_vals_pub[m[K = this->create_publisher<sonar_msgs::msg::kf_values>("k_vals_topic", 10);
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:65:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kkf_values[m[K’ is not a member of ‘[01m[Ksonar_msgs::msg[m[K’; did you mean ‘[01m[KKfValues[m[K’?
+   65 |         k_vals_pub = this->create_publisher<sonar_msgs::msg::[01;31m[Kkf_values[m[K>("k_vals_topic", 10);
+      |                                                              [01;31m[K^~~~~~~~~[m[K
+      |                                                              [32m[KKfValues[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:65:72:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kkf_node::create_publisher<<expression error> >(const char [13], int)[m[K’
+   65 |         k_vals_pub = [01;31m[Kthis->create_publisher<sonar_msgs::msg::kf_values>("k_vals_topic", 10)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:1321[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class AllocatorT, class PublisherT> std::shared_ptr<PublisherT> rclcpp::Node::create_publisher(const string&, const rclcpp::QoS&, const rclcpp::PublisherOptionsWithAllocator<AllocatorT>&)[m[K’
+   73 | [01;36m[KNode[m[K::create_publisher(
+      | [01;36m[K^~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_impl.hpp:73:1:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:65:72:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   65 |         k_vals_pub = [01;31m[Kthis->create_publisher<sonar_msgs::msg::kf_values>("k_vals_topic", 10)[m[K;
+      |                      [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:101:31:[m[K [01;31m[Kerror: [m[K‘[01m[Knode[m[K’ was not declared in this scope; did you mean ‘[01m[KYAML::detail::node[m[K’?
+  101 |         auto imu_subscriber = [01;31m[Knode[m[K->create_subscription<sensor_msgs::msg::Imu>(
+      |                               [01;31m[K^~~~[m[K
+      |                               [32m[KYAML::detail::node[m[K
+In file included from [01m[K/usr/include/yaml-cpp/node/impl.h:12[m[K,
+                 from [01m[K/usr/include/yaml-cpp/yaml.h:17[m[K,
+                 from [01m[K/opt/ros/humble/include/rosbag2_storage/rosbag2_storage/yaml.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rosbag2_storage/rosbag2_storage/storage_options.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer_interfaces/base_writer_interface.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writers/sequential_writer.hpp:31[m[K,
+                 from [01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:31[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/usr/include/yaml-cpp/node/detail/node.h:20:7:[m[K [01;36m[Knote: [m[K‘[01m[KYAML::detail::node[m[K’ declared here
+   20 | class [01;36m[Knode[m[K {
+      |       [01;36m[K^~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:101:78:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+  101 |         auto imu_subscriber = node->create_subscription<sensor_msgs::msg::Imu[01;31m[K>[m[K(
+      |                                                                              [01;31m[K^[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  102 |         [01;35m[Kimu_param[m[K, 10, std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
+      |         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:85:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  102 |         imu_param, 10, std::bind(&kf_node::imu_callback, this, std::placeholders::_1[01;35m[K)[m[K);
+      |                                                                                     [01;35m[K^[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:104:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kthree_sonar_depth[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’
+  104 |         auto sonar_subscriber = node->create_subscription<sensor_msgs::msg::[01;31m[Kthree_sonar_depth[m[K>(
+      |                                                                             [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:105:9:[m[K [01;35m[Kwarning: [m[Kleft operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  105 |         [01;35m[Ksonar_param[m[K, 10, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+      |         [01;35m[K^~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:105:89:[m[K [01;35m[Kwarning: [m[Kright operand of comma operator has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  105 |         sonar_param, 10, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1[01;35m[K)[m[K);
+      |                                                                                         [01;35m[K^[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(sensor_msgs::msg::Imu_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:158:80:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KtoSec[m[K’
+  158 |             surge_state_p = surge.prediction((predict_time_now - predict_time).[01;31m[KtoSec[m[K());
+      |                                                                                [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:159:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KtoSec[m[K’
+  159 |             sway_state_p = sway.prediction((predict_time_now - predict_time).[01;31m[KtoSec[m[K());
+      |                                                                              [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:160:80:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KtoSec[m[K’
+  160 |             heave_state_p = heave.prediction((predict_time_now - predict_time).[01;31m[KtoSec[m[K());
+      |                                                                                [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:205:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ was not declared in this scope
+  205 |             [01;31m[Kpose_pub[m[K.publish(pose_msg);
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback(const int&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:225:27:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  225 |         surge.set_dist(msg[01;31m[K->[m[Kdistance_1 / 1000);
+      |                           [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:226:27:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  226 |         heave.set_dist(msg[01;31m[K->[m[Kdepth);
+      |                           [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:227:26:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  227 |         sway.set_dist(msg[01;31m[K->[m[Kdistance_2 / 1000);
+      |                          [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:264:44:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  264 |             surge_dist = surge.set_dist(msg[01;31m[K->[m[Kdistance_1 / 1000);
+      |                                            [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:265:42:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  265 |             sway_dist = sway.set_dist(msg[01;31m[K->[m[Kdistance_2 / 1000);
+      |                                          [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:266:44:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  266 |             heave_dist = heave.set_dist(msg[01;31m[K->[m[Kdepth);
+      |                                            [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:271:58:[m[K [01;31m[Kerror: [m[K‘[01m[Ksbs_frame_before[m[K’ was not declared in this scope
+  271 |             RCLCPP_INFO(this->get_logger(),"Before: %f", [01;31m[Ksbs_frame_before[m[K.transform.translation.x);
+      |                                                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:295:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KtoSec[m[K’
+  295 |                 surge.set_vel((measure_time_now - measure_time).[01;31m[KtoSec[m[K());
+      |                                                                 [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:306:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KtoSec[m[K’
+  306 |                 sway.set_vel((measure_time_now - measure_time).[01;31m[KtoSec[m[K());
+      |                                                                [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:315:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KtoSec[m[K’
+  315 |                 heave.set_vel((measure_time_now - measure_time).[01;31m[KtoSec[m[K());
+      |                                                                 [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:321:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kk_vals[m[K’ was not declared in this scope
+  321 |             [01;31m[Kk_vals[m[K.header.stamp= msg->header.stamp;
+      |             [01;31m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:321:37:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  321 |             k_vals.header.stamp= msg[01;31m[K->[m[Kheader.stamp;
+      |                                     [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:332:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kc1[m[K’ was not declared in this scope; did you mean ‘[01m[Ky1[m[K’?
+  332 |             [01;31m[Kc1[m[K.header.stamp = msg->header.stamp;
+      |             [01;31m[K^~[m[K
+      |             [32m[Ky1[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:332:34:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  332 |             c1.header.stamp = msg[01;31m[K->[m[Kheader.stamp;
+      |                                  [01;31m[K^~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:341:63:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  341 |             RCLCPP_INFO(this->get_logger(),"Distance: %f", msg[01;31m[K->[m[Kdistance_1 / 1000);
+      |                                                               [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:342:94:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass rclcpp::Duration[m[K’ has no member named ‘[01m[KtoSec[m[K’
+  342 |             RCLCPP_INFO(this->get_logger(),"Timestamp: %f",(measure_time_now - measure_time).[01;31m[KtoSec[m[K());
+      |                                                                                              [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:343:28:[m[K [01;31m[Kerror: [m[K‘[01m[KPoseStamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::PoseStamped[m[K’?
+  343 |             geometry_msgs::[01;31m[KPoseStamped[m[K pose_msg;
+      |                            [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/pose_stamped.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:47[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:19[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/pose_stamped__struct.hpp:135:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::PoseStamped[m[K’ declared here
+  135 | using [01;36m[KPoseStamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:344:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_msg[m[K’ was not declared in this scope
+  344 |             [01;31m[Kpose_msg[m[K.header.stamp = msg->header.stamp;
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:344:40:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  344 |             pose_msg.header.stamp = msg[01;31m[K->[m[Kheader.stamp;
+      |                                        [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:351:28:[m[K [01;31m[Kerror: [m[K‘[01m[KVector3Stamped[m[K’ is not a member of ‘[01m[Kgeometry_msgs[m[K’; did you mean ‘[01m[Kgeometry_msgs::msg::Vector3Stamped[m[K’?
+  351 |             geometry_msgs::[01;31m[KVector3Stamped[m[K vector3_msg, vel_msg;
+      |                            [01;31m[K^~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/vector3_stamped.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.hpp:43[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:19[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__struct.hpp:135:7:[m[K [01;36m[Knote: [m[K‘[01m[Kgeometry_msgs::msg::Vector3Stamped[m[K’ declared here
+  135 | using [01;36m[KVector3Stamped[m[K =
+      |       [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:352:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvector3_msg[m[K’ was not declared in this scope
+  352 |             [01;31m[Kvector3_msg[m[K.header.stamp = msg->header.stamp;
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:352:43:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  352 |             vector3_msg.header.stamp = msg[01;31m[K->[m[Kheader.stamp;
+      |                                           [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:364:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvel_msg[m[K’ was not declared in this scope
+  364 |             [01;31m[Kvel_msg[m[K.header.stamp = msg->header.stamp;
+      |             [01;31m[K^~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:364:39:[m[K [01;31m[Kerror: [m[Kbase operand of ‘[01m[K->[m[K’ is not a pointer
+  364 |             vel_msg.header.stamp = msg[01;31m[K->[m[Kheader.stamp;
+      |                                       [01;31m[K^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:369:27:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Krosbag2_cpp::Writer::write(const char [10], rclcpp::Time&, const int&)[m[K’
+  369 |             [01;31m[Kwriter_->write("SONAR_raw", measure_time_now, msg)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT> void rosbag2_cpp::Writer::write(const MessageT&, const string&, const rclcpp::Time&)[m[K’
+  191 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:191:8:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:369:41:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((kf_node*)this)->kf_node::measure_time_now[m[K’ (type ‘[01m[Krclcpp::Time[m[K’) to type ‘[01m[Kconst string&[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>&[m[K’}
+  369 |             writer_->write("SONAR_raw", [01;36m[Kmeasure_time_now[m[K, msg);
+      |                                         [01;36m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:47[m[K:
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>)[m[K’
+  122 |   void [01;36m[Kwrite[m[K(std::shared_ptr<rosbag2_storage::SerializedBagMessage> message);
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:122:8:[m[K [01;36m[Knote: [m[K  candidate expects 1 argument, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:134:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rosbag2_storage::SerializedBagMessage>, const string&, const string&, const string&)[m[K’
+  134 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:135:60:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst char [10][m[K’ to ‘[01m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage>[m[K’
+  135 |     [01;36m[Kstd::shared_ptr<rosbag2_storage::SerializedBagMessage> message[m[K,
+      |     [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(const rclcpp::SerializedMessage&, const string&, const string&, const rclcpp::Time&)[m[K’
+  156 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:156:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kvoid rosbag2_cpp::Writer::write(std::shared_ptr<rclcpp::SerializedMessage>, const string&, const string&, const rclcpp::Time&)[m[K’
+  174 |   void [01;36m[Kwrite[m[K(
+      |        [01;36m[K^~~~~[m[K
+[01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:174:8:[m[K [01;36m[Knote: [m[K  candidate expects 4 arguments, 3 provided
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:378:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ was not declared in this scope
+  378 |             [01;31m[Kpose_pub[m[K.publish(pose_msg);
+      |             [01;31m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:383:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kk_vals_pub[m[K’ was not declared in this scope
+  383 |             [01;31m[Kk_vals_pub[m[K.publish(k_vals);
+      |             [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:391:9:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: First argument to logging macros must be an rclcpp::Logger
+  391 |         [01;31m[KRCLCPP_ERROR[m[K("error in sonar-callback: %s", e.what());
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:391:9:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("error in sonar-callback: %s")[m[K’, which is of non-class type ‘[01m[Kconst char [28][m[K’
+  391 |         [01;31m[KRCLCPP_ERROR[m[K("error in sonar-callback: %s", e.what());
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:391:9:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Kget_name[m[K’ in ‘[01m[K("error in sonar-callback: %s")[m[K’, which is of non-class type ‘[01m[Kconst char [28][m[K’
+  391 |         [01;31m[KRCLCPP_ERROR[m[K("error in sonar-callback: %s", e.what());
+      |         [01;31m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

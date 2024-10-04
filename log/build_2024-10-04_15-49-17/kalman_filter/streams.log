@@ -1,0 +1,44 @@
+[0.011s] Invoking command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter': AMENT_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
+[0.039s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.170s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.198s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.200s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.206s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.217s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.229s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.263s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.264s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.361s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.415s] -- Found sonar_msgs: 0.0.0 (/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake)
+[0.428s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.469s] -- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)
+[0.480s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.555s] -- Added test 'copyright' to check source files copyright and LICENSE
+[0.555s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.556s] -- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/uwr/Desktop/2024_UWR/src/kalman_filter/include>
+[0.556s] -- Configured cppcheck exclude dirs and/or files: 
+[0.556s] -- Added test 'lint_cmake' to check CMake code style
+[0.557s] -- Added test 'uncrustify' to check C / C++ code style
+[0.557s] -- Configured uncrustify additional arguments: 
+[0.557s] -- Added test 'xmllint' to check XML markup files
+[0.558s] -- Configuring done
+[0.569s] -- Generating done
+[0.570s] -- Build files have been written to: /home/uwr/Desktop/2024_UWR/build/kalman_filter
+[0.599s] [35m[1mConsolidate compiler generated dependencies of target kf[0m
+[0.622s] [ 20%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[0.624s] [ 40%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf.cpp.o[0m
+[0.626s] [ 60%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_bag_processing.cpp.o[0m
+[0.627s] [ 80%] [32mBuilding CXX object CMakeFiles/kf.dir/src/sonar_processing.cpp.o[0m
+[1.347s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:19:10:[m[K [01;31m[Kfatal error: [m[Ktf2_geometry_msgs/tf2_geometry_msgs.hpp: No such file or directory
+[1.348s]    19 | #include [01;31m[K<tf2_geometry_msgs/tf2_geometry_msgs.hpp>[m[K
+[1.348s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.348s] compilation terminated.
+[1.356s] gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+[1.356s] gmake[2]: *** Waiting for unfinished jobs....
+[4.386s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kdouble SonarProcess::MovingAvg(const float&)[m[K’:
+[4.386s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:58:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.386s]    58 |     if ([01;35m[Kmoving_avg_window.size() == window_size[m[K) {
+[4.387s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[5.234s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+[5.234s] gmake: *** [Makefile:146: all] Error 2
+[5.237s] Invoked command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter' returned '2': AMENT_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
