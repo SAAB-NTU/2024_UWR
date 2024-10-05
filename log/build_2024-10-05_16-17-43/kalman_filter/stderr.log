@@ -1,0 +1,32 @@
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:127:76:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  127 |     void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth::SharedPtr msg[m[K)
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(geometry_msgs::msg::Vector3Stamped_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:138:33:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Klinear_acceleration[m[K’
+  138 |         bef_rotate<<abs(imu_msg.[01;31m[Klinear_acceleration[m[K.x),abs(imu_msg.linear_acceleration.z),1;
+      |                                 [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:138:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Klinear_acceleration[m[K’
+  138 |         bef_rotate<<abs(imu_msg.linear_acceleration.x),abs(imu_msg.[01;31m[Klinear_acceleration[m[K.z),1;
+      |                                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:143:34:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Korientation[m[K’
+  143 |             tf2::convert(imu_msg.[01;31m[Korientation[m[K, q_orig);
+      |                                  [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:154:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Klinear_acceleration[m[K’
+  154 |             heave.set_accel_bias(true, imu_msg.[01;31m[Klinear_acceleration[m[K.z);
+      |                                                [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:162:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Klinear_acceleration[m[K’
+  162 |             heave_accel = heave.set_accel(imu_msg.[01;31m[Klinear_acceleration[m[K.z);
+      |                                                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:171:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  171 |             vector3_msg.header.stamp = imu_msg.[01;31m[Kheader[m[K.stamp;
+      |                                                [01;31m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:176:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  176 |             vel_msg.header.stamp = imu_msg.[01;31m[Kheader[m[K.stamp;
+      |                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:181:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<geometry_msgs::msg::Vector3Stamped_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  181 |             pose_msg.header.stamp = imu_msg.[01;31m[Kheader[m[K.stamp;
+      |                                             [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

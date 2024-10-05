@@ -5,7 +5,7 @@
 #include "../include/bag_processing.h"    // Custom header (ROS2 does not have native rosbag API yet, so ensure compatibility)
 
 // ROS2 message headers
-#include <sonar_msgs/msg/three_sonar_depth.hpp>   // Replace with ROS2 message types, ensure these are available in your ROS2 package
+#include "sonar_msgs/msg/three_sonar_depth.hpp"   // Replace with ROS2 message types, ensure these are available in your ROS2 package
 #include <sonar_msgs/msg/conf_scal.hpp>
 #include <sonar_msgs/msg/kf_values.hpp>
 
@@ -72,7 +72,7 @@ public:
         this->declare_parameter<std::string>("csv_path", "default_path.csv");
         this->get_parameter("csv_path", path_param);
 
-        this->declare_parameter<std::string>("imu_topic", "/imu/data");
+        this->declare_parameter<std::string>("imu_topic", "/imu/acceleration");
         this->declare_parameter<std::string>("sonar_topic", "/sonar");
         this->declare_parameter<double>("angle", 0.0);
         this->declare_parameter<bool>("without_measurement", false);
@@ -96,13 +96,14 @@ public:
         surge = kf_v3(sample_size);
         sway = kf_v3(sample_size);
         heave = kf_v3(sample_size);
+	RCLCPP_INFO(this->get_logger(), "%s", sonar_param.c_str());
 
 
-        auto imu_subscriber = this->create_subscription<sensor_msgs::msg::Imu>(
-        imu_param, 10, std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
+        imu_subscriber_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
+        imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1));
 
-        auto sonar_subscriber = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-        sonar_param, 10, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+        sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+        sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 
         // Create a bag file name using the bag_create_file function
         std::string bag_file_name = bag_create_file(path_param, this->now());
@@ -123,30 +124,34 @@ public:
 
     }
 
-    void imu_callback(const sensor_msgs::msg::Imu& imu_msg) 
+    void sonar_callback2(const sonar_msgs::msg::ThreeSonarDepth& msg)
+{
+    RCLCPP_INFO(this->get_logger(), "Callback triggered!");
+    // Your code here
+}
+
+    void imu_callback2(const geometry_msgs::msg::Vector3Stamped& imu_msg) 
     
     {
-    
-    //static tf2_ros::Buffer tfBuffer;
-    //static tf2_ros::TransformBroadcaster tf_broadcaster;
-    try {
-        bef_rotate<<abs(imu_msg.linear_acceleration.x),abs(imu_msg.linear_acceleration.z),1;
+        
+        try {
+        bef_rotate<<abs(imu_msg.vector.x),abs(imu_msg.vector.z),1;
         aft_rotate=rot_matrix*bef_rotate;
         predict_time_now = this->now();
-        if(!rot_bias)
-        {
-            tf2::convert(imu_msg.orientation, q_orig);
-            //tf2::convert(imu_msg.orientation, world_to_inertial_transform.transform.rotation);
-            //world_to_inertial_transform.transform.rotation=tf2::toMsg(q_orig);
-            //transformStamped.transform.rotation=tf2::toMsg(q_orig);
-            //ROS_INFO("w: %f",transformStamped.transform.rotation.w);
-            rot_bias=true;
-        }
+        // if(!rot_bias)
+        // {
+        //     tf2::convert(imu_msg.orientation, q_orig);
+        //     //tf2::convert(imu_msg.orientation, world_to_inertial_transform.transform.rotation);
+        //     //world_to_inertial_transform.transform.rotation=tf2::toMsg(q_orig);
+        //     //transformStamped.transform.rotation=tf2::toMsg(q_orig);
+        //     //ROS_INFO("w: %f",transformStamped.transform.rotation.w);
+        //     rot_bias=true;
+        // }
         if (!bias) {
 
             surge.set_accel_bias(true, aft_rotate(0));
             sway.set_accel_bias(true, aft_rotate(1));
-            heave.set_accel_bias(true, imu_msg.linear_acceleration.z);
+            heave.set_accel_bias(true, imu_msg.vector.z);
             
             bias = true;
         }
@@ -154,7 +159,7 @@ public:
         if (start) {
             surge_accel = surge.set_accel(aft_rotate(0));
             sway_accel = sway.set_accel(aft_rotate(1));
-            heave_accel = heave.set_accel(imu_msg.linear_acceleration.z);
+            heave_accel = heave.set_accel(imu_msg.vector.z);
             surge_state_p = surge.prediction((predict_time_now - predict_time).seconds());
             sway_state_p = sway.prediction((predict_time_now - predict_time).seconds());
             heave_state_p = heave.prediction((predict_time_now - predict_time).seconds());
@@ -186,7 +191,7 @@ public:
            // transformStamped.transform.translation.z = heave_state_p(0);
            // transformStamped.transform.rotation = tf2::toMsg(q_new);
 
-                        writer_->write(imu_msg, "IMU_raw", predict_time_now);
+            writer_->write(imu_msg, "IMU_raw", predict_time_now);
             writer_->write(vector3_msg, "IMU_filtered", predict_time_now);
             writer_->write(vel_msg, "IMU_vel", predict_time_now);
             writer_->write(pose_msg, "Pose", predict_time_now);
@@ -210,14 +215,109 @@ public:
     } catch (const std::exception& e) {
         RCLCPP_ERROR(this->get_logger(), "error in imu-callback: %s", e.what());
     }
-        }
+        
 
-    void sonar_callback(const sonar_msgs::msg::ThreeSonarDepth& msg) {
-    //static tf2_ros::Buffer tfBuffer;
+        }
+    // void imu_callback(const geometry_msgs::msg::Vector3Stamped& imu_msg) 
+    
+    // {
+        
+    //     try {
+    //     bef_rotate<<abs(imu_msg.linear_acceleration.x),abs(imu_msg.linear_acceleration.z),1;
+    //     aft_rotate=rot_matrix*bef_rotate;
+    //     predict_time_now = this->now();
+    //     if(!rot_bias)
+    //     {
+    //         tf2::convert(imu_msg.orientation, q_orig);
+    //         //tf2::convert(imu_msg.orientation, world_to_inertial_transform.transform.rotation);
+    //         //world_to_inertial_transform.transform.rotation=tf2::toMsg(q_orig);
+    //         //transformStamped.transform.rotation=tf2::toMsg(q_orig);
+    //         //ROS_INFO("w: %f",transformStamped.transform.rotation.w);
+    //         rot_bias=true;
+    //     }
+    //     if (!bias) {
+
+    //         surge.set_accel_bias(true, aft_rotate(0));
+    //         sway.set_accel_bias(true, aft_rotate(1));
+    //         heave.set_accel_bias(true, imu_msg.linear_acceleration.z);
+            
+    //         bias = true;
+    //     }
+
+    //     if (start) {
+    //         surge_accel = surge.set_accel(aft_rotate(0));
+    //         sway_accel = sway.set_accel(aft_rotate(1));
+    //         heave_accel = heave.set_accel(imu_msg.linear_acceleration.z);
+    //         surge_state_p = surge.prediction((predict_time_now - predict_time).seconds());
+    //         sway_state_p = sway.prediction((predict_time_now - predict_time).seconds());
+    //         heave_state_p = heave.prediction((predict_time_now - predict_time).seconds());
+    //         predict_time = predict_time_now;
+
+    //         geometry_msgs::msg::Vector3Stamped vector3_msg, vel_msg;
+    //         geometry_msgs::msg::PoseStamped pose_msg;
+
+    //         vector3_msg.header.stamp = imu_msg.header.stamp;
+    //         vector3_msg.vector.x = surge_accel;
+    //         vector3_msg.vector.y = sway_accel;
+    //         vector3_msg.vector.z = heave_accel;
+
+    //         vel_msg.header.stamp = imu_msg.header.stamp;
+    //         vel_msg.vector.x = surge_state_p(1);
+    //         vel_msg.vector.y = sway_state_p(1);
+    //         vel_msg.vector.z = heave_state_p(1);
+
+    //         pose_msg.header.stamp = imu_msg.header.stamp;
+    //         pose_msg.pose.position.x = surge_state_p(0);
+    //         pose_msg.pose.position.y = sway_state_p(0);
+    //         pose_msg.pose.position.z = heave_state_p(0);
+    //         //tf2::convert(imu_msg.orientation, q_new);
+    //         pose_msg.pose.orientation = tf2::toMsg(q_new * q_orig);
+
+    //         //transformStamped.header.stamp = imu_msg.header.stamp;
+    //         //transformStamped.transform.translation.x = surge_state_p(0);
+    //         // transformStamped.transform.translation.y = sway_state_p(0);
+    //        // transformStamped.transform.translation.z = heave_state_p(0);
+    //        // transformStamped.transform.rotation = tf2::toMsg(q_new);
+
+    //                     writer_->write(imu_msg, "IMU_raw", predict_time_now);
+    //         writer_->write(vector3_msg, "IMU_filtered", predict_time_now);
+    //         writer_->write(vel_msg, "IMU_vel", predict_time_now);
+    //         writer_->write(pose_msg, "Pose", predict_time_now);
+    //         //tf2::doTransform(transformStamped, world_to_inertial_transform, transformStamped);
+    //         /*
+
+    //         */
+    //         //writer_->write(transformStamped, "Transform", "std_msgs/msg/String", time_stamp);
+
+    //         //bag.write("IMU_raw", predict_time_now, imu_msg);
+    //         //bag.write("IMU_filtered", predict_time_now, vector3_msg);
+    //         //bag.write("IMU_vel", predict_time_now, vel_msg);
+    //         //bag.write("Pose", predict_time_now, pose_msg);
+    //         //bag.write("Transform",predict_time_now,transformStamped);
+            
+           
+    //         pose_pub->publish(pose_msg);
+    //         //pub_transform->publish(transformStamped);
+            
+    //     }
+    // } catch (const std::exception& e) {
+    //     RCLCPP_ERROR(this->get_logger(), "error in imu-callback: %s", e.what());
+    // }
+        
+
+    //     }
+
+    void sonar_callback(const sonar_msgs::msg::ThreeSonarDepth& msg) 
+    
+    {
+        //static tf2_ros::Buffer tfBuffer;
     //static tf2_ros::TransformBroadcaster tf_broadcaster;
     //static tf2_ros::StaticTransformBroadcaster static_broadcaster;
-    try {
+    RCLCPP_INFO(this->get_logger(),"Hi");
 
+    
+    try {
+	
         measure_time_now = this->now();
         //surge.set_dist(msg.distance_1 / 1000);
         //heave.set_dist(msg.depth);
@@ -397,6 +497,7 @@ public:
     } catch (const std::exception& e) {
         RCLCPP_ERROR(this->get_logger(), "error in sonar-callback: %s", e.what());
     }
+    
         }
 
 
@@ -405,6 +506,9 @@ private:
     rclcpp::Publisher<geometry_msgs::msg::PoseStamped>::SharedPtr pose_pub;
     rclcpp::Publisher<sonar_msgs::msg::ConfScal>::SharedPtr confidence_pub;
     rclcpp::Publisher<sonar_msgs::msg::KfValues>::SharedPtr k_vals_pub;
+
+    rclcpp::Subscription<sonar_msgs::msg::ThreeSonarDepth>::SharedPtr sonar_subscriber_;
+    rclcpp::Subscription<geometry_msgs::msg::Vector3Stamped>::SharedPtr imu_subscriber_;
 
     int sample_size;
     

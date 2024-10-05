@@ -1,0 +1,52 @@
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback(sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:228:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_1[m[K’
+  228 |         surge.set_dist(msg.[01;31m[Kdistance_1[m[K / 1000);
+      |                            [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:229:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdepth[m[K’
+  229 |         heave.set_dist(msg.[01;31m[Kdepth[m[K);
+      |                            [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:230:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_2[m[K’
+  230 |         sway.set_dist(msg.[01;31m[Kdistance_2[m[K / 1000);
+      |                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:267:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_1[m[K’
+  267 |             surge_dist = surge.set_dist(msg.[01;31m[Kdistance_1[m[K / 1000);
+      |                                             [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:268:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_2[m[K’
+  268 |             sway_dist = sway.set_dist(msg.[01;31m[Kdistance_2[m[K / 1000);
+      |                                           [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:269:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdepth[m[K’
+  269 |             heave_dist = heave.set_dist(msg.[01;31m[Kdepth[m[K);
+      |                                             [01;31m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:324:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  324 |             k_vals.header.stamp= msg.[01;31m[Kheader[m[K.stamp;
+      |                                      [01;31m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:335:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  335 |             c1.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+      |                                   [01;31m[K^~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:344:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_1[m[K’
+  344 |             RCLCPP_INFO(this->get_logger(),"Distance: %f", msg.[01;31m[Kdistance_1[m[K / 1000);
+      |                                                                [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:347:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  347 |             pose_msg.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+      |                                         [01;31m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:355:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  355 |             vector3_msg.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+      |                                            [01;31m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:367:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+  367 |             vel_msg.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+      |                                        [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,56 @@
+[0.013s] Invoking command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
+[0.056s] [35m[1mConsolidate compiler generated dependencies of target kf[0m
+[0.084s] [ 20%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[5.668s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback(sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> >::SharedPtr)[m[K’:
+[5.668s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:228:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_1[m[K’
+[5.668s]   228 |         surge.set_dist(msg.[01;31m[Kdistance_1[m[K / 1000);
+[5.668s]       |                            [01;31m[K^~~~~~~~~~[m[K
+[5.668s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:229:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdepth[m[K’
+[5.668s]   229 |         heave.set_dist(msg.[01;31m[Kdepth[m[K);
+[5.668s]       |                            [01;31m[K^~~~~[m[K
+[5.668s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:230:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_2[m[K’
+[5.668s]   230 |         sway.set_dist(msg.[01;31m[Kdistance_2[m[K / 1000);
+[5.668s]       |                           [01;31m[K^~~~~~~~~~[m[K
+[5.669s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:267:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_1[m[K’
+[5.669s]   267 |             surge_dist = surge.set_dist(msg.[01;31m[Kdistance_1[m[K / 1000);
+[5.669s]       |                                             [01;31m[K^~~~~~~~~~[m[K
+[5.669s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:268:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_2[m[K’
+[5.669s]   268 |             sway_dist = sway.set_dist(msg.[01;31m[Kdistance_2[m[K / 1000);
+[5.669s]       |                                           [01;31m[K^~~~~~~~~~[m[K
+[5.669s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:269:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdepth[m[K’
+[5.669s]   269 |             heave_dist = heave.set_dist(msg.[01;31m[Kdepth[m[K);
+[5.669s]       |                                             [01;31m[K^~~~~[m[K
+[5.669s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:324:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+[5.669s]   324 |             k_vals.header.stamp= msg.[01;31m[Kheader[m[K.stamp;
+[5.670s]       |                                      [01;31m[K^~~~~~[m[K
+[5.672s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:335:35:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+[5.672s]   335 |             c1.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+[5.672s]       |                                   [01;31m[K^~~~~~[m[K
+[5.673s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[5.673s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[5.673s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[5.673s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[5.673s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[5.673s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[5.673s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[5.673s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[5.674s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[5.674s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[5.674s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[5.674s]                  from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[5.674s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:344:64:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kdistance_1[m[K’
+[5.674s]   344 |             RCLCPP_INFO(this->get_logger(),"Distance: %f", msg.[01;31m[Kdistance_1[m[K / 1000);
+[5.674s]       |                                                                [01;31m[K^~~~~~~~~~[m[K
+[5.674s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:347:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+[5.675s]   347 |             pose_msg.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+[5.675s]       |                                         [01;31m[K^~~~~~[m[K
+[5.675s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:355:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+[5.675s]   355 |             vector3_msg.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+[5.675s]       |                                            [01;31m[K^~~~~~[m[K
+[5.675s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:367:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst SharedPtr[m[K’ {aka ‘[01m[Kconst class std::shared_ptr<sonar_msgs::msg::ThreeSonarDepth_<std::allocator<void> > >[m[K’} has no member named ‘[01m[Kheader[m[K’
+[5.675s]   367 |             vel_msg.header.stamp = msg.[01;31m[Kheader[m[K.stamp;
+[5.676s]       |                                        [01;31m[K^~~~~~[m[K
+[9.728s] gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+[9.729s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+[9.729s] gmake: *** [Makefile:146: all] Error 2
+[9.731s] Invoked command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter' returned '2': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8

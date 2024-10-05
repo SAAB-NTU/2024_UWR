@@ -1,0 +1,935 @@
+[35m[1mConsolidate compiler generated dependencies of target kf[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(const Imu&) const[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:134:19:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kconst Vector3f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 1>[m[K’} and ‘[01m[Kdouble[m[K’)
+  134 |         [32m[Kbef_rotate[m[K[01;31m[K<<[m[K[34m[Kabs(imu_msg.linear_acceleration.x)[m[K,abs(imu_msg.linear_acceleration.z),1;
+      |         [32m[K~~~~~~~~~~[m[K[01;31m[K^~[m[K[34m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |         [32m[K|[m[K              [34m[K|[m[K
+      |         [32m[K|[m[K              [34m[Kdouble[m[K
+      |         [32m[Kconst Vector3f {aka const Eigen::Matrix<float, 3, 1>}[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:272[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:322:31:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::CommaInitializer<Derived> Eigen::DenseBase<Derived>::operator<<(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = OtherDerived; Derived = Eigen::Matrix<float, 3, 1>][m[K’
+  322 |     CommaInitializer<Derived> [01;36m[Koperator[m[K<< (const DenseBase<OtherDerived>& other);
+      |                               [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/DenseBase.h:322:31:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:134:54:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’ and ‘[01m[Kdouble[m[K’
+  134 |         bef_rotate<<abs(imu_msg.linear_acceleration.x[01;36m[K)[m[K,abs(imu_msg.linear_acceleration.z),1;
+      |                                                      [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:321[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:148:52:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::CommaInitializer<Derived> Eigen::DenseBase<Derived>::operator<<(const Scalar&) [with Derived = Eigen::Matrix<float, 3, 1>; Eigen::DenseBase<Derived>::Scalar = float][m[K’ (near match)
+  148 | EIGEN_DEVICE_FUNC inline CommaInitializer<Derived> [01;36m[KDenseBase<Derived>[m[K::operator<< (const Scalar& s)
+      |                                                    [01;36m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/CommaInitializer.h:148:52:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector3f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:269[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/IO.h:249:16:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class Derived> std::ostream& Eigen::operator<<(std::ostream&, const Eigen::DenseBase<Derived>&)[m[K’
+  249 | std::ostream & [01;36m[Koperator[m[K <<
+      |                [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/IO.h:249:16:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:134:54:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst Eigen::DenseBase<Derived>[m[K’ and ‘[01m[Kdouble[m[K’
+  134 |         bef_rotate<<abs(imu_msg.linear_acceleration.x[01;36m[K)[m[K,abs(imu_msg.linear_acceleration.z),1;
+      |                                                      [01;36m[K^[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:135:31:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector3f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 1>[m[K’} and ‘[01m[Kconst Eigen::Product<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, 3, 1>, 0>[m[K’)
+  135 |         aft_rotate=rot_matrix*[01;31m[Kbef_rotate[m[K;
+      |                               [01;31m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, 3, 1>, 0>; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector3f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Product<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, 3, 1>, 0>; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector3f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:135:31:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Eigen::Product<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, 3, 1>, 0>[m[K’ is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  135 |         aft_rotate=rot_matrix*[01;36m[Kbef_rotate[m[K;
+      |                               [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:135:31:[m[K [01;36m[Knote: [m[K  ‘[01m[Kconst Eigen::Product<Eigen::Matrix<float, 3, 3>, Eigen::Matrix<float, 3, 1>, 0>[m[K’ is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  135 |         aft_rotate=rot_matrix*[01;36m[Kbef_rotate[m[K;
+      |                               [01;36m[K^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector3f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 3; int _Cols = 1; int _Options = 0; int _MaxRows = 3; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector3f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 3, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:136:38:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  136 |         predict_time_now = this->now([01;31m[K)[m[K;
+      |                                      [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+   91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:144:21:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::rot_bias[m[K’ in read-only object
+  144 |             [01;31m[Krot_bias=true[m[K;
+      |             [01;31m[K~~~~~~~~^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:148:33:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  148 |             [01;31m[Ksurge.set_accel_bias(true, aft_rotate(0))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:72:28:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kbool kf_v3::set_accel_bias(bool, double)[m[K’
+   72 |     bool get_accel_bias(), [01;36m[Kset_accel_bias[m[K(bool val, double bias);
+      |                            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:149:32:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  149 |             [01;31m[Ksway.set_accel_bias(true, aft_rotate(1))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:72:28:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kbool kf_v3::set_accel_bias(bool, double)[m[K’
+   72 |     bool get_accel_bias(), [01;36m[Kset_accel_bias[m[K(bool val, double bias);
+      |                            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:150:33:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  150 |             [01;31m[Kheave.set_accel_bias(true, imu_msg.linear_acceleration.z)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:72:28:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kbool kf_v3::set_accel_bias(bool, double)[m[K’
+   72 |     bool get_accel_bias(), [01;36m[Kset_accel_bias[m[K(bool val, double bias);
+      |                            [01;36m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:152:18:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::bias[m[K’ in read-only object
+  152 |             [01;31m[Kbias = true[m[K;
+      |             [01;31m[K~~~~~^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:156:42:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  156 |             surge_accel = [01;31m[Ksurge.set_accel(aft_rotate(0))[m[K;
+      |                           [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:74:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_accel(double)[m[K’
+   74 |     double [01;36m[Kset_accel[m[K(double val);
+      |            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:156:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::surge_accel[m[K’ in read-only object
+  156 |             [01;31m[Ksurge_accel = surge.set_accel(aft_rotate(0))[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:157:40:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  157 |             sway_accel = [01;31m[Ksway.set_accel(aft_rotate(1))[m[K;
+      |                          [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:74:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_accel(double)[m[K’
+   74 |     double [01;36m[Kset_accel[m[K(double val);
+      |            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:157:24:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::sway_accel[m[K’ in read-only object
+  157 |             [01;31m[Ksway_accel = sway.set_accel(aft_rotate(1))[m[K;
+      |             [01;31m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:158:42:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  158 |             heave_accel = [01;31m[Kheave.set_accel(imu_msg.linear_acceleration.z)[m[K;
+      |                           [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:74:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_accel(double)[m[K’
+   74 |     double [01;36m[Kset_accel[m[K(double val);
+      |            [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:158:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::heave_accel[m[K’ in read-only object
+  158 |             [01;31m[Kheave_accel = heave.set_accel(imu_msg.linear_acceleration.z)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:159:45:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  159 |             surge_state_p = [01;31m[Ksurge.prediction((predict_time_now - predict_time).seconds())[m[K;
+      |                             [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:66:21:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::prediction(double)[m[K’
+   66 |     Eigen::Vector2f [01;36m[Kprediction[m[K(double dt);
+      |                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:159:89:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  159 |             surge_state_p = surge.prediction((predict_time_now - predict_time).seconds()[01;31m[K)[m[K;
+      |                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:159:89:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  159 |             surge_state_p = surge.prediction((predict_time_now - predict_time).seconds()[01;36m[K)[m[K;
+      |                                                                                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:159:89:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  159 |             surge_state_p = surge.prediction((predict_time_now - predict_time).seconds()[01;36m[K)[m[K;
+      |                                                                                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:160:43:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  160 |             sway_state_p = [01;31m[Ksway.prediction((predict_time_now - predict_time).seconds())[m[K;
+      |                            [01;31m[K~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:66:21:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::prediction(double)[m[K’
+   66 |     Eigen::Vector2f [01;36m[Kprediction[m[K(double dt);
+      |                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:160:87:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  160 |             sway_state_p = sway.prediction((predict_time_now - predict_time).seconds()[01;31m[K)[m[K;
+      |                                                                                       [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:160:87:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  160 |             sway_state_p = sway.prediction((predict_time_now - predict_time).seconds()[01;36m[K)[m[K;
+      |                                                                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:160:87:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  160 |             sway_state_p = sway.prediction((predict_time_now - predict_time).seconds()[01;36m[K)[m[K;
+      |                                                                                       [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:161:45:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  161 |             heave_state_p = [01;31m[Kheave.prediction((predict_time_now - predict_time).seconds())[m[K;
+      |                             [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:66:21:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::prediction(double)[m[K’
+   66 |     Eigen::Vector2f [01;36m[Kprediction[m[K(double dt);
+      |                     [01;36m[K^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:161:89:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  161 |             heave_state_p = heave.prediction((predict_time_now - predict_time).seconds()[01;31m[K)[m[K;
+      |                                                                                         [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:161:89:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  161 |             heave_state_p = heave.prediction((predict_time_now - predict_time).seconds()[01;36m[K)[m[K;
+      |                                                                                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:161:89:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  161 |             heave_state_p = heave.prediction((predict_time_now - predict_time).seconds()[01;36m[K)[m[K;
+      |                                                                                         [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:162:28:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  162 |             predict_time = [01;31m[Kpredict_time_now[m[K;
+      |                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+   91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback(const ThreeSonarDepth&) const[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:223:38:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  223 |         measure_time_now = this->now([01;31m[K)[m[K;
+      |                                      [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+   91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:228:23:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  228 |         [01;31m[Ksurge.set_dist(msg.distance_1 / 1000)[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:75:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_dist(double)[m[K’
+   75 |     double [01;36m[Kset_dist[m[K(double val);
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:229:23:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  229 |         [01;31m[Kheave.set_dist(msg.depth)[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:75:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_dist(double)[m[K’
+   75 |     double [01;36m[Kset_dist[m[K(double val);
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:230:22:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  230 |         [01;31m[Ksway.set_dist(msg.distance_2 / 1000)[m[K;
+      |         [01;31m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:75:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_dist(double)[m[K’
+   75 |     double [01;36m[Kset_dist[m[K(double val);
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:249:28:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  249 |             measure_time = [01;31m[Kmeasure_time_now[m[K;
+      |                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+   91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:250:28:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  250 |             predict_time = [01;31m[Kmeasure_time_now[m[K;
+      |                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+   91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:251:19:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::start[m[K’ in read-only object
+  251 |             [01;31m[Kstart = true[m[K;
+      |             [01;31m[K~~~~~~^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:267:40:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  267 |             surge_dist = [01;31m[Ksurge.set_dist(msg.distance_1 / 1000)[m[K;
+      |                          [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:75:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_dist(double)[m[K’
+   75 |     double [01;36m[Kset_dist[m[K(double val);
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:267:24:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::surge_dist[m[K’ in read-only object
+  267 |             [01;31m[Ksurge_dist = surge.set_dist(msg.distance_1 / 1000)[m[K;
+      |             [01;31m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:268:38:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  268 |             sway_dist = [01;31m[Ksway.set_dist(msg.distance_2 / 1000)[m[K;
+      |                         [01;31m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:75:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_dist(double)[m[K’
+   75 |     double [01;36m[Kset_dist[m[K(double val);
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:268:23:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::sway_dist[m[K’ in read-only object
+  268 |             [01;31m[Ksway_dist = sway.set_dist(msg.distance_2 / 1000)[m[K;
+      |             [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:269:40:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  269 |             heave_dist = [01;31m[Kheave.set_dist(msg.depth)[m[K;
+      |                          [01;31m[K~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:75:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_dist(double)[m[K’
+   75 |     double [01;36m[Kset_dist[m[K(double val);
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:269:24:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::heave_dist[m[K’ in read-only object
+  269 |             [01;31m[Kheave_dist = heave.set_dist(msg.depth)[m[K;
+      |             [01;31m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:270:40:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  270 |             diff_surge = [01;31m[Ksurge.residual()[m[K;
+      |                          [01;31m[K~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:71:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::residual()[m[K’
+   71 |     double [01;36m[Kresidual[m[K();
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:270:24:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::diff_surge[m[K’ in read-only object
+  270 |             [01;31m[Kdiff_surge = surge.residual()[m[K;
+      |             [01;31m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:271:38:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  271 |             diff_sway = [01;31m[Ksway.residual()[m[K;
+      |                         [01;31m[K~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:71:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::residual()[m[K’
+   71 |     double [01;36m[Kresidual[m[K();
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:271:23:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::diff_sway[m[K’ in read-only object
+  271 |             [01;31m[Kdiff_sway = sway.residual()[m[K;
+      |             [01;31m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:272:40:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  272 |             diff_heave = [01;31m[Kheave.residual()[m[K;
+      |                          [01;31m[K~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:71:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::residual()[m[K’
+   71 |     double [01;36m[Kresidual[m[K();
+      |            [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:272:24:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::diff_heave[m[K’ in read-only object
+  272 |             [01;31m[Kdiff_heave = heave.residual()[m[K;
+      |             [01;31m[K~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:298:30:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  298 |                 [01;31m[Ksurge.set_vel((measure_time_now - measure_time).seconds())[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:76:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_vel(double)[m[K’
+   76 |     double [01;36m[Kset_vel[m[K(double dt);
+      |            [01;36m[K^~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:299:45:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  299 |                 surge_state_u = [01;31m[Ksurge.update()[m[K;
+      |                                 [01;31m[K~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:68:21:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::update()[m[K’
+   68 |     Eigen::Vector2f [01;36m[Kupdate[m[K(), get_state();
+      |                     [01;36m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:299:46:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  299 |                 surge_state_u = surge.update([01;31m[K)[m[K;
+      |                                              [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:299:46:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  299 |                 surge_state_u = surge.update([01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:299:46:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  299 |                 surge_state_u = surge.update([01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:301:22:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Kkf_node::bias[m[K’ in read-only object
+  301 |                 {[01;31m[Kbias=false[m[K;}
+      |                  [01;31m[K~~~~^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:305:48:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  305 |                 surge_state_u = [01;31m[Ksurge.get_state()[m[K;
+      |                                 [01;31m[K~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:68:31:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::get_state()[m[K’
+   68 |     Eigen::Vector2f update(), [01;36m[Kget_state[m[K();
+      |                               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:305:49:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  305 |                 surge_state_u = surge.get_state([01;31m[K)[m[K;
+      |                                                 [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:305:49:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  305 |                 surge_state_u = surge.get_state([01;36m[K)[m[K;
+      |                                                 [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:305:49:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  305 |                 surge_state_u = surge.get_state([01;36m[K)[m[K;
+      |                                                 [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:309:29:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  309 |                 [01;31m[Ksway.set_vel((measure_time_now - measure_time).seconds())[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:76:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_vel(double)[m[K’
+   76 |     double [01;36m[Kset_vel[m[K(double dt);
+      |            [01;36m[K^~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:310:43:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  310 |                 sway_state_u = [01;31m[Ksway.update()[m[K;
+      |                                [01;31m[K~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:68:21:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::update()[m[K’
+   68 |     Eigen::Vector2f [01;36m[Kupdate[m[K(), get_state();
+      |                     [01;36m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:310:44:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  310 |                 sway_state_u = sway.update([01;31m[K)[m[K;
+      |                                            [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:310:44:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  310 |                 sway_state_u = sway.update([01;36m[K)[m[K;
+      |                                            [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:310:44:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  310 |                 sway_state_u = sway.update([01;36m[K)[m[K;
+      |                                            [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:314:46:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  314 |                 sway_state_u = [01;31m[Ksway.get_state()[m[K;
+      |                                [01;31m[K~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:68:31:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::get_state()[m[K’
+   68 |     Eigen::Vector2f update(), [01;36m[Kget_state[m[K();
+      |                               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:314:47:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  314 |                 sway_state_u = sway.get_state([01;31m[K)[m[K;
+      |                                               [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:314:47:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  314 |                 sway_state_u = sway.get_state([01;36m[K)[m[K;
+      |                                               [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:314:47:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  314 |                 sway_state_u = sway.get_state([01;36m[K)[m[K;
+      |                                               [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:318:30:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  318 |                 [01;31m[Kheave.set_vel((measure_time_now - measure_time).seconds())[m[K;
+      |                 [01;31m[K~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:76:12:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kdouble kf_v3::set_vel(double)[m[K’
+   76 |     double [01;36m[Kset_vel[m[K(double dt);
+      |            [01;36m[K^~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:319:45:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  319 |                 heave_state_u = [01;31m[Kheave.update()[m[K;
+      |                                 [01;31m[K~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:68:21:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::update()[m[K’
+   68 |     Eigen::Vector2f [01;36m[Kupdate[m[K(), get_state();
+      |                     [01;36m[K^~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:319:46:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  319 |                 heave_state_u = heave.update([01;31m[K)[m[K;
+      |                                              [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:319:46:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  319 |                 heave_state_u = heave.update([01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:319:46:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  319 |                 heave_state_u = heave.update([01;36m[K)[m[K;
+      |                                              [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:321:48:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  321 |                 heave_state_u = [01;31m[Kheave.get_state()[m[K;
+      |                                 [01;31m[K~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:68:31:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[KEigen::Vector2f kf_v3::get_state()[m[K’
+   68 |     Eigen::Vector2f update(), [01;36m[Kget_state[m[K();
+      |                               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:321:49:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kconst Vector2f[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>[m[K’} and ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’})
+  321 |                 heave_state_u = heave.get_state([01;31m[K)[m[K;
+      |                                                 [01;31m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  223 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const DenseBase<OtherDerived>& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:223:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  236 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const EigenBase<OtherDerived> &other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:236:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::ReturnByValue<OtherDerived>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  243 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const ReturnByValue<OtherDerived>& func)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:243:33:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:321:49:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::ReturnByValue<Derived>[m[K’
+  321 |                 heave_state_u = heave.get_state([01;36m[K)[m[K;
+      |                                                 [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class OtherDerived> Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::RotationBase<OtherDerived, Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::ColsAtCompileTime>&) [with OtherDerived = OtherDerived; _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’
+  438 |     Matrix& [01;36m[Koperator[m[K=(const RotationBase<OtherDerived,ColsAtCompileTime>& r);
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:438:13:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:321:49:[m[K [01;36m[Knote: [m[K  ‘[01m[KEigen::Vector2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 1>[m[K’} is not derived from ‘[01m[Kconst Eigen::RotationBase<OtherDerived, 1>[m[K’
+  321 |                 heave_state_u = heave.get_state([01;36m[K)[m[K;
+      |                                                 [01;36m[K^[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(const Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  206 |     EIGEN_STRONG_INLINE Matrix& [01;36m[Koperator[m[K=(const Matrix& other)
+      |                                 [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:206:33:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>& Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::operator=(Eigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>&&) [with _Scalar = float; int _Rows = 2; int _Cols = 1; int _Options = 0; int _MaxRows = 2; int _MaxCols = 1][m[K’ (near match)
+  279 |     Matrix& [01;36m[Koperator[m[K=(Matrix&& other) EIGEN_NOEXCEPT_IF(std::is_nothrow_move_assignable<Scalar>::value)
+      |             [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:279:13:[m[K [01;36m[Knote: [m[K  passing ‘[01m[Kconst Vector2f*[m[K’ {aka ‘[01m[Kconst Eigen::Matrix<float, 2, 1>*[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:324:45:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst _stamp_type[m[K’ {aka ‘[01m[Kconst builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  324 |             k_vals.header.stamp= msg.header.[01;31m[Kstamp[m[K;
+      |                                             [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:32:8:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kconstexpr builtin_interfaces::msg::Time_<std::allocator<void> >& builtin_interfaces::msg::Time_<std::allocator<void> >::operator=(const builtin_interfaces::msg::Time_<std::allocator<void> >&)[m[K’
+   32 | struct [01;36m[KTime_[m[K
+      |        [01;36m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:325:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::KfValues_<std::allocator<void> >::k_d_1[m[K’ in read-only object
+  325 |             [01;31m[Kk_vals.k_d_1=surge.K(0,0)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:326:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::KfValues_<std::allocator<void> >::k_v_1[m[K’ in read-only object
+  326 |             [01;31m[Kk_vals.k_v_1=surge.K(1,1)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:327:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::KfValues_<std::allocator<void> >::k_d_2[m[K’ in read-only object
+  327 |             [01;31m[Kk_vals.k_d_2=sway.K(0,0)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:328:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::KfValues_<std::allocator<void> >::k_v_2[m[K’ in read-only object
+  328 |             [01;31m[Kk_vals.k_v_2=sway.K(1,1)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:329:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::KfValues_<std::allocator<void> >::k_d_3[m[K’ in read-only object
+  329 |             [01;31m[Kk_vals.k_d_3=heave.K(0,0)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:330:25:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::KfValues_<std::allocator<void> >::k_v_3[m[K’ in read-only object
+  330 |             [01;31m[Kk_vals.k_v_3=heave.K(1,1)[m[K;
+      |             [01;31m[K~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:335:42:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst _stamp_type[m[K’ {aka ‘[01m[Kconst builtin_interfaces::msg::Time_<std::allocator<void> >[m[K’} as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  335 |             c1.header.stamp = msg.header.[01;31m[Kstamp[m[K;
+      |                                          [01;31m[K^~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.hpp:7[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:32:8:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kconstexpr builtin_interfaces::msg::Time_<std::allocator<void> >& builtin_interfaces::msg::Time_<std::allocator<void> >::operator=(const builtin_interfaces::msg::Time_<std::allocator<void> >&)[m[K’
+   32 | struct [01;36m[KTime_[m[K
+      |        [01;36m[K^~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:336:29:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::ConfScal_<std::allocator<void> >::confidence_1[m[K’ in read-only object
+  336 |             [01;31m[Kc1.confidence_1 = e1*100[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:338:29:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::ConfScal_<std::allocator<void> >::confidence_2[m[K’ in read-only object
+  338 |             [01;31m[Kc1.confidence_2 = e2*100[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:340:29:[m[K [01;31m[Kerror: [m[Kassignment of member ‘[01m[Ksonar_msgs::msg::ConfScal_<std::allocator<void> >::confidence_3[m[K’ in read-only object
+  340 |             [01;31m[Kc1.confidence_3 = e3*100[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:352:26:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  352 |             measure_time=[01;31m[Kmeasure_time_now[m[K;
+      |                          [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+   91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:393:28:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst rclcpp::Time[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  393 |             measure_time = [01;31m[Kmeasure_time_now[m[K;
+      |                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/timer.hpp:27[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:30[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/time.hpp:91:3:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Krclcpp::Time& rclcpp::Time::operator=(const rclcpp::Time&)[m[K’
+   91 |   [01;36m[Koperator[m[K=(const Time & rhs);
+      |   [01;36m[K^~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:394:32:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  394 |             [01;31m[Ksurge.set_prev_dist()[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:77:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid kf_v3::set_prev_dist()[m[K’
+   77 |     void [01;36m[Kset_prev_dist[m[K();
+      |          [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:395:31:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  395 |             [01;31m[Ksway.set_prev_dist()[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:77:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid kf_v3::set_prev_dist()[m[K’
+   77 |     void [01;36m[Kset_prev_dist[m[K();
+      |          [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:396:32:[m[K [01;31m[Kerror: [m[Kpassing ‘[01m[Kconst kf_v3[m[K’ as ‘[01m[Kthis[m[K’ argument discards qualifiers [[01;31m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-fpermissive-fpermissive]8;;[m[K]
+  396 |             [01;31m[Kheave.set_prev_dist()[m[K;
+      |             [01;31m[K~~~~~~~~~~~~~~~~~~~^~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:77:10:[m[K [01;36m[Knote: [m[K  in call to ‘[01m[Kvoid kf_v3::set_prev_dist()[m[K’
+   77 |     void [01;36m[Kset_prev_dist[m[K();
+      |          [01;36m[K^~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
