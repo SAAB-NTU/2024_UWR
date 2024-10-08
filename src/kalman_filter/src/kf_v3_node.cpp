@@ -136,6 +136,7 @@ public:
     
     {
         
+        
         try {
         bef_rotate<<abs(imu_msg.vector.x),abs(imu_msg.vector.z),1;
         aft_rotate=rot_matrix*bef_rotate;
@@ -159,6 +160,7 @@ public:
         }
 
         if (start) {
+             RCLCPP_INFO(this->get_logger(),"Hi");
             surge_accel = surge.set_accel(aft_rotate(0));
             sway_accel = sway.set_accel(aft_rotate(1));
             heave_accel = heave.set_accel(imu_msg.vector.z);
@@ -315,7 +317,7 @@ public:
         //static tf2_ros::Buffer tfBuffer;
     //static tf2_ros::TransformBroadcaster tf_broadcaster;
     //static tf2_ros::StaticTransformBroadcaster static_broadcaster;
-    RCLCPP_INFO(this->get_logger(),"Hi");
+   
 
     
     try {
@@ -324,7 +326,8 @@ public:
         //surge.set_dist(msg.distance_1 / 1000);
         //heave.set_dist(msg.depth);
         //sway.set_dist(msg.distance_2 / 1000);
-        if (!start && rot_bias) {
+        //if (!start && rot_bias) {
+        if (!start) {
         surge.set_dist(msg.distance_1 / 1000);
         heave.set_dist(msg.depth);
         sway.set_dist(msg.distance_2 / 1000);
