@@ -120,15 +120,17 @@ public:
         writer_ = std::make_shared<rosbag2_cpp::Writer>();
         writer_->open(storage_options_, converter_options_);
 
+        expected_difference=0.1;
+
         RCLCPP_INFO(this->get_logger(), "Class successfully constructed, waiting for data");
 
     }
 
-    void sonar_callback2(const sonar_msgs::msg::ThreeSonarDepth& msg)
-{
-    RCLCPP_INFO(this->get_logger(), "Callback triggered!");
+  //  void sonar_callback2(const sonar_msgs::msg::ThreeSonarDepth& msg)
+//{
+ //   RCLCPP_INFO(this->get_logger(), "Callback triggered!");
     // Your code here
-}
+//}
 
     void imu_callback2(const geometry_msgs::msg::Vector3Stamped& imu_msg) 
     
@@ -391,7 +393,7 @@ public:
 
             confidence_pub->publish(confidence_msg);
             scalar_pub->publish(scalar_msg);*/
-            double e1,e2,e3;
+            
             if (std::abs(diff_surge) < 0.1) {
                 surge.set_vel((measure_time_now - measure_time).seconds());
                 surge_state_u = surge.update();
@@ -427,16 +429,20 @@ public:
             k_vals.k_d_3=heave.K(0,0);    
             k_vals.k_v_3=heave.K(1,1);
 
-            e1=std::abs(1-(std::abs(diff_surge))/0.1);
-            e2=std::abs(1-(std::abs(diff_sway))/0.1);
-            e3=std::abs(1-(std::abs(diff_heave))/0.1);
+            //e1=std::abs(1-(std::abs(diff_surge))/0.1);
+            //e2=std::abs(1-(std::abs(diff_sway))/0.1);
+            //e3=std::abs(1-(std::abs(diff_heave))/0.1);
+
+            auto e1=surge.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
+            auto e2=sway.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
+            auto e3=heave.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
             c1.header.stamp = msg.header.stamp;
-            c1.confidence_1 = e1*100;
-            //c1.scalar_1 = surge.moving_avg.output.second;
-            c1.confidence_2 = e2*100;
-            //c1.scalar_2 = sway.moving_avg.output.second;
-            c1.confidence_3 = e3*100;
-            //c1.scalar_3 = heave.moving_avg.output.second;
+            c1.confidence_1 = e1.first;
+            c1.scalar_1 = e1.second;
+            c1.confidence_2 = e2.first;
+            c1.scalar_2 = e2.second;
+            c1.confidence_3 = e3.first;
+            c1.scalar_3 = e3.second;
             //ROS_INFO("Confidence: %f", e1*100);
             //ROS_INFO("Scalar: %f", surge.moving_avg.output.second);
             RCLCPP_INFO(this->get_logger(),"Distance: %f", msg.distance_1 / 1000);
@@ -471,6 +477,8 @@ public:
             writer_->write(vel_msg,"SONAR_vel", measure_time_now);
             writer_->write(msg,"SONAR_raw", measure_time_now);
             writer_->write(pose_msg, "Pose",measure_time_now);
+            writer_->write(c1,"Confidence_SONAR",measure_time_now);
+            writer_->write(k_vals,"K_values",measure_time_now);
 
 
             /*
@@ -483,8 +491,9 @@ public:
 
 
             pose_pub->publish(pose_msg);
+            confidence_pub->publish(c1);
 
-            
+        
             //pub_transform->publish(transformStamped);
 
             k_vals_pub->publish(k_vals);
@@ -511,6 +520,7 @@ private:
     rclcpp::Subscription<geometry_msgs::msg::Vector3Stamped>::SharedPtr imu_subscriber_;
 
     int sample_size;
+    double expected_difference;
     
     rclcpp::Time current_time;
     rclcpp::Time predict_time, measure_time,predict_time_now,measure_time_now;

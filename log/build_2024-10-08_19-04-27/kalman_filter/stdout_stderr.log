@@ -1,0 +1,29 @@
+[35m[1mConsolidate compiler generated dependencies of target kf[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf.cpp.o[0m
+[ 60%] [32mBuilding CXX object CMakeFiles/kf.dir/src/sonar_processing.cpp.o[0m
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:29:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid SonarProcess::setSampleSize(int)[m[K’
+   29 | void [01;31m[KSonarProcess[m[K::setSampleSize(int sample_size) {
+      |      [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:11:6:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid SonarProcess::setSampleSize(int)[m[K’ previously defined here
+   11 | void [01;36m[KSonarProcess[m[K::setSampleSize(int sample_size) {
+      |      [01;36m[K^~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kdouble SonarProcess::MovingAvg(const float&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:56:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   56 |     if ([01;35m[Kmoving_avg_window.size() > window_size[m[K) {
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:60:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+   60 |     if ([01;35m[Kmoving_avg_window.size() < window_size[m[K) {
+      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:67:18:[m[K [01;31m[Kerror: [m[K‘[01m[KCalculateConfidenceLevels[m[K’ was not declared in this scope; did you mean ‘[01m[KcalculateConfidenceLevels[m[K’?
+   67 |         output = [01;31m[KCalculateConfidenceLevels[m[K(output.second, 6.0);
+      |                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                  [32m[KcalculateConfidenceLevels[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:118: CMakeFiles/kf.dir/src/sonar_processing.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:129:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  129 |     void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

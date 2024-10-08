@@ -1,66 +1,68 @@
 #include "../include/sonar_processing.h"
+#include "../include/ConfidenceLevel.h"
+#include "../include/ConfidenceLevelVariation2.h"
 #include <bits/stdc++.h>
 #include <armadillo>
 
-SonarProcess::SonarProcess(const int& window_size) : window_size{window_size}, confidence_window_size{10} {}
+
+SonarProcess::SonarProcess(const int& window_size) 
+: window_size{window_size}, confidence_window_size{10} {}
 
 void SonarProcess::setSampleSize(int sample_size) {
     window_size = sample_size;
 }
 
-double SonarProcess::adjustScalar(double currentConfidence, double targetConfidence, double initialX, double adjustmentFactor, double maxScalar) {
-    double x = initialX;
-    double error = targetConfidence - currentConfidence;
-
-    // Use a smaller threshold for more gradual changes
-    if (std::abs(error) > 5) {
-        x += std::copysign(adjustmentFactor, error);
-    }
-    else
-    {
-        x-=adjustmentFactor;
-    }
-
-    x = std::min(x, maxScalar);
-    x = std::max(x, 1.0);
-
-    return x;
+// Getter for `output`
+const std::pair<double, double>& SonarProcess::getOutput() const {
+    return output;
 }
 
+// Getter for `window_size`
+int SonarProcess::getWindowSize() const {
+    return window_size;
+}
 
-std::pair<double, double> SonarProcess::CalculateConfidenceLevels(double initialX, double maxScalar) {
-    double x = initialX;
+const std::deque<double>& SonarProcess::getMovingAvgWindow() const {
+    return moving_avg_window;
+}
+
+//void SonarProcess::setSampleSize(int sample_size) {
+//    window_size = sample_size;
+//}
+
+std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double expectedDifference) {
+    double fixedStdDev = expectedDifference / 3.0;
+    
+    // Convert deque to vector for Armadillo compatibility
     std::vector<double> contiguousVector(moving_avg_window.begin(), moving_avg_window.end());
     arma::vec armaWindow(contiguousVector.data(), contiguousVector.size());
 
     double meanSequence = arma::mean(armaWindow);
     double lastNum = moving_avg_window.back();
-    double difference = std::abs(lastNum - meanSequence);//Max theoretically possible distance 0.1
+    double difference = std::abs(lastNum - meanSequence);
 
-    double stdDev = arma::stddev(armaWindow);
-    //double mad = arma::mean(arma::abs(armaWindow - meanSequence));
-    double adjustedStdDev = stdDev * x;
-    double sigmasAway = adjustedStdDev != 0 ? difference / adjustedStdDev : 0;
-    double confidencePercentage = sigmasAway <= 1.2 ? 100 - (sigmasAway /1.2 * 100) :0;
-    //confidencePercentage = std::max(0.0, std::min(100.0, confidencePercentage));
-
-    x = adjustScalar(confidencePercentage, 100, x, 0.01, maxScalar);  // Reduced adjustment factor for gradual changes
+    double sigmasAway = fixedStdDev != 0 ? std::abs(difference / fixedStdDev) : 0;
+    double confidencePercentage = sigmasAway <= 3 ? 100 - (std::abs(sigmasAway) / 3 * 100) : 0;
+    confidencePercentage = std::max(0.0, std::min(100.0, confidencePercentage));
 
     output.first = confidencePercentage;
-    output.second = x;
-    debug.first=sigmasAway;
-    debug.second=adjustedStdDev;
+    output.second = sigmasAway; 
 
     return output;
 }
 
 double SonarProcess::MovingAvg(const float& raw_measurement) {
-    if (moving_avg_window.size() == window_size) {
+    moving_avg_window.push_back(raw_measurement);
+    if (moving_avg_window.size() > window_size) {
         moving_avg_window.pop_front();
     }
-    moving_avg_window.push_back(raw_measurement);
 
-   // output = CalculateConfidenceLevels(1, 1.5);  // Pass the current scalar value
+    if (moving_avg_window.size() < window_size) {
+        return 0.0;
+    }
+
+    output = CalculateConfidenceLevelsVariation2(0.006); 
+ 
 
     return std::accumulate(moving_avg_window.begin(), moving_avg_window.end(), 0.0) / moving_avg_window.size();
 }

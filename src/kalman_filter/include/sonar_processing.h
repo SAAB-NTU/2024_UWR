@@ -16,21 +16,29 @@
 class SonarProcess {
 public:
     SonarProcess(const int& window_size);
+    
+    
+    void setSampleSize(int sample_size);
     double MovingAvg(const float& raw_measurement);
     double SequenceBeginning();
     double SequenceEnd();
-    void setSampleSize(int sample_size);
+    std::pair<double, double> CalculateConfidenceLevelsVariation2(double expectedDifference);
 
-    int window_size;
-    std::pair<double, double> output,debug;
+   
+    // Getter for private members
+    const std::pair<double, double>& getOutput() const;
+    int getWindowSize() const;
+
+    // Getter for moving_avg_window (from the previous update)
+    const std::deque<double>& getMovingAvgWindow() const;
 
 private:
+    int window_size;
     int confidence_window_size;
     std::deque<double> moving_avg_window;
-    std::deque<double> confidence_window;
+    std::pair<double, double> output;
 
-    std::pair<double, double> CalculateConfidenceLevels(double initialX, double maxScalar);
-    double adjustScalar(double currentConfidence, double targetConfidence, double initialX, double adjustmentFactor, double maxScalar);
+
 };
 
 #endif // SONAR_PROCESSING

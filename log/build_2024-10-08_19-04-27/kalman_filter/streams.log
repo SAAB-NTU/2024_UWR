@@ -1,0 +1,31 @@
+[0.015s] Invoking command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter': AMENT_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
+[0.072s] [35m[1mConsolidate compiler generated dependencies of target kf[0m
+[0.109s] [ 20%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[0.110s] [ 40%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf.cpp.o[0m
+[0.111s] [ 60%] [32mBuilding CXX object CMakeFiles/kf.dir/src/sonar_processing.cpp.o[0m
+[4.364s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:29:6:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[Kvoid SonarProcess::setSampleSize(int)[m[K’
+[4.364s]    29 | void [01;31m[KSonarProcess[m[K::setSampleSize(int sample_size) {
+[4.365s]       |      [01;31m[K^~~~~~~~~~~~[m[K
+[4.365s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:11:6:[m[K [01;36m[Knote: [m[K‘[01m[Kvoid SonarProcess::setSampleSize(int)[m[K’ previously defined here
+[4.365s]    11 | void [01;36m[KSonarProcess[m[K::setSampleSize(int sample_size) {
+[4.365s]       |      [01;36m[K^~~~~~~~~~~~[m[K
+[4.367s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kdouble SonarProcess::MovingAvg(const float&)[m[K’:
+[4.367s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:56:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.367s]    56 |     if ([01;35m[Kmoving_avg_window.size() > window_size[m[K) {
+[4.367s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[4.367s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:60:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[4.367s]    60 |     if ([01;35m[Kmoving_avg_window.size() < window_size[m[K) {
+[4.367s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[4.375s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:67:18:[m[K [01;31m[Kerror: [m[K‘[01m[KCalculateConfidenceLevels[m[K’ was not declared in this scope; did you mean ‘[01m[KcalculateConfidenceLevels[m[K’?
+[4.375s]    67 |         output = [01;31m[KCalculateConfidenceLevels[m[K(output.second, 6.0);
+[4.375s]       |                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.375s]       |                  [32m[KcalculateConfidenceLevels[m[K
+[4.835s] gmake[2]: *** [CMakeFiles/kf.dir/build.make:118: CMakeFiles/kf.dir/src/sonar_processing.cpp.o] Error 1
+[4.835s] gmake[2]: *** Waiting for unfinished jobs....
+[6.871s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[6.871s] [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:129:66:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.871s]   129 |     void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+[6.872s]       |                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[15.968s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+[15.968s] gmake: *** [Makefile:146: all] Error 2
+[15.970s] Invoked command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter' returned '2': AMENT_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
