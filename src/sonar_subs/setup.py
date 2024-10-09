@@ -19,7 +19,7 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': ['sonar_reader = sonar_subs.read_sonar:main2','sync_readings=sonar_subs.sync_ros2:main',
+        'console_scripts': ['sonar_reader = sonar_subs.read_sonar:main2','sync_readings=sonar_subs.sync_ros2:main','kf_sync=sonar_subs.sync_ros2_kf:main',
         ],
     },
 )

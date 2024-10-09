@@ -76,7 +76,7 @@ public:
         this->declare_parameter<std::string>("sonar_topic", "/sonar");
         this->declare_parameter<double>("angle", 0.0);
         this->declare_parameter<bool>("without_measurement", false);
-        this->declare_parameter<bool>("bias_override", false);
+        this->declare_parameter<bool>("bias_override", true);
 
         // Get parameters
         this->get_parameter("imu_topic", imu_param);
@@ -120,7 +120,7 @@ public:
         writer_ = std::make_shared<rosbag2_cpp::Writer>();
         writer_->open(storage_options_, converter_options_);
 
-        expected_difference=0.1;
+        expected_difference=0.05;
 
         RCLCPP_INFO(this->get_logger(), "Class successfully constructed, waiting for data");
 
@@ -160,7 +160,7 @@ public:
         }
 
         if (start) {
-             RCLCPP_INFO(this->get_logger(),"Hi");
+             //RCLCPP_INFO(this->get_logger(),"Hi");
             surge_accel = surge.set_accel(aft_rotate(0));
             sway_accel = sway.set_accel(aft_rotate(1));
             heave_accel = heave.set_accel(imu_msg.vector.z);
@@ -309,7 +309,7 @@ public:
     // }
         
 
-    //     }
+    // }
 
     void sonar_callback(const sonar_msgs::msg::ThreeSonarDepth& msg) 
     
@@ -321,38 +321,40 @@ public:
 
     
     try {
-	
+        //RCLCPP_INFO(this->get_logger(),"%s",start.c_str());
         measure_time_now = this->now();
         //surge.set_dist(msg.distance_1 / 1000);
         //heave.set_dist(msg.depth);
         //sway.set_dist(msg.distance_2 / 1000);
         //if (!start && rot_bias) {
-        if (!start) {
-        surge.set_dist(msg.distance_1 / 1000);
-        heave.set_dist(msg.depth);
-        sway.set_dist(msg.distance_2 / 1000);
-            /*if (msg.confidence_1 == 100.0) {
-                //surge.set_dist_init(msg.distance_1 / 1000);
-                world_to_inertial_transform.transform.translation.x = msg.distance_1 / 1000;
+        if (!start) 
+        {
+        surge.set_dist_init(msg.distance_1 / 1000);
+        sway.set_dist_init(msg.distance_2 /1000);
+        heave.set_dist_init(msg.depth / 1000);
+            // /*if (msg.confidence_1 == 100.0) {
+            //     //surge.set_dist_init(msg.distance_1 / 1000);
+            //     world_to_inertial_transform.transform.translation.x = msg.distance_1 / 1000;
                 
     
-            }
-            if (msg.confidence_2 == 100.0) {
-                //sway.set_dist_init(msg.distance_2 / 1000);
-                world_to_inertial_transform.transform.translation.y = msg.distance_2 / 1000;
-            } */
-            //heave.set_dist_init(msg.depth);
-            //world_to_inertial_transform.transform.translation.z = msg.depth;
-            //ROS_INFO("Child: %s", world_to_inertial_transform.child_frame_id.c_str());
-            //world_to_inertial_transform.header.stamp=measure_time_now;
-            //transformStamped.header.stamp=measure_time_now;
+            // }
+            // if (msg.confidence_2 == 100.0) {
+            //     //sway.set_dist_init(msg.distance_2 / 1000);
+            //     world_to_inertial_transform.transform.translation.y = msg.distance_2 / 1000;
+            // } */
+            // //heave.set_dist_init(msg.depth);
+            // //world_to_inertial_transform.transform.translation.z = msg.depth;
+            // //ROS_INFO("Child: %s", world_to_inertial_transform.child_frame_id.c_str());
+            // //world_to_inertial_transform.header.stamp=measure_time_now;
+            // //transformStamped.header.stamp=measure_time_now;
             
-            //tf_broadcaster.sendTransform(transformStamped);
-            //static_broadcaster.sendTransform(world_to_inertial_transform);
+            // //tf_broadcaster.sendTransform(transformStamped);
+            // //static_broadcaster.sendTransform(world_to_inertial_transform);
             measure_time = measure_time_now;
             predict_time = measure_time_now;
             start = true;
-            
+            RCLCPP_INFO(this->get_logger(), "%f",msg.distance_2/1000);
+            RCLCPP_INFO(this->get_logger(), "%f",sway.get_state()(0));
             RCLCPP_INFO(this->get_logger(), "Measurements started");
         } else {
 
@@ -397,7 +399,18 @@ public:
             confidence_pub->publish(confidence_msg);
             scalar_pub->publish(scalar_msg);*/
             
-            if (std::abs(diff_surge) < 0.1) {
+            auto e1=surge.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
+            auto e2=sway.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
+            auto e3=heave.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
+            c1.header.stamp = msg.header.stamp;
+            c1.confidence_1 = e1.first;
+            c1.scalar_1 = e1.second;
+            c1.confidence_2 = e2.first;
+            c1.scalar_2 = e2.second;
+            c1.confidence_3 = e3.first;
+            c1.scalar_3 = e3.second;
+            
+            if (e1.first> 50) {
                 surge.set_vel((measure_time_now - measure_time).seconds());
                 surge_state_u = surge.update();
                 if(override==true)
@@ -408,7 +421,7 @@ public:
                 surge_state_u = surge.get_state();
             }
                 //Change < to >, 0.4 to 0.1 perhaps, avoid the use of m2 
-            if (std::abs(diff_sway) < 0.1) {
+            if (e2.first>50) {
                 sway.set_vel((measure_time_now - measure_time).seconds());
                 sway_state_u = sway.update();
                 //m2=measure_time_now;
@@ -417,7 +430,7 @@ public:
                 sway_state_u = sway.get_state();
             }
 
-            if (std::abs(diff_heave) < 0.1) {
+            if (e3.first>50) {
                 heave.set_vel((measure_time_now - measure_time).seconds());
                 heave_state_u = heave.update();
             } else {
@@ -436,20 +449,11 @@ public:
             //e2=std::abs(1-(std::abs(diff_sway))/0.1);
             //e3=std::abs(1-(std::abs(diff_heave))/0.1);
 
-            auto e1=surge.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
-            auto e2=sway.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
-            auto e3=heave.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
-            c1.header.stamp = msg.header.stamp;
-            c1.confidence_1 = e1.first;
-            c1.scalar_1 = e1.second;
-            c1.confidence_2 = e2.first;
-            c1.scalar_2 = e2.second;
-            c1.confidence_3 = e3.first;
-            c1.scalar_3 = e3.second;
+
             //ROS_INFO("Confidence: %f", e1*100);
             //ROS_INFO("Scalar: %f", surge.moving_avg.output.second);
-            RCLCPP_INFO(this->get_logger(),"Distance: %f", msg.distance_1 / 1000);
-            RCLCPP_INFO(this->get_logger(),"Timestamp: %f",(measure_time_now - measure_time).seconds());
+            RCLCPP_INFO(this->get_logger(),"Distance: %f", sway_state_u(0));
+            //RCLCPP_INFO(this->get_logger(),"Timestamp: %f",(measure_time_now - measure_time).seconds());
             geometry_msgs::msg::PoseStamped pose_msg;
             pose_msg.header.stamp = msg.header.stamp;
             pose_msg.pose.position.x = surge_state_u(0);

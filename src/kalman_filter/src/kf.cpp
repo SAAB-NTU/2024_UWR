@@ -32,7 +32,7 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
 {
     x << 0,0;
     z << 0,0;
-    H << 0,0,0,1;
+    H << 1,0,0,1;
     P << 1,0,0,1;
     Q << 0.0001,0,0,0.0001;
     R << 100,0,0,100;

@@ -87,7 +87,7 @@ class RosbagSync(Node):
         img=self.image_bridge.imgmsg_to_cv2(data4)
         img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         #cv2.imwrite("/home/uwr/Desktop/output/"+str(timestamp.sec + timestamp.nanosec * 1e-9)+".png",img)
-        cv2.imwrite("/home/uwr/Desktop/output/"+f"{self.counter:03d}"+".png",img)
+        cv2.imwrite("/home/uwr/Desktop/output/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
         self.counter+=1
         # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data)

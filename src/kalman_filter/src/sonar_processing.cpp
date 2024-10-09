@@ -33,11 +33,8 @@ const std::deque<double>& SonarProcess::getMovingAvgWindow() const {
 std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double expectedDifference) {
     double fixedStdDev = expectedDifference / 3.0;
     
-    // Convert deque to vector for Armadillo compatibility
-    std::vector<double> contiguousVector(moving_avg_window.begin(), moving_avg_window.end());
-    arma::vec armaWindow(contiguousVector.data(), contiguousVector.size());
+    
 
-    double meanSequence = arma::mean(armaWindow);
     double lastNum = moving_avg_window.back();
     double difference = std::abs(lastNum - meanSequence);
 
@@ -51,6 +48,7 @@ std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(doub
     return output;
 }
 
+
 double SonarProcess::MovingAvg(const float& raw_measurement) {
     moving_avg_window.push_back(raw_measurement);
     if (moving_avg_window.size() > window_size) {
@@ -60,12 +58,21 @@ double SonarProcess::MovingAvg(const float& raw_measurement) {
     if (moving_avg_window.size() < window_size) {
         return 0.0;
     }
+    
+    std::vector<double> contiguousVector(moving_avg_window.begin(), moving_avg_window.end());
+    arma::vec armaWindow(contiguousVector.data(), contiguousVector.size());
 
-    output = CalculateConfidenceLevelsVariation2(0.006); 
+    meanSequence = arma::mean(armaWindow);
+    
+    return meanSequence;
+    
+    }
+
+//    output = CalculateConfidenceLevelsVariation2(0.006); 
  
 
-    return std::accumulate(moving_avg_window.begin(), moving_avg_window.end(), 0.0) / moving_avg_window.size();
-}
+//    return std::accumulate(moving_avg_window.begin(), moving_avg_window.end(), 0.0) / moving_avg_window.size();
+//}
 
 double SonarProcess::SequenceBeginning() {
     return moving_avg_window.front();
