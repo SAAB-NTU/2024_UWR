@@ -1,0 +1,27 @@
+[35m[1mConsolidate compiler generated dependencies of target kf_v4[0m
+[ 10%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf.cpp.o[0m
+[ 20%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[ 30%] [32mBuilding CXX object CMakeFiles/kf_v4.dir/src/kf_v4_node.cpp.o[0m
+[ 40%] [32mBuilding CXX object CMakeFiles/kf_v4.dir/src/kf_v4.cpp.o[0m
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v4.cpp:[m[K In member function ‘[01m[Kdouble kf_v4::set_jerk(double)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v4.cpp:119:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  119 | double kf_v4::set_jerk([01;35m[Kdouble dt[m[K)
+      |                        [01;35m[K~~~~~~~^~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:136:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  136 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v4_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v4_node.cpp:137:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  137 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v4_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(const Imu&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v4_node.cpp:321:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst Imu[m[K’ {aka ‘[01m[Kconst struct sensor_msgs::msg::Imu_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kvector[m[K’
+  321 |             heave.set_accel_bias(true, imu_msg.[01;31m[Kvector[m[K.z);
+      |                                                [01;31m[K^~~~~~[m[K
+gmake[2]: *** [CMakeFiles/kf_v4.dir/build.make:76: CMakeFiles/kf_v4.dir/src/kf_v4_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/kf_v4.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 50%] [32m[1mLinking CXX executable kf[0m
+[ 70%] Built target kf
+gmake: *** [Makefile:146: all] Error 2

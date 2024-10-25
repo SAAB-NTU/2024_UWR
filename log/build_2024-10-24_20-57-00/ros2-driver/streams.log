@@ -1,0 +1,84 @@
+[0.014s] Invoking command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake /home/uwr/Desktop/2024_UWR/src/ros2-driver -DCMAKE_INSTALL_PREFIX=/home/uwr/Desktop/2024_UWR/install/ros2-driver
+[0.157s] -- The C compiler identification is GNU 11.4.0
+[0.268s] -- The CXX compiler identification is GNU 11.4.0
+[0.275s] -- Detecting C compiler ABI info
+[0.330s] -- Detecting C compiler ABI info - done
+[0.337s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.337s] -- Detecting C compile features
+[0.337s] -- Detecting C compile features - done
+[0.340s] -- Detecting CXX compiler ABI info
+[0.402s] -- Detecting CXX compiler ABI info - done
+[0.413s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.413s] -- Detecting CXX compile features
+[0.414s] -- Detecting CXX compile features - done
+[0.418s] -- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.562s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.656s] -- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)
+[0.708s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.713s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.724s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.737s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.754s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.797s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.800s] -- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.869s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.889s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.927s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.940s] -- Looking for pthread.h
+[1.000s] -- Looking for pthread.h - found
+[1.000s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.054s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.055s] -- Found Threads: TRUE  
+[1.107s] -- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.140s] -- Found diagnostic_msgs: 4.2.4 (/opt/ros/humble/share/diagnostic_msgs/cmake)
+[1.157s] -- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.234s] -- Added test 'copyright' to check source files copyright and LICENSE
+[1.236s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.236s] -- Configured cppcheck include dirs: 
+[1.236s] -- Configured cppcheck exclude dirs and/or files: 
+[1.239s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[1.239s] -- Configured cpplint exclude dirs and/or files: 
+[1.240s] -- Added test 'lint_cmake' to check CMake code style
+[1.243s] -- Added test 'uncrustify' to check C / C++ code style
+[1.243s] -- Configured uncrustify additional arguments: 
+[1.244s] -- Added test 'xmllint' to check XML markup files
+[1.245s] -- Configuring done
+[1.254s] -- Generating done
+[1.255s] -- Build files have been written to: /home/uwr/Desktop/2024_UWR/build/ros2-driver
+[1.263s] Invoked command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake /home/uwr/Desktop/2024_UWR/src/ros2-driver -DCMAKE_INSTALL_PREFIX=/home/uwr/Desktop/2024_UWR/install/ros2-driver
+[1.265s] Invoking command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/ros2-driver -- -j8 -l8
+[1.301s] [ 33%] [32mBuilding C object CMakeFiles/adnav_driver.dir/src/spatial_packets.c.o[0m
+[1.301s] [ 33%] [32mBuilding CXX object CMakeFiles/adnav_driver.dir/src/advanced_navigation_driver.cpp.o[0m
+[1.303s] [ 66%] [32mBuilding C object CMakeFiles/adnav_driver.dir/src/rs232/rs232.c.o[0m
+[1.303s] [ 66%] [32mBuilding C object CMakeFiles/adnav_driver.dir/src/an_packet_protocol.c.o[0m
+[1.304s] [ 83%] [32mBuilding C object CMakeFiles/adnav_driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.o[0m
+[1.341s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/rs232/rs232.c:[m[K In function ‘[01m[KPollComport[m[K’:
+[1.341s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/rs232/rs232.c:143:10:[m[K [01;35m[Kwarning: [m[Kcomparison is always false due to limited range of data type [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits-Wtype-limits]8;;[m[K]
+[1.341s]   143 |   if(size[01;35m[K>[m[KSSIZE_MAX)  size = (int)SSIZE_MAX;  /* SSIZE_MAX is defined in limits.h */
+[1.341s]       |          [01;35m[K^[m[K
+[1.341s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/rs232/rs232.c:[m[K In function ‘[01m[KIsCTSEnabled[m[K’:
+[1.341s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/rs232/rs232.c:192:22:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kcomport_number[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.342s]   192 | int IsCTSEnabled([01;35m[Kint comport_number[m[K)
+[1.342s]       |                  [01;35m[K~~~~^~~~~~~~~~~~~~[m[K
+[1.380s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/NTRIP_Client/NTRIP/ntripclient.c:[m[K In function ‘[01m[Kntrip[m[K’:
+[1.380s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/NTRIP_Client/NTRIP/ntripclient.c:379:17:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[1.381s]   379 |                 [01;35m[K++chunkymode[m[K; /* no break */
+[1.381s]       |                 [01;35m[K^~~~~~~~~~~~[m[K
+[1.381s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/NTRIP_Client/NTRIP/ntripclient.c:380:15:[m[K [01;36m[Knote: [m[Khere
+[1.381s]   380 |               [01;36m[Kcase[m[K 2: /* during reading number */
+[1.381s]       |               [01;36m[K^~~~[m[K
+[1.382s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/NTRIP_Client/NTRIP/ntripclient.c:[m[K In function ‘[01m[Kgetargs[m[K’:
+[1.382s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/NTRIP_Client/NTRIP/ntripclient.c:676:7:[m[K [01;35m[Kwarning: [m[Kthis statement may fall through [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=-Wimplicit-fallthrough=]8;;[m[K]
+[1.382s]   676 |       [01;35m[Kfprintf(stderr, "Option -d or --data is deprecated. Use -m instead.\n")[m[K;
+[1.382s]       |       [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.382s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/NTRIP_Client/NTRIP/ntripclient.c:677:5:[m[K [01;36m[Knote: [m[Khere
+[1.382s]   677 |     [01;36m[Kcase[m[K 'm':
+[1.382s]       |     [01;36m[K^~~~[m[K
+[1.445s] [01m[K/home/uwr/Desktop/2024_UWR/src/ros2-driver/src/advanced_navigation_driver.cpp:40:10:[m[K [01;31m[Kfatal error: [m[Ktf2/LinearMath/Quaternion.h: No such file or directory
+[1.445s]    40 | #include [01;31m[K<tf2/LinearMath/Quaternion.h>[m[K
+[1.445s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.445s] compilation terminated.
+[1.446s] gmake[2]: *** [CMakeFiles/adnav_driver.dir/build.make:76: CMakeFiles/adnav_driver.dir/src/advanced_navigation_driver.cpp.o] Error 1
+[1.447s] gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/adnav_driver.dir/all] Error 2
+[1.447s] gmake: *** [Makefile:146: all] Error 2
+[1.449s] Invoked command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/ros2-driver -- -j8 -l8

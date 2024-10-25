@@ -7,8 +7,8 @@ kf_v3::kf_v3() : moving_avg(10),moving_avg_vel(3),moving_avg_time(3)  // Default
     x << 0,0;
     z << 0,0;
     H << 0,0,0,1;
-    P << 1,0,0,1;
-    Q << 0.0001,0,0,0.0001;
+    P << 1,0.01,0.01,1;
+    Q << 1,1,1,1;
     R << 100,0,0,100;
     prev_measurement_dist=0;
     meas_bias=0;
@@ -33,8 +33,8 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     x << 0,0;
     z << 0,0;
     H << 1,0,0,1;
-    P << 1,0,0,1;
-    Q << 0.0001,0,0,0.0001;
+    P << 10,0,0,10;
+    Q << 100,100,100,100;
     R << 100,0,0,100;
     prev_measurement_dist=0;
     meas_bias=0;
@@ -44,12 +44,13 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     vel=0;
     dist=0;
     avg_window=sample_size;
-    cutoff_frequency=100;
+    cutoff_frequency=20;
     samplingrate=1000;
     bias_reset=false;
     moving_avg=SonarProcess(avg_window);
     //moving_avg_vel=SonarProcess(avg_window);
     bw_filter.setup(samplingrate, cutoff_frequency);
+    bw_filter2.setup(samplingrate, 0.05);
 }
 
 Eigen::Vector2f kf_v3::prediction(double dt)
@@ -72,15 +73,15 @@ Eigen::Vector2f kf_v3::update()
     return x;
 }
 
-Eigen::Vector2f kf_v3::update(double dist,double vel, Eigen::Matrix2f& external_H) {
+Eigen::Vector2f kf_v3::update(Eigen::Matrix2f& external_R) {
     Eigen::Vector2f external_z;
     external_z << dist, vel; 
-    Eigen::Vector2f y = external_z - external_H * x;
-    Eigen::Matrix2f external_R;
-    external_R<<1,0,0,1;
-    K = P * external_H.transpose() * (external_H * P * external_H.transpose() + external_R).inverse();
+    Eigen::Vector2f y = external_z - H * x;
+    //Eigen::Matrix2f external_R;
+    //external_R<<1,0,0,1;
+    K = P * H.transpose() * (H * P * H.transpose() + external_R).inverse();
     x = x + K * y;
-    P = (Eigen::Matrix2f::Identity() - K * external_H) * P;
+    P = (Eigen::Matrix2f::Identity() - K * H) * P;
     //prev_measurement_dist=dist;
     return x;
 }
@@ -106,8 +107,8 @@ bool kf_v3::set_accel_bias(bool val, double bias)
 
 double kf_v3::set_accel(double val)
 {
-    accel = (val - accel_bias);
-    accel = bw_filter.filter(accel);
+    //accel = (val - accel_bias);
+    accel = bw_filter2.filter(bw_filter.filter((val - accel_bias)));
     return accel;
 }
 

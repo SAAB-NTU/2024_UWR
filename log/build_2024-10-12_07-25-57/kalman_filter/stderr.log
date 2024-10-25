@@ -1,0 +1,66 @@
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf.cpp:[m[K In member function ‘[01m[KEigen::Vector2f kf_v3::update(Eigen::Matrix2f&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf.cpp:81:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kexternal_H[m[K’ was not declared in this scope; did you mean ‘[01m[Kexternal_z[m[K’?
+   81 |     K = P * [01;31m[Kexternal_H[m[K.transpose() * (external_H * P * external_H.transpose() + external_R).inverse();
+      |             [01;31m[K^~~~~~~~~~[m[K
+      |             [32m[Kexternal_z[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:90: CMakeFiles/kf.dir/src/kf.cpp.o] Error 1
+gmake[2]: *** Waiting for unfinished jobs....
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:430:46:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type ‘[01m[KEigen::Matrix2f&[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 2>&[m[K’} to an rvalue of type ‘[01m[KEigen::Matrix2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 2>[m[K’}
+  430 |                 surge_state_u = surge.update([01;31m[Ksurge_R[m[K);
+      |                                              [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:422:25:[m[K [01;36m[Knote: [m[K  after user-defined conversion: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 2; int _Options = 0; int _MaxRows = 2; int _MaxCols = 2][m[K’
+  422 |     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const EigenBase<OtherDerived> &other)
+      |                         [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:70:45:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[KEigen::Vector2f kf_v3::update(Eigen::Matrix2f&)[m[K’
+   70 |     Eigen::Vector2f update([01;36m[KEigen::Matrix2f& external_R[m[K);
+      |                            [01;36m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:442:44:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type ‘[01m[KEigen::Matrix2f&[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 2>&[m[K’} to an rvalue of type ‘[01m[KEigen::Matrix2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 2>[m[K’}
+  442 |                 sway_state_u = sway.update([01;31m[Ksway_R[m[K);
+      |                                            [01;31m[K^~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:422:25:[m[K [01;36m[Knote: [m[K  after user-defined conversion: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 2; int _Options = 0; int _MaxRows = 2; int _MaxCols = 2][m[K’
+  422 |     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const EigenBase<OtherDerived> &other)
+      |                         [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:70:45:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[KEigen::Vector2f kf_v3::update(Eigen::Matrix2f&)[m[K’
+   70 |     Eigen::Vector2f update([01;36m[KEigen::Matrix2f& external_R[m[K);
+      |                            [01;36m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:452:46:[m[K [01;31m[Kerror: [m[Kcannot bind non-const lvalue reference of type ‘[01m[KEigen::Matrix2f&[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 2>&[m[K’} to an rvalue of type ‘[01m[KEigen::Matrix2f[m[K’ {aka ‘[01m[KEigen::Matrix<float, 2, 2>[m[K’}
+  452 |                 heave_state_u = heave.update([01;31m[Kheave_R[m[K);
+      |                                              [01;31m[K^~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:295[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:422:25:[m[K [01;36m[Knote: [m[K  after user-defined conversion: ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 2; int _Options = 0; int _MaxRows = 2; int _MaxCols = 2][m[K’
+  422 |     EIGEN_STRONG_INLINE [01;36m[KMatrix[m[K(const EigenBase<OtherDerived> &other)
+      |                         [01;36m[K^~~~~~[m[K
+In file included from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:4[m[K:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:70:45:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[KEigen::Vector2f kf_v3::update(Eigen::Matrix2f&)[m[K’
+   70 |     Eigen::Vector2f update([01;36m[KEigen::Matrix2f& external_R[m[K);
+      |                            [01;36m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/eigen3/Eigen/Core:164[m[K,
+                 from [01m[K/usr/include/eigen3/Eigen/Dense:1[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/../include/sonar_processing.h:6[m[K,
+                 from [01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:3[m[K:
+/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h: In instantiation of ‘[01m[Kvoid Eigen::internal::call_assignment_no_alias(Dst&, const Src&, const Func&) [with Dst = Eigen::Matrix<float, 2, 2>; Src = Eigen::Matrix<float, 2, 1>; Func = Eigen::internal::assign_op<float, float>][m[K’:
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:797:41:[m[K   required from ‘[01m[KDerived& Eigen::PlainObjectBase<Derived>::_set_noalias(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; Derived = Eigen::Matrix<float, 2, 2>][m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/PlainObjectBase.h:594:19:[m[K   required from ‘[01m[KEigen::PlainObjectBase<Derived>::PlainObjectBase(const Eigen::DenseBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; Derived = Eigen::Matrix<float, 2, 2>][m[K’
+[01m[K/usr/include/eigen3/Eigen/src/Core/Matrix.h:423:29:[m[K   required from ‘[01m[KEigen::Matrix<_Scalar, _Rows, _Cols, _Options, _MaxRows, _MaxCols>::Matrix(const Eigen::EigenBase<OtherDerived>&) [with OtherDerived = Eigen::Matrix<float, 2, 1>; _Scalar = float; int _Rows = 2; int _Cols = 2; int _Options = 0; int _MaxRows = 2; int _MaxCols = 2][m[K’
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:430:45:[m[K   required from here
+[01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:[m[K [01;31m[Kerror: [m[Kstatic assertion failed: YOU_MIXED_MATRICES_OF_DIFFERENT_SIZES
+  887 |   [01;31m[KEIGEN_STATIC_ASSERT_SAME_MATRIX_SIZE[m[K(ActualDstTypeCleaned,Src)
+      |   [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/eigen3/Eigen/src/Core/AssignEvaluator.h:887:3:[m[K [01;36m[Knote: [m[K‘[01m[K(((((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<float, 2, 2> >::ret) == 0) && (((int)Eigen::internal::size_of_xpr_at_compile_time<Eigen::Matrix<float, 2, 1> >::ret) == 0)) || ((((((int)Eigen::Matrix<float, 2, 2>::RowsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<float, 2, 1>::RowsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<float, 2, 2>::RowsAtCompileTime) == ((int)Eigen::Matrix<float, 2, 1>::RowsAtCompileTime))) && (((((int)Eigen::Matrix<float, 2, 2>::ColsAtCompileTime) == ((int)Eigen::Dynamic)) || (((int)Eigen::Matrix<float, 2, 1>::ColsAtCompileTime) == ((int)Eigen::Dynamic))) || (((int)Eigen::Matrix<float, 2, 2>::ColsAtCompileTime) == ((int)Eigen::Matrix<float, 2, 1>::ColsAtCompileTime)))))[m[K’ evaluates to false
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

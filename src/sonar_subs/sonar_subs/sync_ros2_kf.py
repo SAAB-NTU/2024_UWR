@@ -26,6 +26,9 @@ class RosbagSync(Node):
         
         self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4], 10, slop=0.002)  # Increase the queue size for stability
         self.ts.registerCallback(self.callback)
+
+        self.ts2 = ApproximateTimeSynchronizer([self.sub1], 10, slop=0.002)  # Increase the queue size for stability
+        self.ts2.registerCallback(self.callback_pred)
         self.image_bridge=cv_bridge.CvBridge()
         self.synchronized_data = []
         self.get_logger().info('Subscribers and synchronizer initialized successfully!')
@@ -92,7 +95,36 @@ class RosbagSync(Node):
         synchronized_df = pd.DataFrame(self.synchronized_data)
         synchronized_df.to_csv('/home/uwr/Desktop/output.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
+    def callback_pred(self, data1):
+        # Log entry into the callback
+        self.get_logger().info("Callback triggered with synchronized messages")
+
+        # Log the received data for debugging
+        #self.get_logger().info(f"Sonar Data: Distance 1: {data1.distance_1}, Confidence 1: {data1.confidence_1}")
+        #self.get_logger().info(f"IMU Acceleration: x: {data2.vector.x}, y: {data2.vector.y}, z: {data2.vector.z}")
+        #self.get_logger().info(f"IMU Angular Velocity: x: {data3.vector.x}, y: {data3.vector.y}, z: {data3.vector.z}")
+
+        # Synchronization logic
+        timestamp = data1.header.stamp
+        self.synchronized_data.append({
+            'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
+            'Pose_X': data1.pose.position.x,
+            'Pose_Y': data1.pose.position.y,
+            'Pose_Z': data1.pose.position.z,
+        })
         
+        # Log synchronized data size
+        # self.get_logger().info(f"Synchronized data size: {len(self.synchronized_data)}")
+        
+        # img=self.image_bridge.imgmsg_to_cv2(data4)
+        # img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+        # #cv2.imwrite("/home/uwr/Desktop/output/"+str(timestamp.sec + timestamp.nanosec * 1e-9)+".png",img)
+        # cv2.imwrite("/home/uwr/Desktop/output/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
+        # self.counter+=1
+        # # Save to CSV file
+        synchronized_df = pd.DataFrame(self.synchronized_data)
+        synchronized_df.to_csv('/home/uwr/Desktop/output.csv', index=False)
+        self.get_logger().info('Data written to CSV file!')
 
 def main(args=None):
     rclpy.init(args=args)

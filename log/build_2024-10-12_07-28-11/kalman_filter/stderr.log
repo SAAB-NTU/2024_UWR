@@ -1,0 +1,8 @@
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf.cpp:[m[K In member function ‘[01m[KEigen::Vector2f kf_v3::update(Eigen::Matrix2f&)[m[K’:
+[01m[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf.cpp:81:30:[m[K [01;31m[Kerror: [m[K‘[01m[Kexternal_H[m[K’ was not declared in this scope; did you mean ‘[01m[Kexternal_z[m[K’?
+   81 |     K = P * H.transpose() * ([01;31m[Kexternal_H[m[K * P * H.transpose() + external_R).inverse();
+      |                              [01;31m[K^~~~~~~~~~[m[K
+      |                              [32m[Kexternal_z[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:90: CMakeFiles/kf.dir/src/kf.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

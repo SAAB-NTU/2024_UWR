@@ -75,7 +75,7 @@ public:
         this->declare_parameter<std::string>("imu_topic", "/imu/acceleration");
         this->declare_parameter<std::string>("sonar_topic", "/sonar");
         this->declare_parameter<double>("angle", 0.0);
-        this->declare_parameter<bool>("without_measurement", false);
+        this->declare_parameter<bool>("without_measurement", true);
         this->declare_parameter<bool>("bias_override", true);
 
         // Get parameters
@@ -102,9 +102,13 @@ public:
         imu_subscriber_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
         imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1));
 
-        sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-        sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+       // sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+       // sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+	
+	sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+       sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
+	
         // Create a bag file name using the bag_create_file function
         std::string bag_file_name = bag_create_file(path_param, this->now());
 
@@ -123,14 +127,17 @@ public:
         expected_difference=0.05;
 
         RCLCPP_INFO(this->get_logger(), "Class successfully constructed, waiting for data");
+        
+        slope=(1-1000)/(100-0);
+        intercept=1000;
 
     }
 
-  //  void sonar_callback2(const sonar_msgs::msg::ThreeSonarDepth& msg)
-//{
- //   RCLCPP_INFO(this->get_logger(), "Callback triggered!");
-    // Your code here
-//}
+   void sonar_callback2(const sonar_msgs::msg::ThreeSonarDepth& msg)
+{
+    RCLCPP_INFO(this->get_logger(), "Callback triggered!");
+    bias=false;
+}
 
     void imu_callback2(const geometry_msgs::msg::Vector3Stamped& imu_msg) 
     
@@ -138,7 +145,7 @@ public:
         
         
         try {
-        bef_rotate<<abs(imu_msg.vector.x),abs(imu_msg.vector.z),1;
+        bef_rotate<<imu_msg.vector.x,(imu_msg.vector.y),1;
         aft_rotate=rot_matrix*bef_rotate;
         predict_time_now = this->now();
         // if(!rot_bias)
@@ -150,14 +157,7 @@ public:
         //     //ROS_INFO("w: %f",transformStamped.transform.rotation.w);
         //     rot_bias=true;
         // }
-        if (!bias) {
-
-            surge.set_accel_bias(true, aft_rotate(0));
-            sway.set_accel_bias(true, aft_rotate(1));
-            heave.set_accel_bias(true, imu_msg.vector.z);
-            
-            bias = true;
-        }
+        
 
         if (start) {
              //RCLCPP_INFO(this->get_logger(),"Hi");
@@ -214,6 +214,14 @@ public:
            
             pose_pub->publish(pose_msg);
             //pub_transform->publish(transformStamped);
+            if (!bias) {
+
+            surge.set_accel_bias(true, aft_rotate(0));
+            sway.set_accel_bias(true, aft_rotate(1));
+            heave.set_accel_bias(true, imu_msg.vector.z);
+            
+            bias = true;
+        }
             
         }
     } catch (const std::exception& e) {
@@ -329,8 +337,8 @@ public:
         //if (!start && rot_bias) {
         if (!start) 
         {
-        surge.set_dist_init(msg.distance_1 / 1000);
-        sway.set_dist_init(msg.distance_2 /1000);
+        surge.set_dist_init(msg.distance_1*0.95/ 1000);
+        sway.set_dist_init(msg.distance_1*0.1 /1000);
         heave.set_dist_init(msg.depth / 1000);
             // /*if (msg.confidence_1 == 100.0) {
             //     //surge.set_dist_init(msg.distance_1 / 1000);
@@ -369,8 +377,8 @@ public:
             //surge_dist=sbs_frame_after.transform.translation.x;
             //sway_dist=sbs_frame_after.transform.translation.y;
             //heave_dist=sbs_frame_after.transform.translation.z;
-            surge_dist = surge.set_dist(msg.distance_1 / 1000);
-            sway_dist = sway.set_dist(msg.distance_2 / 1000);
+            surge_dist = surge.set_dist(msg.distance_1*0.95 / 1000);
+            sway_dist = sway.set_dist(msg.distance_1*0.1 / 1000);
             heave_dist = heave.set_dist(msg.depth);
             diff_surge = surge.residual();
             diff_sway = sway.residual();
@@ -410,32 +418,83 @@ public:
             c1.confidence_3 = e3.first;
             c1.scalar_3 = e3.second;
             
-            if (e1.first> 50) {
+            
+            
+            covar_surge=slope*e1.first+intercept;
+            covar_sway=slope*e2.first+intercept;
+            covar_heave=slope*e3.first+intercept;
+            
+            surge_R<<covar_surge,0,0,covar_surge;
+            sway_R<<covar_sway,0,0,covar_sway;
+            heave_R<<covar_heave,0,0,covar_heave;
+            
+            
+        //     if (e1.first> 90) {
+        //         surge.set_vel((measure_time_now - measure_time).seconds());
+        //         //surge_state_u = surge.update();
+        //         surge_state_u = surge.update(surge_R);
+        //         if(override==true)
+        //         {bias=false;}
+                
+        //     } else {
+        //         RCLCPP_INFO(this->get_logger(),"Deviate_x");
+        //         surge_state_u = surge.get_state();
+                
+        //     }
+        //         //Change < to >, 0.4 to 0.1 perhaps, avoid the use of m2 
+        //     if (e2.first>90) {
+        //         sway.set_vel((measure_time_now - measure_time).seconds());
+        //         //sway_state_u = sway.update();
+        //         sway_state_u = sway.update(sway_R);
+        //         //m2=measure_time_now;
+        //    } else {
+        //         //RCLCPP_INFO(this->get_logger(),"Deviate");
+        //         sway_state_u = sway.get_state();
+        //     }
+
+        //     if (e3.first>50) {
+        //         heave.set_vel((measure_time_now - measure_time).seconds());
+        //         //heave_state_u = heave.update();
+        //         heave_state_u = heave.update(heave_R);
+        //     } else {
+        //         heave_state_u = heave.get_state();
+        //     } 
+
                 surge.set_vel((measure_time_now - measure_time).seconds());
                 surge_state_u = surge.update();
+                //surge_state_u = surge.update(surge_R);
+            if (e1.first> 90) {
+
                 if(override==true)
                 {bias=false;}
                 
             } else {
                 RCLCPP_INFO(this->get_logger(),"Deviate_x");
-                surge_state_u = surge.get_state();
+                //surge_state_u = surge.get_state();
+                
             }
+            //sway.set_vel((measure_time_now - measure_time).seconds());
+                //sway_state_u = sway.update();
+                //sway_state_u = sway.update(sway_R);
                 //Change < to >, 0.4 to 0.1 perhaps, avoid the use of m2 
-            if (e2.first>50) {
-                sway.set_vel((measure_time_now - measure_time).seconds());
-                sway_state_u = sway.update();
+            if (e2.first>70) {
+                RCLCPP_INFO(this->get_logger(),"Taken_y");
                 //m2=measure_time_now;
            } else {
-                RCLCPP_INFO(this->get_logger(),"Deviate");
+                //RCLCPP_INFO(this->get_logger(),"Deviate");
+                RCLCPP_INFO(this->get_logger(),"Deviate_y");
                 sway_state_u = sway.get_state();
             }
 
-            if (e3.first>50) {
                 heave.set_vel((measure_time_now - measure_time).seconds());
                 heave_state_u = heave.update();
-            } else {
-                heave_state_u = heave.get_state();
-            }
+                //heave_state_u = heave.update(heave_R);
+
+            //if (e3.first>50) {
+
+            //} else {
+                //heave_state_u = heave.get_state();
+            //} 
 
             k_vals.header.stamp= msg.header.stamp;
             k_vals.k_d_1=surge.K(0,0);
@@ -450,7 +509,7 @@ public:
             //e3=std::abs(1-(std::abs(diff_heave))/0.1);
 
 
-            //ROS_INFO("Confidence: %f", e1*100);
+            //RCLCPP_INFO(this->get_logger(),"R_sway %f", covar_sway);
             //ROS_INFO("Scalar: %f", surge.moving_avg.output.second);
             RCLCPP_INFO(this->get_logger(),"Distance: %f", sway_state_u(0));
             //RCLCPP_INFO(this->get_logger(),"Timestamp: %f",(measure_time_now - measure_time).seconds());
@@ -525,6 +584,7 @@ private:
 
     rclcpp::Subscription<sonar_msgs::msg::ThreeSonarDepth>::SharedPtr sonar_subscriber_;
     rclcpp::Subscription<geometry_msgs::msg::Vector3Stamped>::SharedPtr imu_subscriber_;
+    
 
     int sample_size;
     double expected_difference;
@@ -549,6 +609,10 @@ private:
 
 
     double surge_accel, sway_accel, heave_accel;
+    
+    double covar_surge,covar_sway,covar_heave,slope,intercept;
+    Eigen::Matrix2f surge_R, sway_R, heave_R;
+    
     tf2::Quaternion q_orig, q_new;
 
     kf_v3 surge, sway, heave;
@@ -557,7 +621,7 @@ private:
     Eigen::Vector2f surge_state_u, sway_state_u, heave_state_u;
     Eigen::Vector3f bef_rotate,aft_rotate;
     Eigen::Matrix3f rot_matrix;
-
+	
     sonar_msgs::msg::KfValues k_vals;
 
     //geometry_msgs::TransformStamped transformStamped, sbs_frame_before,sbs_frame_after;
