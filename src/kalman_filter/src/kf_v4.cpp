@@ -20,8 +20,8 @@ kf_v4::kf_v4() : moving_avg(10),moving_avg_vel(3),moving_avg_time(3)
     vel=0;
     dist=0;
     avg_window=10;
-    cutoff_frequency=20;
-    samplingrate=1000;
+    cutoff_frequency=0.01;
+    samplingrate=400;
     bias_reset=false;
     moving_avg=SonarProcess(avg_window);
     //moving_avg_vel=SonarProcess(avg_window);
@@ -46,8 +46,8 @@ kf_v4::kf_v4(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     vel=0;
     dist=0;
     avg_window=sample_size;
-    cutoff_frequency=20;
-    samplingrate=1000;
+    cutoff_frequency=0.01;
+    samplingrate=400;
     bias_reset=false;
     moving_avg=SonarProcess(avg_window);
     //moving_avg_vel=SonarProcess(avg_window);
@@ -100,7 +100,8 @@ double kf_v4::residual()
 double kf_v4::set_accel(double val)
 {
     //accel = (val - accel_bias);
-    accel = bw_filter2.filter(bw_filter.filter((val-accel_bias)));
+    accel =bw_filter2.filter(bw_filter.filter((val-accel_bias)));
+    //accel =(bw_filter.filter((val-accel_bias)));
     return accel;
 }
 

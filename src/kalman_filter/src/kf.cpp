@@ -11,16 +11,13 @@ kf_v3::kf_v3() : moving_avg(10),moving_avg_vel(3),moving_avg_time(3)  // Default
     Q << 1,1,1,1;
     R << 100,0,0,100;
     prev_measurement_dist=0;
-    meas_bias=0;
-    accel_bias=0;
-    dist_bias=0;
     
     accel=0;
     vel=0;
     dist=0;
     avg_window=10;
-    cutoff_frequency=100;
-    samplingrate=1000;
+    cutoff_frequency=0.01;
+    samplingrate=400;
     bias_reset=false;
     moving_avg=SonarProcess(avg_window);
     //moving_avg_vel=SonarProcess(avg_window);
@@ -37,20 +34,17 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     Q << 100,100,100,100;
     R << 100,0,0,100;
     prev_measurement_dist=0;
-    meas_bias=0;
-    accel_bias=0;
-    dist_bias=0;
     accel=0;
     vel=0;
     dist=0;
     avg_window=sample_size;
-    cutoff_frequency=20;
-    samplingrate=1000;
+    cutoff_frequency=0.01;
+    samplingrate=400;
     bias_reset=false;
     moving_avg=SonarProcess(avg_window);
     //moving_avg_vel=SonarProcess(avg_window);
     bw_filter.setup(samplingrate, cutoff_frequency);
-    bw_filter2.setup(samplingrate, 0.05);
+   bw_filter2.setup(samplingrate, 0.05);
 }
 
 Eigen::Vector2f kf_v3::prediction(double dt)
@@ -108,7 +102,8 @@ bool kf_v3::set_accel_bias(bool val, double bias)
 double kf_v3::set_accel(double val)
 {
     //accel = (val - accel_bias);
-    accel = bw_filter2.filter(bw_filter.filter((val - accel_bias)));
+    accel=bw_filter2.filter(bw_filter.filter((val - accel_bias)));
+    //accel = (bw_filter.filter((val - accel_bias)));
     return accel;
 }
 

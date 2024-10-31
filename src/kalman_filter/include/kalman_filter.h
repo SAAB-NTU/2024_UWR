@@ -28,35 +28,6 @@ protected:
     Eigen::Vector2f x, B;
 };
 
-class KalmanFilter_6dof
-{
-public:
-    KalmanFilter_6dof();
-    Eigen::Matrix<double, 6, 1> prediction(const Eigen::Matrix<double, 3, 1>& u, const float& dt);
-    Eigen::Matrix<double, 6, 1> update(const Eigen::Matrix<double, 6, 1>& z);
-    Eigen::Matrix<double, 6, 1> residual(const Eigen::Matrix<double, 6, 1>& z);
-    Eigen::Matrix<double, 6, 6> Q, R;
-
-protected:
-    Eigen::Matrix<double, 6, 6> F, P, H, K;
-    Eigen::Matrix<double, 6, 1> x;
-    Eigen::Matrix<double, 6, 3> B;
-};
-
-class KalmanFilter_6dof_FLS
-{
-public:
-    KalmanFilter_6dof_FLS();
-    Eigen::Matrix<double, 6, 1> prediction(const Eigen::Matrix<double, 3, 1>& u, const float& dt);
-    Eigen::Matrix<double, 6, 1> update(const Eigen::Matrix<double, 6, 1>& z, Eigen::Matrix<double, 6, 6>& R, Eigen::Matrix<double, 6, 6>& H);
-    Eigen::Matrix<double, 6, 1> residual(const Eigen::Matrix<double, 6, 1>& z, Eigen::Matrix<double, 6, 6>& H);
-    Eigen::Matrix<double, 6, 6> Q, R1, R2;
-
-protected:
-    Eigen::Matrix<double, 6, 6> F, P, H1, H2, K;
-    Eigen::Matrix<double, 6, 1> x;
-    Eigen::Matrix<double, 6, 3> B;
-};
 
 class kf_v3
 {
@@ -127,6 +98,42 @@ protected:
     Iir::Butterworth::HighPass<4> bw_filter2;
 };
 
+
+class KalmanFilter_3dof
+{
+public:
+    KalmanFilter_3dof();
+    Eigen::Matrix<double, 6, 1> prediction(const float& dt);
+    Eigen::Matrix<double, 6, 1> update(),update(Eigen::Matrix<double,6,6> external_R);
+    Eigen::Matrix<double, 6, 1> residual();
+    Eigen::Matrix<double, 6, 6> Q, R,K;
+    Eigen::Matrix<double,6,1> get_state();
+
+
+    void set_accel_bias(double bias_surge,double bias_sway,double bias_heave);
+    void set_dist_init(double init_surge,double init_sway, double init_heave);
+    Eigen::Vector3d set_accel(double accel_surge,double accel_sway, double accel_heave);
+    SonarProcess moving_avg_surge,moving_avg_sway,moving_avg_heave,moving_avg_vel,moving_avg_time;
+    Eigen::Vector3d set_dist(double val_surge,double val_sway, double val_heave);
+    void set_vel(double dt);
+    void set_prev_dist();
+protected:
+    Eigen::Matrix<double, 6, 6> F, P, H;
+    Eigen::Matrix<double, 6, 1> x,z;
+    Eigen::Matrix<double, 6, 3> B;
+    Eigen::Vector3d dist,vel,conf,accel,prev_measurement_dist,accel_bias;
+    
+
+
+    // accel_bias, accel, vel, dist, previous_predict_time, conf;
+    float samplingrate;
+    double cutoff_frequency, dist_bias;
+    int sample_size;
+    bool bias_reset,bias_reset_dist;
+    
+    Iir::Butterworth::LowPass<4> bw_filter_surge,bw_filter_sway,bw_filter_heave;
+    //Iir::Butterworth::HighPass<4> bw_filter2;
+};
 #endif // KALMAN_FILTER
 
 
