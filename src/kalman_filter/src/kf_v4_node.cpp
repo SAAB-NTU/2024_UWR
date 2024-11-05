@@ -103,11 +103,11 @@ public:
         imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1));
 	//imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
         //imu_param, 1, std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
-       // sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-       // sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+     sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+     sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 	
-	sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-       sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
+	//sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+      // sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
 	
         // Create a bag file name using the bag_create_file function
@@ -485,7 +485,7 @@ public:
                 
             }
             //sway.set_vel((measure_time_now - measure_time).seconds());
-                //sway_state_u = sway.update();
+                sway_state_u = sway.update();
                 //sway_state_u = sway.update(sway_R);
                 //Change < to >, 0.4 to 0.1 perhaps, avoid the use of m2 
             if (e2.first>70) {
@@ -494,7 +494,7 @@ public:
            } else {
                 //RCLCPP_INFO(this->get_logger(),"Deviate");
                 RCLCPP_INFO(this->get_logger(),"Deviate_y");
-                sway_state_u = sway.get_state();
+                //sway_state_u = sway.get_state();
             }
 
                 heave.set_vel((measure_time_now - measure_time).seconds());

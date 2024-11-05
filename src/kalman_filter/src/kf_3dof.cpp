@@ -8,18 +8,32 @@ x << 0,0,0,0,0,0; //6x1 state variable
 
 
     
-   P << 0.01, 0, 0, 0, 0, 0,
-         0, 0.01, 0, 0, 0, 0,
-         0, 0, 0.01, 0, 0, 0,
-         0, 0, 0, 0.01, 0, 0,
-         0, 0, 0, 0, 0.01, 0,
-         0, 0, 0, 0, 0, 0.01; //6x6 covariancematrix; so no covariance between state variables
-    Q << 10, 0, 0, 0, 0, 0,
-         0, 10, 0, 0, 0, 0,
-         0, 0, 10, 0, 0, 0,
-         0, 0, 0, 10, 0, 0,
-         0, 0, 0, 0, 10, 0,
-         0, 0, 0, 0, 0, 10; //6x6 process noise
+   P << 1, 0, 0, 0, 0, 0,
+         0, 1, 0, 0, 0, 0,
+         0, 0, 1, 0, 0, 0,
+         0, 0, 0, 1, 0, 0,
+         0, 0, 0, 0, 1, 0,
+         0, 0, 0, 0, 0, 1; //6x6 covariancematrix; so no covariance between state variables
+    Q << 1, 5, 10, 10, 10, 10,
+         5, 1, 10, 10, 10, 10,
+         0, 0, 0.001, 1, 0, 0,
+         0, 0, 1, 0.001, 0, 0,
+         0, 0, 0, 0, 1, 0,
+         0, 0, 0, 0, 0, 1;
+
+    R<< 1, 0, 0, 0, 0, 0,
+         0, 1, 0, 0, 0, 0,
+         0, 0, 100000, 0, 0, 0,
+         0, 0, 0, 100000, 0, 0,
+         0, 0, 0, 0, 1, 0,
+         0, 0, 0, 0, 0, 1; //6x6 process noise
+    
+    H << 1, 0, 0, 0, 0, 0,
+         0, 1, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0,
+         0, 0, 0, 0, 1, 0,
+         0, 0, 0, 0, 0, 1; //6x6 measurement noise
     
     prev_measurement_dist<<0,0,0;
     dist_bias=0;
@@ -97,7 +111,7 @@ Eigen::Matrix<double,6,1> KalmanFilter_3dof::prediction(const float& dt)
     F << 1, dt, 0, 0, 0, 0,
          0, 1, 0, 0, 0, 0,
          0, 0, 1, dt, 0, 0,
-         0, 0, 0, 1, 0, 0,
+         0, 0, 0, 1,0, 0,
          0, 0, 0, 0, 1, dt,
          0, 0, 0, 0, 0, 1;
     // B << 0.5*dt*dt,dt;
@@ -143,7 +157,7 @@ Eigen::Matrix<double,6,1> KalmanFilter_3dof::update(Eigen::Matrix<double,6,6> ex
 
 Eigen::Matrix<double,6,1> KalmanFilter_3dof::residual()
 {
-   z<<dist(0,0),dist(0,1),dist(0,2),vel(0,0),vel(0,1),vel(0,2);
+   z<<dist(0),vel(0),dist(1),vel(1),dist(2),vel(2);
    return z-H*x; 
   
 }

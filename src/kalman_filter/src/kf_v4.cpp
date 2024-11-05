@@ -35,8 +35,8 @@ kf_v4::kf_v4(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     z << 0,0,0;
     H << 1,0,0,0,1,0,0,0,0;
     P << 1,0,0,0,1,0,0,0,1;
-    Q << 1,1,1,1,1,1,1,1,1;
-    R << 1,1,1,1,1,1,1,1,1;
+    Q << 1,0,0,0,1,0,0,0,1;
+    R << 1,0,0,0,1,0,0,0,1;
     prev_measurement_dist=0;
     meas_bias=0;
     accel_bias=0;
@@ -100,8 +100,8 @@ double kf_v4::residual()
 double kf_v4::set_accel(double val)
 {
     //accel = (val - accel_bias);
-    accel =bw_filter2.filter(bw_filter.filter((val-accel_bias)));
-    //accel =(bw_filter.filter((val-accel_bias)));
+    //accel =bw_filter2.filter(bw_filter.filter((val-accel_bias)));
+    accel =(bw_filter.filter((val-accel_bias)));
     return accel;
 }
 

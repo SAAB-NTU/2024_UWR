@@ -100,11 +100,11 @@ public:
         imu_subscriber_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
         imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1));
 
-       // sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+      //  sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
        // sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 	
 	sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-       sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
+      sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
 	
         // Create a bag file name using the bag_create_file function

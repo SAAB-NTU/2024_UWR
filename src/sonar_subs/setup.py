@@ -10,6 +10,7 @@ setup(
         ('share/ament_index/resource_index/packages',
             ['resource/' + package_name]),
         ('share/' + package_name, ['package.xml']),
+         ('share/' + package_name + '/launch', ['launch/launch.py']),
     ],
     install_requires=['setuptools'],
     zip_safe=True,
@@ -19,7 +20,7 @@ setup(
     license='Apache-2.0',
     tests_require=['pytest'],
     entry_points={
-        'console_scripts': ['sonar_reader = sonar_subs.read_sonar:main2','sync_readings=sonar_subs.sync_ros2:main','kf_sync=sonar_subs.sync_ros2_kf:main',
+        'console_scripts': ['sonar_reader = sonar_subs.read_sonar:main2','sync_readings=sonar_subs.sync_ros2:main','kf_sync=sonar_subs.sync_ros2_kf:main','imu=sonar_subs.read_imu:main'
         ],
     },
 )

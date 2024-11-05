@@ -1,0 +1,491 @@
+[0.138s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.138s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x72e489010b80>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x72e4891096f0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x72e4891096f0>>)
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.369s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.369s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/uwr/Desktop/2024_UWR'
+[0.369s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.370s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.384s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['ignore', 'ignore_ament_install']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'ignore'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'ignore_ament_install'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['colcon_pkg']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'colcon_pkg'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['colcon_meta']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'colcon_meta'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['ros']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'ros'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['cmake', 'python']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'cmake'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'python'
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['python_setup_py']
+[0.385s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'python_setup_py'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['ignore', 'ignore_ament_install']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'ignore'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'ignore_ament_install'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['colcon_pkg']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'colcon_pkg'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['colcon_meta']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'colcon_meta'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['ros']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'ros'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['cmake', 'python']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'cmake'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'python'
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['python_setup_py']
+[0.386s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'python_setup_py'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.387s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.388s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['ignore', 'ignore_ament_install']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'ignore'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'ignore_ament_install'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['colcon_pkg']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'colcon_pkg'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['colcon_meta']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'colcon_meta'
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['ros']
+[0.389s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'ros'
+[0.392s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kalman_filter' with type 'ros.ament_cmake' and name 'kalman_filter'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['ignore', 'ignore_ament_install']
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'ignore'
+[0.392s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'ignore_ament_install'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['colcon_pkg']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'colcon_pkg'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['colcon_meta']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'colcon_meta'
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['ros']
+[0.393s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'ros'
+[0.394s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ntrip' with type 'ros.ament_cmake' and name 'ntrip'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['ignore', 'ignore_ament_install']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'ignore'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'ignore_ament_install'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['colcon_pkg']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'colcon_pkg'
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['colcon_meta']
+[0.394s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'colcon_meta'
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['ros']
+[0.395s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'ros'
+[0.396s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ros2-driver' with type 'ros.ament_cmake' and name 'ros2-driver'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'ignore'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'ignore_ament_install'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['colcon_pkg']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'colcon_pkg'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['colcon_meta']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'colcon_meta'
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['ros']
+[0.396s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'ros'
+[0.397s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sonar_msgs' with type 'ros.ament_cmake' and name 'sonar_msgs'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['ignore', 'ignore_ament_install']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'ignore'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'ignore_ament_install'
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['colcon_pkg']
+[0.397s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'colcon_pkg'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['colcon_meta']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'colcon_meta'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['ros']
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'ros'
+[0.398s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sonar_subs' with type 'ros.ament_python' and name 'sonar_subs'
+[0.398s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'ignore'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'ignore_ament_install'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['colcon_pkg']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'colcon_pkg'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['colcon_meta']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'colcon_meta'
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['ros']
+[0.399s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'ros'
+[0.400s] DEBUG:colcon.colcon_core.package_identification:Package 'src/xsens_mti_ros2_driver' with type 'ros.ament_cmake' and name 'xsens_mti_ros2_driver'
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.400s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.427s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.427s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.430s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 7 installed packages in /home/uwr/Desktop/2024_UWR/install
+[0.431s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 280 installed packages in /opt/ros/humble
+[0.442s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_target' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_clean_cache' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_clean_first' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_force_configure' from command line to 'False'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'ament_cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'catkin_cmake_args' from command line to 'None'
+[0.491s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.491s] DEBUG:colcon.colcon_core.verb:Building package 'ntrip' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uwr/Desktop/2024_UWR/build/ntrip', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uwr/Desktop/2024_UWR/install/ntrip', 'merge_install': False, 'path': '/home/uwr/Desktop/2024_UWR/src/ntrip', 'symlink_install': False, 'test_result_base': None}
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'cmake_target' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.492s] Level 5:colcon.colcon_core.verb:set package 'ros2-driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.492s] DEBUG:colcon.colcon_core.verb:Building package 'ros2-driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uwr/Desktop/2024_UWR/build/ros2-driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uwr/Desktop/2024_UWR/install/ros2-driver', 'merge_install': False, 'path': '/home/uwr/Desktop/2024_UWR/src/ros2-driver', 'symlink_install': False, 'test_result_base': None}
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_target' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.493s] DEBUG:colcon.colcon_core.verb:Building package 'sonar_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uwr/Desktop/2024_UWR/build/sonar_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uwr/Desktop/2024_UWR/install/sonar_msgs', 'merge_install': False, 'path': '/home/uwr/Desktop/2024_UWR/src/sonar_msgs', 'symlink_install': False, 'test_result_base': None}
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_args' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_target' from command line to 'None'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.493s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.494s] DEBUG:colcon.colcon_core.verb:Building package 'xsens_mti_ros2_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver', 'merge_install': False, 'path': '/home/uwr/Desktop/2024_UWR/src/xsens_mti_ros2_driver', 'symlink_install': False, 'test_result_base': None}
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_target' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_clean_first' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_force_configure' from command line to 'False'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'ament_cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.494s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.494s] DEBUG:colcon.colcon_core.verb:Building package 'kalman_filter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uwr/Desktop/2024_UWR/build/kalman_filter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uwr/Desktop/2024_UWR/install/kalman_filter', 'merge_install': False, 'path': '/home/uwr/Desktop/2024_UWR/src/kalman_filter', 'symlink_install': False, 'test_result_base': None}
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_args' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_target' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_clean_first' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_force_configure' from command line to 'False'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'ament_cmake_args' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.495s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.495s] DEBUG:colcon.colcon_core.verb:Building package 'sonar_subs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/uwr/Desktop/2024_UWR/build/sonar_subs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/uwr/Desktop/2024_UWR/install/sonar_subs', 'merge_install': False, 'path': '/home/uwr/Desktop/2024_UWR/src/sonar_subs', 'symlink_install': False, 'test_result_base': None}
+[0.495s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.497s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.497s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uwr/Desktop/2024_UWR/src/sonar_msgs' with build type 'ament_cmake'
+[0.497s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uwr/Desktop/2024_UWR/src/sonar_msgs'
+[0.500s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.501s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.501s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.505s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uwr/Desktop/2024_UWR/src/ntrip' with build type 'ament_cmake'
+[0.505s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uwr/Desktop/2024_UWR/src/ntrip'
+[0.506s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.506s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.511s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uwr/Desktop/2024_UWR/src/ros2-driver' with build type 'ament_cmake'
+[0.511s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uwr/Desktop/2024_UWR/src/ros2-driver'
+[0.512s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.512s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.518s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uwr/Desktop/2024_UWR/src/xsens_mti_ros2_driver' with build type 'ament_cmake'
+[0.518s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uwr/Desktop/2024_UWR/src/xsens_mti_ros2_driver'
+[0.518s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.518s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.533s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/sonar_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/sonar_msgs -- -j8 -l8
+[0.538s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/ntrip': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/ntrip -- -j8 -l8
+[0.544s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/ros2-driver -- -j8 -l8
+[0.552s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver -- -j8 -l8
+[0.708s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/ros2-driver -- -j8 -l8
+[0.719s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/ntrip' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/ntrip -- -j8 -l8
+[0.796s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/ntrip': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/ntrip
+[0.801s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/ros2-driver
+[0.820s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ntrip)
+[0.828s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/ntrip' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/ntrip
+[0.832s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip' for CMake module files
+[0.833s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip' for CMake config files
+[0.834s] Level 1:colcon.colcon_core.shell:create_environment_hook('ntrip', 'cmake_prefix_path')
+[0.835s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.ps1'
+[0.836s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.dsv'
+[0.837s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.sh'
+[0.839s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/lib'
+[0.840s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/bin'
+[0.840s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/lib/pkgconfig/ntrip.pc'
+[0.841s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/lib/python3.10/site-packages'
+[0.841s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/bin'
+[0.842s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.ps1'
+[0.844s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.dsv'
+[0.845s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.sh'
+[0.846s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.bash'
+[0.848s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.zsh'
+[0.849s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/ntrip/share/colcon-core/packages/ntrip)
+[0.853s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2-driver)
+[0.853s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver' for CMake module files
+[0.855s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/ros2-driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/ros2-driver
+[0.856s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver' for CMake config files
+[0.856s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2-driver', 'cmake_prefix_path')
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/hook/cmake_prefix_path.ps1'
+[0.858s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/hook/cmake_prefix_path.dsv'
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/hook/cmake_prefix_path.sh'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/lib'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/bin'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/lib/pkgconfig/ros2-driver.pc'
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/lib/python3.10/site-packages'
+[0.862s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/bin'
+[0.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.ps1'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.dsv'
+[0.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.sh'
+[0.865s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.bash'
+[0.866s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.zsh'
+[0.867s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/colcon-core/packages/ros2-driver)
+[0.938s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ntrip)
+[0.939s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip' for CMake module files
+[0.940s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip' for CMake config files
+[0.941s] Level 1:colcon.colcon_core.shell:create_environment_hook('ntrip', 'cmake_prefix_path')
+[0.942s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.ps1'
+[0.944s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.dsv'
+[0.945s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.sh'
+[0.946s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/lib'
+[0.946s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/bin'
+[0.946s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/lib/pkgconfig/ntrip.pc'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/lib/python3.10/site-packages'
+[0.947s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ntrip/bin'
+[0.948s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.ps1'
+[0.949s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.dsv'
+[0.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.sh'
+[0.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.bash'
+[0.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ntrip/share/ntrip/package.zsh'
+[0.952s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/ntrip/share/colcon-core/packages/ntrip)
+[0.955s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2-driver)
+[0.955s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver' for CMake module files
+[0.956s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver' for CMake config files
+[0.956s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2-driver', 'cmake_prefix_path')
+[0.957s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/hook/cmake_prefix_path.ps1'
+[0.958s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/hook/cmake_prefix_path.dsv'
+[0.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/hook/cmake_prefix_path.sh'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/lib'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/bin'
+[0.959s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/lib/pkgconfig/ros2-driver.pc'
+[0.960s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/lib/python3.10/site-packages'
+[0.961s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/ros2-driver/bin'
+[0.961s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.ps1'
+[0.962s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.dsv'
+[0.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.sh'
+[0.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.bash'
+[0.964s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/ros2-driver/package.zsh'
+[0.965s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/ros2-driver/share/colcon-core/packages/ros2-driver)
+[1.254s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/sonar_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/sonar_msgs -- -j8 -l8
+[1.273s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver -- -j8 -l8
+[1.379s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver
+[1.388s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/sonar_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/sonar_msgs
+[1.470s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xsens_mti_ros2_driver)
+[1.471s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake module files
+[1.476s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake config files
+[1.478s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/xsens_mti_ros2_driver
+[1.479s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'cmake_prefix_path')
+[1.479s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.ps1'
+[1.480s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.dsv'
+[1.480s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.sh'
+[1.481s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib'
+[1.481s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'ld_library_path_lib')
+[1.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.ps1'
+[1.482s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.dsv'
+[1.482s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.sh'
+[1.483s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[1.483s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/pkgconfig/xsens_mti_ros2_driver.pc'
+[1.483s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/python3.10/site-packages'
+[1.484s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[1.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.ps1'
+[1.485s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.dsv'
+[1.485s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.sh'
+[1.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.bash'
+[1.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.zsh'
+[1.487s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/colcon-core/packages/xsens_mti_ros2_driver)
+[1.489s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sonar_msgs)
+[1.489s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs' for CMake module files
+[1.490s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/sonar_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/sonar_msgs
+[1.491s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs' for CMake config files
+[1.492s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'cmake_prefix_path')
+[1.492s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.ps1'
+[1.493s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.dsv'
+[1.493s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.sh'
+[1.494s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib'
+[1.494s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'ld_library_path_lib')
+[1.494s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.ps1'
+[1.495s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.dsv'
+[1.495s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.sh'
+[1.496s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/bin'
+[1.496s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib/pkgconfig/sonar_msgs.pc'
+[1.496s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib/python3.10/site-packages'
+[1.497s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/bin'
+[1.497s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.ps1'
+[1.498s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.dsv'
+[1.498s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.sh'
+[1.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.bash'
+[1.499s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.zsh'
+[1.500s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/colcon-core/packages/sonar_msgs)
+[1.588s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xsens_mti_ros2_driver)
+[1.589s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake module files
+[1.590s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake config files
+[1.591s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'cmake_prefix_path')
+[1.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.ps1'
+[1.592s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.dsv'
+[1.592s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.sh'
+[1.593s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib'
+[1.593s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'ld_library_path_lib')
+[1.594s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.ps1'
+[1.594s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.dsv'
+[1.595s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.sh'
+[1.595s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[1.595s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/pkgconfig/xsens_mti_ros2_driver.pc'
+[1.596s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/python3.10/site-packages'
+[1.596s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[1.597s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.ps1'
+[1.597s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.dsv'
+[1.598s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.sh'
+[1.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.bash'
+[1.599s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.zsh'
+[1.600s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/colcon-core/packages/xsens_mti_ros2_driver)
+[1.628s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sonar_msgs)
+[1.629s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs' for CMake module files
+[1.629s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs' for CMake config files
+[1.630s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'cmake_prefix_path')
+[1.630s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.ps1'
+[1.631s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.dsv'
+[1.632s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.sh'
+[1.633s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib'
+[1.633s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'ld_library_path_lib')
+[1.633s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.ps1'
+[1.634s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.dsv'
+[1.635s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.sh'
+[1.635s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/bin'
+[1.635s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib/pkgconfig/sonar_msgs.pc'
+[1.635s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib/python3.10/site-packages'
+[1.636s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/bin'
+[1.636s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.ps1'
+[1.637s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.dsv'
+[1.637s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.sh'
+[1.638s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.bash'
+[1.638s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.zsh'
+[1.639s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/sonar_msgs/share/colcon-core/packages/sonar_msgs)
+[1.640s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/uwr/Desktop/2024_UWR/src/kalman_filter' with build type 'ament_cmake'
+[1.640s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/uwr/Desktop/2024_UWR/src/kalman_filter'
+[1.640s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.640s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.645s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/uwr/Desktop/2024_UWR/src/sonar_subs' with build type 'ament_python'
+[1.646s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_subs', 'ament_prefix_path')
+[1.646s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/ament_prefix_path.ps1'
+[1.647s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/ament_prefix_path.dsv'
+[1.647s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/ament_prefix_path.sh'
+[1.648s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.649s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.663s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
+[2.032s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/uwr/Desktop/2024_UWR/src/sonar_subs'
+[2.032s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.032s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.039s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter' returned '0': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/uwr/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
+[2.098s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/kalman_filter
+[2.112s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kalman_filter)
+[2.113s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter' for CMake module files
+[2.114s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/build/kalman_filter' returned '0': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/uwr/Desktop/2024_UWR/build/kalman_filter
+[2.115s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter' for CMake config files
+[2.115s] Level 1:colcon.colcon_core.shell:create_environment_hook('kalman_filter', 'cmake_prefix_path')
+[2.115s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.ps1'
+[2.116s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.dsv'
+[2.117s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.sh'
+[2.117s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/lib'
+[2.117s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/bin'
+[2.118s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/pkgconfig/kalman_filter.pc'
+[2.118s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/python3.10/site-packages'
+[2.118s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/bin'
+[2.119s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.ps1'
+[2.120s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.dsv'
+[2.120s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.sh'
+[2.121s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.bash'
+[2.121s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.zsh'
+[2.122s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/colcon-core/packages/kalman_filter)
+[2.180s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kalman_filter)
+[2.180s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter' for CMake module files
+[2.181s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter' for CMake config files
+[2.181s] Level 1:colcon.colcon_core.shell:create_environment_hook('kalman_filter', 'cmake_prefix_path')
+[2.182s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.ps1'
+[2.182s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.dsv'
+[2.183s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.sh'
+[2.184s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/lib'
+[2.184s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/bin'
+[2.184s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/pkgconfig/kalman_filter.pc'
+[2.184s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/python3.10/site-packages'
+[2.184s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/kalman_filter/bin'
+[2.185s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.ps1'
+[2.186s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.dsv'
+[2.186s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.sh'
+[2.187s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.bash'
+[2.187s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.zsh'
+[2.188s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/kalman_filter/share/colcon-core/packages/kalman_filter)
+[2.510s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/uwr/Desktop/2024_UWR/src/sonar_subs': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/uwr/Desktop/2024_UWR/build/sonar_subs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/uwr/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sonar_subs build --build-base /home/uwr/Desktop/2024_UWR/build/sonar_subs/build install --record /home/uwr/Desktop/2024_UWR/build/sonar_subs/install.log --single-version-externally-managed install_data
+[2.892s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_subs' for CMake module files
+[2.893s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/uwr/Desktop/2024_UWR/src/sonar_subs' returned '0': CMAKE_PREFIX_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver LD_LIBRARY_PATH=/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/uwr/Desktop/2024_UWR/build/sonar_subs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/uwr/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated setup.py egg_info --egg-base ../../build/sonar_subs build --build-base /home/uwr/Desktop/2024_UWR/build/sonar_subs/build install --record /home/uwr/Desktop/2024_UWR/build/sonar_subs/install.log --single-version-externally-managed install_data
+[2.893s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_subs' for CMake config files
+[2.894s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_subs/lib'
+[2.894s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_subs/bin'
+[2.894s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_subs/lib/pkgconfig/sonar_subs.pc'
+[2.894s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages'
+[2.895s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_subs', 'pythonpath')
+[2.895s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/pythonpath.ps1'
+[2.895s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/pythonpath.dsv'
+[2.896s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/pythonpath.sh'
+[2.897s] Level 1:colcon.colcon_core.environment:checking '/home/uwr/Desktop/2024_UWR/install/sonar_subs/bin'
+[2.897s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sonar_subs)
+[2.897s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.ps1'
+[2.898s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.dsv'
+[2.898s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.sh'
+[2.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.bash'
+[2.899s] INFO:colcon.colcon_core.shell:Creating package script '/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.zsh'
+[2.899s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/uwr/Desktop/2024_UWR/install/sonar_subs/share/colcon-core/packages/sonar_subs)
+[2.900s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[2.900s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[2.900s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[2.900s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[2.908s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[2.908s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[2.908s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[2.923s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[2.923s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uwr/Desktop/2024_UWR/install/local_setup.ps1'
+[2.924s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/uwr/Desktop/2024_UWR/install/_local_setup_util_ps1.py'
+[2.926s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uwr/Desktop/2024_UWR/install/setup.ps1'
+[2.927s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uwr/Desktop/2024_UWR/install/local_setup.sh'
+[2.928s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/uwr/Desktop/2024_UWR/install/_local_setup_util_sh.py'
+[2.928s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uwr/Desktop/2024_UWR/install/setup.sh'
+[2.930s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uwr/Desktop/2024_UWR/install/local_setup.bash'
+[2.931s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uwr/Desktop/2024_UWR/install/setup.bash'
+[2.932s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/uwr/Desktop/2024_UWR/install/local_setup.zsh'
+[2.933s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/uwr/Desktop/2024_UWR/install/setup.zsh'

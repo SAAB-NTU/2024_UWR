@@ -30,9 +30,9 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     x << 0,0;
     z << 0,0;
     H << 1,0,0,1;
-    P << 10,0,0,10;
-    Q << 100,100,100,100;
-    R << 100,0,0,100;
+    P << 1,0,0,1;
+    Q << 1,0,0,1;
+    R << 1,0,0,1;
     prev_measurement_dist=0;
     accel=0;
     vel=0;
@@ -102,8 +102,8 @@ bool kf_v3::set_accel_bias(bool val, double bias)
 double kf_v3::set_accel(double val)
 {
     //accel = (val - accel_bias);
-    accel=bw_filter2.filter(bw_filter.filter((val - accel_bias)));
-    //accel = (bw_filter.filter((val - accel_bias)));
+    //accel=bw_filter2.filter(bw_filter.filter((val - accel_bias)));
+    accel = (bw_filter.filter((val - accel_bias)));
     return accel;
 }
 

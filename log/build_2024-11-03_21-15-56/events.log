@@ -1,0 +1,247 @@
+[0.000000] (-) TimerEvent: {}
+[0.000762] (-) JobUnselected: {'identifier': 'adnav-driver'}
+[0.001236] (-) JobUnselected: {'identifier': 'ntrip'}
+[0.001466] (-) JobUnselected: {'identifier': 'sonar_msgs'}
+[0.001544] (-) JobUnselected: {'identifier': 'sonar_subs'}
+[0.001576] (-) JobUnselected: {'identifier': 'xsens_mti_ros2_driver'}
+[0.001609] (kalman_filter) JobQueued: {'identifier': 'kalman_filter', 'dependencies': OrderedDict([('sonar_msgs', '/home/uwr/Desktop/2024_UWR/install/sonar_msgs')])}
+[0.001648] (kalman_filter) JobStarted: {'identifier': 'kalman_filter'}
+[0.017519] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'cmake'}
+[0.018622] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'build'}
+[0.019786] (kalman_filter) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/uwr/Desktop/2024_UWR/build/kalman_filter', '--', '-j8', '-l8'], 'cwd': '/home/uwr/Desktop/2024_UWR/build/kalman_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'uwr'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/uwr'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1513'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=a8d9a78fae8cfb2188b3f56467274c2a'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/uwr/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'uwr'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'uwr'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/uwr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/uwr-Latitude-5310:@/tmp/.ICE-unix/1513,unix/uwr-Latitude-5310:/tmp/.ICE-unix/1513'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9f732d67_907c_4710_8abd_8ffa5474bb94'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YKPDW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/uwr/Desktop/2024_UWR/build/kalman_filter'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=a8d9a78fae8cfb2188b3f56467274c2a'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/uwr/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/uwr/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.099707] (-) TimerEvent: {}
+[0.150455] (kalman_filter) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target kf_3dof\x1b[0m\n'}
+[0.189928] (kalman_filter) StdoutLine: {'line': b'[ 40%] Built target kf_v4\n'}
+[0.190239] (kalman_filter) StdoutLine: {'line': b'[ 66%] Built target kf\n'}
+[0.199804] (-) TimerEvent: {}
+[0.222381] (kalman_filter) StdoutLine: {'line': b'[ 73%] \x1b[32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o\x1b[0m\n'}
+[0.299946] (-) TimerEvent: {}
+[0.400465] (-) TimerEvent: {}
+[0.500846] (-) TimerEvent: {}
+[0.601178] (-) TimerEvent: {}
+[0.701589] (-) TimerEvent: {}
+[0.802014] (-) TimerEvent: {}
+[0.902385] (-) TimerEvent: {}
+[1.002766] (-) TimerEvent: {}
+[1.103107] (-) TimerEvent: {}
+[1.203572] (-) TimerEvent: {}
+[1.303948] (-) TimerEvent: {}
+[1.404424] (-) TimerEvent: {}
+[1.504856] (-) TimerEvent: {}
+[1.605270] (-) TimerEvent: {}
+[1.705782] (-) TimerEvent: {}
+[1.806213] (-) TimerEvent: {}
+[1.906674] (-) TimerEvent: {}
+[2.007118] (-) TimerEvent: {}
+[2.107512] (-) TimerEvent: {}
+[2.207955] (-) TimerEvent: {}
+[2.308391] (-) TimerEvent: {}
+[2.408819] (-) TimerEvent: {}
+[2.509260] (-) TimerEvent: {}
+[2.609697] (-) TimerEvent: {}
+[2.710136] (-) TimerEvent: {}
+[2.810599] (-) TimerEvent: {}
+[2.911026] (-) TimerEvent: {}
+[3.011503] (-) TimerEvent: {}
+[3.111897] (-) TimerEvent: {}
+[3.212261] (-) TimerEvent: {}
+[3.312652] (-) TimerEvent: {}
+[3.413022] (-) TimerEvent: {}
+[3.513409] (-) TimerEvent: {}
+[3.613874] (-) TimerEvent: {}
+[3.714226] (-) TimerEvent: {}
+[3.814561] (-) TimerEvent: {}
+[3.914920] (-) TimerEvent: {}
+[4.015268] (-) TimerEvent: {}
+[4.115638] (-) TimerEvent: {}
+[4.215985] (-) TimerEvent: {}
+[4.316359] (-) TimerEvent: {}
+[4.416730] (-) TimerEvent: {}
+[4.517075] (-) TimerEvent: {}
+[4.617406] (-) TimerEvent: {}
+[4.717772] (-) TimerEvent: {}
+[4.818131] (-) TimerEvent: {}
+[4.918487] (-) TimerEvent: {}
+[5.018852] (-) TimerEvent: {}
+[5.119200] (-) TimerEvent: {}
+[5.219547] (-) TimerEvent: {}
+[5.319915] (-) TimerEvent: {}
+[5.420270] (-) TimerEvent: {}
+[5.520634] (-) TimerEvent: {}
+[5.620996] (-) TimerEvent: {}
+[5.721357] (-) TimerEvent: {}
+[5.821700] (-) TimerEvent: {}
+[5.922066] (-) TimerEvent: {}
+[6.022397] (-) TimerEvent: {}
+[6.122764] (-) TimerEvent: {}
+[6.223138] (-) TimerEvent: {}
+[6.323483] (-) TimerEvent: {}
+[6.423837] (-) TimerEvent: {}
+[6.524216] (-) TimerEvent: {}
+[6.624637] (-) TimerEvent: {}
+[6.724976] (-) TimerEvent: {}
+[6.825388] (-) TimerEvent: {}
+[6.925770] (-) TimerEvent: {}
+[7.026147] (-) TimerEvent: {}
+[7.126490] (-) TimerEvent: {}
+[7.171702] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[7.171999] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/uwr/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:134:65:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[7.172140] (kalman_filter) StderrLine: {'line': b'  134 |    void sonar_callback2(\x1b[01;35m\x1b[Kconst sonar_msgs::msg::ThreeSonarDepth& msg\x1b[m\x1b[K)\n'}
+[7.172252] (kalman_filter) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[7.226620] (-) TimerEvent: {}
+[7.327205] (-) TimerEvent: {}
+[7.427563] (-) TimerEvent: {}
+[7.527909] (-) TimerEvent: {}
+[7.628276] (-) TimerEvent: {}
+[7.728646] (-) TimerEvent: {}
+[7.828995] (-) TimerEvent: {}
+[7.929408] (-) TimerEvent: {}
+[8.029761] (-) TimerEvent: {}
+[8.130103] (-) TimerEvent: {}
+[8.230458] (-) TimerEvent: {}
+[8.330806] (-) TimerEvent: {}
+[8.431181] (-) TimerEvent: {}
+[8.531520] (-) TimerEvent: {}
+[8.631849] (-) TimerEvent: {}
+[8.732150] (-) TimerEvent: {}
+[8.832468] (-) TimerEvent: {}
+[8.932817] (-) TimerEvent: {}
+[9.033178] (-) TimerEvent: {}
+[9.133522] (-) TimerEvent: {}
+[9.233877] (-) TimerEvent: {}
+[9.334229] (-) TimerEvent: {}
+[9.434574] (-) TimerEvent: {}
+[9.534933] (-) TimerEvent: {}
+[9.635291] (-) TimerEvent: {}
+[9.735646] (-) TimerEvent: {}
+[9.836004] (-) TimerEvent: {}
+[9.936371] (-) TimerEvent: {}
+[10.036703] (-) TimerEvent: {}
+[10.137053] (-) TimerEvent: {}
+[10.237398] (-) TimerEvent: {}
+[10.337747] (-) TimerEvent: {}
+[10.438109] (-) TimerEvent: {}
+[10.538394] (-) TimerEvent: {}
+[10.638746] (-) TimerEvent: {}
+[10.739114] (-) TimerEvent: {}
+[10.839644] (-) TimerEvent: {}
+[10.940056] (-) TimerEvent: {}
+[11.040473] (-) TimerEvent: {}
+[11.140930] (-) TimerEvent: {}
+[11.241385] (-) TimerEvent: {}
+[11.341743] (-) TimerEvent: {}
+[11.442112] (-) TimerEvent: {}
+[11.542556] (-) TimerEvent: {}
+[11.642989] (-) TimerEvent: {}
+[11.743411] (-) TimerEvent: {}
+[11.843852] (-) TimerEvent: {}
+[11.944291] (-) TimerEvent: {}
+[12.044915] (-) TimerEvent: {}
+[12.145278] (-) TimerEvent: {}
+[12.245830] (-) TimerEvent: {}
+[12.346203] (-) TimerEvent: {}
+[12.446619] (-) TimerEvent: {}
+[12.547001] (-) TimerEvent: {}
+[12.647526] (-) TimerEvent: {}
+[12.747868] (-) TimerEvent: {}
+[12.848276] (-) TimerEvent: {}
+[12.948703] (-) TimerEvent: {}
+[13.051389] (-) TimerEvent: {}
+[13.151755] (-) TimerEvent: {}
+[13.252184] (-) TimerEvent: {}
+[13.352648] (-) TimerEvent: {}
+[13.453046] (-) TimerEvent: {}
+[13.553471] (-) TimerEvent: {}
+[13.653898] (-) TimerEvent: {}
+[13.754275] (-) TimerEvent: {}
+[13.854773] (-) TimerEvent: {}
+[13.955208] (-) TimerEvent: {}
+[14.055593] (-) TimerEvent: {}
+[14.155982] (-) TimerEvent: {}
+[14.256318] (-) TimerEvent: {}
+[14.356643] (-) TimerEvent: {}
+[14.456975] (-) TimerEvent: {}
+[14.557300] (-) TimerEvent: {}
+[14.657628] (-) TimerEvent: {}
+[14.757990] (-) TimerEvent: {}
+[14.858359] (-) TimerEvent: {}
+[14.958717] (-) TimerEvent: {}
+[15.059081] (-) TimerEvent: {}
+[15.159458] (-) TimerEvent: {}
+[15.259801] (-) TimerEvent: {}
+[15.360155] (-) TimerEvent: {}
+[15.460521] (-) TimerEvent: {}
+[15.560889] (-) TimerEvent: {}
+[15.661221] (-) TimerEvent: {}
+[15.761599] (-) TimerEvent: {}
+[15.861951] (-) TimerEvent: {}
+[15.962300] (-) TimerEvent: {}
+[16.062645] (-) TimerEvent: {}
+[16.162967] (-) TimerEvent: {}
+[16.263315] (-) TimerEvent: {}
+[16.363643] (-) TimerEvent: {}
+[16.463970] (-) TimerEvent: {}
+[16.564333] (-) TimerEvent: {}
+[16.664658] (-) TimerEvent: {}
+[16.764977] (-) TimerEvent: {}
+[16.865301] (-) TimerEvent: {}
+[16.965662] (-) TimerEvent: {}
+[17.065995] (-) TimerEvent: {}
+[17.166332] (-) TimerEvent: {}
+[17.266671] (-) TimerEvent: {}
+[17.366992] (-) TimerEvent: {}
+[17.467326] (-) TimerEvent: {}
+[17.567642] (-) TimerEvent: {}
+[17.668000] (-) TimerEvent: {}
+[17.768357] (-) TimerEvent: {}
+[17.868712] (-) TimerEvent: {}
+[17.969181] (-) TimerEvent: {}
+[18.069652] (-) TimerEvent: {}
+[18.170095] (-) TimerEvent: {}
+[18.270503] (-) TimerEvent: {}
+[18.370936] (-) TimerEvent: {}
+[18.471335] (-) TimerEvent: {}
+[18.571757] (-) TimerEvent: {}
+[18.672224] (-) TimerEvent: {}
+[18.693190] (kalman_filter) StdoutLine: {'line': b'[ 80%] \x1b[32m\x1b[1mLinking CXX executable kf_3dof\x1b[0m\n'}
+[18.772378] (-) TimerEvent: {}
+[18.872738] (-) TimerEvent: {}
+[18.973203] (-) TimerEvent: {}
+[19.073713] (-) TimerEvent: {}
+[19.174134] (-) TimerEvent: {}
+[19.274521] (-) TimerEvent: {}
+[19.374978] (-) TimerEvent: {}
+[19.475407] (-) TimerEvent: {}
+[19.575830] (-) TimerEvent: {}
+[19.676185] (-) TimerEvent: {}
+[19.776577] (-) TimerEvent: {}
+[19.876952] (-) TimerEvent: {}
+[19.951809] (kalman_filter) StdoutLine: {'line': b'[100%] Built target kf_3dof\n'}
+[19.972875] (kalman_filter) CommandEnded: {'returncode': 0}
+[19.977097] (-) TimerEvent: {}
+[20.034030] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'install'}
+[20.047771] (kalman_filter) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/uwr/Desktop/2024_UWR/build/kalman_filter'], 'cwd': '/home/uwr/Desktop/2024_UWR/build/kalman_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'uwr'), ('XDG_SESSION_TYPE', 'wayland'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/uwr/Desktop/2024_UWR/install/sonar_msgs/lib:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/uwr'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1513'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=a8d9a78fae8cfb2188b3f56467274c2a'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/home/uwr/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'uwr'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'uwr'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/home/uwr/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/uwr-Latitude-5310:@/tmp/.ICE-unix/1513,unix/uwr-Latitude-5310:/tmp/.ICE-unix/1513'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/9f732d67_907c_4710_8abd_8ffa5474bb94'), ('GNOME_SETUP_DISPLAY', ':1'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/.mutter-Xwaylandauth.YKPDW2'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.101'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/uwr/Desktop/2024_UWR/build/kalman_filter'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=a8d9a78fae8cfb2188b3f56467274c2a'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/uwr/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/uwr/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/uwr/Desktop/2024_UWR/install/sonar_msgs:/home/uwr/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/uwr/Desktop/2024_UWR/install/kalman_filter:/home/uwr/Desktop/2024_UWR/install/ntrip:/home/uwr/Desktop/2024_UWR/install/adnav-driver:/home/uwr/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[20.058741] (kalman_filter) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[20.060188] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf\n'}
+[20.061349] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_v4\n'}
+[20.062661] (kalman_filter) StdoutLine: {'line': b'-- Installing: /home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_3dof\n'}
+[20.077237] (-) TimerEvent: {}
+[20.077741] (kalman_filter) StdoutLine: {'line': b'-- Set runtime path of "/home/uwr/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_3dof" to ""\n'}
+[20.078943] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/package_run_dependencies/kalman_filter\n'}
+[20.079340] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/parent_prefix_path/kalman_filter\n'}
+[20.080554] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.sh\n'}
+[20.080786] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.dsv\n'}
+[20.081028] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.sh\n'}
+[20.081194] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.dsv\n'}
+[20.081452] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.bash\n'}
+[20.081658] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.sh\n'}
+[20.081865] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.zsh\n'}
+[20.082036] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.dsv\n'}
+[20.082141] (kalman_filter) StdoutLine: {'line': b'-- Installing: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.dsv\n'}
+[20.082678] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/packages/kalman_filter\n'}
+[20.083226] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig.cmake\n'}
+[20.083505] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig-version.cmake\n'}
+[20.083782] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date: /home/uwr/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.xml\n'}
+[20.086519] (kalman_filter) CommandEnded: {'returncode': 0}
+[20.174039] (kalman_filter) JobEnded: {'identifier': 'kalman_filter', 'rc': 0}
+[20.175131] (-) EventReactorShutdown: {}

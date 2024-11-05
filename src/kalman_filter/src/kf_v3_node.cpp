@@ -72,7 +72,7 @@ public:
         this->declare_parameter<std::string>("csv_path", "default_path.csv");
         this->get_parameter("csv_path", path_param);
 
-        this->declare_parameter<std::string>("imu_topic", "/imu/acceleration");
+        this->declare_parameter<std::string>("imu_topic", "/Imu");
         this->declare_parameter<std::string>("sonar_topic", "/sonar");
         this->declare_parameter<double>("angle", 0.0);
         this->declare_parameter<bool>("without_measurement", true);
@@ -102,11 +102,11 @@ public:
         imu_subscriber_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
         imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1));
 
-       // sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-       // sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+        sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+        sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 	
-	sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-       sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
+	//sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+      // sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
 	
         // Create a bag file name using the bag_create_file function
@@ -230,96 +230,103 @@ public:
         
 
         }
-    // void imu_callback(const geometry_msgs::msg::Vector3Stamped& imu_msg) 
+    void imu_callback(const sensor_msgs::msg::Imu& imu_msg) 
     
-    // {
+    {
         
-    //     try {
-    //     bef_rotate<<abs(imu_msg.linear_acceleration.x),abs(imu_msg.linear_acceleration.z),1;
-    //     aft_rotate=rot_matrix*bef_rotate;
-    //     predict_time_now = this->now();
-    //     if(!rot_bias)
-    //     {
-    //         tf2::convert(imu_msg.orientation, q_orig);
-    //         //tf2::convert(imu_msg.orientation, world_to_inertial_transform.transform.rotation);
-    //         //world_to_inertial_transform.transform.rotation=tf2::toMsg(q_orig);
-    //         //transformStamped.transform.rotation=tf2::toMsg(q_orig);
-    //         //ROS_INFO("w: %f",transformStamped.transform.rotation.w);
-    //         rot_bias=true;
-    //     }
-    //     if (!bias) {
+        
+        try {
+        bef_rotate<<(imu_msg.linear_acceleration.x),(imu_msg.linear_acceleration.y),1;
+        aft_rotate=rot_matrix*bef_rotate;
+        predict_time_now = this->now();
+        // if(!rot_bias)
+        // {
+        //     tf2::convert(imu_msg.orientation, q_orig);
+        //     //tf2::convert(imu_msg.orientation, world_to_inertial_transform.transform.rotation);
+        //     //world_to_inertial_transform.transform.rotation=tf2::toMsg(q_orig);
+        //     //transformStamped.transform.rotation=tf2::toMsg(q_orig);
+        //     //ROS_INFO("w: %f",transformStamped.transform.rotation.w);
+        //     rot_bias=true;
+        // }
+        
 
-    //         surge.set_accel_bias(true, aft_rotate(0));
-    //         sway.set_accel_bias(true, aft_rotate(1));
-    //         heave.set_accel_bias(true, imu_msg.linear_acceleration.z);
+        if (start) {
+             RCLCPP_INFO(this->get_logger(),"Hi");
+            surge_accel = surge.set_accel(aft_rotate(0));
+            sway_accel = sway.set_accel(aft_rotate(1));
+            heave_accel = heave.set_accel(imu_msg.linear_acceleration.z);
             
-    //         bias = true;
-    //     }
+           //surge.set_jerk((predict_time_now - predict_time).seconds());
+            //sway.set_jerk((predict_time_now - predict_time).seconds());
+            //heave.set_jerk((predict_time_now - predict_time).seconds());
+            surge_state_p = surge.prediction((predict_time_now - predict_time).seconds());
+            sway_state_p = sway.prediction((predict_time_now - predict_time).seconds());
+            heave_state_p = heave.prediction((predict_time_now - predict_time).seconds());
+            predict_time = predict_time_now;
 
-    //     if (start) {
-    //         surge_accel = surge.set_accel(aft_rotate(0));
-    //         sway_accel = sway.set_accel(aft_rotate(1));
-    //         heave_accel = heave.set_accel(imu_msg.linear_acceleration.z);
-    //         surge_state_p = surge.prediction((predict_time_now - predict_time).seconds());
-    //         sway_state_p = sway.prediction((predict_time_now - predict_time).seconds());
-    //         heave_state_p = heave.prediction((predict_time_now - predict_time).seconds());
-    //         predict_time = predict_time_now;
+            geometry_msgs::msg::Vector3Stamped vector3_msg, vel_msg;
+            geometry_msgs::msg::PoseStamped pose_msg;
 
-    //         geometry_msgs::msg::Vector3Stamped vector3_msg, vel_msg;
-    //         geometry_msgs::msg::PoseStamped pose_msg;
+            vector3_msg.header.stamp = imu_msg.header.stamp;
+            vector3_msg.vector.x = surge_accel;
+            vector3_msg.vector.y = sway_accel;
+            vector3_msg.vector.z = heave_accel;
 
-    //         vector3_msg.header.stamp = imu_msg.header.stamp;
-    //         vector3_msg.vector.x = surge_accel;
-    //         vector3_msg.vector.y = sway_accel;
-    //         vector3_msg.vector.z = heave_accel;
+            vel_msg.header.stamp = imu_msg.header.stamp;
+            vel_msg.vector.x = surge_state_p(1);
+            vel_msg.vector.y = sway_state_p(1);
+            vel_msg.vector.z = heave_state_p(1);
 
-    //         vel_msg.header.stamp = imu_msg.header.stamp;
-    //         vel_msg.vector.x = surge_state_p(1);
-    //         vel_msg.vector.y = sway_state_p(1);
-    //         vel_msg.vector.z = heave_state_p(1);
+            pose_msg.header.stamp = imu_msg.header.stamp;
+            pose_msg.pose.position.x = surge_state_p(0);
+            pose_msg.pose.position.y = sway_state_p(0);
+            pose_msg.pose.position.z = heave_state_p(0);
+            //tf2::convert(imu_msg.orientation, q_new);
+            pose_msg.pose.orientation = tf2::toMsg(q_new * q_orig);
 
-    //         pose_msg.header.stamp = imu_msg.header.stamp;
-    //         pose_msg.pose.position.x = surge_state_p(0);
-    //         pose_msg.pose.position.y = sway_state_p(0);
-    //         pose_msg.pose.position.z = heave_state_p(0);
-    //         //tf2::convert(imu_msg.orientation, q_new);
-    //         pose_msg.pose.orientation = tf2::toMsg(q_new * q_orig);
+            //transformStamped.header.stamp = imu_msg.header.stamp;
+            //transformStamped.transform.translation.x = surge_state_p(0);
+            // transformStamped.transform.translation.y = sway_state_p(0);
+           // transformStamped.transform.translation.z = heave_state_p(0);
+           // transformStamped.transform.rotation = tf2::toMsg(q_new);
 
-    //         //transformStamped.header.stamp = imu_msg.header.stamp;
-    //         //transformStamped.transform.translation.x = surge_state_p(0);
-    //         // transformStamped.transform.translation.y = sway_state_p(0);
-    //        // transformStamped.transform.translation.z = heave_state_p(0);
-    //        // transformStamped.transform.rotation = tf2::toMsg(q_new);
+            writer_->write(imu_msg, "IMU_raw", predict_time_now);
+            writer_->write(vector3_msg, "IMU_filtered", predict_time_now);
+            writer_->write(vel_msg, "IMU_vel", predict_time_now);
+            writer_->write(pose_msg, "Pose", predict_time_now);
+            //tf2::doTransform(transformStamped, world_to_inertial_transform, transformStamped);
+            /*
 
-    //                     writer_->write(imu_msg, "IMU_raw", predict_time_now);
-    //         writer_->write(vector3_msg, "IMU_filtered", predict_time_now);
-    //         writer_->write(vel_msg, "IMU_vel", predict_time_now);
-    //         writer_->write(pose_msg, "Pose", predict_time_now);
-    //         //tf2::doTransform(transformStamped, world_to_inertial_transform, transformStamped);
-    //         /*
+            */
+            //writer_->write(transformStamped, "Transform", "std_msgs/msg/String", time_stamp);
 
-    //         */
-    //         //writer_->write(transformStamped, "Transform", "std_msgs/msg/String", time_stamp);
-
-    //         //bag.write("IMU_raw", predict_time_now, imu_msg);
-    //         //bag.write("IMU_filtered", predict_time_now, vector3_msg);
-    //         //bag.write("IMU_vel", predict_time_now, vel_msg);
-    //         //bag.write("Pose", predict_time_now, pose_msg);
-    //         //bag.write("Transform",predict_time_now,transformStamped);
+            //bag.write("IMU_raw", predict_time_now, imu_msg);
+            //bag.write("IMU_filtered", predict_time_now, vector3_msg);
+            //bag.write("IMU_vel", predict_time_now, vel_msg);
+            //bag.write("Pose", predict_time_now, pose_msg);
+            //bag.write("Transform",predict_time_now,transformStamped);
             
            
-    //         pose_pub->publish(pose_msg);
-    //         //pub_transform->publish(transformStamped);
+           pose_pub->publish(pose_msg);
+            //pub_transform->publish(transformStamped);
+       
+                 if (!bias) {
+
+            surge.set_accel_bias(true, aft_rotate(0));
+            sway.set_accel_bias(true, aft_rotate(1));
+            heave.set_accel_bias(true, imu_msg.linear_acceleration.z);
             
-    //     }
-    // } catch (const std::exception& e) {
-    //     RCLCPP_ERROR(this->get_logger(), "error in imu-callback: %s", e.what());
-    // }
+            bias = true;
+        }
+        }
+    } catch (const std::exception& e) {
+        RCLCPP_ERROR(this->get_logger(), "error in imu-callback: %s", e.what());
+    }
         
 
-    // }
+        }
 
-    void sonar_callback(const sonar_msgs::msg::ThreeSonarDepth& msg) 
+ void sonar_callback(const sonar_msgs::msg::ThreeSonarDepth& msg) 
     
     {
         //static tf2_ros::Buffer tfBuffer;
@@ -337,8 +344,8 @@ public:
         //if (!start && rot_bias) {
         if (!start) 
         {
-        surge.set_dist_init(msg.distance_1*0.95/ 1000);
-        sway.set_dist_init(msg.distance_1*0.1 /1000);
+        surge.set_dist_init(msg.distance_1/ 1000);
+        sway.set_dist_init(msg.distance_2 /1000);
         heave.set_dist_init(msg.depth / 1000);
             // /*if (msg.confidence_1 == 100.0) {
             //     //surge.set_dist_init(msg.distance_1 / 1000);
@@ -377,8 +384,8 @@ public:
             //surge_dist=sbs_frame_after.transform.translation.x;
             //sway_dist=sbs_frame_after.transform.translation.y;
             //heave_dist=sbs_frame_after.transform.translation.z;
-            surge_dist = surge.set_dist(msg.distance_1*0.95 / 1000);
-            sway_dist = sway.set_dist(msg.distance_1*0.1 / 1000);
+            surge_dist = surge.set_dist(msg.distance_1 / 1000);
+            sway_dist = sway.set_dist(msg.distance_2 / 1000);
             heave_dist = heave.set_dist(msg.depth);
             diff_surge = surge.residual();
             diff_sway = sway.residual();
@@ -424,9 +431,9 @@ public:
             covar_sway=slope*e2.first+intercept;
             covar_heave=slope*e3.first+intercept;
             
-            surge_R<<covar_surge,0,0,covar_surge;
-            sway_R<<covar_sway,0,0,covar_sway;
-            heave_R<<covar_heave,0,0,covar_heave;
+           // surge_R<<covar_surge,0,0,0,covar_surge,0,0,0,0;
+           // sway_R<<covar_sway,0,0,0,covar_sway,0,0,0,0;
+           // heave_R<<covar_heave,0,0,0,covar_heave,0,0,0,0;
             
             
         //     if (e1.first> 90) {
@@ -474,7 +481,7 @@ public:
                 
             }
             //sway.set_vel((measure_time_now - measure_time).seconds());
-                //sway_state_u = sway.update();
+                sway_state_u = sway.update();
                 //sway_state_u = sway.update(sway_R);
                 //Change < to >, 0.4 to 0.1 perhaps, avoid the use of m2 
             if (e2.first>70) {
@@ -483,7 +490,7 @@ public:
            } else {
                 //RCLCPP_INFO(this->get_logger(),"Deviate");
                 RCLCPP_INFO(this->get_logger(),"Deviate_y");
-                sway_state_u = sway.get_state();
+               // sway_state_u = sway.get_state();
             }
 
                 heave.set_vel((measure_time_now - measure_time).seconds());
@@ -574,6 +581,7 @@ public:
     }
     
         }
+
 
 
 private:
