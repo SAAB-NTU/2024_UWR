@@ -1,0 +1,39 @@
+[0.013s] Invoking command in '/home/nuc1/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/kalman_filter:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/adnav-driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/nuc1/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8
+[0.090s] [ 33%] Built target kf_v4
+[0.093s] [ 40%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[0.096s] [ 73%] Built target kf_3dof
+[6.785s] [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In constructor ‘[01m[Kkf_node::kf_node()[m[K’:
+[6.785s] [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:71:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’; did you mean ‘[01m[KImu[m[K’?
+[6.786s]   102 |     imu_subscriber_ = this->create_subscription<sensor_msgs::msg::[01;31m[Kimu[m[K>(
+[6.786s]       |                                                                   [01;31m[K^~~[m[K
+[6.786s]       |                                                                   [32m[KImu[m[K
+[6.791s] [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kkf_node::create_subscription<<expression error> >(std::string&, int, std::_Bind_helper<false, void (kf_node::*)(const geometry_msgs::msg::Vector3Stamped_<std::allocator<void> >&), kf_node*, const std::_Placeholder<1>&>::type)[m[K’
+[6.791s]   102 |     imu_subscriber_ = [01;31m[Kthis->create_subscription<sensor_msgs::msg::imu>([m[K
+[6.791s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[6.791s] 
+[6.791s]   103 | [01;31m[K    imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1))[m[K;
+[6.791s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.791s] 
+[6.792s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+[6.792s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+[6.792s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[6.792s]                  from [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[6.792s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+[6.792s]   219 |   [01;36m[Kcreate_subscription[m[K(
+[6.793s]       |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[6.793s] [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[6.793s] [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[6.793s]   102 |     imu_subscriber_ = [01;31m[Kthis->create_subscription<sensor_msgs::msg::imu>([m[K
+[6.793s]       |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+[6.793s] 
+[6.793s]   103 | [01;31m[K    imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1))[m[K;
+[6.793s]       |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[6.793s] 
+[6.799s] [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[6.799s] [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:136:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[6.799s]   136 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+[6.799s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[10.212s] gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+[10.212s] gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/kf.dir/all] Error 2
+[10.213s] gmake: *** [Makefile:146: all] Error 2
+[10.215s] Invoked command in '/home/nuc1/Desktop/2024_UWR/build/kalman_filter' returned '2': CMAKE_PREFIX_PATH=/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/kalman_filter:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/adnav-driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/nuc1/Desktop/2024_UWR/build/kalman_filter -- -j8 -l8

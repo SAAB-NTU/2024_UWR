@@ -12,7 +12,7 @@ class IMUI2CNode(Node):
         self.publisher = self.create_publisher(Imu, 'lcimu/data', 10)
 
         # I2C bus initialization
-        self.bus = smbus.SMBus(0)  # 1 is the I2C bus number (use 0 for Raspberry Pi)
+        self.bus = smbus.SMBus(7)  # 1 is the I2C bus number (use 0 for Raspberry Pi)
         self.device_address = 0x68  # MPU6050 I2C address
 
         # Initialize the MPU6050

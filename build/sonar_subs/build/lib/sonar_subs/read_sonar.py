@@ -5,7 +5,7 @@ from rclpy.node import Node
 from sonar_msgs.msg import ThreeSonarDepth
 from brping import Ping1D
 
-def main_2():
+def main2():
     # Initialize ROS 2
     rclpy.init()
     node = rclpy.create_node("single_beam_sonar_node")
@@ -31,10 +31,10 @@ def main_2():
     sonar_driver2.set_range(0,10000) #In mm
     sonar_driver2.set_ping_interval(ping_interval)
 
-    #sonar_port3 = node.declare_parameter("sonar2/sonar_port", "/dev/ttyACM3").value
-    #sonar_driver3 = Ping1D()
-    #sonar_driver3.connect_serial(device_name=sonar_port3)
-    #sonar_driver3.set_ping_interval(ping_interval)
+    sonar_port3 = node.declare_parameter("sonar2/sonar_port", "/dev/ttyUSB0").value
+    sonar_driver3 = Ping1D()
+    sonar_driver3.connect_serial(device_name=sonar_port3)
+    sonar_driver3.set_ping_interval(ping_interval)
     
     while rclpy.ok():
         sonar_msg = ThreeSonarDepth()
@@ -54,8 +54,8 @@ def main_2():
             sonar_msg.distance_2 = float(data_2["distance"])
             sonar_msg.confidence_2 = float(data_2["confidence"])
 
-        #sonar_msg.distance_3 = float(data_3["distance"])
-        #sonar_msg.confidence_3 = float(data_3["confidence"])
+        sonar_msg.distance_3 = float(data_3["distance"])
+        sonar_msg.confidence_3 = float(data_3["confidence"])
 
         # Publish the message
         pub_sonar.publish(sonar_msg)
@@ -88,7 +88,7 @@ def main():
 
 if __name__ == "__main__":
     try:
-        main_2()
+        main2()
     except rclpy.exceptions.ROSInterruptException:
         pass
 

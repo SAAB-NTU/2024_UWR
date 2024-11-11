@@ -1,0 +1,37 @@
+[ 33%] Built target kf_v4
+[ 40%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[ 73%] Built target kf_3dof
+[01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In constructor ‘[01m[Kkf_node::kf_node()[m[K’:
+[01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:71:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu[m[K’ is not a member of ‘[01m[Ksensor_msgs::msg[m[K’; did you mean ‘[01m[KImu[m[K’?
+  102 |     imu_subscriber_ = this->create_subscription<sensor_msgs::msg::[01;31m[Kimu[m[K>(
+      |                                                                   [01;31m[K^~~[m[K
+      |                                                                   [32m[KImu[m[K
+[01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:75:[m[K [01;31m[Kerror: [m[Kno matching function for call to ‘[01m[Kkf_node::create_subscription<<expression error> >(std::string&, int, std::_Bind_helper<false, void (kf_node::*)(const geometry_msgs::msg::Vector3Stamped_<std::allocator<void> >&), kf_node*, const std::_Placeholder<1>&>::type)[m[K’
+  102 |     imu_subscriber_ = [01;31m[Kthis->create_subscription<sensor_msgs::msg::imu>([m[K
+      |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+
+  103 | [01;31m[K    imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1))[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:28[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:22[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class MessageT, class CallbackT, class AllocatorT, class SubscriptionT, class MessageMemoryStrategyT> std::shared_ptr<ROSMessageT> rclcpp::Node::create_subscription(const string&, const rclcpp::QoS&, CallbackT&&, const rclcpp::SubscriptionOptionsWithAllocator<AllocatorT>&, typename MessageMemoryStrategyT::SharedPtr)[m[K’
+  219 |   [01;36m[Kcreate_subscription[m[K(
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/rclcpp/rclcpp/node.hpp:219:3:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:102:75:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  102 |     imu_subscriber_ = [01;31m[Kthis->create_subscription<sensor_msgs::msg::imu>([m[K
+      |                       [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+
+  103 | [01;31m[K    imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1))[m[K;
+      |     [01;31m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+
+[01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/nuc1/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:136:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  136 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,915 @@
+[0.000000] (-) TimerEvent: {}
+[0.000229] (adnav-driver) JobQueued: {'identifier': 'adnav-driver', 'dependencies': OrderedDict()}
+[0.000289] (ntrip) JobQueued: {'identifier': 'ntrip', 'dependencies': OrderedDict()}
+[0.000308] (sonar_msgs) JobQueued: {'identifier': 'sonar_msgs', 'dependencies': OrderedDict()}
+[0.000324] (xsens_mti_ros2_driver) JobQueued: {'identifier': 'xsens_mti_ros2_driver', 'dependencies': OrderedDict()}
+[0.000340] (kalman_filter) JobQueued: {'identifier': 'kalman_filter', 'dependencies': OrderedDict([('sonar_msgs', '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs')])}
+[0.000359] (sonar_subs) JobQueued: {'identifier': 'sonar_subs', 'dependencies': OrderedDict([('sonar_msgs', '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs')])}
+[0.000375] (sonar_msgs) JobStarted: {'identifier': 'sonar_msgs'}
+[0.005631] (adnav-driver) JobStarted: {'identifier': 'adnav-driver'}
+[0.008871] (ntrip) JobStarted: {'identifier': 'ntrip'}
+[0.011711] (xsens_mti_ros2_driver) JobStarted: {'identifier': 'xsens_mti_ros2_driver'}
+[0.019211] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'cmake'}
+[0.019608] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/sonar_msgs', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/sonar_msgs'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.022014] (adnav-driver) JobProgress: {'identifier': 'adnav-driver', 'progress': 'cmake'}
+[0.022363] (adnav-driver) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/adnav-driver', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/adnav-driver'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/adnav-driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/adnav-driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.026593] (ntrip) JobProgress: {'identifier': 'ntrip', 'progress': 'cmake'}
+[0.026714] (ntrip) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/ntrip', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/ntrip'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/ntrip', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/ntrip'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.030333] (xsens_mti_ros2_driver) JobProgress: {'identifier': 'xsens_mti_ros2_driver', 'progress': 'cmake'}
+[0.030724] (xsens_mti_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.099347] (-) TimerEvent: {}
+[0.199855] (-) TimerEvent: {}
+[0.300313] (-) TimerEvent: {}
+[0.337234] (sonar_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.337452] (ntrip) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.343184] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.344460] (adnav-driver) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.400425] (-) TimerEvent: {}
+[0.500895] (-) TimerEvent: {}
+[0.587863] (sonar_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.588739] (ntrip) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.589919] (adnav-driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.591980] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.601014] (-) TimerEvent: {}
+[0.607797] (adnav-driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.608158] (ntrip) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.608257] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.608344] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.699838] (adnav-driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.700020] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.700130] (ntrip) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.700248] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.701074] (-) TimerEvent: {}
+[0.707153] (ntrip) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.707374] (sonar_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.707497] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.708157] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.708357] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.708471] (ntrip) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.708581] (adnav-driver) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.708721] (adnav-driver) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.709319] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.709589] (ntrip) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.709744] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.709860] (adnav-driver) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.713761] (adnav-driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.713917] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.714603] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.714732] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.801221] (-) TimerEvent: {}
+[0.807385] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.807609] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.815425] (ntrip) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.815717] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.815940] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.816215] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.816360] (ntrip) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.816720] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.822939] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.823221] (adnav-driver) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.828932] (ntrip) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.829185] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.832851] (adnav-driver) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.833161] (adnav-driver) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.833682] (adnav-driver) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.833994] (sonar_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.834259] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.834696] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.836106] (adnav-driver) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.836790] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.901323] (-) TimerEvent: {}
+[1.001670] (-) TimerEvent: {}
+[1.004581] (sonar_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.004836] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.017284] (ntrip) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.020007] (adnav-driver) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[1.101782] (-) TimerEvent: {}
+[1.131493] (sonar_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[1.133064] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.133263] (adnav-driver) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.133393] (ntrip) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[1.192858] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.192999] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.193075] (adnav-driver) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.193150] (ntrip) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[1.201086] (ntrip) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.201366] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.201439] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.201509] (adnav-driver) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[1.201862] (-) TimerEvent: {}
+[1.215192] (ntrip) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.215356] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.216138] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.216237] (adnav-driver) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[1.238025] (ntrip) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.238257] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.238332] (adnav-driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.238400] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.264757] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.264931] (ntrip) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.265723] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.265863] (adnav-driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.301973] (-) TimerEvent: {}
+[1.306864] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[1.340862] (adnav-driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.341041] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.341160] (ntrip) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.345701] (adnav-driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.345897] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.345976] (ntrip) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[1.402060] (-) TimerEvent: {}
+[1.465688] (ntrip) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.465933] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.466633] (adnav-driver) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[1.498263] (adnav-driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.499474] (ntrip) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.499594] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[1.502165] (-) TimerEvent: {}
+[1.540155] (adnav-driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.546759] (ntrip) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.551441] (xsens_mti_ros2_driver) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.559988] (ntrip) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.560343] (adnav-driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.563220] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.602253] (-) TimerEvent: {}
+[1.658965] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.659545] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.660731] (adnav-driver) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.661387] (adnav-driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.662056] (ntrip) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.662697] (ntrip) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.665138] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.702355] (-) TimerEvent: {}
+[1.734647] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.734849] (adnav-driver) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.735886] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.736073] (adnav-driver) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.743332] (ntrip) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[1.745079] (ntrip) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.802434] (-) TimerEvent: {}
+[1.818609] (ntrip) StdoutLine: {'line': b'-- Found mavros_msgs: 2.8.0 (/opt/ros/humble/share/mavros_msgs/cmake)\n'}
+[1.818851] (adnav-driver) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[1.827106] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.873596] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found tf2_ros: 0.25.7 (/opt/ros/humble/share/tf2_ros/cmake)\n'}
+[1.879895] (adnav-driver) StdoutLine: {'line': b'-- Found diagnostic_msgs: 4.2.4 (/opt/ros/humble/share/diagnostic_msgs/cmake)\n'}
+[1.902554] (-) TimerEvent: {}
+[1.905193] (adnav-driver) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[1.915699] (adnav-driver) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[1.938402] (adnav-driver) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[1.941306] (adnav-driver) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[1.941575] (adnav-driver) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.001385] (ntrip) StdoutLine: {'line': b'-- Found nmea_msgs: 2.0.0 (/opt/ros/humble/share/nmea_msgs/cmake)\n'}
+[2.002627] (-) TimerEvent: {}
+[2.062662] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[2.067461] (adnav-driver) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.081616] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found nmea_msgs: 2.0.0 (/opt/ros/humble/share/nmea_msgs/cmake)\n'}
+[2.090782] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.095405] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found mavros_msgs: 2.8.0 (/opt/ros/humble/share/mavros_msgs/cmake)\n'}
+[2.102721] (-) TimerEvent: {}
+[2.127282] (ntrip) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.148485] (ntrip) StdoutLine: {'line': b'-- Generating done\n'}
+[2.150837] (ntrip) StdoutLine: {'line': b'-- Build files have been written to: /home/nuc1/Desktop/2024_UWR/build/ntrip\n'}
+[2.163834] (ntrip) CommandEnded: {'returncode': 0}
+[2.164398] (ntrip) JobProgress: {'identifier': 'ntrip', 'progress': 'build'}
+[2.165202] (ntrip) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc1/Desktop/2024_UWR/build/ntrip', '--', '-j8', '-l8'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/ntrip', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/ntrip'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[2.166798] (adnav-driver) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[2.169168] (adnav-driver) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.169408] (adnav-driver) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[2.169533] (adnav-driver) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.170513] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.171563] (adnav-driver) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[2.171744] (adnav-driver) StdoutLine: {'line': b'-- Configured cpplint exclude dirs and/or files: \n'}
+[2.173525] (adnav-driver) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.176117] (adnav-driver) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.176350] (adnav-driver) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.177423] (adnav-driver) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.179534] (adnav-driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.202840] (-) TimerEvent: {}
+[2.206696] (adnav-driver) StdoutLine: {'line': b'-- Generating done\n'}
+[2.209589] (adnav-driver) StdoutLine: {'line': b'-- Build files have been written to: /home/nuc1/Desktop/2024_UWR/build/adnav-driver\n'}
+[2.215852] (ntrip) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o\x1b[0m\n'}
+[2.216083] (ntrip) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/ntrip.dir/src/client.cpp.o\x1b[0m\n'}
+[2.217774] (ntrip) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o\x1b[0m\n'}
+[2.225051] (adnav-driver) CommandEnded: {'returncode': 0}
+[2.226048] (adnav-driver) JobProgress: {'identifier': 'adnav-driver', 'progress': 'build'}
+[2.226146] (adnav-driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc1/Desktop/2024_UWR/build/adnav-driver', '--', '-j8', '-l8'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/adnav-driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/adnav-driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[2.286578] (adnav-driver) StdoutLine: {'line': b'[ 16%] \x1b[32mBuilding C object CMakeFiles/adnav_driver.dir/src/rs232/rs232.c.o\x1b[0m\n'}
+[2.287420] (adnav-driver) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding C object CMakeFiles/adnav_driver.dir/src/spatial_packets.c.o\x1b[0m\n'}
+[2.290954] (adnav-driver) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/adnav_driver.dir/src/advanced_navigation_driver.cpp.o\x1b[0m\n'}
+[2.292105] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.293497] (adnav-driver) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/adnav_driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.o\x1b[0m\n'}
+[2.293698] (adnav-driver) StdoutLine: {'line': b'[ 83%] \x1b[32mBuilding C object CMakeFiles/adnav_driver.dir/src/an_packet_protocol.c.o\x1b[0m\n'}
+[2.303580] (-) TimerEvent: {}
+[2.332517] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[2.337651] (sonar_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[2.395724] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[2.395932] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[2.396059] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[2.396168] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[2.403764] (-) TimerEvent: {}
+[2.423911] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.c:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[KPollComport\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.425836] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.c:143:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison is always false due to limited range of data type [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wtype-limits\x07-Wtype-limits\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.426011] (adnav-driver) StderrLine: {'line': b'  143 |   if(size\x1b[01;35m\x1b[K>\x1b[m\x1b[KSSIZE_MAX)  size = (int)SSIZE_MAX;  /* SSIZE_MAX is defined in limits.h */\n'}
+[2.426116] (adnav-driver) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^\x1b[m\x1b[K\n'}
+[2.429860] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.c:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[KIsCTSEnabled\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.431677] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.c:192:22:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kcomport_number\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.431873] (adnav-driver) StderrLine: {'line': b'  192 | int IsCTSEnabled(\x1b[01;35m\x1b[Kint comport_number\x1b[m\x1b[K)\n'}
+[2.432008] (adnav-driver) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K~~~~^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.432118] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[2.497548] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kntrip\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.497783] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c:379:17:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kthis statement may fall through [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=\x07-Wimplicit-fallthrough=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.497866] (adnav-driver) StderrLine: {'line': b'  379 |                 \x1b[01;35m\x1b[K++chunkymode\x1b[m\x1b[K; /* no break */\n'}
+[2.497926] (adnav-driver) StderrLine: {'line': b'      |                 \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.497980] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c:380:15:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Khere\n'}
+[2.498033] (adnav-driver) StderrLine: {'line': b'  380 |               \x1b[01;36m\x1b[Kcase\x1b[m\x1b[K 2: /* during reading number */\n'}
+[2.498085] (adnav-driver) StderrLine: {'line': b'      |               \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.501285] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c:\x1b[m\x1b[K In function \xe2\x80\x98\x1b[01m\x1b[Kgetargs\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.501901] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c:676:7:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kthis statement may fall through [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wimplicit-fallthrough=\x07-Wimplicit-fallthrough=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.502072] (adnav-driver) StderrLine: {'line': b'  676 |       \x1b[01;35m\x1b[Kfprintf(stderr, "Option -d or --data is deprecated. Use -m instead.\\n")\x1b[m\x1b[K;\n'}
+[2.502211] (adnav-driver) StderrLine: {'line': b'      |       \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.502346] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c:677:5:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Khere\n'}
+[2.502454] (adnav-driver) StderrLine: {'line': b"  677 |     \x1b[01;36m\x1b[Kcase\x1b[m\x1b[K 'm':\n"}
+[2.502512] (adnav-driver) StderrLine: {'line': b'      |     \x1b[01;36m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[2.503840] (-) TimerEvent: {}
+[2.522894] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.558297] (sonar_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.560078] (sonar_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.564577] (sonar_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.595389] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.603926] (-) TimerEvent: {}
+[2.627598] (sonar_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[2.631513] (sonar_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/nuc1/Desktop/2024_UWR/build/sonar_msgs\n'}
+[2.637879] (sonar_msgs) CommandEnded: {'returncode': 0}
+[2.638587] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'build'}
+[2.638998] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', '--', '-j8', '-l8'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[2.691258] (sonar_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[2.704023] (-) TimerEvent: {}
+[2.704802] (sonar_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[2.717084] (sonar_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_sonar_msgs\n'}
+[2.804121] (-) TimerEvent: {}
+[2.907869] (-) TimerEvent: {}
+[3.008179] (-) TimerEvent: {}
+[3.108560] (-) TimerEvent: {}
+[3.124523] (sonar_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[3.124713] (sonar_msgs) StdoutLine: {'line': b'creating sonar_msgs.egg-info\n'}
+[3.124846] (sonar_msgs) StdoutLine: {'line': b'writing sonar_msgs.egg-info/PKG-INFO\n'}
+[3.125016] (sonar_msgs) StdoutLine: {'line': b'writing dependency_links to sonar_msgs.egg-info/dependency_links.txt\n'}
+[3.125127] (sonar_msgs) StdoutLine: {'line': b'writing top-level names to sonar_msgs.egg-info/top_level.txt\n'}
+[3.125375] (sonar_msgs) StdoutLine: {'line': b"writing manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[3.130369] (sonar_msgs) StdoutLine: {'line': b"reading manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[3.131153] (sonar_msgs) StdoutLine: {'line': b"writing manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[3.165235] (sonar_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_build_sonar_msgs_egg\n'}
+[3.185693] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.208649] (-) TimerEvent: {}
+[3.309873] (-) TimerEvent: {}
+[3.356984] (sonar_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/conf_scal__functions.c.o\x1b[0m\n'}
+[3.357201] (sonar_msgs) StdoutLine: {'line': b'[  8%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/three_sonar_depth__functions.c.o\x1b[0m\n'}
+[3.366703] (sonar_msgs) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/kf_values__functions.c.o\x1b[0m\n'}
+[3.376923] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.408370] (sonar_msgs) StdoutLine: {'line': b'[ 10%] Built target sonar_msgs__cpp\n'}
+[3.408627] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.409961] (-) TimerEvent: {}
+[3.410523] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.426434] (sonar_msgs) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.436622] (sonar_msgs) StdoutLine: {'line': b'[ 14%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.437528] (sonar_msgs) StdoutLine: {'line': b'[ 17%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[3.452976] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.453197] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.453371] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.453525] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.465913] (sonar_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libsonar_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[3.486005] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.510059] (-) TimerEvent: {}
+[3.528370] (sonar_msgs) StdoutLine: {'line': b'[ 19%] Built target sonar_msgs__rosidl_generator_c\n'}
+[3.544152] (sonar_msgs) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[3.561711] (sonar_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[3.566646] (sonar_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[3.602927] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.610147] (-) TimerEvent: {}
+[3.713870] (-) TimerEvent: {}
+[3.717866] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Generating done\n'}
+[3.722624] (xsens_mti_ros2_driver) StdoutLine: {'line': b'-- Build files have been written to: /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver\n'}
+[3.760186] (xsens_mti_ros2_driver) CommandEnded: {'returncode': 0}
+[3.761045] (xsens_mti_ros2_driver) JobProgress: {'identifier': 'xsens_mti_ros2_driver', 'progress': 'build'}
+[3.764283] (xsens_mti_ros2_driver) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver', '--', '-j8', '-l8'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[3.813971] (-) TimerEvent: {}
+[3.860391] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.896028] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.912912] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_xsens_mti_ros2_driver\n'}
+[3.914050] (-) TimerEvent: {}
+[4.014431] (-) TimerEvent: {}
+[4.077891] (sonar_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[4.079137] (sonar_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[4.085373] (sonar_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/kf_values__type_support.cpp.o\x1b[0m\n'}
+[4.114519] (-) TimerEvent: {}
+[4.216870] (-) TimerEvent: {}
+[4.224050] (sonar_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[4.316962] (-) TimerEvent: {}
+[4.344912] (sonar_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[4.417057] (-) TimerEvent: {}
+[4.502924] (sonar_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/three_sonar_depth__type_support.c.o\x1b[0m\n'}
+[4.517149] (-) TimerEvent: {}
+[4.583934] (sonar_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[4.617251] (-) TimerEvent: {}
+[4.617735] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  5%] Built target xsens_mti_ros2_driver__cpp\n'}
+[4.619607] (sonar_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/conf_scal__type_support.c.o\x1b[0m\n'}
+[4.653836] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[  7%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.659798] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.667103] (sonar_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[4.667769] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 13%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.718872] (-) TimerEvent: {}
+[4.746920] (sonar_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/kf_values__type_support.c.o\x1b[0m\n'}
+[4.800511] (sonar_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/kf_values__type_support.cpp.o\x1b[0m\n'}
+[4.816728] (sonar_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/three_sonar_depth__type_support_c.cpp.o\x1b[0m\n'}
+[4.817015] (xsens_mti_ros2_driver) StdoutLine: {'line': b'running egg_info\n'}
+[4.818945] (xsens_mti_ros2_driver) StdoutLine: {'line': b'creating xsens_mti_ros2_driver.egg-info\n'}
+[4.819135] (-) TimerEvent: {}
+[4.819951] (xsens_mti_ros2_driver) StdoutLine: {'line': b'writing xsens_mti_ros2_driver.egg-info/PKG-INFO\n'}
+[4.820323] (xsens_mti_ros2_driver) StdoutLine: {'line': b'writing dependency_links to xsens_mti_ros2_driver.egg-info/dependency_links.txt\n'}
+[4.824937] (xsens_mti_ros2_driver) StdoutLine: {'line': b'writing top-level names to xsens_mti_ros2_driver.egg-info/top_level.txt\n'}
+[4.825129] (xsens_mti_ros2_driver) StdoutLine: {'line': b"writing manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'\n"}
+[4.831539] (xsens_mti_ros2_driver) StdoutLine: {'line': b"reading manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'\n"}
+[4.831732] (xsens_mti_ros2_driver) StdoutLine: {'line': b"writing manifest file 'xsens_mti_ros2_driver.egg-info/SOURCES.txt'\n"}
+[4.834918] (sonar_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/conf_scal__type_support_c.cpp.o\x1b[0m\n'}
+[4.853558] (sonar_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking C shared library libsonar_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.879885] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 15%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_generator_c.dir/rosidl_generator_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__functions.c.o\x1b[0m\n'}
+[4.898265] (sonar_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.919238] (-) TimerEvent: {}
+[4.929897] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 15%] Built target ament_cmake_python_build_xsens_mti_ros2_driver_egg\n'}
+[4.949296] (sonar_msgs) StdoutLine: {'line': b'[ 57%] Built target sonar_msgs__rosidl_typesupport_introspection_c\n'}
+[4.969391] (sonar_msgs) StdoutLine: {'line': b'[ 59%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[5.020882] (-) TimerEvent: {}
+[5.054660] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 18%] \x1b[32m\x1b[1mLinking C shared library libxsens_mti_ros2_driver__rosidl_generator_c.so\x1b[0m\n'}
+[5.057840] (sonar_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/kf_values__type_support.cpp.o\x1b[0m\n'}
+[5.081162] (sonar_msgs) StdoutLine: {'line': b'[ 61%] Built target sonar_msgs__rosidl_typesupport_c\n'}
+[5.104836] (sonar_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/kf_values__type_support_c.cpp.o\x1b[0m\n'}
+[5.120979] (-) TimerEvent: {}
+[5.129916] (sonar_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[5.173650] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 18%] Built target xsens_mti_ros2_driver__rosidl_generator_c\n'}
+[5.206098] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 21%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[5.212114] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[5.212379] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 26%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[5.221066] (-) TimerEvent: {}
+[5.294488] (sonar_msgs) StdoutLine: {'line': b'[ 65%] Built target sonar_msgs__rosidl_typesupport_cpp\n'}
+[5.324861] (sonar_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[5.325062] (-) TimerEvent: {}
+[5.425333] (-) TimerEvent: {}
+[5.528871] (-) TimerEvent: {}
+[5.530604] (sonar_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/kf_values__type_support.cpp.o\x1b[0m\n'}
+[5.628967] (-) TimerEvent: {}
+[5.732868] (-) TimerEvent: {}
+[5.836874] (-) TimerEvent: {}
+[5.878931] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 28%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[5.937702] (-) TimerEvent: {}
+[6.014123] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/xsens_mti_ros2_driver/msg/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[6.036940] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support_c.cpp.o\x1b[0m\n'}
+[6.037790] (-) TimerEvent: {}
+[6.106464] (sonar_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.137867] (-) TimerEvent: {}
+[6.238178] (-) TimerEvent: {}
+[6.299880] (sonar_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[6.300258] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/xsens_mti_ros2_driver/msg/detail/xs_status_word__type_support.c.o\x1b[0m\n'}
+[6.338273] (-) TimerEvent: {}
+[6.344575] (sonar_msgs) StdoutLine: {'line': b'[ 74%] Built target sonar_msgs__rosidl_typesupport_fastrtps_c\n'}
+[6.350594] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 39%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/xsens_mti_ros2_driver/msg/detail/dds_fastrtps/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[6.420979] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 42%] \x1b[32m\x1b[1mLinking C shared library libxsens_mti_ros2_driver__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[6.440139] (-) TimerEvent: {}
+[6.453227] (sonar_msgs) StdoutLine: {'line': b'[ 74%] Built target sonar_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[6.459109] (sonar_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[6.479923] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_c.dir/rosidl_typesupport_c/xsens_mti_ros2_driver/msg/xs_status_word__type_support.cpp.o\x1b[0m\n'}
+[6.486839] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 44%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_c\n'}
+[6.530359] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 47%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_c.so\x1b[0m\n'}
+[6.540241] (-) TimerEvent: {}
+[6.594961] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 47%] Built target xsens_mti_ros2_driver__rosidl_typesupport_c\n'}
+[6.623117] (sonar_msgs) StdoutLine: {'line': b'[ 76%] Built target sonar_msgs__rosidl_typesupport_introspection_cpp\n'}
+[6.640342] (-) TimerEvent: {}
+[6.651022] (sonar_msgs) StdoutLine: {'line': b'[ 76%] Built target sonar_msgs\n'}
+[6.665314] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 50%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[6.681019] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 52%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[6.682240] (sonar_msgs) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[6.704039] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 55%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[6.730729] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 55%] Built target xsens_mti_ros2_driver__rosidl_typesupport_cpp\n'}
+[6.740874] (-) TimerEvent: {}
+[6.755709] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 55%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_cpp\n'}
+[6.797371] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 55%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c\n'}
+[6.840977] (-) TimerEvent: {}
+[6.941293] (-) TimerEvent: {}
+[6.959407] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 57%] \x1b[32m\x1b[1mLinking CXX shared library libxsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[7.037653] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 57%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_cpp\n'}
+[7.041382] (-) TimerEvent: {}
+[7.057078] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 57%] Built target xsens_mti_ros2_driver\n'}
+[7.081642] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 60%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/main.cpp.o\x1b[0m\n'}
+[7.081905] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o\x1b[0m\n'}
+[7.083229] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 65%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o\x1b[0m\n'}
+[7.088894] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 68%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o\x1b[0m\n'}
+[7.090062] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 71%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o\x1b[0m\n'}
+[7.097142] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 73%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[7.097345] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 76%] \x1b[32mBuilding CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o\x1b[0m\n'}
+[7.146878] (-) TimerEvent: {}
+[7.247257] (-) TimerEvent: {}
+[7.347590] (-) TimerEvent: {}
+[7.447963] (-) TimerEvent: {}
+[7.550883] (-) TimerEvent: {}
+[7.651274] (-) TimerEvent: {}
+[7.751661] (-) TimerEvent: {}
+[7.852028] (-) TimerEvent: {}
+[7.920220] (sonar_msgs) StdoutLine: {'line': b'[ 78%] Built target sonar_msgs__py\n'}
+[7.952131] (-) TimerEvent: {}
+[7.980013] (sonar_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_three_sonar_depth_s.c.o\x1b[0m\n'}
+[7.984449] (sonar_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_kf_values_s.c.o\x1b[0m\n'}
+[7.984710] (sonar_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_conf_scal_s.c.o\x1b[0m\n'}
+[8.052230] (-) TimerEvent: {}
+[8.152585] (-) TimerEvent: {}
+[8.252881] (-) TimerEvent: {}
+[8.353208] (-) TimerEvent: {}
+[8.404054] (sonar_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/libsonar_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[8.453308] (-) TimerEvent: {}
+[8.537345] (sonar_msgs) StdoutLine: {'line': b'[ 87%] Built target sonar_msgs__rosidl_generator_py\n'}
+[8.553420] (-) TimerEvent: {}
+[8.599014] (sonar_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[8.601510] (sonar_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[8.601707] (sonar_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[8.653535] (-) TimerEvent: {}
+[8.668994] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 76%] Built target xsens_mti_ros2_driver__py\n'}
+[8.718729] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_generator_py.dir/rosidl_generator_py/xsens_mti_ros2_driver/msg/_xs_status_word_s.c.o\x1b[0m\n'}
+[8.754881] (-) TimerEvent: {}
+[8.851286] (sonar_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[8.856871] (sonar_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[8.857078] (-) TimerEvent: {}
+[8.918592] (sonar_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[8.955235] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 81%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/libxsens_mti_ros2_driver__rosidl_generator_py.so\x1b[0m\n'}
+[8.956104] (sonar_msgs) StdoutLine: {'line': b'[100%] Built target sonar_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[8.957180] (-) TimerEvent: {}
+[8.964661] (sonar_msgs) StdoutLine: {'line': b'[100%] Built target sonar_msgs__rosidl_typesupport_c__pyext\n'}
+[9.001979] (sonar_msgs) StdoutLine: {'line': b'[100%] Built target sonar_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[9.043545] (sonar_msgs) CommandEnded: {'returncode': 0}
+[9.044310] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 81%] Built target xsens_mti_ros2_driver__rosidl_generator_py\n'}
+[9.059061] (-) TimerEvent: {}
+[9.077738] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 84%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[9.102998] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 86%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[9.110187] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/xsens_mti_ros2_driver/_xsens_mti_ros2_driver_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[9.159174] (-) TimerEvent: {}
+[9.259525] (-) TimerEvent: {}
+[9.347881] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 92%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[9.359624] (-) TimerEvent: {}
+[9.408140] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[9.413842] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'install'}
+[9.419609] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/xsens_mti_ros2_driver/xsens_mti_ros2_driver_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[9.437494] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/sonar_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[9.459736] (-) TimerEvent: {}
+[9.463476] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_fastrtps_c__pyext\n'}
+[9.464907] (sonar_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[9.465174] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/rosidl_interfaces/sonar_msgs\n'}
+[9.465451] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[9.465621] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[9.465905] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.h\n'}
+[9.466055] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[9.466305] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/conf_scal.h\n'}
+[9.466455] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[9.466637] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__type_support.h\n'}
+[9.466773] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__struct.h\n'}
+[9.468959] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__functions.c\n'}
+[9.469168] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__struct.h\n'}
+[9.469303] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__functions.h\n'}
+[9.469423] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__functions.c\n'}
+[9.469540] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.h\n'}
+[9.469656] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.h\n'}
+[9.469779] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__functions.h\n'}
+[9.469921] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__functions.c\n'}
+[9.471722] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__functions.h\n'}
+[9.475978] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.h\n'}
+[9.476208] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/kf_values.h\n'}
+[9.476429] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/library_path.sh\n'}
+[9.476635] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/library_path.dsv\n'}
+[9.476843] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_c.so\n'}
+[9.477020] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_c.so" to ""\n'}
+[9.477157] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[9.477352] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[9.477470] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[9.477651] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[9.477762] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_fastrtps_c.h\n'}
+[9.477877] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_fastrtps_c.h\n'}
+[9.478035] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_fastrtps_c.h\n'}
+[9.478135] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[9.478227] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[9.478328] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[9.478434] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[9.478523] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.hpp\n'}
+[9.478630] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/kf_values.hpp\n'}
+[9.478732] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/conf_scal.hpp\n'}
+[9.478840] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[9.479036] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__struct.hpp\n'}
+[9.479191] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.hpp\n'}
+[9.479298] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__builder.hpp\n'}
+[9.479422] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__traits.hpp\n'}
+[9.479557] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__builder.hpp\n'}
+[9.479703] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__struct.hpp\n'}
+[9.479928] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__traits.hpp\n'}
+[9.480076] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__traits.hpp\n'}
+[9.480171] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__builder.hpp\n'}
+[9.480275] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[9.480390] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[9.480500] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[9.481950] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[9.482097] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[9.482223] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/dds_fastrtps\n'}
+[9.482349] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[9.482469] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[9.484781] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[9.484949] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[9.485068] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[9.485180] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[9.485294] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[9.485403] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.c\n'}
+[9.485520] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_introspection_c.h\n'}
+[9.485631] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__type_support.c\n'}
+[9.485741] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.c\n'}
+[9.485917] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_introspection_c.h\n'}
+[9.486097] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_introspection_c.h\n'}
+[9.486264] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[9.486426] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_c.so\n'}
+[9.486553] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[9.486717] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_c.so\n'}
+[9.486884] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_c.so" to ""\n'}
+[9.487039] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[9.487159] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[9.487362] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[9.487472] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_introspection_cpp.hpp\n'}
+[9.487636] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__type_support.cpp\n'}
+[9.487799] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_c__pyext\n'}
+[9.488143] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.cpp\n'}
+[9.488328] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.cpp\n'}
+[9.488509] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_introspection_cpp.hpp\n'}
+[9.488697] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_introspection_cpp.hpp\n'}
+[9.488896] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[9.489080] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[9.489239] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_cpp.so\n'}
+[9.489422] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[9.489611] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/pythonpath.sh\n'}
+[9.489779] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/pythonpath.dsv\n'}
+[9.489953] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info\n'}
+[9.490112] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[9.490235] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[9.490387] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[9.490500] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[9.490613] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs\n'}
+[9.490719] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[9.490850] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[9.490978] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/libsonar_msgs__rosidl_generator_py.so\n'}
+[9.491083] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[9.491186] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[9.491292] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[9.491394] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg\n'}
+[9.491500] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_kf_values_s.c\n'}
+[9.491604] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth.py\n'}
+[9.491711] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal.py\n'}
+[9.491824] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_kf_values.py\n'}
+[9.491948] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth_s.c\n'}
+[9.492052] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal_s.c\n'}
+[9.492158] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/__init__.py\n'}
+[9.492261] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[9.492367] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/__init__.py\n'}
+[9.515215] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[ 97%] Built target xsens_mti_ros2_driver__rosidl_typesupport_introspection_c__pyext\n'}
+[9.553021] (sonar_msgs) StdoutLine: {'line': b"Listing '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs'...\n"}
+[9.553318] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/__init__.py'...\n"}
+[9.553531] (sonar_msgs) StdoutLine: {'line': b"Listing '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg'...\n"}
+[9.553728] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/__init__.py'...\n"}
+[9.553938] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal.py'...\n"}
+[9.554142] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_kf_values.py'...\n"}
+[9.554365] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth.py'...\n"}
+[9.559288] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[9.560161] (-) TimerEvent: {}
+[9.560832] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[9.561082] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[9.561929] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[9.562883] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[9.563186] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[9.563363] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_py.so\n'}
+[9.564027] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_py.so" to ""\n'}
+[9.564265] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ThreeSonarDepth.idl\n'}
+[9.564548] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ConfScal.idl\n'}
+[9.565053] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/KfValues.idl\n'}
+[9.565230] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ThreeSonarDepth.msg\n'}
+[9.565383] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ConfScal.msg\n'}
+[9.565531] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/KfValues.msg\n'}
+[9.565871] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/package_run_dependencies/sonar_msgs\n'}
+[9.566123] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/parent_prefix_path/sonar_msgs\n'}
+[9.566350] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/ament_prefix_path.sh\n'}
+[9.566567] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/ament_prefix_path.dsv\n'}
+[9.566786] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/path.sh\n'}
+[9.567025] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/path.dsv\n'}
+[9.567243] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.bash\n'}
+[9.567454] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.sh\n'}
+[9.567670] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.zsh\n'}
+[9.567896] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.dsv\n'}
+[9.568108] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.dsv\n'}
+[9.568402] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/packages/sonar_msgs\n'}
+[9.568704] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cExport.cmake\n'}
+[9.568940] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[9.569180] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[9.569429] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[9.569695] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cppExport.cmake\n'}
+[9.569943] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[9.570177] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[9.570430] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[9.570661] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[9.570907] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cExport.cmake\n'}
+[9.571131] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[9.571350] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[9.572068] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[9.572270] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[9.572418] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[9.572619] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport.cmake\n'}
+[9.572737] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[9.573169] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[9.573921] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[9.574174] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[9.574375] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[9.574569] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[9.574769] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[9.574979] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[9.575202] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgsConfig.cmake\n'}
+[9.575403] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgsConfig-version.cmake\n'}
+[9.575581] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.xml\n'}
+[9.577957] (sonar_msgs) CommandEnded: {'returncode': 0}
+[9.660269] (-) TimerEvent: {}
+[9.711025] (sonar_msgs) JobEnded: {'identifier': 'sonar_msgs', 'rc': 0}
+[9.712419] (kalman_filter) JobStarted: {'identifier': 'kalman_filter'}
+[9.716970] (sonar_subs) JobStarted: {'identifier': 'sonar_subs'}
+[9.730631] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'cmake'}
+[9.731004] (kalman_filter) Command: {'cmd': ['/usr/bin/cmake', '/home/nuc1/Desktop/2024_UWR/src/kalman_filter', '-DCMAKE_INSTALL_PREFIX=/home/nuc1/Desktop/2024_UWR/install/kalman_filter'], 'cwd': '/home/nuc1/Desktop/2024_UWR/build/kalman_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'nuc1'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/nuc1'), ('OLDPWD', '/home/nuc1/Desktop'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('DBUS_STARTER_BUS_TYPE', 'session'), ('SYSTEMD_EXEC_PID', '1670'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'nuc1'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'nuc1'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.102'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/nuc1/Desktop/2024_UWR/build/kalman_filter'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('DBUS_STARTER_ADDRESS', 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/ntrip:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[9.762878] (-) TimerEvent: {}
+[9.829757] (kalman_filter) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[9.862979] (-) TimerEvent: {}
+[9.918172] (kalman_filter) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[9.939578] (kalman_filter) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[9.963075] (-) TimerEvent: {}
+[10.065922] (kalman_filter) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[10.066124] (-) TimerEvent: {}
+[10.081412] (kalman_filter) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[10.082143] (kalman_filter) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[10.083112] (kalman_filter) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[10.089908] (kalman_filter) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[10.166241] (-) TimerEvent: {}
+[10.211586] (kalman_filter) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[10.227072] (kalman_filter) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[10.227869] (kalman_filter) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[10.228966] (kalman_filter) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[10.233917] (kalman_filter) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[10.266337] (-) TimerEvent: {}
+[10.370010] (-) TimerEvent: {}
+[10.470342] (-) TimerEvent: {}
+[10.475715] (kalman_filter) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[10.570444] (-) TimerEvent: {}
+[10.617113] (kalman_filter) StdoutLine: {'line': b'-- Found rclcpp: 16.0.10 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[10.670548] (-) TimerEvent: {}
+[10.681987] (kalman_filter) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[10.690807] (kalman_filter) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[10.704946] (kalman_filter) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[10.726088] (kalman_filter) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[10.752679] (kalman_filter) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[10.770761] (-) TimerEvent: {}
+[10.819625] (sonar_subs) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/sonar_subs', 'build', '--build-base', '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/build', 'install', '--record', '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/home/nuc1/Desktop/2024_UWR/src/sonar_subs', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'LANGUAGE': 'en_SG:en', 'USER': 'nuc1', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/lib:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/nuc1', 'OLDPWD': '/home/nuc1/Desktop', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'DBUS_STARTER_BUS_TYPE': 'session', 'SYSTEMD_EXEC_PID': '1670', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c', 'COLORTERM': 'truecolor', 'COLCON_PREFIX_PATH': '/home/nuc1/Desktop/2024_UWR/install', 'ROS_DISTRO': 'humble', 'GTK_IM_MODULE': 'ibus', 'LOGNAME': 'nuc1', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'nuc1', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/humble/bin:/home/nuc1/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin', 'SESSION_MANAGER': 'local/nuc1-NUC8i5BEH:@/tmp/.ICE-unix/1670,unix/nuc1-NUC8i5BEH:/tmp/.ICE-unix/1670', 'XDG_MENU_PREFIX': 'gnome-', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/77d47d85_99bb_42f9_8968_3b61d5d8d2b0', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':1', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.102', 'SSH_AGENT_LAUNCHER': 'gnome-keyring', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/sonar_subs:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/ntrip:/opt/ros/humble', 'SHELL': '/bin/bash', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/nuc1/Desktop/2024_UWR/build/sonar_subs', 'LC_ALL': 'en_US.UTF-8', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'DBUS_STARTER_ADDRESS': 'unix:path=/run/user/1000/bus,guid=d15335ce30a067ca7ef7645a672a004c', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'VTE_VERSION': '6800', 'CMAKE_PREFIX_PATH': '/home/nuc1/Desktop/2024_UWR/install/sonar_msgs:/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/nuc1/Desktop/2024_UWR/install/ntrip'}, 'shell': False}
+[10.831024] (kalman_filter) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[10.833275] (kalman_filter) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[10.870860] (-) TimerEvent: {}
+[10.941075] (adnav-driver) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/advanced_navigation_driver.cpp:41\x1b[m\x1b[K:\n'}
+[10.941262] (adnav-driver) StderrLine: {'line': b'\x1b[01m\x1b[K/home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.h:96:22:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kopts\x1b[m\x1b[K\xe2\x80\x99 defined but not used [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[10.941369] (adnav-driver) StderrLine: {'line': b'   96 | static struct option \x1b[01;35m\x1b[Kopts\x1b[m\x1b[K[] = {\n'}
+[10.941454] (adnav-driver) StderrLine: {'line': b'      |                      \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[10.965943] (kalman_filter) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[10.970952] (-) TimerEvent: {}
+[11.011122] (kalman_filter) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[11.070872] (kalman_filter) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[11.071082] (-) TimerEvent: {}
+[11.080293] (kalman_filter) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[11.171198] (-) TimerEvent: {}
+[11.189006] (kalman_filter) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[11.190110] (kalman_filter) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[11.223013] (sonar_subs) StdoutLine: {'line': b'running egg_info\n'}
+[11.224116] (sonar_subs) StdoutLine: {'line': b'creating ../../build/sonar_subs/sonar_subs.egg-info\n'}
+[11.224581] (sonar_subs) StdoutLine: {'line': b'writing ../../build/sonar_subs/sonar_subs.egg-info/PKG-INFO\n'}
+[11.224954] (sonar_subs) StdoutLine: {'line': b'writing dependency_links to ../../build/sonar_subs/sonar_subs.egg-info/dependency_links.txt\n'}
+[11.225207] (sonar_subs) StdoutLine: {'line': b'writing entry points to ../../build/sonar_subs/sonar_subs.egg-info/entry_points.txt\n'}
+[11.225420] (sonar_subs) StdoutLine: {'line': b'writing requirements to ../../build/sonar_subs/sonar_subs.egg-info/requires.txt\n'}
+[11.225592] (sonar_subs) StdoutLine: {'line': b'writing top-level names to ../../build/sonar_subs/sonar_subs.egg-info/top_level.txt\n'}
+[11.225940] (sonar_subs) StdoutLine: {'line': b"writing manifest file '../../build/sonar_subs/sonar_subs.egg-info/SOURCES.txt'\n"}
+[11.228548] (sonar_subs) StdoutLine: {'line': b"reading manifest file '../../build/sonar_subs/sonar_subs.egg-info/SOURCES.txt'\n"}
+[11.228855] (sonar_subs) StdoutLine: {'line': b"adding license file 'LICENSE'\n"}
+[11.230054] (sonar_subs) StdoutLine: {'line': b"writing manifest file '../../build/sonar_subs/sonar_subs.egg-info/SOURCES.txt'\n"}
+[11.230898] (sonar_subs) StdoutLine: {'line': b'running build\n'}
+[11.231111] (sonar_subs) StdoutLine: {'line': b'running build_py\n'}
+[11.231235] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build\n'}
+[11.231364] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib\n'}
+[11.235014] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[11.235143] (sonar_subs) StdoutLine: {'line': b'copying sonar_subs/sync_ros2_kf.py -> /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[11.235251] (sonar_subs) StdoutLine: {'line': b'copying sonar_subs/sync_ros2.py -> /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[11.235355] (sonar_subs) StdoutLine: {'line': b'copying sonar_subs/read_imu.py -> /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[11.235464] (sonar_subs) StdoutLine: {'line': b'copying sonar_subs/read_sonar.py -> /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[11.235639] (sonar_subs) StdoutLine: {'line': b'copying sonar_subs/__init__.py -> /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs\n'}
+[11.235745] (sonar_subs) StdoutLine: {'line': b'running install\n'}
+[11.235862] (sonar_subs) StdoutLine: {'line': b'running install_lib\n'}
+[11.235974] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[11.236081] (sonar_subs) StdoutLine: {'line': b'copying /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs/sync_ros2_kf.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[11.236191] (sonar_subs) StdoutLine: {'line': b'copying /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs/sync_ros2.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[11.236301] (sonar_subs) StdoutLine: {'line': b'copying /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs/read_imu.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[11.236408] (sonar_subs) StdoutLine: {'line': b'copying /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs/read_sonar.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[11.236521] (sonar_subs) StdoutLine: {'line': b'copying /home/nuc1/Desktop/2024_UWR/build/sonar_subs/build/lib/sonar_subs/__init__.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs\n'}
+[11.236624] (sonar_subs) StdoutLine: {'line': b'byte-compiling /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs/sync_ros2_kf.py to sync_ros2_kf.cpython-310.pyc\n'}
+[11.236821] (sonar_subs) StdoutLine: {'line': b'byte-compiling /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs/sync_ros2.py to sync_ros2.cpython-310.pyc\n'}
+[11.238151] (sonar_subs) StdoutLine: {'line': b'byte-compiling /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs/read_imu.py to read_imu.cpython-310.pyc\n'}
+[11.239102] (sonar_subs) StdoutLine: {'line': b'byte-compiling /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs/read_sonar.py to read_sonar.cpython-310.pyc\n'}
+[11.240113] (sonar_subs) StdoutLine: {'line': b'byte-compiling /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs/__init__.py to __init__.cpython-310.pyc\n'}
+[11.241204] (sonar_subs) StdoutLine: {'line': b'running install_data\n'}
+[11.241441] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index\n'}
+[11.241613] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index/resource_index\n'}
+[11.241800] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index/resource_index/packages\n'}
+[11.241936] (sonar_subs) StdoutLine: {'line': b'copying resource/sonar_subs -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/ament_index/resource_index/packages\n'}
+[11.242864] (sonar_subs) StdoutLine: {'line': b'copying package.xml -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs\n'}
+[11.243044] (sonar_subs) StdoutLine: {'line': b'creating /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/launch\n'}
+[11.243161] (sonar_subs) StdoutLine: {'line': b'copying launch/launch.py -> /home/nuc1/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/launch\n'}
+[11.243270] (sonar_subs) StdoutLine: {'line': b'running install_egg_info\n'}
+[11.245348] (sonar_subs) StdoutLine: {'line': b'Copying ../../build/sonar_subs/sonar_subs.egg-info to /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages/sonar_subs-0.1.0-py3.10.egg-info\n'}
+[11.249875] (sonar_subs) StdoutLine: {'line': b'running install_scripts\n'}
+[11.271298] (-) TimerEvent: {}
+[11.278810] (sonar_subs) StdoutLine: {'line': b'Installing imu script to /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/sonar_subs\n'}
+[11.279062] (sonar_subs) StdoutLine: {'line': b'Installing kf_sync script to /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/sonar_subs\n'}
+[11.279237] (sonar_subs) StdoutLine: {'line': b'Installing sonar_reader script to /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/sonar_subs\n'}
+[11.279348] (sonar_subs) StdoutLine: {'line': b'Installing sync_readings script to /home/nuc1/Desktop/2024_UWR/install/sonar_subs/lib/sonar_subs\n'}
+[11.279704] (sonar_subs) StdoutLine: {'line': b"writing list of installed files to '/home/nuc1/Desktop/2024_UWR/build/sonar_subs/install.log'\n"}
+[11.297682] (kalman_filter) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[11.299731] (kalman_filter) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[11.316363] (sonar_subs) CommandEnded: {'returncode': 0}
+[11.329932] (sonar_subs) JobEnded: {'identifier': 'sonar_subs', 'rc': 0}
+[11.371415] (-) TimerEvent: {}
+[11.395335] (kalman_filter) StdoutLine: {'line': b'-- Found sonar_msgs: 0.0.0 (/home/nuc1/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake)\n'}
+[11.418124] (kalman_filter) StdoutLine: {'line': b'-- Found sensor_msgs: 4.2.4 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[11.471522] (-) TimerEvent: {}
+[11.475894] (kalman_filter) StdoutLine: {'line': b'-- Found tf2: 0.25.7 (/opt/ros/humble/share/tf2/cmake)\n'}
+[11.491125] (kalman_filter) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.7 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[11.510831] (kalman_filter) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[11.512841] (kalman_filter) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[11.513103] (kalman_filter) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[11.571628] (-) TimerEvent: {}
+[11.671996] (-) TimerEvent: {}
+[11.682390] (kalman_filter) StdoutLine: {'line': b'-- Found rosbag2_cpp: 0.15.12 (/opt/ros/humble/share/rosbag2_cpp/cmake)\n'}
+[11.755933] (kalman_filter) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[11.772062] (-) TimerEvent: {}
+[11.874741] (-) TimerEvent: {}
+[11.883635] (kalman_filter) StdoutLine: {'line': b"-- Added test 'copyright' to check source files copyright and LICENSE\n"}
+[11.886107] (kalman_filter) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[11.886650] (kalman_filter) StdoutLine: {'line': b'-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/nuc1/Desktop/2024_UWR/src/kalman_filter/include>\n'}
+[11.886796] (kalman_filter) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[11.888128] (kalman_filter) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[11.890380] (kalman_filter) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[11.890567] (kalman_filter) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[11.891375] (kalman_filter) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[11.893500] (kalman_filter) StdoutLine: {'line': b'-- Configuring done\n'}
+[11.898017] (kalman_filter) StderrLine: {'line': b'\x1b[0mCMake Error: The following variables are used in this project, but they are set to NOTFOUND.\n'}
+[11.898307] (kalman_filter) StderrLine: {'line': b'Please set them or make sure they are set and tested correctly in the CMake files:\n'}
+[11.898422] (kalman_filter) StderrLine: {'line': b'IIR_LIB\n'}
+[11.898528] (kalman_filter) StderrLine: {'line': b'    linked by target "kf_v4" in directory /home/nuc1/Desktop/2024_UWR/src/kalman_filter\n'}
+[11.898632] (kalman_filter) StderrLine: {'line': b'    linked by target "kf_3dof" in directory /home/nuc1/Desktop/2024_UWR/src/kalman_filter\n'}
+[11.898736] (kalman_filter) StderrLine: {'line': b'    linked by target "kf" in directory /home/nuc1/Desktop/2024_UWR/src/kalman_filter\n'}
+[11.898846] (kalman_filter) StderrLine: {'line': b'\x1b[0m\n'}
+[11.937125] (kalman_filter) StdoutLine: {'line': b'-- Generating done\n'}
+[11.939518] (kalman_filter) StderrLine: {'line': b'\x1b[0mCMake Generate step failed.  Build files cannot be regenerated correctly.\x1b[0m\n'}
+[11.955350] (kalman_filter) CommandEnded: {'returncode': 1}
+[11.974997] (-) TimerEvent: {}
+[11.978673] (kalman_filter) JobEnded: {'identifier': 'kalman_filter', 'rc': 1}
+[12.075115] (-) TimerEvent: {}
+[12.175455] (-) TimerEvent: {}
+[12.275805] (-) TimerEvent: {}
+[12.376153] (-) TimerEvent: {}
+[12.476516] (-) TimerEvent: {}
+[12.576807] (-) TimerEvent: {}
+[12.677072] (-) TimerEvent: {}
+[12.777339] (-) TimerEvent: {}
+[12.877610] (-) TimerEvent: {}
+[12.977903] (-) TimerEvent: {}
+[13.078155] (-) TimerEvent: {}
+[13.178418] (-) TimerEvent: {}
+[13.278685] (-) TimerEvent: {}
+[13.389881] (-) TimerEvent: {}
+[13.490155] (-) TimerEvent: {}
+[13.590428] (-) TimerEvent: {}
+[13.690710] (-) TimerEvent: {}
+[13.791000] (-) TimerEvent: {}
+[13.891276] (-) TimerEvent: {}
+[13.991565] (-) TimerEvent: {}
+[14.091852] (-) TimerEvent: {}
+[14.192123] (-) TimerEvent: {}
+[14.292453] (-) TimerEvent: {}
+[14.392777] (-) TimerEvent: {}
+[14.489759] (adnav-driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable adnav_driver\x1b[0m\n'}
+[14.492901] (-) TimerEvent: {}
+[14.593226] (-) TimerEvent: {}
+[14.693558] (-) TimerEvent: {}
+[14.793922] (-) TimerEvent: {}
+[14.894252] (-) TimerEvent: {}
+[14.994588] (-) TimerEvent: {}
+[15.002371] (adnav-driver) StdoutLine: {'line': b'[100%] Built target adnav_driver\n'}
+[15.013708] (adnav-driver) JobEnded: {'identifier': 'adnav-driver', 'rc': 'SIGINT'}
+[15.094691] (-) TimerEvent: {}
+[15.195074] (-) TimerEvent: {}
+[15.295409] (-) TimerEvent: {}
+[15.395764] (-) TimerEvent: {}
+[15.496167] (-) TimerEvent: {}
+[15.596507] (-) TimerEvent: {}
+[15.696884] (-) TimerEvent: {}
+[15.797196] (-) TimerEvent: {}
+[15.897536] (-) TimerEvent: {}
+[15.950069] (ntrip) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ntrip\x1b[0m\n'}
+[15.997635] (-) TimerEvent: {}
+[16.097998] (-) TimerEvent: {}
+[16.198360] (-) TimerEvent: {}
+[16.298713] (-) TimerEvent: {}
+[16.399108] (-) TimerEvent: {}
+[16.455307] (ntrip) StdoutLine: {'line': b'[100%] Built target ntrip\n'}
+[16.465945] (ntrip) JobEnded: {'identifier': 'ntrip', 'rc': 'SIGINT'}
+[16.499205] (-) TimerEvent: {}
+[16.599489] (-) TimerEvent: {}
+[16.699795] (-) TimerEvent: {}
+[16.800120] (-) TimerEvent: {}
+[16.900450] (-) TimerEvent: {}
+[17.000767] (-) TimerEvent: {}
+[17.101091] (-) TimerEvent: {}
+[17.201386] (-) TimerEvent: {}
+[17.301676] (-) TimerEvent: {}
+[17.401984] (-) TimerEvent: {}
+[17.502248] (-) TimerEvent: {}
+[17.602530] (-) TimerEvent: {}
+[17.702854] (-) TimerEvent: {}
+[17.803175] (-) TimerEvent: {}
+[17.903521] (-) TimerEvent: {}
+[18.003855] (-) TimerEvent: {}
+[18.104174] (-) TimerEvent: {}
+[18.204513] (-) TimerEvent: {}
+[18.304884] (-) TimerEvent: {}
+[18.405271] (-) TimerEvent: {}
+[18.505576] (-) TimerEvent: {}
+[18.605910] (-) TimerEvent: {}
+[18.706237] (-) TimerEvent: {}
+[18.806565] (-) TimerEvent: {}
+[18.906904] (-) TimerEvent: {}
+[19.007237] (-) TimerEvent: {}
+[19.107659] (-) TimerEvent: {}
+[19.208011] (-) TimerEvent: {}
+[19.308329] (-) TimerEvent: {}
+[19.408628] (-) TimerEvent: {}
+[19.508967] (-) TimerEvent: {}
+[19.609280] (-) TimerEvent: {}
+[19.709605] (-) TimerEvent: {}
+[19.809914] (-) TimerEvent: {}
+[19.910232] (-) TimerEvent: {}
+[20.010559] (-) TimerEvent: {}
+[20.110883] (-) TimerEvent: {}
+[20.211203] (-) TimerEvent: {}
+[20.311523] (-) TimerEvent: {}
+[20.411889] (-) TimerEvent: {}
+[20.512219] (-) TimerEvent: {}
+[20.612557] (-) TimerEvent: {}
+[20.712923] (-) TimerEvent: {}
+[20.813236] (-) TimerEvent: {}
+[20.913563] (-) TimerEvent: {}
+[21.013912] (-) TimerEvent: {}
+[21.114237] (-) TimerEvent: {}
+[21.214564] (-) TimerEvent: {}
+[21.314959] (-) TimerEvent: {}
+[21.415273] (-) TimerEvent: {}
+[21.515598] (-) TimerEvent: {}
+[21.615966] (-) TimerEvent: {}
+[21.716271] (-) TimerEvent: {}
+[21.816592] (-) TimerEvent: {}
+[21.916932] (-) TimerEvent: {}
+[22.017254] (-) TimerEvent: {}
+[22.117575] (-) TimerEvent: {}
+[22.217941] (-) TimerEvent: {}
+[22.318265] (-) TimerEvent: {}
+[22.418734] (-) TimerEvent: {}
+[22.519197] (-) TimerEvent: {}
+[22.619656] (-) TimerEvent: {}
+[22.720063] (-) TimerEvent: {}
+[22.820386] (-) TimerEvent: {}
+[22.920711] (-) TimerEvent: {}
+[23.021093] (-) TimerEvent: {}
+[23.121432] (-) TimerEvent: {}
+[23.221780] (-) TimerEvent: {}
+[23.322137] (-) TimerEvent: {}
+[23.422539] (-) TimerEvent: {}
+[23.522906] (-) TimerEvent: {}
+[23.548736] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable xsens_mti_node\x1b[0m\n'}
+[23.623012] (-) TimerEvent: {}
+[23.723347] (-) TimerEvent: {}
+[23.823677] (-) TimerEvent: {}
+[23.923976] (-) TimerEvent: {}
+[24.024245] (-) TimerEvent: {}
+[24.124537] (-) TimerEvent: {}
+[24.224806] (-) TimerEvent: {}
+[24.325052] (-) TimerEvent: {}
+[24.425299] (-) TimerEvent: {}
+[24.525550] (-) TimerEvent: {}
+[24.625847] (-) TimerEvent: {}
+[24.669683] (xsens_mti_ros2_driver) StdoutLine: {'line': b'[100%] Built target xsens_mti_node\n'}
+[24.683217] (xsens_mti_ros2_driver) JobEnded: {'identifier': 'xsens_mti_ros2_driver', 'rc': 'SIGINT'}
+[24.693999] (-) EventReactorShutdown: {}

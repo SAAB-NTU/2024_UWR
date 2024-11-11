@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/2024_UWR/src/sonar_msgs
+CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/sonar_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/2024_UWR/build/sonar_msgs
+CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/sonar_msgs
 
 # Utility rule file for sonar_msgs__py.
 
@@ -125,8 +125,8 @@ rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
-	cd /home/saab/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/saab/Desktop/2024_UWR/build/sonar_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuc1/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
+	cd /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
 
 rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c: rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c
@@ -174,10 +174,10 @@ sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/build: sonar_msgs__py
 .PHONY : sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/build
 
 sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/clean:
-	cd /home/saab/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/sonar_msgs__py.dir/cmake_clean.cmake
+	cd /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py && $(CMAKE_COMMAND) -P CMakeFiles/sonar_msgs__py.dir/cmake_clean.cmake
 .PHONY : sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/clean
 
 sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/depend:
-	cd /home/saab/Desktop/2024_UWR/build/sonar_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2024_UWR/src/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py /home/saab/Desktop/2024_UWR/build/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py /home/saab/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc1/Desktop/2024_UWR/build/sonar_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py /home/nuc1/Desktop/2024_UWR/build/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : sonar_msgs__py/CMakeFiles/sonar_msgs__py.dir/depend
 

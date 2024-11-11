@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/2024_UWR/src/kalman_filter
+CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/kalman_filter
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/2024_UWR/build/kalman_filter
+CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/kalman_filter
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/saab/Desktop/2024_UWR/build/kalman_filter && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2024_UWR/src/kalman_filter /home/saab/Desktop/2024_UWR/src/kalman_filter /home/saab/Desktop/2024_UWR/build/kalman_filter /home/saab/Desktop/2024_UWR/build/kalman_filter /home/saab/Desktop/2024_UWR/build/kalman_filter/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc1/Desktop/2024_UWR/build/kalman_filter && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/kalman_filter /home/nuc1/Desktop/2024_UWR/src/kalman_filter /home/nuc1/Desktop/2024_UWR/build/kalman_filter /home/nuc1/Desktop/2024_UWR/build/kalman_filter /home/nuc1/Desktop/2024_UWR/build/kalman_filter/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

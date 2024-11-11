@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver
+CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver
+CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver
 
 # Include any dependencies generated for this target.
 include CMakeFiles/xsens_mti_node.dir/depend.make
@@ -70,88 +70,88 @@ include CMakeFiles/xsens_mti_node.dir/progress.make
 include CMakeFiles/xsens_mti_node.dir/flags.make
 
 CMakeFiles/xsens_mti_node.dir/src/main.cpp.o: CMakeFiles/xsens_mti_node.dir/flags.make
-CMakeFiles/xsens_mti_node.dir/src/main.cpp.o: /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp
+CMakeFiles/xsens_mti_node.dir/src/main.cpp.o: /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp
 CMakeFiles/xsens_mti_node.dir/src/main.cpp.o: CMakeFiles/xsens_mti_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/main.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/main.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/main.cpp.o -c /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/main.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/main.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/main.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp
 
 CMakeFiles/xsens_mti_node.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xsens_mti_node.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp > CMakeFiles/xsens_mti_node.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp > CMakeFiles/xsens_mti_node.dir/src/main.cpp.i
 
 CMakeFiles/xsens_mti_node.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_mti_node.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp -o CMakeFiles/xsens_mti_node.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/main.cpp -o CMakeFiles/xsens_mti_node.dir/src/main.cpp.s
 
 CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o: CMakeFiles/xsens_mti_node.dir/flags.make
-CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o: /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp
+CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o: /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp
 CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o: CMakeFiles/xsens_mti_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o -c /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp
 
 CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp > CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp > CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.i
 
 CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp -o CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdainterface.cpp -o CMakeFiles/xsens_mti_node.dir/src/xdainterface.cpp.s
 
 CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o: CMakeFiles/xsens_mti_node.dir/flags.make
-CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o: /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp
+CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o: /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp
 CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o: CMakeFiles/xsens_mti_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o -c /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp
 
 CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp > CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp > CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.i
 
 CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp -o CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xdacallback.cpp -o CMakeFiles/xsens_mti_node.dir/src/xdacallback.cpp.s
 
 CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o: CMakeFiles/xsens_mti_node.dir/flags.make
-CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o: /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp
+CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o: /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp
 CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o: CMakeFiles/xsens_mti_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o -c /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp
 
 CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp > CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp > CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.i
 
 CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp -o CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_log_handler.cpp -o CMakeFiles/xsens_mti_node.dir/src/xsens_log_handler.cpp.s
 
 CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o: CMakeFiles/xsens_mti_node.dir/flags.make
-CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o: /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp
+CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o: /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp
 CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o: CMakeFiles/xsens_mti_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o -c /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp
 
 CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp > CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp > CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.i
 
 CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp -o CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/ntrip_util.cpp -o CMakeFiles/xsens_mti_node.dir/src/ntrip_util.cpp.s
 
 CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o: CMakeFiles/xsens_mti_node.dir/flags.make
-CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o: /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp
+CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o: /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp
 CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o: CMakeFiles/xsens_mti_node.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o -c /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o -MF CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o.d -o CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp
 
 CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp > CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp > CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.i
 
 CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp -o CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver/src/xsens_time_handler.cpp -o CMakeFiles/xsens_mti_node.dir/src/xsens_time_handler.cpp.s
 
 # Object files for target xsens_mti_node
 xsens_mti_node_OBJECTS = \
@@ -313,7 +313,7 @@ xsens_mti_node: /opt/ros/humble/lib/librosidl_runtime_c.so
 xsens_mti_node: /opt/ros/humble/lib/librcpputils.so
 xsens_mti_node: /opt/ros/humble/lib/librcutils.so
 xsens_mti_node: CMakeFiles/xsens_mti_node.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable xsens_mti_node"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable xsens_mti_node"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/xsens_mti_node.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -325,6 +325,6 @@ CMakeFiles/xsens_mti_node.dir/clean:
 .PHONY : CMakeFiles/xsens_mti_node.dir/clean
 
 CMakeFiles/xsens_mti_node.dir/depend:
-	cd /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver /home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles/xsens_mti_node.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver /home/nuc1/Desktop/2024_UWR/src/xsens_mti_ros2_driver /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/CMakeFiles/xsens_mti_node.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/xsens_mti_node.dir/depend
 
