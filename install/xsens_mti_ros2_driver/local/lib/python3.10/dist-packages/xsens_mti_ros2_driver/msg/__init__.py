@@ -1,1 +1,1 @@
-from xsens_mti_ros2_driver.msg._xs_status_word import XsStatusWord  # noqa: F401
+/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/rosidl_generator_py/xsens_mti_ros2_driver/msg/__init__.py

@@ -1,10 +1,1 @@
-std_msgs/Header header 
-float32 distance_1 
-float32 confidence_1
-float32 distance_2
-float32 confidence_2
-float32 distance_3
-float32 confidence_3
-float32 depth 
-float32 altitude
-float32 pressure
+/home/saab/Desktop/2024_UWR/src/sonar_msgs/msg/ThreeSonarDepth.msg

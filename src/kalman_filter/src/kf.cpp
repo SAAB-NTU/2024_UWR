@@ -16,8 +16,8 @@ kf_v3::kf_v3() : moving_avg(10),moving_avg_vel(3),moving_avg_time(3)  // Default
     vel=0;
     dist=0;
     avg_window=10;
-    cutoff_frequency=0.01;
-    samplingrate=400;
+    cutoff_frequency=10;
+    samplingrate=100;
     bias_reset=false;
     moving_avg=SonarProcess(avg_window);
     //moving_avg_vel=SonarProcess(avg_window);
@@ -38,8 +38,8 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     vel=0;
     dist=0;
     avg_window=sample_size;
-    cutoff_frequency=0.01;
-    samplingrate=400;
+    cutoff_frequency=10;
+    samplingrate=100;
     bias_reset=false;
     moving_avg=SonarProcess(avg_window);
     //moving_avg_vel=SonarProcess(avg_window);

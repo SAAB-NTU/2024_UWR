@@ -72,7 +72,7 @@ public:
         this->declare_parameter<std::string>("csv_path", "default_path.csv");
         this->get_parameter("csv_path", path_param);
 
-        this->declare_parameter<std::string>("imu_topic", "/Imu");
+        this->declare_parameter<std::string>("imu_topic", "/imu/data_raw");
         this->declare_parameter<std::string>("sonar_topic", "/sonar");
         this->declare_parameter<double>("angle", 0.0);
         this->declare_parameter<bool>("without_measurement", true);
@@ -99,14 +99,14 @@ public:
 	RCLCPP_INFO(this->get_logger(), "%s", sonar_param.c_str());
 
 
-        imu_subscriber_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
-        imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1));
+        imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
+        imu_param, 1, std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
 
-        sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-        sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+    sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+      sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 	
 	//sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-      // sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
+    //sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
 	
         // Create a bag file name using the bag_create_file function
@@ -236,7 +236,7 @@ public:
         
         
         try {
-        bef_rotate<<(imu_msg.linear_acceleration.x),(imu_msg.linear_acceleration.y),1;
+        bef_rotate<<(imu_msg.linear_acceleration.x),(-imu_msg.linear_acceleration.y),1;
         aft_rotate=rot_matrix*bef_rotate;
         predict_time_now = this->now();
         // if(!rot_bias)
@@ -346,7 +346,7 @@ public:
         {
         surge.set_dist_init(msg.distance_1/ 1000);
         sway.set_dist_init(msg.distance_2 /1000);
-        heave.set_dist_init(msg.depth / 1000);
+        heave.set_dist_init(msg.distance_3 / 1000);
             // /*if (msg.confidence_1 == 100.0) {
             //     //surge.set_dist_init(msg.distance_1 / 1000);
             //     world_to_inertial_transform.transform.translation.x = msg.distance_1 / 1000;
@@ -386,7 +386,7 @@ public:
             //heave_dist=sbs_frame_after.transform.translation.z;
             surge_dist = surge.set_dist(msg.distance_1 / 1000);
             sway_dist = sway.set_dist(msg.distance_2 / 1000);
-            heave_dist = heave.set_dist(msg.depth);
+            heave_dist = heave.set_dist(msg.distance_3/1000);
             diff_surge = surge.residual();
             diff_sway = sway.residual();
             diff_heave = heave.residual();
@@ -591,8 +591,8 @@ private:
     rclcpp::Publisher<sonar_msgs::msg::KfValues>::SharedPtr k_vals_pub;
 
     rclcpp::Subscription<sonar_msgs::msg::ThreeSonarDepth>::SharedPtr sonar_subscriber_;
-    rclcpp::Subscription<geometry_msgs::msg::Vector3Stamped>::SharedPtr imu_subscriber_;
-    
+    //rclcpp::Subscription<geometry_msgs::msg::Vector3Stamped>::SharedPtr imu_subscriber_;
+    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_subscriber_;
 
     int sample_size;
     double expected_difference;

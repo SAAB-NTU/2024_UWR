@@ -23,15 +23,15 @@ class RosbagSync(Node):
         self.sub2 = Subscriber(self, ConfScal, '/Confidence_SONAR')
         self.sub3 = Subscriber(self, Vector3Stamped, '/IMU_filtered')
         self.sub4 = Subscriber(self,ThreeSonarDepth,'/SONAR_raw')
-        self.sub5=Subscriber(self,Vector3Stamped,'/IMU_raw')
+        self.sub5=Subscriber(self,Imu,'/IMU_raw')
         
-        #self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4], 10, slop=0.002)  # Increase the queue size for stability
-        #self.ts.registerCallback(self.callback)
+        self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4], 10, slop=0.002)  # Increase the queue size for stability
+        self.ts.registerCallback(self.callback)
 
         #self.ts2 = ApproximateTimeSynchronizer([self.sub1], 10, slop=0.002)  # Increase the queue size for stability
         #self.ts2.registerCallback(self.callback_pred)
         #self.image_bridge=cv_bridge.CvBridge()
-        #self.synchronized_data = []
+        self.synchronized_data = []
         self.synchronized_data_imu = []
         self.ts3 = ApproximateTimeSynchronizer([self.sub3,self.sub5,self.sub1], 10, slop=0.002)  # Increase the queue size for stability
         self.ts3.registerCallback(self.callback_imu)
@@ -60,7 +60,7 @@ class RosbagSync(Node):
     #def log_angular_velocity_data(self, data):
     #    self.get_logger().info(f"Received IMU angular velocity data: x: {data.vector.x}")
 
-
+'''
     def callback(self, data1, data2, data3,data4):
         # Log entry into the callback
         self.get_logger().info("Callback triggered with synchronized messages")
@@ -97,8 +97,9 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data)
-        synchronized_df.to_csv('/home/uwr/Desktop/output.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/output.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
+    '''
     def callback_pred(self, data1):
         # Log entry into the callback
         self.get_logger().info("Callback triggered with synchronized messages")
@@ -129,8 +130,8 @@ class RosbagSync(Node):
         synchronized_df = pd.DataFrame(self.synchronized_data)
         synchronized_df.to_csv('/home/uwr/Desktop/output.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
-        '''
-
+        
+'''
     def callback_imu(self, data1,data2,data3):
         # Log entry into the callback
         self.get_logger().info("Callback triggered with synchronized messages")
@@ -144,9 +145,9 @@ class RosbagSync(Node):
         timestamp = data1.header.stamp
         self.synchronized_data_imu.append({
             'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
-            'IMU_Linear_Acc_X': data2.vector.x,
-            'IMU_Linear_Acc_Y': data2.vector.y,
-            'IMU_Linear_Acc_Z': data2.vector.z,
+            'IMU_Linear_Acc_X': data2.linear_acceleration.x,
+            'IMU_Linear_Acc_Y': data2.linear_acceleration.y,
+            'IMU_Linear_Acc_Z': data2.linear_acceleration.z,
             'Filtered_X': data1.vector.x,
             'Filtered_Y': data1.vector.y,
             'Filtered_Z': data1.vector.z,
@@ -165,7 +166,7 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data_imu)
-        synchronized_df.to_csv('/home/uwr/Desktop/output_IMU.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/output_IMU.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
 
 def main(args=None):

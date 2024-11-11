@@ -1,3 +1,1 @@
-# generated from ament_package/template/environment_hook/pythonpath.sh.in
-
-ament_prepend_unique_value PYTHONPATH "$AMENT_CURRENT_PREFIX/local/lib/python3.10/dist-packages"
+/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/ament_cmake_environment_hooks/pythonpath.sh
