@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/saab/Desktop/2024_UWR/src/adnav-driver
+CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/adnav-driver
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/saab/Desktop/2024_UWR/build/adnav-driver
+CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/adnav-driver
 
 # Utility rule file for adnav-driver_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/adnav-driver_uninstall.dir/compiler_depend.make
 include CMakeFiles/adnav-driver_uninstall.dir/progress.make
 
 CMakeFiles/adnav-driver_uninstall:
-	/usr/bin/cmake -P /home/saab/Desktop/2024_UWR/build/adnav-driver/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/nuc1/Desktop/2024_UWR/build/adnav-driver/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 adnav-driver_uninstall: CMakeFiles/adnav-driver_uninstall
 adnav-driver_uninstall: CMakeFiles/adnav-driver_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/adnav-driver_uninstall.dir/clean:
 .PHONY : CMakeFiles/adnav-driver_uninstall.dir/clean
 
 CMakeFiles/adnav-driver_uninstall.dir/depend:
-	cd /home/saab/Desktop/2024_UWR/build/adnav-driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2024_UWR/src/adnav-driver /home/saab/Desktop/2024_UWR/src/adnav-driver /home/saab/Desktop/2024_UWR/build/adnav-driver /home/saab/Desktop/2024_UWR/build/adnav-driver /home/saab/Desktop/2024_UWR/build/adnav-driver/CMakeFiles/adnav-driver_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/nuc1/Desktop/2024_UWR/build/adnav-driver && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/adnav-driver /home/nuc1/Desktop/2024_UWR/src/adnav-driver /home/nuc1/Desktop/2024_UWR/build/adnav-driver /home/nuc1/Desktop/2024_UWR/build/adnav-driver /home/nuc1/Desktop/2024_UWR/build/adnav-driver/CMakeFiles/adnav-driver_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/adnav-driver_uninstall.dir/depend
 

@@ -8,9 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/saab/Desktop/2024_UWR/src/ntrip/src/client.cpp" "CMakeFiles/ntrip.dir/src/client.cpp.o" "gcc" "CMakeFiles/ntrip.dir/src/client.cpp.o.d"
-  "/home/saab/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp" "CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o" "gcc" "CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o.d"
-  "/home/saab/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp" "CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o" "gcc" "CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o.d"
+  "/home/nuc1/Desktop/2024_UWR/src/ntrip/src/client.cpp" "CMakeFiles/ntrip.dir/src/client.cpp.o" "gcc" "CMakeFiles/ntrip.dir/src/client.cpp.o.d"
+  "/home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp" "CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o" "gcc" "CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o.d"
+  "/home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp" "CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o" "gcc" "CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o.d"
   )
 
 # Targets to which this target links.

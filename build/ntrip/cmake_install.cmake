@@ -1,8 +1,8 @@
-# Install script for directory: /home/saab/Desktop/2024_UWR/src/ntrip
+# Install script for directory: /home/nuc1/Desktop/2024_UWR/src/ntrip
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/2024_UWR/install/ntrip")
+  set(CMAKE_INSTALL_PREFIX "/home/nuc1/Desktop/2024_UWR/install/ntrip")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -49,7 +49,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ntrip/ntrip"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ntrip" TYPE EXECUTABLE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ntrip")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ntrip" TYPE EXECUTABLE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ntrip")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ntrip/ntrip" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ntrip/ntrip")
     file(RPATH_CHANGE
@@ -63,15 +63,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip/" TYPE DIRECTORY FILES "/home/saab/Desktop/2024_UWR/src/ntrip/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip/" TYPE DIRECTORY FILES "/home/nuc1/Desktop/2024_UWR/src/ntrip/launch")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ntrip")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/ntrip")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ntrip")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/parent_prefix_path" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/ntrip")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -79,7 +79,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip/environment" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/ament_prefix_path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip/environment" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/ament_prefix_path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
@@ -87,42 +87,42 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip/environment" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/path.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip/environment" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/path.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.bash")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.bash")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.sh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.zsh")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.zsh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/local_setup.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/package.dsv")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_environment_hooks/package.dsv")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_index/share/ament_index/resource_index/packages/ntrip")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/packages" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_index/share/ament_index/resource_index/packages/ntrip")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip/cmake" TYPE FILE FILES
-    "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_core/ntripConfig.cmake"
-    "/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_core/ntripConfig-version.cmake"
+    "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_core/ntripConfig.cmake"
+    "/home/nuc1/Desktop/2024_UWR/build/ntrip/ament_cmake_core/ntripConfig-version.cmake"
     )
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/saab/Desktop/2024_UWR/src/ntrip/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ntrip" TYPE FILE FILES "/home/nuc1/Desktop/2024_UWR/src/ntrip/package.xml")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -133,5 +133,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/saab/Desktop/2024_UWR/build/ntrip/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nuc1/Desktop/2024_UWR/build/ntrip/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

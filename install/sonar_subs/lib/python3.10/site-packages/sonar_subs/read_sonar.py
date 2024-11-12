@@ -4,14 +4,20 @@ import rclpy
 from rclpy.node import Node
 from sonar_msgs.msg import ThreeSonarDepth
 from brping import Ping1D
+from rclpy.qos import QoSProfile, ReliabilityPolicy, DurabilityPolicy
 
-def main2():
+def main():
     # Initialize ROS 2
     rclpy.init()
     node = rclpy.create_node("single_beam_sonar_node")
     rclpy.logging.get_logger("single_beam_sonar_node").info("Init")
+    qos_profile = QoSProfile(
+        depth=1,  # Keep only the latest message
+        reliability=ReliabilityPolicy.BEST_EFFORT,  # Fast, but may drop messages
+        durability=DurabilityPolicy.VOLATILE  # Do not persist messages
+    )
     # Create a publisher for the custom message type
-    pub_sonar = node.create_publisher(ThreeSonarDepth, "sonar", qos_profile=10)
+    pub_sonar = node.create_publisher(ThreeSonarDepth, "sonar", qos_profile=qos_profile)
     
     # Declare parameters with default values
     sonar_port1 = node.declare_parameter("sonar0/sonar_port", "/dev/ttyACM0").value
@@ -24,11 +30,11 @@ def main2():
     sonar_driver1 = Ping1D()
     sonar_driver1.connect_serial(device_name=sonar_port1)
     sonar_driver1.set_ping_interval(ping_interval)
-    sonar_driver1.set_range(0,10000) #In mm
+    #sonar_driver1.set_range(0,10000) #In mm
     sonar_port2 = node.declare_parameter("sonar1/sonar_port", "/dev/ttyACM1").value
     sonar_driver2 = Ping1D()
     sonar_driver2.connect_serial(device_name=sonar_port2)
-    sonar_driver2.set_range(0,10000) #In mm
+    #sonar_driver2.set_range(0,10000) #In mm
     sonar_driver2.set_ping_interval(ping_interval)
 
     sonar_port3 = node.declare_parameter("sonar2/sonar_port", "/dev/ttyUSB0").value
@@ -42,7 +48,7 @@ def main2():
         # Retrieve distance and confidence from each sonar
         data_1 = sonar_driver1.get_distance_simple()
         data_2 = sonar_driver2.get_distance_simple()
-       # data_3 = sonar_driver3.get_distance_simple()
+        data_3 = sonar_driver3.get_distance_simple()
 
         # Ensure the data is not None before accessing
         if data_1 is not None:
@@ -59,36 +65,20 @@ def main2():
 
         # Publish the message
         pub_sonar.publish(sonar_msg)
-        rclpy.logging.get_logger("single_beam_sonar_node").info(f"Published sonar data: {sonar_msg}")
+        #rclpy.logging.get_logger("single_beam_sonar_node").info(f"Published sonar data: {sonar_msg}")
 
         # Sleep to control the publishing rate
-        rclpy.spin_once(node, timeout_sec=0.0001)
+        rclpy.spin_once(node, timeout_sec=0.01)
     
     # Cleanup and shutdown
     node.destroy_node()
     rclpy.shutdown()
 
-def main():
-    rclpy.init()
-    node = rclpy.create_node("single_beam_sonar_node")
-    rclpy.logging.get_logger("single_beam_sonar_node").info("Init2")
-    # Create a publisher for the custom message type
-    pub_sonar = node.create_publisher(ThreeSonarDepth, "sonar", qos_profile=10)
-    #r = rclpy.timer.Rate(20)
-    while rclpy.ok():
-        data = {"distance": 1000, "confidence": 100.0}
-        sonar_msg = ThreeSonarDepth()
-        sonar_msg.header.stamp = node.get_clock().now().to_msg()
-        sonar_msg.distance_1 = float(data["distance"]) / 1000.0
-        sonar_msg.confidence_1 = float(data["confidence"])
-        pub_sonar.publish(sonar_msg)
-        rclpy.logging.get_logger("single_beam_sonar_node").info("hello")
-        rclpy.spin_once(node, timeout_sec=0.01)
-        #r.sleep()
+
 
 if __name__ == "__main__":
     try:
-        main2()
+        main()
     except rclpy.exceptions.ROSInterruptException:
         pass
 
