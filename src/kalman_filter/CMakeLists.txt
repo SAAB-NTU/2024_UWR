@@ -40,7 +40,8 @@ target_include_directories(kf_3dof PUBLIC
   $<INSTALL_INTERFACE:include>
 )
 
-
+	
+install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
 # Set required C and C++ standards
 target_compile_features(kf PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17
 target_compile_features(kf_v4 PUBLIC c_std_99 cxx_std_17)  # Require C99 and C++17

@@ -1,8 +1,8 @@
-# Install script for directory: /home/nuc1/Desktop/2024_UWR/build/xsens_mti_ros2_driver/xsens_mti_ros2_driver__py
+# Install script for directory: /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver/xsens_mti_ros2_driver__py
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/nuc1/Desktop/2024_UWR/install/xsens_mti_ros2_driver")
+  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

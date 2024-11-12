@@ -31,7 +31,7 @@ const std::deque<double>& SonarProcess::getMovingAvgWindow() const {
 //}
 
 std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double expectedDifference) {
-    double fixedStdDev = expectedDifference / 3.0;
+    double fixedStdDev = expectedDifference * 3.0;
     
     
 

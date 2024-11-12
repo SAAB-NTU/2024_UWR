@@ -62,7 +62,7 @@ def main2():
         rclpy.logging.get_logger("single_beam_sonar_node").info(f"Published sonar data: {sonar_msg}")
 
         # Sleep to control the publishing rate
-        rclpy.spin_once(node, timeout_sec=0.01)
+        rclpy.spin_once(node, timeout_sec=0.0001)
     
     # Cleanup and shutdown
     node.destroy_node()

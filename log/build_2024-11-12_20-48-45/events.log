@@ -1,0 +1,344 @@
+[0.000000] (-) TimerEvent: {}
+[0.000385] (-) JobUnselected: {'identifier': 'adnav-driver'}
+[0.000632] (-) JobUnselected: {'identifier': 'kalman_filter'}
+[0.000671] (-) JobUnselected: {'identifier': 'ntrip'}
+[0.000741] (-) JobUnselected: {'identifier': 'sonar_subs'}
+[0.000774] (-) JobUnselected: {'identifier': 'xsens_mti_ros2_driver'}
+[0.000800] (sonar_msgs) JobQueued: {'identifier': 'sonar_msgs', 'dependencies': OrderedDict()}
+[0.000828] (sonar_msgs) JobStarted: {'identifier': 'sonar_msgs'}
+[0.008060] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'cmake'}
+[0.008397] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '/home/saab/Desktop/2024_UWR/src/sonar_msgs', '-DCMAKE_INSTALL_PREFIX=/home/saab/Desktop/2024_UWR/install/sonar_msgs'], 'cwd': '/home/saab/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'saab'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/saab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/saab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2773'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'saab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'saab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/saab/.android/emulator:/home/saab/.android/tools:/home/saab/.android/tools/bin:/home/saab/.android/platform-tools:/opt/ros/humble/bin:/home/saab/anaconda3/condabin:/home/saab/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.5/bin:/snap/bin:/home/saab/.dotnet/tools'), ('SESSION_MANAGER', 'local/saab-asrockx570:@/tmp/.ICE-unix/2574,unix/saab-asrockx570:/tmp/.ICE-unix/2574'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/83bcbb20_929d_4016_9a6c_495a66eaef7e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.263'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/saab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ANDROID_SDK_ROOT', '/home/saab/.android'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/saab/Desktop/2024_UWR/build/sonar_msgs'), ('SDK', '/home/saab/.android'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/saab/anaconda3/bin/conda'), ('ANDROID_HOME', '/home/saab/.android'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/python3.9/site-packages:/home/saab/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/python3.9/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.054057] (sonar_msgs) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099804] (-) TimerEvent: {}
+[0.107185] (sonar_msgs) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.114192] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.173920] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.178834] (sonar_msgs) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.178993] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.179247] (sonar_msgs) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.181254] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199872] (-) TimerEvent: {}
+[0.254619] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.260669] (sonar_msgs) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.260877] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.261183] (sonar_msgs) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.263639] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.10 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299962] (-) TimerEvent: {}
+[0.400201] (-) TimerEvent: {}
+[0.451824] (sonar_msgs) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.500282] (-) TimerEvent: {}
+[0.563361] (sonar_msgs) StdoutLine: {'line': b'-- Found std_msgs: 4.2.4 (/opt/ros/humble/share/std_msgs/cmake)\n'}
+[0.600363] (-) TimerEvent: {}
+[0.611724] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.616076] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.622502] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.631843] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.644089] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.662601] (sonar_msgs) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[0.700435] (-) TimerEvent: {}
+[0.800618] (-) TimerEvent: {}
+[0.900814] (-) TimerEvent: {}
+[0.904586] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[1.000901] (-) TimerEvent: {}
+[1.101117] (-) TimerEvent: {}
+[1.201327] (-) TimerEvent: {}
+[1.301545] (-) TimerEvent: {}
+[1.304517] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.401620] (-) TimerEvent: {}
+[1.472501] (sonar_msgs) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.501690] (-) TimerEvent: {}
+[1.502973] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[1.506201] (sonar_msgs) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[1.535723] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[1.535870] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[1.535952] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[1.536022] (sonar_msgs) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[1.559305] (sonar_msgs) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[1.601765] (-) TimerEvent: {}
+[1.604754] (sonar_msgs) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.11 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.628913] (sonar_msgs) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.630123] (sonar_msgs) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.632293] (sonar_msgs) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.665205] (sonar_msgs) StdoutLine: {'line': b'-- Generating done\n'}
+[1.667765] (sonar_msgs) StdoutLine: {'line': b'-- Build files have been written to: /home/saab/Desktop/2024_UWR/build/sonar_msgs\n'}
+[1.673066] (sonar_msgs) CommandEnded: {'returncode': 0}
+[1.673618] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'build'}
+[1.674637] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/saab/Desktop/2024_UWR/build/sonar_msgs', '--', '-j24', '-l24'], 'cwd': '/home/saab/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'saab'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/saab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/saab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2773'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'saab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'saab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/saab/.android/emulator:/home/saab/.android/tools:/home/saab/.android/tools/bin:/home/saab/.android/platform-tools:/opt/ros/humble/bin:/home/saab/anaconda3/condabin:/home/saab/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.5/bin:/snap/bin:/home/saab/.dotnet/tools'), ('SESSION_MANAGER', 'local/saab-asrockx570:@/tmp/.ICE-unix/2574,unix/saab-asrockx570:/tmp/.ICE-unix/2574'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/83bcbb20_929d_4016_9a6c_495a66eaef7e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.263'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/saab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ANDROID_SDK_ROOT', '/home/saab/.android'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/saab/Desktop/2024_UWR/build/sonar_msgs'), ('SDK', '/home/saab/.android'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/saab/anaconda3/bin/conda'), ('ANDROID_HOME', '/home/saab/.android'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/python3.9/site-packages:/home/saab/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/python3.9/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[1.701851] (-) TimerEvent: {}
+[1.718157] (sonar_msgs) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[1.722533] (sonar_msgs) StdoutLine: {'line': b'[  4%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[1.731056] (sonar_msgs) StdoutLine: {'line': b'[  4%] Built target ament_cmake_python_copy_sonar_msgs\n'}
+[1.801945] (-) TimerEvent: {}
+[1.902150] (-) TimerEvent: {}
+[1.950337] (sonar_msgs) StdoutLine: {'line': b'[  4%] Built target sonar_msgs__cpp\n'}
+[1.958064] (sonar_msgs) StdoutLine: {'line': b'[  6%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[1.958722] (sonar_msgs) StdoutLine: {'line': b'[  8%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[1.958814] (sonar_msgs) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[1.975780] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_generator_c\x1b[0m\n'}
+[1.979882] (sonar_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[1.980539] (sonar_msgs) StdoutLine: {'line': b'writing sonar_msgs.egg-info/PKG-INFO\n'}
+[1.980680] (sonar_msgs) StdoutLine: {'line': b'writing dependency_links to sonar_msgs.egg-info/dependency_links.txt\n'}
+[1.980798] (sonar_msgs) StdoutLine: {'line': b'writing top-level names to sonar_msgs.egg-info/top_level.txt\n'}
+[1.986375] (sonar_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/conf_scal__functions.c.o\x1b[0m\n'}
+[1.986468] (sonar_msgs) StdoutLine: {'line': b'[ 14%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/three_sonar_depth__functions.c.o\x1b[0m\n'}
+[1.986896] (sonar_msgs) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_c.dir/rosidl_generator_c/sonar_msgs/msg/detail/kf_values__functions.c.o\x1b[0m\n'}
+[1.987487] (sonar_msgs) StdoutLine: {'line': b"reading manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[1.987906] (sonar_msgs) StdoutLine: {'line': b"writing manifest file 'sonar_msgs.egg-info/SOURCES.txt'\n"}
+[2.002252] (-) TimerEvent: {}
+[2.010068] (sonar_msgs) StdoutLine: {'line': b'[ 17%] Built target ament_cmake_python_build_sonar_msgs_egg\n'}
+[2.027327] (sonar_msgs) StdoutLine: {'line': b'[ 19%] \x1b[32m\x1b[1mLinking C shared library libsonar_msgs__rosidl_generator_c.so\x1b[0m\n'}
+[2.059745] (sonar_msgs) StdoutLine: {'line': b'[ 19%] Built target sonar_msgs__rosidl_generator_c\n'}
+[2.066674] (sonar_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[2.066803] (sonar_msgs) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[2.067484] (sonar_msgs) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[2.102320] (-) TimerEvent: {}
+[2.145500] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_cpp\x1b[0m\n'}
+[2.154483] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_introspection_cpp\x1b[0m\n'}
+[2.157923] (sonar_msgs) StdoutLine: {'line': b'[ 27%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/kf_values__type_support.cpp.o\x1b[0m\n'}
+[2.158243] (sonar_msgs) StdoutLine: {'line': b'[ 29%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[2.158786] (sonar_msgs) StdoutLine: {'line': b'[ 31%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/sonar_msgs/msg/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[2.165437] (sonar_msgs) StdoutLine: {'line': b'[ 34%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[2.165713] (sonar_msgs) StdoutLine: {'line': b'[ 36%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/kf_values__type_support.cpp.o\x1b[0m\n'}
+[2.166003] (sonar_msgs) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/sonar_msgs/msg/detail/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[2.184992] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_fastrtps_cpp\x1b[0m\n'}
+[2.196435] (sonar_msgs) StdoutLine: {'line': b'[ 40%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[2.197410] (sonar_msgs) StdoutLine: {'line': b'[ 42%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[2.198004] (sonar_msgs) StdoutLine: {'line': b'[ 44%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/sonar_msgs/msg/detail/dds_fastrtps/kf_values__type_support.cpp.o\x1b[0m\n'}
+[2.202385] (-) TimerEvent: {}
+[2.269016] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_introspection_c\x1b[0m\n'}
+[2.276754] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_c\x1b[0m\n'}
+[2.278360] (sonar_msgs) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/kf_values__type_support.c.o\x1b[0m\n'}
+[2.278732] (sonar_msgs) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/three_sonar_depth__type_support.c.o\x1b[0m\n'}
+[2.280944] (sonar_msgs) StdoutLine: {'line': b'[ 51%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/sonar_msgs/msg/detail/conf_scal__type_support.c.o\x1b[0m\n'}
+[2.285995] (sonar_msgs) StdoutLine: {'line': b'[ 53%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/kf_values__type_support.cpp.o\x1b[0m\n'}
+[2.286759] (sonar_msgs) StdoutLine: {'line': b'[ 55%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/three_sonar_depth__type_support.cpp.o\x1b[0m\n'}
+[2.287506] (sonar_msgs) StdoutLine: {'line': b'[ 57%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_c.dir/rosidl_typesupport_c/sonar_msgs/msg/conf_scal__type_support.cpp.o\x1b[0m\n'}
+[2.295229] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_fastrtps_c\x1b[0m\n'}
+[2.302486] (-) TimerEvent: {}
+[2.308999] (sonar_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/three_sonar_depth__type_support_c.cpp.o\x1b[0m\n'}
+[2.309283] (sonar_msgs) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/conf_scal__type_support_c.cpp.o\x1b[0m\n'}
+[2.309982] (sonar_msgs) StdoutLine: {'line': b'[ 63%] \x1b[32mBuilding CXX object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/sonar_msgs/msg/detail/kf_values__type_support_c.cpp.o\x1b[0m\n'}
+[2.311690] (sonar_msgs) StdoutLine: {'line': b'[ 65%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_c.so\x1b[0m\n'}
+[2.316948] (sonar_msgs) StdoutLine: {'line': b'[ 68%] \x1b[32m\x1b[1mLinking C shared library libsonar_msgs__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[2.341150] (sonar_msgs) StdoutLine: {'line': b'[ 68%] Built target sonar_msgs__rosidl_typesupport_c\n'}
+[2.346827] (sonar_msgs) StdoutLine: {'line': b'[ 68%] Built target sonar_msgs__rosidl_typesupport_introspection_c\n'}
+[2.357267] (sonar_msgs) StdoutLine: {'line': b'[ 70%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[2.386236] (sonar_msgs) StdoutLine: {'line': b'[ 70%] Built target sonar_msgs__rosidl_typesupport_cpp\n'}
+[2.402591] (-) TimerEvent: {}
+[2.477351] (sonar_msgs) StdoutLine: {'line': b'[ 72%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[2.502698] (-) TimerEvent: {}
+[2.519480] (sonar_msgs) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[2.519739] (sonar_msgs) StdoutLine: {'line': b'[ 74%] Built target sonar_msgs__rosidl_typesupport_introspection_cpp\n'}
+[2.544804] (sonar_msgs) StdoutLine: {'line': b'[ 76%] \x1b[32m\x1b[1mLinking CXX shared library libsonar_msgs__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[2.567273] (sonar_msgs) StdoutLine: {'line': b'[ 76%] Built target sonar_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[2.593641] (sonar_msgs) StdoutLine: {'line': b'[ 76%] Built target sonar_msgs__rosidl_typesupport_fastrtps_c\n'}
+[2.602749] (-) TimerEvent: {}
+[2.606062] (sonar_msgs) StdoutLine: {'line': b'[ 76%] Built target sonar_msgs\n'}
+[2.619069] (sonar_msgs) StdoutLine: {'line': b'[ 78%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[2.702842] (-) TimerEvent: {}
+[2.803066] (-) TimerEvent: {}
+[2.903291] (-) TimerEvent: {}
+[2.948241] (sonar_msgs) StdoutLine: {'line': b'[ 78%] Built target sonar_msgs__py\n'}
+[2.957699] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_generator_py\x1b[0m\n'}
+[2.973080] (sonar_msgs) StdoutLine: {'line': b'[ 80%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_conf_scal_s.c.o\x1b[0m\n'}
+[2.973294] (sonar_msgs) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_three_sonar_depth_s.c.o\x1b[0m\n'}
+[2.974144] (sonar_msgs) StdoutLine: {'line': b'[ 85%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_generator_py.dir/rosidl_generator_py/sonar_msgs/msg/_kf_values_s.c.o\x1b[0m\n'}
+[3.003363] (-) TimerEvent: {}
+[3.049342] (sonar_msgs) StdoutLine: {'line': b'[ 87%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/libsonar_msgs__rosidl_generator_py.so\x1b[0m\n'}
+[3.084581] (sonar_msgs) StdoutLine: {'line': b'[ 87%] Built target sonar_msgs__rosidl_generator_py\n'}
+[3.093278] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_fastrtps_c__pyext\x1b[0m\n'}
+[3.093545] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_c__pyext\x1b[0m\n'}
+[3.093624] (sonar_msgs) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target sonar_msgs__rosidl_typesupport_introspection_c__pyext\x1b[0m\n'}
+[3.103427] (-) TimerEvent: {}
+[3.103601] (sonar_msgs) StdoutLine: {'line': b'[ 89%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[3.104924] (sonar_msgs) StdoutLine: {'line': b'[ 91%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[3.105064] (sonar_msgs) StdoutLine: {'line': b'[ 93%] \x1b[32mBuilding C object CMakeFiles/sonar_msgs__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[3.174894] (sonar_msgs) StdoutLine: {'line': b'[ 95%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.175650] (sonar_msgs) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.181028] (sonar_msgs) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[3.203506] (-) TimerEvent: {}
+[3.205433] (sonar_msgs) StdoutLine: {'line': b'[100%] Built target sonar_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[3.207044] (sonar_msgs) StdoutLine: {'line': b'[100%] Built target sonar_msgs__rosidl_typesupport_c__pyext\n'}
+[3.210426] (sonar_msgs) StdoutLine: {'line': b'[100%] Built target sonar_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[3.218656] (sonar_msgs) CommandEnded: {'returncode': 0}
+[3.292812] (sonar_msgs) JobProgress: {'identifier': 'sonar_msgs', 'progress': 'install'}
+[3.300792] (sonar_msgs) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/saab/Desktop/2024_UWR/build/sonar_msgs'], 'cwd': '/home/saab/Desktop/2024_UWR/build/sonar_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'saab'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/saab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/saab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '2773'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'saab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'saab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/saab/.android/emulator:/home/saab/.android/tools:/home/saab/.android/tools/bin:/home/saab/.android/platform-tools:/opt/ros/humble/bin:/home/saab/anaconda3/condabin:/home/saab/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.5/bin:/snap/bin:/home/saab/.dotnet/tools'), ('SESSION_MANAGER', 'local/saab-asrockx570:@/tmp/.ICE-unix/2574,unix/saab-asrockx570:/tmp/.ICE-unix/2574'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/83bcbb20_929d_4016_9a6c_495a66eaef7e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.263'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/saab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ANDROID_SDK_ROOT', '/home/saab/.android'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/saab/Desktop/2024_UWR/build/sonar_msgs'), ('SDK', '/home/saab/.android'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/saab/anaconda3/bin/conda'), ('ANDROID_HOME', '/home/saab/.android'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/python3.9/site-packages:/home/saab/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/python3.9/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[3.303569] (-) TimerEvent: {}
+[3.305746] (sonar_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[3.305850] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/rosidl_interfaces/sonar_msgs\n'}
+[3.305935] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[3.306002] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[3.306055] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[3.306106] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__functions.h\n'}
+[3.306175] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.h\n'}
+[3.306241] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__functions.c\n'}
+[3.306369] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__type_support.h\n'}
+[3.306489] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.h\n'}
+[3.306604] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__struct.h\n'}
+[3.306722] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__functions.h\n'}
+[3.306843] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__functions.h\n'}
+[3.306966] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__struct.h\n'}
+[3.307085] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__functions.c\n'}
+[3.307224] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__functions.c\n'}
+[3.307352] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.h\n'}
+[3.307470] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/kf_values.h\n'}
+[3.307589] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/conf_scal.h\n'}
+[3.307705] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.h\n'}
+[3.307825] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[3.307906] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/library_path.sh\n'}
+[3.307969] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/library_path.dsv\n'}
+[3.308143] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_c.so\n'}
+[3.308773] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_c.so" to ""\n'}
+[3.308864] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[3.308946] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[3.309012] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[3.309079] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_fastrtps_c.h\n'}
+[3.309132] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_fastrtps_c.h\n'}
+[3.309198] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_fastrtps_c.h\n'}
+[3.309282] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[3.309415] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[3.309737] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[3.309802] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[3.309886] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[3.309942] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[3.309992] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__traits.hpp\n'}
+[3.310054] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__traits.hpp\n'}
+[3.310125] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__builder.hpp\n'}
+[3.310250] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__builder.hpp\n'}
+[3.310369] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__traits.hpp\n'}
+[3.310495] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__struct.hpp\n'}
+[3.310617] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__builder.hpp\n'}
+[3.310736] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.hpp\n'}
+[3.310859] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__struct.hpp\n'}
+[3.310980] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/kf_values.hpp\n'}
+[3.311103] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.hpp\n'}
+[3.311220] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/conf_scal.hpp\n'}
+[3.311350] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[3.311425] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[3.311500] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[3.311552] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[3.311614] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.311685] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/dds_fastrtps\n'}
+[3.311739] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.311801] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[3.311976] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[3.312365] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[3.312446] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[3.312512] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[3.312565] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[3.312614] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.c\n'}
+[3.312676] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_introspection_c.h\n'}
+[3.312759] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__type_support.c\n'}
+[3.312898] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_introspection_c.h\n'}
+[3.313020] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_introspection_c.h\n'}
+[3.313150] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.c\n'}
+[3.313286] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[3.313412] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_c.so\n'}
+[3.313723] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_c.so" to ""\n'}
+[3.313835] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_c.so\n'}
+[3.314115] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_c.so" to ""\n'}
+[3.314204] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs\n'}
+[3.314280] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg\n'}
+[3.314333] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail\n'}
+[3.314383] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__type_support.cpp\n'}
+[3.314447] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.314524] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__type_support.cpp\n'}
+[3.314664] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/kf_values__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.314789] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__type_support.cpp\n'}
+[3.314914] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/conf_scal__rosidl_typesupport_introspection_cpp.hpp\n'}
+[3.315150] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[3.315471] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[3.315586] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_cpp.so\n'}
+[3.315873] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_typesupport_cpp.so" to ""\n'}
+[3.315938] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/pythonpath.sh\n'}
+[3.316053] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/pythonpath.dsv\n'}
+[3.316184] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info\n'}
+[3.316260] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[3.316360] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[3.316477] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[3.316595] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[3.316728] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs\n'}
+[3.316792] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[3.316917] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-39-x86_64-linux-gnu.so\n'}
+[3.317037] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.317179] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.317325] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.317459] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/libsonar_msgs__rosidl_generator_py.so\n'}
+[3.317609] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg\n'}
+[3.317673] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth.py\n'}
+[3.317780] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_kf_values_s.c\n'}
+[3.317900] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth_s.c\n'}
+[3.318022] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal_s.c\n'}
+[3.318142] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/__init__.py\n'}
+[3.318261] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_kf_values.py\n'}
+[3.318388] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal.py\n'}
+[3.318518] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/__init__.py\n'}
+[3.318619] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[3.318751] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-39-x86_64-linux-gnu.so\n'}
+[3.318871] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/_sonar_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[3.319006] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-39-x86_64-linux-gnu.so\n'}
+[3.354986] (sonar_msgs) StdoutLine: {'line': b"Listing '/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs'...\n"}
+[3.355133] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/__init__.py'...\n"}
+[3.355194] (sonar_msgs) StdoutLine: {'line': b"Listing '/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg'...\n"}
+[3.355246] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/__init__.py'...\n"}
+[3.355310] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_conf_scal.py'...\n"}
+[3.355361] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_kf_values.py'...\n"}
+[3.355410] (sonar_msgs) StdoutLine: {'line': b"Compiling '/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/msg/_three_sonar_depth.py'...\n"}
+[3.359050] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.359411] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[3.359607] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.359933] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[3.360083] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[3.360368] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[3.360494] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_py.so\n'}
+[3.360809] (sonar_msgs) StdoutLine: {'line': b'-- Set runtime path of "/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/libsonar_msgs__rosidl_generator_py.so" to ""\n'}
+[3.360883] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ThreeSonarDepth.idl\n'}
+[3.360976] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ConfScal.idl\n'}
+[3.361066] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/KfValues.idl\n'}
+[3.361149] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ThreeSonarDepth.msg\n'}
+[3.361218] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/ConfScal.msg\n'}
+[3.361274] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/msg/KfValues.msg\n'}
+[3.361345] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/package_run_dependencies/sonar_msgs\n'}
+[3.361404] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/parent_prefix_path/sonar_msgs\n'}
+[3.361461] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/ament_prefix_path.sh\n'}
+[3.361567] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/ament_prefix_path.dsv\n'}
+[3.361646] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/path.sh\n'}
+[3.361708] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/environment/path.dsv\n'}
+[3.361780] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.bash\n'}
+[3.361846] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.sh\n'}
+[3.361920] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.zsh\n'}
+[3.362012] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/local_setup.dsv\n'}
+[3.362092] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.dsv\n'}
+[3.362159] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/ament_index/resource_index/packages/sonar_msgs\n'}
+[3.362237] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cExport.cmake\n'}
+[3.362307] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[3.362375] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[3.362441] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[3.362517] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_cppExport.cmake\n'}
+[3.362594] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[3.362663] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[3.362729] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[3.362794] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[3.362851] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cExport.cmake\n'}
+[3.362906] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[3.362974] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[3.363030] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[3.363114] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[3.363191] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[3.363260] (sonar_msgs) StdoutLine: {'line': b'-- Old export file "/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport.cmake" will be replaced.  Removing files [/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport-noconfig.cmake].\n'}
+[3.363349] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport.cmake\n'}
+[3.363406] (sonar_msgs) StdoutLine: {'line': b'-- Installing: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/export_sonar_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[3.363461] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[3.363515] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[3.363569] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[3.363623] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[3.363693] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[3.363754] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[3.363809] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[3.363863] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgsConfig.cmake\n'}
+[3.363916] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/cmake/sonar_msgsConfig-version.cmake\n'}
+[3.363969] (sonar_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.xml\n'}
+[3.364938] (sonar_msgs) CommandEnded: {'returncode': 0}
+[3.403662] (-) TimerEvent: {}
+[3.456528] (sonar_msgs) JobEnded: {'identifier': 'sonar_msgs', 'rc': 0}
+[3.457132] (-) EventReactorShutdown: {}

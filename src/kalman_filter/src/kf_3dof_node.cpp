@@ -69,21 +69,23 @@ public:
         predict_time = this->now();
         measure_time = this->now();
 
-        this->declare_parameter<std::string>("csv_path", "default_path.csv");
+        this->declare_parameter<std::string>("csv_path", "default_path");
         this->get_parameter("csv_path", path_param);
 
         this->declare_parameter<std::string>("imu_topic", "/imu/acceleration");
         this->declare_parameter<std::string>("sonar_topic", "/sonar");
         this->declare_parameter<double>("angle", 0.0);
-        this->declare_parameter<bool>("without_measurement", true);
+        this->declare_parameter<bool>("without_measurement", false);
         this->declare_parameter<bool>("bias_override", true);
-
+        this->declare_parameter<double>("expected_difference", 0.1);
+        
         // Get parameters
         this->get_parameter("imu_topic", imu_param);
         this->get_parameter("sonar_topic", sonar_param);
         this->get_parameter("angle", angle);
         this->get_parameter("without_measurement", start);
         this->get_parameter("bias_override", override);
+        this->get_parameter("expected_difference", expected_difference);
 
         angle_rad=angle*M_PI/180;
 
@@ -122,8 +124,8 @@ public:
         writer_ = std::make_shared<rosbag2_cpp::Writer>();
         writer_->open(storage_options_, converter_options_);
 
-        expected_difference=0.05;
-
+        //expected_difference=0.05;
+        RCLCPP_INFO(this->get_logger(), "%f",expected_difference);
         RCLCPP_INFO(this->get_logger(), "Class successfully constructed, waiting for data");
         
         slope=(1-1000)/(100-0);

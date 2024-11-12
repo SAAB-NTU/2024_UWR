@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/sonar_msgs
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2024_UWR/src/sonar_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/sonar_msgs
+CMAKE_BINARY_DIR = /home/saab/Desktop/2024_UWR/build/sonar_msgs
 
 # Utility rule file for sonar_msgs_uninstall.
 
@@ -67,7 +67,7 @@ include CMakeFiles/sonar_msgs_uninstall.dir/compiler_depend.make
 include CMakeFiles/sonar_msgs_uninstall.dir/progress.make
 
 CMakeFiles/sonar_msgs_uninstall:
-	/usr/bin/cmake -P /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
+	/usr/bin/cmake -P /home/saab/Desktop/2024_UWR/build/sonar_msgs/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
 
 sonar_msgs_uninstall: CMakeFiles/sonar_msgs_uninstall
 sonar_msgs_uninstall: CMakeFiles/sonar_msgs_uninstall.dir/build.make
@@ -82,6 +82,6 @@ CMakeFiles/sonar_msgs_uninstall.dir/clean:
 .PHONY : CMakeFiles/sonar_msgs_uninstall.dir/clean
 
 CMakeFiles/sonar_msgs_uninstall.dir/depend:
-	cd /home/nuc1/Desktop/2024_UWR/build/sonar_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/sonar_msgs /home/nuc1/Desktop/2024_UWR/src/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles/sonar_msgs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/saab/Desktop/2024_UWR/build/sonar_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2024_UWR/src/sonar_msgs /home/saab/Desktop/2024_UWR/src/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles/sonar_msgs_uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sonar_msgs_uninstall.dir/depend
 

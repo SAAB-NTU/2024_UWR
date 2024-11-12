@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/sonar_msgs
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2024_UWR/src/sonar_msgs
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/sonar_msgs
+CMAKE_BINARY_DIR = /home/saab/Desktop/2024_UWR/build/sonar_msgs
 
 # Utility rule file for sonar_msgs__cpp.
 
@@ -129,8 +129,8 @@ rosidl_generator_cpp/sonar_msgs/msg/three_sonar_depth.hpp: /opt/ros/humble/share
 rosidl_generator_cpp/sonar_msgs/msg/three_sonar_depth.hpp: /opt/ros/humble/share/std_msgs/msg/UInt8MultiArray.idl
 rosidl_generator_cpp/sonar_msgs/msg/three_sonar_depth.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
 rosidl_generator_cpp/sonar_msgs/msg/three_sonar_depth.hpp: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/nuc1/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
-	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/rosidl_generator_cpp__arguments.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/saab/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
+	/usr/bin/python3 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/saab/Desktop/2024_UWR/build/sonar_msgs/rosidl_generator_cpp__arguments.json
 
 rosidl_generator_cpp/sonar_msgs/msg/detail/three_sonar_depth__builder.hpp: rosidl_generator_cpp/sonar_msgs/msg/three_sonar_depth.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/sonar_msgs/msg/detail/three_sonar_depth__builder.hpp
@@ -190,6 +190,6 @@ CMakeFiles/sonar_msgs__cpp.dir/clean:
 .PHONY : CMakeFiles/sonar_msgs__cpp.dir/clean
 
 CMakeFiles/sonar_msgs__cpp.dir/depend:
-	cd /home/nuc1/Desktop/2024_UWR/build/sonar_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/sonar_msgs /home/nuc1/Desktop/2024_UWR/src/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs /home/nuc1/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles/sonar_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/saab/Desktop/2024_UWR/build/sonar_msgs && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/saab/Desktop/2024_UWR/src/sonar_msgs /home/saab/Desktop/2024_UWR/src/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs /home/saab/Desktop/2024_UWR/build/sonar_msgs/CMakeFiles/sonar_msgs__cpp.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/sonar_msgs__cpp.dir/depend
 
