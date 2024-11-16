@@ -1,7 +1,7 @@
 CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o: \
- /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp \
+ /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp \
  /usr/include/stdc-predef.h \
- /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_util.h \
+ /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_util.h \
  /usr/include/c++/11/string \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \

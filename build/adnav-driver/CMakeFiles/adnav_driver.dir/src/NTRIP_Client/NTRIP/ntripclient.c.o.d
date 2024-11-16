@@ -1,7 +1,7 @@
 CMakeFiles/adnav_driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.o: \
- /home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c \
+ /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.c \
  /usr/include/stdc-predef.h \
- /home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.h \
+ /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/ntripclient.h \
  /usr/include/ctype.h /usr/include/features.h \
  /usr/include/features-time64.h \
  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
@@ -111,7 +111,7 @@ CMakeFiles/adnav_driver.dir/src/NTRIP_Client/NTRIP/ntripclient.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/struct_osockaddr.h \
  /usr/include/x86_64-linux-gnu/bits/in.h /usr/include/netdb.h \
  /usr/include/rpc/netdb.h /usr/include/x86_64-linux-gnu/bits/netdb.h \
- /home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/../../rs232/rs232.h \
+ /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/NTRIP_Client/NTRIP/../../rs232/rs232.h \
  /usr/include/termios.h /usr/include/x86_64-linux-gnu/bits/termios.h \
  /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
  /usr/include/x86_64-linux-gnu/bits/termios-c_cc.h \

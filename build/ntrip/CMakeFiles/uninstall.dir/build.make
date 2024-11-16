@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/ntrip
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2024_UWR/src/ntrip
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/ntrip
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2024_UWR/build/ntrip
 
 # Utility rule file for uninstall.
 
@@ -78,6 +78,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/nuc1/Desktop/2024_UWR/build/ntrip && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/ntrip /home/nuc1/Desktop/2024_UWR/src/ntrip /home/nuc1/Desktop/2024_UWR/build/ntrip /home/nuc1/Desktop/2024_UWR/build/ntrip /home/nuc1/Desktop/2024_UWR/build/ntrip/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uwr/Desktop/2024_UWR/build/ntrip && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2024_UWR/src/ntrip /home/uwr/Desktop/2024_UWR/src/ntrip /home/uwr/Desktop/2024_UWR/build/ntrip /home/uwr/Desktop/2024_UWR/build/ntrip /home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

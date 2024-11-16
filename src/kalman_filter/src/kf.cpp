@@ -29,6 +29,7 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
 {
     x << 0,0;
     z << 0,0;
+    IMU_x<<0,0;
     H << 1,0,0,1;
     P << 1,0,0,1;
     Q << 1,0,0,1;
@@ -52,6 +53,7 @@ Eigen::Vector2f kf_v3::prediction(double dt)
     F << 1, dt, 0, 1;
     B << 0.5 * dt * dt, dt;
     x = F * x + B * accel;
+    IMU_x=F*IMU_x+B*accel;
     P = F * P * F.transpose() + Q;
     return x;
 }
@@ -82,7 +84,7 @@ Eigen::Vector2f kf_v3::update(Eigen::Matrix2f& external_R) {
 
 double kf_v3::residual()
 {
-    double result=prev_measurement_dist-dist;
+    double result=dist-IMU_x(0);
     //prev_measurement_dist=dist;
     return result;
 }
@@ -111,6 +113,7 @@ bool kf_v3::set_dist_init(double init) //To use tf2 ros to standardize inertial 
 {
     bias_reset_dist = true;
     x(0) = (init);
+    init_dist=init;
     prev_measurement_dist = (init);
     return bias_reset_dist;
 } 

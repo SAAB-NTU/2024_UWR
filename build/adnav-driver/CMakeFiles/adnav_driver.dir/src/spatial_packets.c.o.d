@@ -1,5 +1,5 @@
 CMakeFiles/adnav_driver.dir/src/spatial_packets.c.o: \
- /home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/spatial_packets.c \
+ /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/spatial_packets.c \
  /usr/include/stdc-predef.h \
  /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -20,5 +20,5 @@ CMakeFiles/adnav_driver.dir/src/spatial_packets.c.o: \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
  /usr/include/strings.h \
- /home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/an_packet_protocol.h \
- /home/nuc1/Desktop/2024_UWR/src/adnav-driver/src/spatial_packets.h
+ /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/an_packet_protocol.h \
+ /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/spatial_packets.h

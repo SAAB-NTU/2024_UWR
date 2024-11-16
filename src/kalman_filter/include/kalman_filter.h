@@ -52,8 +52,8 @@ public:
 
 protected:
     Eigen::Matrix2f F, P, H;
-    Eigen::Vector2f x, B, z, y;
-    double prev_measurement_dist, final_dist, meas_bias, accel_bias, accel, vel, dist, previous_predict_time, conf;
+    Eigen::Vector2f x, B, z, y,IMU_x;
+    double prev_measurement_dist, final_dist, meas_bias, accel_bias, accel, vel, dist, previous_predict_time, conf,init_dist;
     float samplingrate;
     double cutoff_frequency, dist_bias;
     int avg_window;

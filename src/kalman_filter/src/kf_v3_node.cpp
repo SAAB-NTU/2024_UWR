@@ -75,7 +75,7 @@ public:
         this->declare_parameter<std::string>("imu_topic", "/imu/data_raw");
         this->declare_parameter<std::string>("sonar_topic", "/sonar");
         this->declare_parameter<double>("angle", 0.0);
-        this->declare_parameter<bool>("without_measurement", true);
+        this->declare_parameter<bool>("without_measurement", false);
         this->declare_parameter<bool>("bias_override", true);
         this->declare_parameter<double>("expected_difference", 0.1);
         // Get parameters
@@ -104,10 +104,10 @@ public:
         imu_param, 1, std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
 
     sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-      sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+     sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 	
 	//sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-    //sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
+   // sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
 	
         // Create a bag file name using the bag_create_file function
@@ -370,10 +370,10 @@ public:
             predict_time = measure_time_now;
             start = true;
             RCLCPP_INFO(this->get_logger(), "%f",msg.distance_2/1000);
-            RCLCPP_INFO(this->get_logger(), "%f",sway.get_state()(0));
+            
             RCLCPP_INFO(this->get_logger(), "Measurements started");
         } else {
-
+                
             //sbs_frame_before.transform.translation.x = msg.distance_1 / 1000;
             //sbs_frame_before.transform.translation.y = msg.distance_2 / 1000;
             //sbs_frame_before.transform.translation.z = msg.depth;
@@ -467,30 +467,30 @@ public:
         //     } else {
         //         heave_state_u = heave.get_state();
         //     } 
-
+                RCLCPP_INFO(this->get_logger(), "%f",heave.residual());
                 surge.set_vel((measure_time_now - measure_time).seconds());
                 surge_state_u = surge.update();
                 //surge_state_u = surge.update(surge_R);
-            if (e1.first> 90) {
+            if (e1.first> 40) {
 
                 if(override==true)
                 {bias=false;}
                 
             } else {
-                RCLCPP_INFO(this->get_logger(),"Deviate_x");
+                //RCLCPP_INFO(this->get_logger(),"Deviate_x");
                 //surge_state_u = surge.get_state();
                 
             }
-            //sway.set_vel((measure_time_now - measure_time).seconds());
+            sway.set_vel((measure_time_now - measure_time).seconds());
                 sway_state_u = sway.update();
                 //sway_state_u = sway.update(sway_R);
                 //Change < to >, 0.4 to 0.1 perhaps, avoid the use of m2 
             if (e2.first>70) {
-                RCLCPP_INFO(this->get_logger(),"Taken_y");
+               // RCLCPP_INFO(this->get_logger(),"Taken_y");
                 //m2=measure_time_now;
            } else {
                 //RCLCPP_INFO(this->get_logger(),"Deviate");
-                RCLCPP_INFO(this->get_logger(),"Deviate_y");
+                //RCLCPP_INFO(this->get_logger(),"Deviate_y");
                // sway_state_u = sway.get_state();
             }
 

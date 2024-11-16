@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/nuc1/Desktop/2024_UWR/src/ntrip
+CMAKE_SOURCE_DIR = /home/uwr/Desktop/2024_UWR/src/ntrip
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/nuc1/Desktop/2024_UWR/build/ntrip
+CMAKE_BINARY_DIR = /home/uwr/Desktop/2024_UWR/build/ntrip
 
 # Include any dependencies generated for this target.
 include CMakeFiles/ntrip.dir/depend.make
@@ -70,46 +70,46 @@ include CMakeFiles/ntrip.dir/progress.make
 include CMakeFiles/ntrip.dir/flags.make
 
 CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o: CMakeFiles/ntrip.dir/flags.make
-CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o: /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp
+CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o: /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp
 CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o: CMakeFiles/ntrip.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o -MF CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o.d -o CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o -MF CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o.d -o CMakeFiles/ntrip.dir/src/ntrip_util.cpp.o -c /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp
 
 CMakeFiles/ntrip.dir/src/ntrip_util.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ntrip.dir/src/ntrip_util.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp > CMakeFiles/ntrip.dir/src/ntrip_util.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp > CMakeFiles/ntrip.dir/src/ntrip_util.cpp.i
 
 CMakeFiles/ntrip.dir/src/ntrip_util.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ntrip.dir/src/ntrip_util.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp -o CMakeFiles/ntrip.dir/src/ntrip_util.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_util.cpp -o CMakeFiles/ntrip.dir/src/ntrip_util.cpp.s
 
 CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o: CMakeFiles/ntrip.dir/flags.make
-CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o: /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp
+CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o: /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp
 CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o: CMakeFiles/ntrip.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o -MF CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o.d -o CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o -MF CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o.d -o CMakeFiles/ntrip.dir/src/ntrip_client.cpp.o -c /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp
 
 CMakeFiles/ntrip.dir/src/ntrip_client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ntrip.dir/src/ntrip_client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp > CMakeFiles/ntrip.dir/src/ntrip_client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp > CMakeFiles/ntrip.dir/src/ntrip_client.cpp.i
 
 CMakeFiles/ntrip.dir/src/ntrip_client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ntrip.dir/src/ntrip_client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp -o CMakeFiles/ntrip.dir/src/ntrip_client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uwr/Desktop/2024_UWR/src/ntrip/src/ntrip_client.cpp -o CMakeFiles/ntrip.dir/src/ntrip_client.cpp.s
 
 CMakeFiles/ntrip.dir/src/client.cpp.o: CMakeFiles/ntrip.dir/flags.make
-CMakeFiles/ntrip.dir/src/client.cpp.o: /home/nuc1/Desktop/2024_UWR/src/ntrip/src/client.cpp
+CMakeFiles/ntrip.dir/src/client.cpp.o: /home/uwr/Desktop/2024_UWR/src/ntrip/src/client.cpp
 CMakeFiles/ntrip.dir/src/client.cpp.o: CMakeFiles/ntrip.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nuc1/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ntrip.dir/src/client.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ntrip.dir/src/client.cpp.o -MF CMakeFiles/ntrip.dir/src/client.cpp.o.d -o CMakeFiles/ntrip.dir/src/client.cpp.o -c /home/nuc1/Desktop/2024_UWR/src/ntrip/src/client.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ntrip.dir/src/client.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/ntrip.dir/src/client.cpp.o -MF CMakeFiles/ntrip.dir/src/client.cpp.o.d -o CMakeFiles/ntrip.dir/src/client.cpp.o -c /home/uwr/Desktop/2024_UWR/src/ntrip/src/client.cpp
 
 CMakeFiles/ntrip.dir/src/client.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ntrip.dir/src/client.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nuc1/Desktop/2024_UWR/src/ntrip/src/client.cpp > CMakeFiles/ntrip.dir/src/client.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/uwr/Desktop/2024_UWR/src/ntrip/src/client.cpp > CMakeFiles/ntrip.dir/src/client.cpp.i
 
 CMakeFiles/ntrip.dir/src/client.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ntrip.dir/src/client.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nuc1/Desktop/2024_UWR/src/ntrip/src/client.cpp -o CMakeFiles/ntrip.dir/src/client.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/uwr/Desktop/2024_UWR/src/ntrip/src/client.cpp -o CMakeFiles/ntrip.dir/src/client.cpp.s
 
 # Object files for target ntrip
 ntrip_OBJECTS = \
@@ -235,7 +235,7 @@ ntrip: /opt/ros/humble/lib/librosidl_runtime_c.so
 ntrip: /opt/ros/humble/lib/librcutils.so
 ntrip: /usr/lib/x86_64-linux-gnu/libpython3.10.so
 ntrip: CMakeFiles/ntrip.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nuc1/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ntrip"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable ntrip"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ntrip.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -247,6 +247,6 @@ CMakeFiles/ntrip.dir/clean:
 .PHONY : CMakeFiles/ntrip.dir/clean
 
 CMakeFiles/ntrip.dir/depend:
-	cd /home/nuc1/Desktop/2024_UWR/build/ntrip && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/nuc1/Desktop/2024_UWR/src/ntrip /home/nuc1/Desktop/2024_UWR/src/ntrip /home/nuc1/Desktop/2024_UWR/build/ntrip /home/nuc1/Desktop/2024_UWR/build/ntrip /home/nuc1/Desktop/2024_UWR/build/ntrip/CMakeFiles/ntrip.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/uwr/Desktop/2024_UWR/build/ntrip && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/uwr/Desktop/2024_UWR/src/ntrip /home/uwr/Desktop/2024_UWR/src/ntrip /home/uwr/Desktop/2024_UWR/build/ntrip /home/uwr/Desktop/2024_UWR/build/ntrip /home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles/ntrip.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ntrip.dir/depend
 
