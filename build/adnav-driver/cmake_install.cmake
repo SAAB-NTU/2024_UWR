@@ -1,8 +1,8 @@
-# Install script for directory: /home/uwr/Desktop/2024_UWR/src/adnav-driver
+# Install script for directory: /home/saab/Desktop/2024_UWR/src/adnav-driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/uwr/Desktop/2024_UWR/install/adnav-driver")
+  set(CMAKE_INSTALL_PREFIX "/home/saab/Desktop/2024_UWR/install/adnav-driver")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -43,7 +43,7 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/uwr/Desktop/2024_UWR/build/adnav-driver/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+  include("/home/saab/Desktop/2024_UWR/build/adnav-driver/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -54,5 +54,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/uwr/Desktop/2024_UWR/build/adnav-driver/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/saab/Desktop/2024_UWR/build/adnav-driver/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,1 +1,1 @@
-/home/uwr/Desktop/2024_UWR/src/sonar_msgs/msg/ConfScal.msg
+/home/saab/Desktop/2024_UWR/src/sonar_msgs/msg/ConfScal.msg

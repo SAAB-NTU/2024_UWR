@@ -1,7 +1,7 @@
 CMakeFiles/adnav_driver.dir/src/rs232/rs232.c.o: \
- /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.c \
+ /home/saab/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.c \
  /usr/include/stdc-predef.h \
- /home/uwr/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.h \
+ /home/saab/Desktop/2024_UWR/src/adnav-driver/src/rs232/rs232.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

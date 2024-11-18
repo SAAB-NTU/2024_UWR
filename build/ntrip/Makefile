@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/uwr/Desktop/2024_UWR/src/ntrip
+CMAKE_SOURCE_DIR = /home/saab/Desktop/2024_UWR/src/ntrip
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/uwr/Desktop/2024_UWR/build/ntrip
+CMAKE_BINARY_DIR = /home/saab/Desktop/2024_UWR/build/ntrip
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles /home/uwr/Desktop/2024_UWR/build/ntrip//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2024_UWR/build/ntrip/CMakeFiles /home/saab/Desktop/2024_UWR/build/ntrip//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/uwr/Desktop/2024_UWR/build/ntrip/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/saab/Desktop/2024_UWR/build/ntrip/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
