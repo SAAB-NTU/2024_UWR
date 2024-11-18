@@ -1,1 +1,0 @@
-/home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver/msg/XsStatusWord.msg

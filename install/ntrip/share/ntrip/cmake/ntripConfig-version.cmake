@@ -1,1 +1,0 @@
-/home/saab/Desktop/2024_UWR/build/ntrip/ament_cmake_core/ntripConfig-version.cmake

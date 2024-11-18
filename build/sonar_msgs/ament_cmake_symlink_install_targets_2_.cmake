@@ -1,1 +1,0 @@
-ament_cmake_symlink_install_targets("TARGET_FILES" "/home/saab/Desktop/2024_UWR/build/sonar_msgs/rosidl_generator_py/sonar_msgs/sonar_msgs_s__rosidl_typesupport_c.cpython-39-x86_64-linux-gnu.so" "TARGETS" "sonar_msgs__rosidl_typesupport_c__pyext" "DESTINATION" "lib/python3.9/site-packages/sonar_msgs")
