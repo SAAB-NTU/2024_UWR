@@ -32,7 +32,7 @@ kf_v3::kf_v3(int sample_size) : moving_avg(sample_size),moving_avg_vel(10),movin
     IMU_x<<0,0;
     H << 1,0,0,1;
     P << 1,0,0,1;
-    Q << 1,0,0,1;
+    Q << 0.01,0,0,0.01;
     R << 1,0,0,1;
     prev_measurement_dist=0;
     accel=0;

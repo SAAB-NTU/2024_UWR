@@ -9,13 +9,13 @@ def generate_launch_description():
             name='kf',
             output='screen',
             parameters=[
-                {'csv_path': '/home/saab/Desktop/2024_UWR/Analysis/CSVs/case_13thNov_13_07_normal_'},
+                {'csv_path': '/home/saab/Desktop/2024_UWR/Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_'},
                 {'imu_topic': '/imu/data_raw'},
                 {'sonar_topic': '/sonar'},
                 {'angle': 0.0},
                 {'without_measurement': False},
                 {'bias_override': True},
-                {'expected_difference':0.1},
+                {'expected_difference':0.05},
             ]
         )
     ])

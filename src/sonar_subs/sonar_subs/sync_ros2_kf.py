@@ -16,7 +16,7 @@ import cv2
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="1307"
+        self.time="1205_r1_q_0_01"
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
         self.sub1 = Subscriber(self, PoseStamped, '/Pose')
@@ -54,7 +54,7 @@ class RosbagSync(Node):
             'Sonar_Distance_3': data1.distance_3,
             'Confidence_3': data2.confidence_3})
         synchronized_df = pd.DataFrame(self.synchronized_data_sonar)
-        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_13_Nov_confidence_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_6_Nov_confidence_case_'+self.time+'.csv', index=False)
 
     #def log_acceleration_data(self, data):
     #    self.get_logger().info(f"Received IMU acceleration data: x: {data.vector.x}")
@@ -103,7 +103,7 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data)
-        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_13_Nov_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_6_Nov_case_'+self.time+'.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
     '''
     def callback_pred(self, data1):
@@ -172,7 +172,7 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data_imu)
-        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_13_Nov_IMU_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_6_Nov_IMU_case_'+self.time+'.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
 
 def main(args=None):
