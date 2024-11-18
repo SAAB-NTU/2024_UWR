@@ -9,7 +9,7 @@ def generate_launch_description():
             name='kf',
             output='screen',
             parameters=[
-                {'csv_path': '/home/uwr/Desktop/case_13_08_normal_'},
+                {'csv_path': '/home/saab/Desktop/2024_UWR/Analysis/CSVs/case_13thNov_13_07_normal_'},
                 {'imu_topic': '/imu/data_raw'},
                 {'sonar_topic': '/sonar'},
                 {'angle': 0.0},
