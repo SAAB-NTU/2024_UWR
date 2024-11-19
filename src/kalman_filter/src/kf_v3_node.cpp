@@ -78,6 +78,7 @@ public:
         this->declare_parameter<bool>("without_measurement", false);
         this->declare_parameter<bool>("bias_override", true);
         this->declare_parameter<double>("expected_difference", 0.1);
+        this->declare_parameter<int>("sample_size", 10);
         // Get parameters
         this->get_parameter("imu_topic", imu_param);
         this->get_parameter("sonar_topic", sonar_param);
@@ -85,6 +86,7 @@ public:
         this->get_parameter("without_measurement", start);
         this->get_parameter("bias_override", override);
         this->get_parameter("expected_difference", expected_difference);
+        this->get_parameter("sample_size",sample_size);
 
         angle_rad=angle*M_PI/180;
 

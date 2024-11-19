@@ -9,14 +9,16 @@ from message_filters import ApproximateTimeSynchronizer, Subscriber
 from sonar_msgs.msg import ThreeSonarDepth,ConfScal
 from sensor_msgs.msg import Image
 import pandas as pd
+from scipy.spatial.transform import Rotation as R
 import cv_bridge
 import os
 import cv2
+import numpy as np
 
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="1205_r1_q_0_01"
+        self.time="1205_ed_0_05_conf_4_Angles"
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
         self.sub1 = Subscriber(self, PoseStamped, '/Pose')
@@ -25,7 +27,7 @@ class RosbagSync(Node):
         self.sub4 = Subscriber(self,ThreeSonarDepth,'/SONAR_raw')
         self.sub5=Subscriber(self,Imu,'/IMU_raw')
         
-        self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4], 10, slop=0.002)  # Increase the queue size for stability
+        self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4,self.sub5], 10, slop=0.002)  # Increase the queue size for stability
         self.ts.registerCallback(self.callback)
 
         self.ts2 = ApproximateTimeSynchronizer([self.sub2,self.sub4], 10, slop=0.002)  # Increase the queue size for stability
@@ -41,17 +43,30 @@ class RosbagSync(Node):
         #self.sub1_1 = self.create_subscription(ThreeSonarDepth, '/sonar', self.log_sonar_data,10)
         #self.sub2_1 = self.create_subscription(Vector3Stamped, '/imu/acceleration', self.log_acceleration_data,10)
         #self.sub3_1 = self.create_subscription(Vector3Stamped, '/imu/angular_velocity', self.log_angular_velocity_data,10)
-
+    
+    @staticmethod
+    def quaternion_to_euler(quaternion):
+        """
+        Convert quaternion to Euler angles (roll, pitch, yaw).
+        """
+        # Quaternion input should be [x, y, z, w] for scipy
+        q = [quaternion.x, quaternion.y, quaternion.z, quaternion.w]
+        r = R.from_quat(q)  # Create a rotation object
+        euler = r.as_euler('xyz', degrees=False)  # Convert to Euler angles (ZYX convention)
+        return euler
     
     def log_sonar_data(self, data2,data1):
         timestamp = data1.header.stamp
         self.synchronized_data_sonar.append({
             'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
-            'Sonar_Distance_1': data1.distance_1,
+            'Sonar_distance_1': data1.distance_1,
+            'Confidence_1_dev': data1.confidence_1,
             'Confidence_1': data2.confidence_1,
-            'Sonar_Distance_2': data1.distance_2,
+            'Sonar_distance_2': data1.distance_2,
+            'Confidence_2_dev': data1.confidence_2,
             'Confidence_2': data2.confidence_2,
-            'Sonar_Distance_3': data1.distance_3,
+            'Sonar_distance_3': data1.distance_3,
+            'Confidence_3_dev': data1.confidence_3,
             'Confidence_3': data2.confidence_3})
         synchronized_df = pd.DataFrame(self.synchronized_data_sonar)
         synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_6_Nov_confidence_case_'+self.time+'.csv', index=False)
@@ -63,7 +78,7 @@ class RosbagSync(Node):
     #    self.get_logger().info(f"Received IMU angular velocity data: x: {data.vector.x}")
 
 
-    def callback(self, data1, data2, data3,data4):
+    def callback(self, data1, data2, data3,data4,data5):
         # Log entry into the callback
         self.get_logger().info("Callback triggered with synchronized messages")
 
@@ -71,7 +86,8 @@ class RosbagSync(Node):
         #self.get_logger().info(f"Sonar Data: Distance 1: {data1.distance_1}, Confidence 1: {data1.confidence_1}")
         #self.get_logger().info(f"IMU Acceleration: x: {data2.vector.x}, y: {data2.vector.y}, z: {data2.vector.z}")
         #self.get_logger().info(f"IMU Angular Velocity: x: {data3.vector.x}, y: {data3.vector.y}, z: {data3.vector.z}")
-
+        quaternion = data5.orientation
+        euler_angles = self.quaternion_to_euler(quaternion)
         # Synchronization logic
         timestamp = data1.header.stamp
         self.synchronized_data.append({
@@ -91,6 +107,9 @@ class RosbagSync(Node):
             'Sonar_distance_1': data4.distance_1,
             'Sonar_distance_2': data4.distance_2,
             'Sonar_distance_3': data4.distance_3,
+            'Angle_X':np.rad2deg(euler_angles[0]),
+            'Angle_Y':np.rad2deg(euler_angles[1]),
+            'Angle_Z':np.rad2deg(euler_angles[2])
         })
         
         # Log synchronized data size

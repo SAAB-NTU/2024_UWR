@@ -10,6 +10,7 @@ SonarProcess::SonarProcess(const int& window_size)
 
 void SonarProcess::setSampleSize(int sample_size) {
     window_size = sample_size;
+    multiplier=1;
 }
 
 // Getter for `output`
@@ -31,7 +32,9 @@ const std::deque<double>& SonarProcess::getMovingAvgWindow() const {
 //}
 
 std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double expectedDifference) {
-    double fixedStdDev = expectedDifference * 3.0;
+        
+
+    double fixedStdDev = expectedDifference * 3.0*multiplier;
     
     
 
@@ -39,8 +42,23 @@ std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(doub
     double difference = std::abs(lastNum - meanSequence);
 
     double sigmasAway = fixedStdDev != 0 ? std::abs(difference / fixedStdDev) : 0;
-    double confidencePercentage = sigmasAway <= 3 ? 100 - (std::abs(sigmasAway) / 3 * 100) : 0;
-    confidencePercentage = std::max(0.0, std::min(100.0, confidencePercentage));
+   // if (difference>expectedDifference) //If within the expected difference --> elevate to 100% 
+   // {
+        multiplier=1;
+        confidencePercentage = sigmasAway <= 3 ? 100 - (std::abs(sigmasAway) / 3 * 100) : 0;
+        confidencePercentage = std::max(0.0, std::min(100.0, confidencePercentage));
+    //}
+    //else
+   // {
+   //     multiplier=1;
+   //     confidencePercentage=100.0;
+   // }
+
+    //if(confidencePercentage<20)
+   // {
+   //     moving_avg_window=temp_window; //Discard last element
+    //    multiplier=3;//Become more lenient
+   // }
 
     output.first = confidencePercentage;
     output.second = sigmasAway; 
@@ -49,15 +67,18 @@ std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(doub
 }
 
 
-double SonarProcess::MovingAvg(const float& raw_measurement) {
+double SonarProcess::MovingAvg(const float& raw_measurement) 
+{
+    temp_window=moving_avg_window;
+
     moving_avg_window.push_back(raw_measurement);
     if (moving_avg_window.size() > window_size) {
         moving_avg_window.pop_front();
     }
 
-    if (moving_avg_window.size() < window_size) {
-        return 0.0;
-    }
+    //if (moving_avg_window.size() < window_size) {
+     //   return 0.0;
+    //}
     
     std::vector<double> contiguousVector(moving_avg_window.begin(), moving_avg_window.end());
     arma::vec armaWindow(contiguousVector.data(), contiguousVector.size());
@@ -66,7 +87,7 @@ double SonarProcess::MovingAvg(const float& raw_measurement) {
     
     return meanSequence;
     
-    }
+}
 
 //    output = CalculateConfidenceLevelsVariation2(0.006); 
  

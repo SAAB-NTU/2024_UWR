@@ -35,9 +35,9 @@ public:
 private:
     int window_size;
     int confidence_window_size;
-    std::deque<double> moving_avg_window;
+    std::deque<double> moving_avg_window,temp_window;
     std::pair<double, double> output;
-    double meanSequence;
+    double meanSequence,confidencePercentage,multiplier;
 
 
 };
