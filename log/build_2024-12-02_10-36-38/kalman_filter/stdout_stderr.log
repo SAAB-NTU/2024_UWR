@@ -1,0 +1,37 @@
+[35m[1mConsolidate compiler generated dependencies of target imu_topic[0m
+[ 10%] Built target gd_conf
+[ 15%] [32mBuilding CXX object CMakeFiles/kf_v4.dir/src/kf_v4_node.cpp.o[0m
+[ 21%] [32mBuilding CXX object CMakeFiles/kf_v4.dir/src/kf_v4.cpp.o[0m
+[ 31%] Built target imu_topic
+[ 36%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o[0m
+[ 42%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof.cpp.o[0m
+[ 47%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[ 52%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf.cpp.o[0m
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v4.cpp:[m[K In member function ‘[01m[Kdouble kf_v4::set_jerk(double)[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v4.cpp:120:31:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kdt[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  120 | double kf_v4::set_jerk([01;35m[Kdouble dt[m[K)
+      |                        [01;35m[K~~~~~~~^~[m[K
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:143:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  143 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:139:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias_override[m[K’ was not declared in this scope; did you mean ‘[01m[Koverride[m[K’?
+  139 |     if([01;31m[Kbias_override[m[K)
+      |        [01;31m[K^~~~~~~~~~~~~[m[K
+      |        [32m[Koverride[m[K
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:136:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  136 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v4_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v4_node.cpp:137:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  137 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/kf_3dof.dir/build.make:76: CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/kf_3dof.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 57%] [32m[1mLinking CXX executable kf[0m
+[ 63%] [32m[1mLinking CXX executable kf_v4[0m
+[ 73%] Built target kf
+[ 84%] Built target kf_v4
+gmake: *** [Makefile:146: all] Error 2

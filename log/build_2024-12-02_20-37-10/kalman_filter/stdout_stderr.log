@@ -1,0 +1,72 @@
+[35m[1mConsolidate compiler generated dependencies of target kf_3dof[0m
+[ 10%] Built target imu_topic
+[ 21%] Built target gd_conf
+[ 47%] Built target kf
+[ 73%] Built target kf_v4
+[ 78%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o[0m
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:139:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  139 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(const Imu&)[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:254:41:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[Kb[m[K’ in format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  254 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"Bias %b"[m[K,bias);
+      |                                         [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:254:48:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  254 |         RCLCPP_INFO(this->get_logger(), "Bias %[01;36m[Kb[m[K",bias);
+      |                                                [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:254:41:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args-Wformat-extra-args]8;;[m[K]
+  254 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"Bias %b"[m[K,bias);
+      |                                         [01;35m[K^~~~~~~~~[m[K
+[ 84%] [32m[1mLinking CXX executable kf_3dof[0m
+[100%] Built target kf_3dof
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/imu_launch.py
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_0_01.py
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_0_1.py
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_0_5.py
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_v4
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_3dof
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/gd_conf
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/imu_topic
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/package_run_dependencies/kalman_filter
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/parent_prefix_path/kalman_filter
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.sh
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.dsv
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.sh
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.dsv
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.bash
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.sh
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.zsh
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.dsv
+-- Symlinking: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.dsv
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/packages/kalman_filter
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig.cmake
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig-version.cmake
+-- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.xml

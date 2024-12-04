@@ -1,0 +1,30 @@
+[0.009s] Invoking command in '/home/saab/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/kalman_filter -- -j24 -l24
+[0.043s] [35m[1mConsolidate compiler generated dependencies of target gd_conf[0m
+[0.058s] [ 11%] Built target gd_conf
+[0.061s] [ 41%] Built target kf_3dof
+[0.061s] [ 47%] [32mBuilding CXX object CMakeFiles/kf.dir/src/kf_v3_node.cpp.o[0m
+[0.063s] [ 76%] Built target kf_v4
+[3.583s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.583s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.583s]                  from [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[3.583s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In constructor ‘[01m[Kkf_node::kf_node()[m[K’:
+[3.584s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:133:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference[m[K’ was not declared in this scope; did you mean ‘[01m[Kexpected_difference_x[m[K’?
+[3.584s]   133 |         RCLCPP_INFO(this->get_logger(), "%f",[01;31m[Kexpected_difference[m[K);
+[3.584s]       |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[3.584s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[3.584s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:141:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.585s]   141 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+[3.585s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[6.061s] gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+[6.061s] gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/kf.dir/all] Error 2
+[6.062s] gmake: *** [Makefile:146: all] Error 2
+[6.065s] Invoked command in '/home/saab/Desktop/2024_UWR/build/kalman_filter' returned '2': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/kalman_filter -- -j24 -l24

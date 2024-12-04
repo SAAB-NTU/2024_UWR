@@ -28,6 +28,7 @@ public:
     // Getter for private members
     const std::pair<double, double>& getOutput() const;
     int getWindowSize() const;
+    void clear_window();
 
     // Getter for moving_avg_window (from the previous update)
     const std::deque<double>& getMovingAvgWindow() const;

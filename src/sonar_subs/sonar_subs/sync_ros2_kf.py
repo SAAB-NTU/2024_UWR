@@ -18,7 +18,9 @@ import numpy as np
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="1205_ed_0_05_conf_4_Angles"
+        self.time="6thNov_1205_t014"
+        self.path="/home/saab/Desktop/2024_UWR/Analysis/"
+        os.makedirs(self.path+"output_"+self.time,exist_ok=True)
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
         self.sub1 = Subscriber(self, PoseStamped, '/Pose')
@@ -26,13 +28,16 @@ class RosbagSync(Node):
         self.sub3 = Subscriber(self, Vector3Stamped, '/IMU_filtered')
         self.sub4 = Subscriber(self,ThreeSonarDepth,'/SONAR_raw')
         self.sub5=Subscriber(self,Imu,'/IMU_raw')
+
+        #self.sub6=Subscriber(self,Image,'/camera/color/image/raw')
+        #self.sub1_1 = self.create_subscription(Image, '/camera/realsense2_camera/color/image_raw', self.image_data,10)
         
         self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4,self.sub5], 10, slop=0.002)  # Increase the queue size for stability
         self.ts.registerCallback(self.callback)
 
         self.ts2 = ApproximateTimeSynchronizer([self.sub2,self.sub4], 10, slop=0.002)  # Increase the queue size for stability
         self.ts2.registerCallback(self.log_sonar_data)
-        #self.image_bridge=cv_bridge.CvBridge()
+        self.image_bridge=cv_bridge.CvBridge()
         self.synchronized_data = []
         self.synchronized_data_imu = []
         self.synchronized_data_sonar=[]
@@ -55,8 +60,19 @@ class RosbagSync(Node):
         euler = r.as_euler('xyz', degrees=False)  # Convert to Euler angles (ZYX convention)
         return euler
     
+    def image_data(self,data):
+        timestamp = data.header.stamp
+        self.get_logger().info(f"Synchronized data size: {(self.counter)}")
+        
+        img=self.image_bridge.imgmsg_to_cv2(data)
+        img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+        #cv2.imwrite("/home/saab/Desktop/output/"+str(timestamp.sec + timestamp.nanosec * 1e-9)+".png",img)
+        cv2.imwrite(self.path+"output"+self.time+"/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
+        self.counter+=1
+    
     def log_sonar_data(self, data2,data1):
         timestamp = data1.header.stamp
+        self.get_logger().info("In loop")
         self.synchronized_data_sonar.append({
             'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
             'Sonar_distance_1': data1.distance_1,
@@ -69,7 +85,7 @@ class RosbagSync(Node):
             'Confidence_3_dev': data1.confidence_3,
             'Confidence_3': data2.confidence_3})
         synchronized_df = pd.DataFrame(self.synchronized_data_sonar)
-        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_6_Nov_confidence_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv(self.path+'confidence_case_'+self.time+'.csv', index=False)
 
     #def log_acceleration_data(self, data):
     #    self.get_logger().info(f"Received IMU acceleration data: x: {data.vector.x}")
@@ -122,7 +138,7 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data)
-        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_6_Nov_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv(self.path+'output_case_'+self.time+'.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
     '''
     def callback_pred(self, data1):
@@ -191,7 +207,7 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data_imu)
-        synchronized_df.to_csv('/home/saab/Desktop/2024_UWR/Analysis/CSVs/output_6_Nov_IMU_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv(self.path+'output_IMU_case_'+self.time+'.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
 
 def main(args=None):

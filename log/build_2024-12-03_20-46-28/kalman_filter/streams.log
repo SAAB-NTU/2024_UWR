@@ -1,0 +1,127 @@
+[0.010s] Invoking command in '/home/saab/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/kalman_filter -- -j24 -l24
+[0.049s] [35m[1mConsolidate compiler generated dependencies of target kf_3dof[0m
+[0.054s] [ 10%] Built target gd_conf
+[0.054s] [ 21%] Built target imu_topic
+[0.059s] [ 26%] [32mBuilding CXX object CMakeFiles/kf.dir/src/sonar_processing.cpp.o[0m
+[0.061s] [ 31%] [32mBuilding CXX object CMakeFiles/kf_v4.dir/src/sonar_processing.cpp.o[0m
+[0.087s] [ 36%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o[0m
+[0.088s] [ 47%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof.cpp.o[0m
+[0.088s] [ 47%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/sonar_processing.cpp.o[0m
+[2.214s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kstd::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double)[m[K’:
+[2.215s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:37:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.215s]    37 |     if ([01;35m[Kmoving_avg_window.size() == window_size[m[K)
+[2.215s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[2.215s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kdouble SonarProcess::MovingAvg(const float&)[m[K’:
+[2.215s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:83:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.215s]    83 |     if ([01;35m[Kmoving_avg_window.size() > window_size[m[K) {
+[2.215s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.215s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:87:39:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.215s]    87 |     else if ([01;35m[Kmoving_avg_window.size() < window_size[m[K) {
+[2.215s]       |              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.215s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kstd::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double)[m[K’:
+[2.215s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:37:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.215s]    37 |     if ([01;35m[Kmoving_avg_window.size() == window_size[m[K)
+[2.215s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[2.215s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kdouble SonarProcess::MovingAvg(const float&)[m[K’:
+[2.216s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:83:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.216s]    83 |     if ([01;35m[Kmoving_avg_window.size() > window_size[m[K) {
+[2.216s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.216s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:87:39:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.216s]    87 |     else if ([01;35m[Kmoving_avg_window.size() < window_size[m[K) {
+[2.216s]       |              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.226s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kstd::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double)[m[K’:
+[2.226s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:37:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.226s]    37 |     if ([01;35m[Kmoving_avg_window.size() == window_size[m[K)
+[2.226s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+[2.227s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kdouble SonarProcess::MovingAvg(const float&)[m[K’:
+[2.227s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:83:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.227s]    83 |     if ([01;35m[Kmoving_avg_window.size() > window_size[m[K) {
+[2.227s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.227s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:87:39:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<double>::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[2.227s]    87 |     else if ([01;35m[Kmoving_avg_window.size() < window_size[m[K) {
+[2.227s]       |              [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[2.455s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kstd::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double)[m[K’:
+[2.455s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:75:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.455s]    75 | [01;35m[K}[m[K
+[2.455s]       | [01;35m[K^[m[K
+[2.456s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kstd::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double)[m[K’:
+[2.456s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:75:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.456s]    75 | [01;35m[K}[m[K
+[2.456s]       | [01;35m[K^[m[K
+[2.464s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:[m[K In member function ‘[01m[Kstd::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double)[m[K’:
+[2.464s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/sonar_processing.cpp:75:1:[m[K [01;35m[Kwarning: [m[Kcontrol reaches end of non-void function [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+[2.464s]    75 | [01;35m[K}[m[K
+[2.464s]       | [01;35m[K^[m[K
+[2.621s] [ 52%] [32m[1mLinking CXX executable kf[0m
+[2.627s] [ 57%] [32m[1mLinking CXX executable kf_v4[0m
+[3.064s] [ 73%] Built target kf
+[3.080s] [ 89%] Built target kf_v4
+[3.853s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[3.853s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:169:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.853s]   169 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+[3.854s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.865s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.865s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.865s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.865s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.865s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.866s]                  from [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[3.866s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(const Imu&)[m[K’:
+[3.866s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:295:45:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[Kb[m[K’ in format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[3.866s]   295 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"Bias %b"[m[K,bias);
+[3.866s]       |                                             [01;35m[K^~~~~~~~~[m[K
+[3.866s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:295:52:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[3.866s]   295 |             RCLCPP_INFO(this->get_logger(), "Bias %[01;36m[Kb[m[K",bias);
+[3.866s]       |                                                    [01;36m[K^[m[K
+[3.866s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[3.866s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[3.867s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[3.867s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[3.867s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[3.867s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[3.867s]                  from [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[3.867s] [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:295:45:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args-Wformat-extra-args]8;;[m[K]
+[3.867s]   295 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"Bias %b"[m[K,bias);
+[3.867s]       |                                             [01;35m[K^~~~~~~~~[m[K
+[9.957s] [ 94%] [32m[1mLinking CXX executable kf_3dof[0m
+[10.402s] [100%] Built target kf_3dof
+[10.416s] Invoked command in '/home/saab/Desktop/2024_UWR/build/kalman_filter' returned '0': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/kalman_filter -- -j24 -l24
+[10.457s] Invoking command in '/home/saab/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/kalman_filter
+[10.460s] -- Install configuration: ""
+[10.461s] -- Execute custom install script
+[10.461s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/imu_launch.py
+[10.461s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_0_1.py
+[10.461s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_0_5.py
+[10.461s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_3dof.py
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_v4
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_3dof
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/gd_conf
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/lib/kalman_filter/imu_topic
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/package_run_dependencies/kalman_filter
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/parent_prefix_path/kalman_filter
+[10.462s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.sh
+[10.463s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.dsv
+[10.463s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.sh
+[10.463s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.dsv
+[10.463s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.bash
+[10.463s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.sh
+[10.463s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.zsh
+[10.463s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.dsv
+[10.463s] -- Symlinking: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.dsv
+[10.470s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/ament_index/resource_index/packages/kalman_filter
+[10.470s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig.cmake
+[10.470s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig-version.cmake
+[10.470s] -- Up-to-date symlink: /home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.xml
+[10.472s] Invoked command in '/home/saab/Desktop/2024_UWR/build/kalman_filter' returned '0': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/kalman_filter

@@ -1,0 +1,23 @@
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:1[m[K:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In constructor ‘[01m[Kkf_node::kf_node()[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:133:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference[m[K’ was not declared in this scope; did you mean ‘[01m[Kexpected_difference_x[m[K’?
+  133 |         RCLCPP_INFO(this->get_logger(), "%f",[01;31m[Kexpected_difference[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/saab/Desktop/2024_UWR/src/kalman_filter/src/kf_v3_node.cpp:141:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  141 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+gmake[2]: *** [CMakeFiles/kf.dir/build.make:76: CMakeFiles/kf.dir/src/kf_v3_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:143: CMakeFiles/kf.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

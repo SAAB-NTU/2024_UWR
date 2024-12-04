@@ -1,0 +1,769 @@
+[0.077s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.077s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=24, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x7faba28ae830>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7faba28aeda0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7faba28aeda0>>, mixin_verb=('build',))
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.223s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.223s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/saab/Desktop/2024_UWR'
+[0.223s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.224s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['ignore', 'ignore_ament_install']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'ignore'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'ignore_ament_install'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['colcon_pkg']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'colcon_pkg'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['colcon_meta']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'colcon_meta'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['ros']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'ros'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['cmake', 'python']
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'cmake'
+[0.238s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'python'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extensions ['python_setup_py']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis) by extension 'python_setup_py'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'colcon_meta'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extensions ['ros']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'ros'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extensions ['cmake', 'python']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'cmake'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'python'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extensions ['python_setup_py']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs) by extension 'python_setup_py'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'ignore'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'ignore_ament_install'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extensions ['colcon_pkg']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'colcon_pkg'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extensions ['colcon_meta']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'colcon_meta'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extensions ['ros']
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'ros'
+[0.239s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extensions ['cmake', 'python']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'cmake'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'python'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extensions ['python_setup_py']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_00_normal_2024_11_18_10_42_00.bag) by extension 'python_setup_py'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'ros'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extensions ['cmake', 'python']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'cmake'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'python'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extensions ['python_setup_py']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_01_normal_2024_11_18_10_47_12.bag) by extension 'python_setup_py'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'ignore'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'ignore_ament_install'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extensions ['colcon_pkg']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'colcon_pkg'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extensions ['colcon_meta']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'colcon_meta'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extensions ['ros']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'ros'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extensions ['cmake', 'python']
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'cmake'
+[0.240s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'python'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extensions ['python_setup_py']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_02_normal_2024_11_18_11_28_03.bag) by extension 'python_setup_py'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'ros'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extensions ['cmake', 'python']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'cmake'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'python'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extensions ['python_setup_py']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_04_normal_2024_11_18_11_32_21.bag) by extension 'python_setup_py'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'ignore'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'ignore_ament_install'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extensions ['colcon_pkg']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'colcon_pkg'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extensions ['colcon_meta']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'colcon_meta'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extensions ['ros']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'ros'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extensions ['cmake', 'python']
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'cmake'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'python'
+[0.241s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extensions ['python_setup_py']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_05_normal_2024_11_18_11_35_18.bag) by extension 'python_setup_py'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'ros'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extensions ['cmake', 'python']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'cmake'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'python'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extensions ['python_setup_py']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_11_50_47.bag) by extension 'python_setup_py'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'ignore'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'ignore_ament_install'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extensions ['colcon_pkg']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'colcon_pkg'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extensions ['colcon_meta']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'colcon_meta'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extensions ['ros']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'ros'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extensions ['cmake', 'python']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'cmake'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'python'
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extensions ['python_setup_py']
+[0.242s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_15_56_35.bag) by extension 'python_setup_py'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extensions ['cmake', 'python']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'python'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extensions ['python_setup_py']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_13thNov_13_07_normal_2024_11_18_16_00_07.bag) by extension 'python_setup_py'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'ignore'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'ignore_ament_install'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extensions ['colcon_pkg']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'colcon_pkg'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extensions ['colcon_meta']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'colcon_meta'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extensions ['ros']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'ros'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extensions ['cmake', 'python']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'cmake'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'python'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extensions ['python_setup_py']
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_03_Angles2024_11_20_18_42_48.bag) by extension 'python_setup_py'
+[0.243s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'ros'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf2024_11_19_14_07_14.bag) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'ignore_ament_install'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extensions ['colcon_pkg']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'colcon_pkg'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extensions ['colcon_meta']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'colcon_meta'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extensions ['ros']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'ros'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extensions ['cmake', 'python']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'cmake'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'python'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extensions ['python_setup_py']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_2_2024_11_19_14_17_45.bag) by extension 'python_setup_py'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'ignore'
+[0.244s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'ros'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extensions ['cmake', 'python']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'cmake'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'python'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extensions ['python_setup_py']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_3_2024_11_19_14_58_50.bag) by extension 'python_setup_py'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extensions ['colcon_pkg']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'colcon_pkg'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extensions ['colcon_meta']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'colcon_meta'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extensions ['ros']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'ros'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extensions ['cmake', 'python']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'cmake'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'python'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extensions ['python_setup_py']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_4_2024_11_19_17_53_41.bag) by extension 'python_setup_py'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'ignore'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'ignore_ament_install'
+[0.245s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_1_2024_11_20_17_27_27.bag) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extensions ['colcon_meta']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'colcon_meta'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extensions ['ros']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_conf_init_2_2024_11_20_17_36_02.bag) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'ignore_ament_install'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extensions ['colcon_pkg']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'colcon_pkg'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'ros'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'cmake'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'python'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extensions ['python_setup_py']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_ed_0_05_ss_152024_11_19_13_31_16.bag) by extension 'python_setup_py'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'ros'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'cmake'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'python'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extensions ['python_setup_py']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_100_2024_11_18_18_16_28.bag) by extension 'python_setup_py'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'ros'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extensions ['cmake', 'python']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'python'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extensions ['python_setup_py']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_0001_r_1_2024_11_18_18_19_25.bag) by extension 'python_setup_py'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'ros'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extensions ['cmake', 'python']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'cmake'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'python'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extensions ['python_setup_py']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/CSVs/case_6thNov_12_05_q_0_01_r_1_2024_11_18_18_36_34.bag) by extension 'python_setup_py'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['ignore', 'ignore_ament_install']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'ignore'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'ros'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['cmake', 'python']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'cmake'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'python'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extensions ['python_setup_py']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(Analysis/Last) by extension 'python_setup_py'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.249s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/adnav-driver) by extension 'ros'
+[0.252s] DEBUG:colcon.colcon_core.package_identification:Package 'src/adnav-driver' with type 'ros.ament_cmake' and name 'adnav-driver'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['ignore', 'ignore_ament_install']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/kalman_filter) by extension 'ros'
+[0.253s] DEBUG:colcon.colcon_core.package_identification:Package 'src/kalman_filter' with type 'ros.ament_cmake' and name 'kalman_filter'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/ntrip) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/ntrip' with type 'ros.ament_cmake' and name 'ntrip'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'ros'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['cmake', 'python']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'cmake'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'python'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extensions ['python_setup_py']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/ros2-driver) by extension 'python_setup_py'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'ignore'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'ignore_ament_install'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['colcon_pkg']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'colcon_pkg'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['colcon_meta']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'colcon_meta'
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extensions ['ros']
+[0.254s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_msgs) by extension 'ros'
+[0.255s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sonar_msgs' with type 'ros.ament_cmake' and name 'sonar_msgs'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['ignore', 'ignore_ament_install']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'ignore'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'ignore_ament_install'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['colcon_pkg']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'colcon_pkg'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['colcon_meta']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'colcon_meta'
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extensions ['ros']
+[0.255s] Level 1:colcon.colcon_core.package_identification:_identify(src/sonar_subs) by extension 'ros'
+[0.255s] DEBUG:colcon.colcon_core.package_identification:Package 'src/sonar_subs' with type 'ros.ament_python' and name 'sonar_subs'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['ignore', 'ignore_ament_install']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'ignore'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'ignore_ament_install'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['colcon_pkg']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'colcon_pkg'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['colcon_meta']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'colcon_meta'
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extensions ['ros']
+[0.256s] Level 1:colcon.colcon_core.package_identification:_identify(src/xsens_mti_ros2_driver) by extension 'ros'
+[0.256s] DEBUG:colcon.colcon_core.package_identification:Package 'src/xsens_mti_ros2_driver' with type 'ros.ament_cmake' and name 'xsens_mti_ros2_driver'
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.256s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.269s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.270s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/saab/Desktop/2024_UWR/install
+[0.271s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 274 installed packages in /opt/ros/humble
+[0.272s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.295s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'cmake_target' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'adnav-driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.296s] DEBUG:colcon.colcon_core.verb:Building package 'adnav-driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/saab/Desktop/2024_UWR/build/adnav-driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/saab/Desktop/2024_UWR/install/adnav-driver', 'merge_install': False, 'path': '/home/saab/Desktop/2024_UWR/src/adnav-driver', 'symlink_install': True, 'test_result_base': None}
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_target' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_clean_cache' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_clean_first' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'cmake_force_configure' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'ament_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'catkin_cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'ntrip' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.296s] DEBUG:colcon.colcon_core.verb:Building package 'ntrip' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/saab/Desktop/2024_UWR/build/ntrip', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/saab/Desktop/2024_UWR/install/ntrip', 'merge_install': False, 'path': '/home/saab/Desktop/2024_UWR/src/ntrip', 'symlink_install': True, 'test_result_base': None}
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_args' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_target' from command line to 'None'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.296s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'sonar_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.297s] DEBUG:colcon.colcon_core.verb:Building package 'sonar_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/saab/Desktop/2024_UWR/build/sonar_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/saab/Desktop/2024_UWR/install/sonar_msgs', 'merge_install': False, 'path': '/home/saab/Desktop/2024_UWR/src/sonar_msgs', 'symlink_install': True, 'test_result_base': None}
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_target' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_clean_cache' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_clean_first' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'cmake_force_configure' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'ament_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'catkin_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'xsens_mti_ros2_driver' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.297s] DEBUG:colcon.colcon_core.verb:Building package 'xsens_mti_ros2_driver' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver', 'merge_install': False, 'path': '/home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver', 'symlink_install': True, 'test_result_base': None}
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_target' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_clean_cache' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_clean_first' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'cmake_force_configure' from command line to 'False'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'ament_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'catkin_cmake_args' from command line to 'None'
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'kalman_filter' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.297s] DEBUG:colcon.colcon_core.verb:Building package 'kalman_filter' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/saab/Desktop/2024_UWR/build/kalman_filter', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/saab/Desktop/2024_UWR/install/kalman_filter', 'merge_install': False, 'path': '/home/saab/Desktop/2024_UWR/src/kalman_filter', 'symlink_install': True, 'test_result_base': None}
+[0.297s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_target' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_clean_first' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'cmake_force_configure' from command line to 'False'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'ament_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.298s] Level 5:colcon.colcon_core.verb:set package 'sonar_subs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.298s] DEBUG:colcon.colcon_core.verb:Building package 'sonar_subs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/saab/Desktop/2024_UWR/build/sonar_subs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/saab/Desktop/2024_UWR/install/sonar_subs', 'merge_install': False, 'path': '/home/saab/Desktop/2024_UWR/src/sonar_subs', 'symlink_install': True, 'test_result_base': None}
+[0.298s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.298s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.299s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/saab/Desktop/2024_UWR/src/sonar_msgs' with build type 'ament_cmake'
+[0.299s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/saab/Desktop/2024_UWR/src/sonar_msgs'
+[0.300s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.300s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.300s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.303s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/saab/Desktop/2024_UWR/src/adnav-driver' with build type 'ament_cmake'
+[0.303s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/saab/Desktop/2024_UWR/src/adnav-driver'
+[0.303s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.303s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.305s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/saab/Desktop/2024_UWR/src/ntrip' with build type 'ament_cmake'
+[0.305s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/saab/Desktop/2024_UWR/src/ntrip'
+[0.306s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.306s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.308s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver' with build type 'ament_cmake'
+[0.308s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/saab/Desktop/2024_UWR/src/xsens_mti_ros2_driver'
+[0.308s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.308s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.314s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/sonar_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/sonar_msgs -- -j24 -l24
+[0.316s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/adnav-driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/adnav-driver -- -j24 -l24
+[0.319s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/ntrip': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/ntrip -- -j24 -l24
+[0.322s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver -- -j24 -l24
+[0.366s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/ntrip' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/ntrip -- -j24 -l24
+[0.368s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/adnav-driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/adnav-driver -- -j24 -l24
+[0.390s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/ntrip': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/ntrip
+[0.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/adnav-driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/adnav-driver
+[0.402s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ntrip)
+[0.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/ntrip' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/ntrip
+[0.404s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip' for CMake module files
+[0.405s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip' for CMake config files
+[0.405s] Level 1:colcon.colcon_core.shell:create_environment_hook('ntrip', 'cmake_prefix_path')
+[0.405s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.ps1'
+[0.405s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.dsv'
+[0.406s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.sh'
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/lib'
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/bin'
+[0.406s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/lib/pkgconfig/ntrip.pc'
+[0.407s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/lib/python3.10/site-packages'
+[0.407s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/bin'
+[0.407s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.ps1'
+[0.407s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.dsv'
+[0.408s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.sh'
+[0.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.bash'
+[0.409s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.zsh'
+[0.409s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/ntrip/share/colcon-core/packages/ntrip)
+[0.411s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(adnav-driver)
+[0.411s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver' for CMake module files
+[0.411s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/adnav-driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/adnav-driver
+[0.412s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver' for CMake config files
+[0.412s] Level 1:colcon.colcon_core.shell:create_environment_hook('adnav-driver', 'cmake_prefix_path')
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/hook/cmake_prefix_path.ps1'
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/hook/cmake_prefix_path.dsv'
+[0.412s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/hook/cmake_prefix_path.sh'
+[0.413s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/lib'
+[0.413s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/bin'
+[0.413s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/lib/pkgconfig/adnav-driver.pc'
+[0.413s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/lib/python3.10/site-packages'
+[0.413s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/bin'
+[0.413s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.ps1'
+[0.414s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.dsv'
+[0.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.sh'
+[0.414s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.bash'
+[0.415s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.zsh'
+[0.415s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/adnav-driver/share/colcon-core/packages/adnav-driver)
+[0.428s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ntrip)
+[0.428s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip' for CMake module files
+[0.429s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip' for CMake config files
+[0.429s] Level 1:colcon.colcon_core.shell:create_environment_hook('ntrip', 'cmake_prefix_path')
+[0.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.ps1'
+[0.429s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.dsv'
+[0.430s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/hook/cmake_prefix_path.sh'
+[0.430s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/lib'
+[0.430s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/bin'
+[0.430s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/lib/pkgconfig/ntrip.pc'
+[0.430s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/lib/python3.10/site-packages'
+[0.430s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/ntrip/bin'
+[0.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.ps1'
+[0.431s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.dsv'
+[0.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.sh'
+[0.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.bash'
+[0.432s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/ntrip/share/ntrip/package.zsh'
+[0.432s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/ntrip/share/colcon-core/packages/ntrip)
+[0.435s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(adnav-driver)
+[0.435s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver' for CMake module files
+[0.436s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver' for CMake config files
+[0.436s] Level 1:colcon.colcon_core.shell:create_environment_hook('adnav-driver', 'cmake_prefix_path')
+[0.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/hook/cmake_prefix_path.ps1'
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/hook/cmake_prefix_path.dsv'
+[0.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/hook/cmake_prefix_path.sh'
+[0.438s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/lib'
+[0.438s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/bin'
+[0.438s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/lib/pkgconfig/adnav-driver.pc'
+[0.438s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/lib/python3.10/site-packages'
+[0.438s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/adnav-driver/bin'
+[0.438s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.ps1'
+[0.439s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.dsv'
+[0.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.sh'
+[0.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.bash'
+[0.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/adnav-driver/share/adnav-driver/package.zsh'
+[0.441s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/adnav-driver/share/colcon-core/packages/adnav-driver)
+[0.594s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/sonar_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/sonar_msgs -- -j24 -l24
+[0.607s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver -- -j24 -l24
+[0.657s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver
+[0.659s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/sonar_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/sonar_msgs
+[0.726s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sonar_msgs)
+[0.727s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs' for CMake module files
+[0.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/sonar_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/sonar_msgs
+[0.728s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs' for CMake config files
+[0.729s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'cmake_prefix_path')
+[0.729s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.ps1'
+[0.730s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.dsv'
+[0.730s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.sh'
+[0.731s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib'
+[0.731s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'ld_library_path_lib')
+[0.731s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.ps1'
+[0.731s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.dsv'
+[0.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.sh'
+[0.732s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/bin'
+[0.732s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/pkgconfig/sonar_msgs.pc'
+[0.732s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/python3.10/site-packages'
+[0.732s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/bin'
+[0.733s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.ps1'
+[0.733s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.dsv'
+[0.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.sh'
+[0.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.bash'
+[0.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.zsh'
+[0.735s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/colcon-core/packages/sonar_msgs)
+[0.736s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xsens_mti_ros2_driver)
+[0.736s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake module files
+[0.737s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble /usr/bin/cmake --install /home/saab/Desktop/2024_UWR/build/xsens_mti_ros2_driver
+[0.737s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake config files
+[0.738s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'cmake_prefix_path')
+[0.739s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.ps1'
+[0.739s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.dsv'
+[0.739s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.sh'
+[0.740s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib'
+[0.740s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'ld_library_path_lib')
+[0.740s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.ps1'
+[0.741s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.dsv'
+[0.741s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.sh'
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[0.741s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/pkgconfig/xsens_mti_ros2_driver.pc'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/python3.10/site-packages'
+[0.742s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[0.742s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.ps1'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.dsv'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.sh'
+[0.743s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.bash'
+[0.744s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.zsh'
+[0.744s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/colcon-core/packages/xsens_mti_ros2_driver)
+[0.795s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(xsens_mti_ros2_driver)
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake module files
+[0.795s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver' for CMake config files
+[0.796s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'cmake_prefix_path')
+[0.796s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.ps1'
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.dsv'
+[0.797s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/cmake_prefix_path.sh'
+[0.797s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib'
+[0.797s] Level 1:colcon.colcon_core.shell:create_environment_hook('xsens_mti_ros2_driver', 'ld_library_path_lib')
+[0.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.ps1'
+[0.798s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.dsv'
+[0.798s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/hook/ld_library_path_lib.sh'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/pkgconfig/xsens_mti_ros2_driver.pc'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib/python3.10/site-packages'
+[0.799s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/bin'
+[0.799s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.ps1'
+[0.800s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.dsv'
+[0.800s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.sh'
+[0.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.bash'
+[0.801s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/xsens_mti_ros2_driver/package.zsh'
+[0.801s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/share/colcon-core/packages/xsens_mti_ros2_driver)
+[0.802s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sonar_msgs)
+[0.802s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs' for CMake module files
+[0.803s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs' for CMake config files
+[0.803s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'cmake_prefix_path')
+[0.803s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.ps1'
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.dsv'
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/cmake_prefix_path.sh'
+[0.804s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib'
+[0.804s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_msgs', 'ld_library_path_lib')
+[0.804s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.ps1'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.dsv'
+[0.805s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/hook/ld_library_path_lib.sh'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/bin'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/pkgconfig/sonar_msgs.pc'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib/python3.10/site-packages'
+[0.805s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_msgs/bin'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.ps1'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.dsv'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.sh'
+[0.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.bash'
+[0.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/sonar_msgs/package.zsh'
+[0.807s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/sonar_msgs/share/colcon-core/packages/sonar_msgs)
+[0.807s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/saab/Desktop/2024_UWR/src/kalman_filter' with build type 'ament_cmake'
+[0.807s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/saab/Desktop/2024_UWR/src/kalman_filter'
+[0.808s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.808s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.810s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/saab/Desktop/2024_UWR/src/sonar_subs' with build type 'ament_python'
+[0.810s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_subs', 'ament_prefix_path')
+[0.810s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/ament_prefix_path.ps1'
+[0.810s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/ament_prefix_path.dsv'
+[0.811s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/ament_prefix_path.sh'
+[0.811s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.811s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.817s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/kalman_filter -- -j24 -l24
+[1.019s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/saab/Desktop/2024_UWR/src/sonar_subs'
+[1.020s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.020s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.427s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/saab/Desktop/2024_UWR/build/sonar_subs': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/saab/Desktop/2024_UWR/build/sonar_subs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saab/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/saab/Desktop/2024_UWR/build/sonar_subs/build --no-deps symlink_data
+[1.957s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_subs', 'pythonpath_develop')
+[1.957s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/build/sonar_subs/share/sonar_subs/hook/pythonpath_develop.ps1'
+[1.958s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/sonar_subs' returned '0': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib PYTHONPATH=/home/saab/Desktop/2024_UWR/build/sonar_subs/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/saab/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /home/saab/Desktop/2024_UWR/build/sonar_subs/build --no-deps symlink_data
+[1.958s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/build/sonar_subs/share/sonar_subs/hook/pythonpath_develop.dsv'
+[1.958s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/build/sonar_subs/share/sonar_subs/hook/pythonpath_develop.sh'
+[1.959s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_subs' for CMake module files
+[1.959s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_subs' for CMake config files
+[1.960s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_subs/lib'
+[1.960s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_subs/bin'
+[1.960s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_subs/lib/pkgconfig/sonar_subs.pc'
+[1.960s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_subs/lib/python3.10/site-packages'
+[1.960s] Level 1:colcon.colcon_core.shell:create_environment_hook('sonar_subs', 'pythonpath')
+[1.960s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/pythonpath.ps1'
+[1.960s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/pythonpath.dsv'
+[1.961s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/hook/pythonpath.sh'
+[1.961s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/sonar_subs/bin'
+[1.961s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sonar_subs)
+[1.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.ps1'
+[1.962s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.dsv'
+[1.962s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.sh'
+[1.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.bash'
+[1.963s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/sonar_subs/share/sonar_subs/package.zsh'
+[1.963s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/sonar_subs/share/colcon-core/packages/sonar_subs)
+[6.872s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/saab/Desktop/2024_UWR/build/kalman_filter' returned '2': CMAKE_PREFIX_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/Desktop/2024_UWR/install/kalman_filter:/home/saab/Desktop/2024_UWR/install/ntrip:/home/saab/Desktop/2024_UWR/install/adnav-driver:/home/saab/Desktop/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/Desktop/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/Desktop/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/Desktop/2024_UWR/build/kalman_filter -- -j24 -l24
+[6.913s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(kalman_filter)
+[6.913s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/kalman_filter' for CMake module files
+[6.913s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/kalman_filter' for CMake config files
+[6.914s] Level 1:colcon.colcon_core.shell:create_environment_hook('kalman_filter', 'cmake_prefix_path')
+[6.914s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.ps1'
+[6.914s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.dsv'
+[6.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/hook/cmake_prefix_path.sh'
+[6.915s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/kalman_filter/lib'
+[6.915s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/kalman_filter/bin'
+[6.915s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/kalman_filter/lib/pkgconfig/kalman_filter.pc'
+[6.915s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/kalman_filter/lib/python3.10/site-packages'
+[6.915s] Level 1:colcon.colcon_core.environment:checking '/home/saab/Desktop/2024_UWR/install/kalman_filter/bin'
+[6.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.ps1'
+[6.916s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.dsv'
+[6.916s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.sh'
+[6.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.bash'
+[6.917s] INFO:colcon.colcon_core.shell:Creating package script '/home/saab/Desktop/2024_UWR/install/kalman_filter/share/kalman_filter/package.zsh'
+[6.917s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/saab/Desktop/2024_UWR/install/kalman_filter/share/colcon-core/packages/kalman_filter)
+[6.928s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[6.928s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[6.928s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '2'
+[6.928s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[6.933s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[6.933s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[6.934s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[6.947s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[6.947s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/saab/Desktop/2024_UWR/install/local_setup.ps1'
+[6.948s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/saab/Desktop/2024_UWR/install/_local_setup_util_ps1.py'
+[6.949s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/saab/Desktop/2024_UWR/install/setup.ps1'
+[6.950s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/saab/Desktop/2024_UWR/install/local_setup.sh'
+[6.951s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/saab/Desktop/2024_UWR/install/_local_setup_util_sh.py'
+[6.952s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/saab/Desktop/2024_UWR/install/setup.sh'
+[6.952s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/saab/Desktop/2024_UWR/install/local_setup.bash'
+[6.953s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/saab/Desktop/2024_UWR/install/setup.bash'
+[6.954s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/saab/Desktop/2024_UWR/install/local_setup.zsh'
+[6.954s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/saab/Desktop/2024_UWR/install/setup.zsh'

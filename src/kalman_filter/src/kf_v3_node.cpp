@@ -77,7 +77,9 @@ public:
         this->declare_parameter<double>("angle", 0.0);
         this->declare_parameter<bool>("without_measurement", false);
         this->declare_parameter<bool>("bias_override", true);
-        this->declare_parameter<double>("expected_difference", 0.1);
+        this->declare_parameter<double>("expected_difference_x", 0.1);
+        this->declare_parameter<double>("expected_difference_y", 0.1);
+        this->declare_parameter<double>("expected_difference_z", 0.1);
         this->declare_parameter<int>("sample_size", 10);
         // Get parameters
         this->get_parameter("imu_topic", imu_param);
@@ -85,7 +87,9 @@ public:
         this->get_parameter("angle", angle);
         this->get_parameter("without_measurement", start);
         this->get_parameter("bias_override", override);
-        this->get_parameter("expected_difference", expected_difference);
+        this->get_parameter("expected_difference_x", expected_difference_x);
+        this->get_parameter("expected_difference_y", expected_difference_y);
+        this->get_parameter("expected_difference_z", expected_difference_z);
         this->get_parameter("sample_size",sample_size);
 
         angle_rad=angle*M_PI/180;
@@ -128,7 +132,7 @@ public:
         writer_->open(storage_options_, converter_options_);
 
         
-        RCLCPP_INFO(this->get_logger(), "%f",expected_difference);
+        RCLCPP_INFO(this->get_logger(), "%f",expected_difference_x);
         RCLCPP_INFO(this->get_logger(), "Class successfully constructed, waiting for data");
         
         slope=(1-1000)/(100-0);
@@ -417,9 +421,9 @@ public:
             confidence_pub->publish(confidence_msg);
             scalar_pub->publish(scalar_msg);*/
             
-            auto e1=surge.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
-            auto e2=sway.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
-            auto e3=heave.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference);
+            auto e1=surge.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference_x);
+            auto e2=sway.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference_y);
+            auto e3=heave.moving_avg.CalculateConfidenceLevelsVariation2(expected_difference_z);
             c1.header.stamp = msg.header.stamp;
             c1.confidence_1 = e1.first;
             c1.scalar_1 = e1.second;
@@ -598,7 +602,7 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_subscriber_;
 
     int sample_size;
-    double expected_difference;
+    double expected_difference_x,expected_difference_y,expected_difference_z;
     
     rclcpp::Time current_time;
     rclcpp::Time predict_time, measure_time,predict_time_now,measure_time_now;

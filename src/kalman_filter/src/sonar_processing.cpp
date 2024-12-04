@@ -18,9 +18,17 @@ const std::pair<double, double>& SonarProcess::getOutput() const {
     return output;
 }
 
+void SonarProcess::clear_window()
+{
+    moving_avg_window.clear();
+}
+
 // Getter for `window_size`
 int SonarProcess::getWindowSize() const {
-    return window_size;
+    if(window_size>moving_avg_window.size())
+        return 0;
+    else
+    return 1;
 }
 
 const std::deque<double>& SonarProcess::getMovingAvgWindow() const {
@@ -34,6 +42,8 @@ const std::deque<double>& SonarProcess::getMovingAvgWindow() const {
 std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(double expectedDifference) {
         
 
+    if (moving_avg_window.size() == window_size) 
+    {
     double fixedStdDev = expectedDifference * 3.0*multiplier;
     
     
@@ -63,6 +73,13 @@ std::pair<double, double> SonarProcess::CalculateConfidenceLevelsVariation2(doub
     output.first = confidencePercentage;
     output.second = sigmasAway; 
 
+    
+    }
+    else
+    {
+          output.first = 100;
+        output.second = -5; 
+    }
     return output;
 }
 
@@ -76,9 +93,9 @@ double SonarProcess::MovingAvg(const float& raw_measurement)
         moving_avg_window.pop_front();
     }
 
-    //if (moving_avg_window.size() < window_size) {
-     //   return 0.0;
-    //}
+    else if (moving_avg_window.size() < window_size) {
+        return raw_measurement;
+    }
     
     std::vector<double> contiguousVector(moving_avg_window.begin(), moving_avg_window.end());
     arma::vec armaWindow(contiguousVector.data(), contiguousVector.size());

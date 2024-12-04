@@ -114,6 +114,7 @@ public:
     void set_dist_init(double init_surge,double init_sway, double init_heave);
     Eigen::Vector3d set_accel(double accel_surge,double accel_sway, double accel_heave);
     SonarProcess moving_avg_surge,moving_avg_sway,moving_avg_heave,moving_avg_vel,moving_avg_time;
+    SonarProcess m_avg_surge_high,m_avg_sway_high,m_avg_heave_high;
     Eigen::Vector3d set_dist(double val_surge,double val_sway, double val_heave);
     void set_vel(double dt);
     void set_prev_dist();
@@ -127,7 +128,7 @@ protected:
 
     // accel_bias, accel, vel, dist, previous_predict_time, conf;
     float samplingrate;
-    double cutoff_frequency, dist_bias;
+    double cutoff_frequency_surge,cutoff_frequency_sway,cutoff_frequency_heave, dist_bias;
     int sample_size;
     bool bias_reset,bias_reset_dist;
     
