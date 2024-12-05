@@ -23,6 +23,12 @@ void SonarProcess::clear_window()
     moving_avg_window.clear();
 }
 
+void SonarProcess::clear_last_entry()
+{
+    moving_avg_window=temp_window;
+}
+
+
 // Getter for `window_size`
 int SonarProcess::getWindowSize() const {
     if(window_size>moving_avg_window.size())

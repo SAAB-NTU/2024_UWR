@@ -43,9 +43,9 @@ x << 0,0,0,0,0,0; //6x1 state variable
     vel<<0,0,0;
     dist<<0,0,0;
     
-    cutoff_frequency_surge=5;
-    cutoff_frequency_sway=5; //Dominant direction
-    cutoff_frequency_heave=5;
+    cutoff_frequency_surge=1.28;
+    cutoff_frequency_sway=1.28; //Dominant direction
+    cutoff_frequency_heave=1.28;
     samplingrate=128; //2* topic frequency
     bias_reset=false;
     //moving_avg_surge=SonarProcess(5);

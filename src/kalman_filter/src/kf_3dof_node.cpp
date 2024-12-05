@@ -97,6 +97,10 @@ public:
         this->declare_parameter<int>("persist_x", 20);
         this->declare_parameter<int>("persist_y", 20);
         this->declare_parameter<int>("persist_z", 20);
+
+        this->declare_parameter<bool>("discard_x", true);
+        this->declare_parameter<bool>("discard_y", true);
+        this->declare_parameter<bool>("discard_z", true);
         
         // Get parameters
         this->get_parameter("imu_topic", imu_param);
@@ -125,6 +129,10 @@ public:
         this->get_parameter("persist_y", persist_y);
         this->get_parameter("persist_z", persist_z);
 
+        this->get_parameter("discard_x", discard_x);
+        this->get_parameter("discard_y", discard_y);
+        this->get_parameter("discard_z", discard_z);
+
         angle_rad=angle*M_PI/180;
 
         rot_matrix<<cos(angle_rad),-sin((angle_rad)),0,sin((angle_rad)),cos((angle_rad)),0,0,0,1;
@@ -143,11 +151,11 @@ public:
         imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
         imu_param, 1, std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
 
-       sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-     sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
+      // sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+   //  sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 	
-	//sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-      //sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
+	sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+      sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
 	
         // Create a bag file name using the bag_create_file function
@@ -460,7 +468,7 @@ public:
 
         
             //Bias resetting to add -----------------<
-            
+            RCLCPP_INFO(this->get_logger(),"Distance %f",msg.distance_2/1000);
             if(c1.confidence_1>tolerance_x && ((persist_x_now==0)||(persist_x_now>persist_x)))
             {
                 covar_surge=covar_low_x;
@@ -471,6 +479,10 @@ public:
             {
                 delay_x=true;
                 covar_surge=covar_high_x;
+                // if(discard_x)
+                // {
+                //     auv.moving_avg_surge.clear_last_entry();
+                // }
                 
             }
             if(c1.confidence_2>tolerance_y && ((persist_y_now==0)||(persist_y_now>persist_y)))
@@ -483,7 +495,16 @@ public:
             {
                 delay_y=true;
                 covar_sway=covar_high_y; //Add delay -->flag
-                RCLCPP_INFO(this->get_logger(),"Persisting %i",persist_y_now);
+                 RCLCPP_INFO(this->get_logger(),"Persisting %f",persist_y_now);
+                // if(discard_y && persist_y_now<persist_y)
+                // {
+                //     auv.moving_avg_sway.clear_last_entry();
+                   
+                // }
+                // else
+                // {
+                //     RCLCPP_INFO(this->get_logger(),"Taking in %f",c1.confidence_2);
+                // }
                 
             }
             if(c1.confidence_3>tolerance_z && ((persist_z_now==0)||(persist_z_now>persist_z)))
@@ -497,6 +518,11 @@ public:
                 
                 delay_z=true;
                 covar_heave=covar_high_z; //Add delay
+
+                // if(discard_z)
+                // {
+                //     auv.moving_avg_heave.clear_last_entry();
+                // }
                 
             }
 
@@ -675,7 +701,7 @@ private:
     Eigen::Vector3d dist,diff;
     double angle,angle_rad;
     bool bias = false, start = false,rot_bias=false,override=false,flag1,flag2;
-    bool delay_x,delay_y,delay_z;
+    bool delay_x,delay_y,delay_z,discard_x,discard_y,discard_z;
 
 
 
