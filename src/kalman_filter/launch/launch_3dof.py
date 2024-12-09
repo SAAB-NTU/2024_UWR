@@ -9,9 +9,9 @@ def generate_launch_description():
             name='kf',
             output='screen',
             parameters=[
-                {'csv_path': '/home/saab/Desktop/2024_UWR/Analysis/case_13thNov_1302_best_t1_'},
+                {'csv_path': '/home/saab/Desktop/2024_UWR/Analysis/case_13thNov_1302_best_t2_imu_'},
                 {'imu_topic': '/imu/data'},
-                {'sonar_topic': '/sonar'},
+                {'sonar_topic': '/sonar_'},
                 {'angle': 0.0},
                 {'without_measurement': True},
                 {'bias_override': True},

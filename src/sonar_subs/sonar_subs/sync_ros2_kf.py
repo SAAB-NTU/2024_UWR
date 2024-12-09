@@ -18,7 +18,7 @@ import numpy as np
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="13thNov_1302_best_t1_"
+        self.time="1302_t2_"
         self.path="/home/saab/Desktop/2024_UWR/Analysis/"
         os.makedirs(self.path+"output_"+self.time,exist_ok=True)
         # Define subscribers
@@ -30,7 +30,7 @@ class RosbagSync(Node):
         self.sub5=Subscriber(self,Imu,'/IMU_raw')
 
         #self.sub6=Subscriber(self,Image,'/camera/color/image/raw')
-        #self.sub1_1 = self.create_subscription(Image, '/camera/realsense2_camera/color/image_raw', self.image_data,10)
+        self.sub1_1 = self.create_subscription(Image, '/camera/realsense2_camera/color/image_raw', self.image_data,10)
         
         self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4,self.sub5], 10, slop=0.002)  # Increase the queue size for stability
         self.ts.registerCallback(self.callback)
@@ -67,7 +67,7 @@ class RosbagSync(Node):
         img=self.image_bridge.imgmsg_to_cv2(data)
         img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         #cv2.imwrite("/home/saab/Desktop/output/"+str(timestamp.sec + timestamp.nanosec * 1e-9)+".png",img)
-        cv2.imwrite(self.path+"output"+self.time+"/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
+        cv2.imwrite(self.path+"output_"+self.time+"/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
         self.counter+=1
     
     def log_sonar_data(self, data2,data1):
