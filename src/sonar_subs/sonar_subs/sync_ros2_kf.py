@@ -18,7 +18,7 @@ import numpy as np
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="6thNov_1205_best_t3_"
+        self.time="13thNov_1302_best_t1_"
         self.path="/home/saab/Desktop/2024_UWR/Analysis/"
         os.makedirs(self.path+"output_"+self.time,exist_ok=True)
         # Define subscribers

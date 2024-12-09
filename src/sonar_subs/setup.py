@@ -21,6 +21,6 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': ['sonar_reader = sonar_subs.read_sonar:main','sync_readings=sonar_subs.sync_ros2:main','kf_sync=sonar_subs.sync_ros2_kf:main','imu=sonar_subs.read_imu:main',
-        'imu_i2c=sonar_subs.read_imu_i2c:main'],
+        'imu_i2c=sonar_subs.read_imu_i2c:main','image_saver=sonar_subs.image_saver:main'],
     },
 )
