@@ -13,8 +13,8 @@ class PoseImageSaver(Node):
         super().__init__('pose_image_saver')
 
         # Parameters
-        self.save_distance = 0.5  # Distance threshold to save images
-        self.image_save_folder = '/home/saab/Desktop/saved_images_1302'
+        self.save_distance = 1.1 # Distance threshold to save images
+        self.image_save_folder = '/home/saab/Desktop/saved_images_1302_'+str(self.save_distance)
         os.makedirs(self.image_save_folder,exist_ok=True)
         # Subscribers
         self.pose_sub = self.create_subscription(

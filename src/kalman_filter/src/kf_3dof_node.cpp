@@ -344,6 +344,17 @@ public:
            // transformStamped.transform.translation.z = heave_state_p(0);
            // transformStamped.transform.rotation = tf2::toMsg(q_new);
 
+            P_vals.header.stamp= imu_msg.header.stamp;
+            P_matrix_1=auv.get_P();
+            P_vals.k_d_1=P_matrix_1(0,0);
+            P_vals.k_v_1=P_matrix_1(1,1);
+            P_vals.k_d_2=P_matrix_1(2,2);
+            P_vals.k_v_2=P_matrix_1(3,3);
+            P_vals.k_d_3=P_matrix_1(4,4);    
+            P_vals.k_v_3=P_matrix_1(5,5);
+
+            writer_->write(P_vals,"P_values",predict_time_now);
+
             writer_->write(imu_msg, "IMU_raw", predict_time_now);
             writer_->write(vector3_msg, "IMU_filtered", predict_time_now);
             writer_->write(vel_msg, "IMU_vel", predict_time_now);
@@ -596,6 +607,16 @@ public:
             k_vals.k_d_3=auv.K(4,4);    
             k_vals.k_v_3=auv.K(5,5);
 
+            P_vals.header.stamp= msg.header.stamp;
+            P_matrix_2=auv.get_P();
+            P_vals.k_d_1=P_matrix_2(0,0);
+            P_vals.k_v_1=P_matrix_2(1,1);
+            P_vals.k_d_2=P_matrix_2(2,2);
+            P_vals.k_v_2=P_matrix_2(3,3);
+            P_vals.k_d_3=P_matrix_2(4,4);    
+            P_vals.k_v_3=P_matrix_2(5,5);
+
+
             //e1=std::abs(1-(std::abs(diff_surge))/0.1);
             //e2=std::abs(1-(std::abs(diff_sway))/0.1);
             //e3=std::abs(1-(std::abs(diff_heave))/0.1);
@@ -637,7 +658,7 @@ public:
             writer_->write(pose_msg, "Pose",measure_time_now);
             writer_->write(c1,"Confidence_SONAR",measure_time_now);
             writer_->write(k_vals,"K_values",measure_time_now);
-
+            writer_->write(P_vals,"P_values",measure_time_now);
 
             /*
 
@@ -715,10 +736,11 @@ private:
     KalmanFilter_3dof auv;
 
     Eigen::Matrix<double,6,1> state_p,state_u;
+    Eigen::Matrix<double,6,6> P_matrix_1,P_matrix_2;
     Eigen::Vector3d bef_rotate,aft_rotate;
     Eigen::Matrix3d rot_matrix;
 	
-    sonar_msgs::msg::KfValues k_vals;
+    sonar_msgs::msg::KfValues k_vals,P_vals;
 
     //geometry_msgs::TransformStamped transformStamped, sbs_frame_before,sbs_frame_after;
     //geometry_msgs::TransformStamped world_to_inertial_transform;

@@ -31,11 +31,11 @@ x << 0,0,0,0,0,0; //6x1 state variable
          0, 0, 0, 0, 0,  0.01; //6x6 process noise
     
     H << 1, 0, 0, 0, 0, 0,
-         0, 1, 0, 0, 0, 0,
+         0, 0, 0, 0, 0, 0,
          0, 0, 1, 0, 0, 0,
-         0, 0, 0, 1, 0, 0,
+         0, 0, 0, 0, 0, 0,
          0, 0, 0, 0, 1, 0,
-         0, 0, 0, 0, 0, 1; //6x6 measurement noise
+         0, 0, 0, 0, 0, 0; //6x6 measurement noise
     
     prev_measurement_dist<<0,0,0;
     dist_bias=0;
@@ -279,4 +279,8 @@ void KalmanFilter_3dof::set_vel(double dt)
 void KalmanFilter_3dof::set_prev_dist()
 {
     prev_measurement_dist = (dist);
+}
+Eigen::Matrix<double,6,6> KalmanFilter_3dof::get_P()
+{
+    return P;
 }

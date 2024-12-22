@@ -6,7 +6,7 @@ from sensor_msgs.msg import Imu
 from geometry_msgs.msg import PoseStamped, Vector3Stamped
 from std_msgs.msg import Header, Float64
 from message_filters import ApproximateTimeSynchronizer, Subscriber
-from sonar_msgs.msg import ThreeSonarDepth,ConfScal
+from sonar_msgs.msg import ThreeSonarDepth,ConfScal,KfValues
 from sensor_msgs.msg import Image
 import pandas as pd
 from scipy.spatial.transform import Rotation as R
@@ -18,20 +18,25 @@ import numpy as np
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="1302_t2_"
+        self.time="13thNov_1302_t2_ptn_only"
         self.path="/home/saab/Desktop/2024_UWR/Analysis/"
         os.makedirs(self.path+"output_"+self.time,exist_ok=True)
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
+    
+        
+        #self.sub6=Subscriber(self,Image,'/camera/color/image/raw')
+        #self.sub1_1 = self.create_subscription(Image, '/camera/realsense2_camera/color/image_raw', self.image_data,10)
+        
+        self.subP=self.create_subscription(KfValues,'/P_values',self.P_data,10)
+        self.sync_data_P=[]
+
         self.sub1 = Subscriber(self, PoseStamped, '/Pose')
         self.sub2 = Subscriber(self, ConfScal, '/Confidence_SONAR')
         self.sub3 = Subscriber(self, Vector3Stamped, '/IMU_filtered')
         self.sub4 = Subscriber(self,ThreeSonarDepth,'/SONAR_raw')
         self.sub5=Subscriber(self,Imu,'/IMU_raw')
 
-        #self.sub6=Subscriber(self,Image,'/camera/color/image/raw')
-        self.sub1_1 = self.create_subscription(Image, '/camera/realsense2_camera/color/image_raw', self.image_data,10)
-        
         self.ts = ApproximateTimeSynchronizer([self.sub1, self.sub2, self.sub3,self.sub4,self.sub5], 10, slop=0.002)  # Increase the queue size for stability
         self.ts.registerCallback(self.callback)
 
@@ -41,6 +46,7 @@ class RosbagSync(Node):
         self.synchronized_data = []
         self.synchronized_data_imu = []
         self.synchronized_data_sonar=[]
+        
         self.ts3 = ApproximateTimeSynchronizer([self.sub3,self.sub5,self.sub1], 10, slop=0.002)  # Increase the queue size for stability
         self.ts3.registerCallback(self.callback_imu)
         self.get_logger().info('Subscribers and synchronizer initialized successfully!')
@@ -60,6 +66,21 @@ class RosbagSync(Node):
         euler = r.as_euler('xyz', degrees=False)  # Convert to Euler angles (ZYX convention)
         return euler
     
+    def P_data(self,data):
+        timestamp = data.header.stamp
+        self.get_logger().info("Getting P")
+        self.sync_data_P.append({
+            'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
+            'k_d_1': data.k_d_1,
+            'k_v_1': data.k_v_1,
+            'k_d_2': data.k_d_2,
+            'k_v_2': data.k_v_2,
+            'k_d_3': data.k_d_3,
+            'k_v_3': data.k_v_3,
+           })
+        data_P = pd.DataFrame(self.sync_data_P)
+        data_P.to_csv(self.path+'P_data_'+self.time+'.csv', index=False)
+
     def image_data(self,data):
         timestamp = data.header.stamp
         self.get_logger().info(f"Synchronized data size: {(self.counter)}")
@@ -70,6 +91,23 @@ class RosbagSync(Node):
         cv2.imwrite(self.path+"output_"+self.time+"/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
         self.counter+=1
     
+    def log_sonar_data(self, data2,data1):
+        timestamp = data1.header.stamp
+        self.get_logger().info("In loop")
+        self.synchronized_data_sonar.append({
+            'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
+            'Sonar_distance_1': data1.distance_1,
+            'Confidence_1_dev': data1.confidence_1,
+            'Confidence_1': data2.confidence_1,
+            'Sonar_distance_2': data1.distance_2,
+            'Confidence_2_dev': data1.confidence_2,
+            'Confidence_2': data2.confidence_2,
+            'Sonar_distance_3': data1.distance_3,
+            'Confidence_3_dev': data1.confidence_3,
+            'Confidence_3': data2.confidence_3})
+        synchronized_df = pd.DataFrame(self.synchronized_data_sonar)
+        synchronized_df.to_csv(self.path+'confidence_case_'+self.time+'.csv', index=False)
+
     def log_sonar_data(self, data2,data1):
         timestamp = data1.header.stamp
         self.get_logger().info("In loop")

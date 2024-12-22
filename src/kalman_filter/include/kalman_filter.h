@@ -118,11 +118,14 @@ public:
     Eigen::Vector3d set_dist(double val_surge,double val_sway, double val_heave);
     void set_vel(double dt);
     void set_prev_dist();
+    Eigen::Matrix<double, 6, 6> get_P();
+
 protected:
     Eigen::Matrix<double, 6, 6> F, P, H;
     Eigen::Matrix<double, 6, 1> x,z;
     Eigen::Matrix<double, 6, 3> B;
     Eigen::Vector3d dist,vel,conf,accel,prev_measurement_dist,accel_bias;
+
     
 
 
