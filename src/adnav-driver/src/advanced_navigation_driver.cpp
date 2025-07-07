@@ -65,12 +65,12 @@ int main(int argc, char * argv[])
 	rclcpp::init(argc, argv);
 	auto node = std::make_shared<rclcpp::Node>("AdNav_Node");
 	
-	/* For Debugging
+	/* For Debugging */
 	RCLCPP_INFO(node->get_logger(), "argc: %d\n", argc);
 	for(int i = 0; i < argc; i++){
 		RCLCPP_INFO(node->get_logger(), "argv[%d}: %s\n", i, argv[i]);
 	}
-	*/
+	
 	if(argc == 1){
 		printf("usage: ros2 run package_name executable_name [baud_rate] [comm_port]\npackage_name     Name of the ROS package\nexecutable_name  Name of the executable\nbaud_rate        The Baud rate configured on the device. Default 115200\ncomm_port        The COM port of the connected device. Default /dev/ttyUSB0\n");
 		exit(EXIT_FAILURE);	
@@ -90,7 +90,7 @@ int main(int argc, char * argv[])
 	// Set up the COM port
 	int baud_rate;
 	std::string com_port;
-
+	
 	// String ID for all publishers
 	std::string imu_frame_id = "imu";
 	std::string nav_sat_frame_id;
@@ -125,12 +125,13 @@ int main(int argc, char * argv[])
 		com_port = std::string(argv[2]);
 		baud_rate = atoi(argv[1]);
 		state = 3;
+		RCLCPP_INFO(node->get_logger(), "%d",baud_rate);  
 	}
 	else{
 		getargs(argc, argv, &args);
 		state = 0;
 	}
-
+	
 	std::string prefix = "/imu";
   
 	// Creating the ROS2 Publishers
@@ -251,7 +252,7 @@ int main(int argc, char * argv[])
 			printf("ERROR\n");
 		}
 		else{
-			//printf("NOT ERROR\n");
+			
 			error += 0;
 		}
 	}
@@ -261,13 +262,15 @@ int main(int argc, char * argv[])
 			printf("Could not open serial port: %s \n",com_port.c_str());
 			exit(EXIT_FAILURE);
 		}
+		
 	}
 
   	// Request Config packets and also start decoding anpp packets
 	SendBuf((unsigned char*)request_all_configuration, sizeof(request_all_configuration));
 	an_decoder_initialise(&an_decoder);
   
-	while(rclcpp::ok() && !error){
+	while(rclcpp::ok()){
+	
 		std::stringstream ss;
 		if ((bytes_received = PollComport(an_decoder_pointer(&an_decoder), an_decoder_size(&an_decoder))) > 0)
 		{
@@ -277,7 +280,7 @@ int main(int argc, char * argv[])
 
 			// Decode all the packets in the buffer 
 			while ((an_packet = an_packet_decode(&an_decoder)) != NULL)
-			{				
+			{	RCLCPP_INFO(node->get_logger(), "Successful");  			
 				
 				// System State Packet Decoding
 				if (an_packet->id == packet_id_system_state)
@@ -384,9 +387,9 @@ int main(int argc, char * argv[])
 						imu_msg.angular_velocity.z=system_state_packet.angular_velocity[2];
 
 						//The IMU linear acceleration is now coming from the RAW Sensors Accelerometer 
-						//imu_msg.linear_acceleration.x=system_state_packet.body_acceleration[0];
-						//imu_msg.linear_acceleration.y=system_state_packet.body_acceleration[1];
-						//imu_msg.linear_acceleration.z=system_state_packet.body_acceleration[2];
+						imu_msg.linear_acceleration.x=system_state_packet.body_acceleration[0];
+						imu_msg.linear_acceleration.y=system_state_packet.body_acceleration[1];
+						imu_msg.linear_acceleration.z=system_state_packet.body_acceleration[2];
 
 						// SYSTEM STATUS
 						system_status_msg.message = "";

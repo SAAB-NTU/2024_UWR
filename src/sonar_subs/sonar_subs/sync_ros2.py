@@ -19,7 +19,7 @@ class RosbagSync(Node):
 
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
-        self.sub1 = Subscriber(self, ThreeSonarDepth, '/sonar')
+        self.sub1 = Subscriber(self, ThreeSonarDepth, '/sbs')
         self.sub2 = Subscriber(self, Vector3Stamped, '/imu/acceleration')
         self.sub3 = Subscriber(self, Vector3Stamped, '/imu/angular_velocity')
         self.sub4 = Subscriber(self,Image,'/camera/realsense2_camera/color/image_raw')
@@ -30,12 +30,13 @@ class RosbagSync(Node):
         self.synchronized_data = []
         self.get_logger().info('Subscribers and synchronizer initialized successfully!')
         self.counter=0
-        #self.sub1_1 = self.create_subscription(ThreeSonarDepth, '/sonar', self.log_sonar_data,10)
+        self.sub1_1 = self.create_subscription(ThreeSonarDepth, '/sbs', self.log_sonar_data,10)
         #self.sub2_1 = self.create_subscription(Vector3Stamped, '/imu/acceleration', self.log_acceleration_data,10)
         #self.sub3_1 = self.create_subscription(Vector3Stamped, '/imu/angular_velocity', self.log_angular_velocity_data,10)
 
 
     def log_sonar_data(self, data):
+        self.get_logger().info("Here")
         timestamp = data.header.stamp
         self.synchronized_data.append({
             'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
@@ -45,7 +46,7 @@ class RosbagSync(Node):
             'Confidence_2': data.confidence_2,
             'Sonar_Distance_3': data.distance_3,})
         synchronized_df = pd.DataFrame(self.synchronized_data)
-        synchronized_df.to_csv('/home/uwr/Desktop/output.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/20250212_181120.csv', index=False)
 
     #def log_acceleration_data(self, data):
     #    self.get_logger().info(f"Received IMU acceleration data: x: {data.vector.x}")
@@ -87,17 +88,17 @@ class RosbagSync(Node):
         img=self.image_bridge.imgmsg_to_cv2(data4)
         img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         #cv2.imwrite("/home/uwr/Desktop/output/"+str(timestamp.sec + timestamp.nanosec * 1e-9)+".png",img)
-        cv2.imwrite("/home/uwr/Desktop/output/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
+        cv2.imwrite("/home/saab/Desktop/output/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
         self.counter+=1
         # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data)
-        synchronized_df.to_csv('/home/uwr/Desktop/output.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/output.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
         
 
 def main(args=None):
     rclpy.init(args=args)
-    os.makedirs("/home/uwr/Desktop/output",exist_ok=True)
+    os.makedirs("/home/saab/Desktop/output",exist_ok=True)
     node = RosbagSync()
     
     rclpy.spin(node)

@@ -73,7 +73,7 @@ public:
         this->get_parameter("csv_path", path_param);
 
         this->declare_parameter<std::string>("imu_topic", "/imu/data");
-        this->declare_parameter<std::string>("sonar_topic", "/sonar");
+        this->declare_parameter<std::string>("sonar_topic", "/sbs");
         this->declare_parameter<double>("angle", 0.0);
         this->declare_parameter<bool>("without_measurement", false);
         this->declare_parameter<bool>("bias_override", true);
@@ -283,7 +283,7 @@ public:
     {
         
         try {
-        bef_rotate<<(imu_msg.linear_acceleration.x),-(imu_msg.linear_acceleration.y),1;
+        bef_rotate<<(imu_msg.linear_acceleration.x),(imu_msg.linear_acceleration.y),1;
         //bef_rotate<<-(imu_msg.linear_acceleration.y),(imu_msg.linear_acceleration.x),1;
         //bef_rotate<<(imu_msg.linear_acceleration.z),-(imu_msg.linear_acceleration.x),1;
         aft_rotate=rot_matrix*bef_rotate;
@@ -291,6 +291,7 @@ public:
         if(!rot_bias)
         {
             tf2::convert(imu_msg.orientation, q_orig);
+            RCLCPP_INFO(this->get_logger(), "Quaternion: %f, %f, %f, % f",q_orig.x(), q_orig.w());
             //tf2::convert(imu_msg.orientation, world_to_inertial_transform.transform.rotation);
             //world_to_inertial_transform.transform.rotation=tf2::toMsg(q_orig);
             //transformStamped.transform.rotation=tf2::toMsg(q_orig);
@@ -304,7 +305,7 @@ public:
                if (!bias) {
 
 
-           auv.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.y);
+           auv.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.z);
             //auv.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.z);
             
             bias = true;
@@ -335,7 +336,7 @@ public:
             pose_msg.pose.position.x = state_p(0,0);
             pose_msg.pose.position.y = state_p(2,0);
             pose_msg.pose.position.z = state_p(4,0);
-            //tf2::convert(imu_msg.orientation, q_new);
+            tf2::convert(imu_msg.orientation, q_new);
             pose_msg.pose.orientation = tf2::toMsg(q_new * q_orig);
 
             //transformStamped.header.stamp = imu_msg.header.stamp;
@@ -631,6 +632,7 @@ public:
             pose_msg.pose.position.x = state_u(0,0);
             pose_msg.pose.position.y = state_u(2,0);
             pose_msg.pose.position.z = state_u(4,0);
+            RCLCPP_INFO(this->get_logger(), "Quaternion: %f", q_new.w());
             pose_msg.pose.orientation = tf2::toMsg(q_new * q_orig);
             measure_time=measure_time_now;
 

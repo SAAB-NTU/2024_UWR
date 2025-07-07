@@ -18,15 +18,15 @@ import numpy as np
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="13thNov_1302_t2_ptn_only"
-        self.path="/home/saab/Desktop/2024_UWR/Analysis/"
-        os.makedirs(self.path+"output_"+self.time,exist_ok=True)
+        self.time="not_straight_wall_3_IMU_only_2025_07_07_13_09_14.bag"
+        self.path="/home/saab/SAAB-Experiment/exp7/data/"
+        os.makedirs(self.path+self.time,exist_ok=True)
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
     
         
         #self.sub6=Subscriber(self,Image,'/camera/color/image/raw')
-        #self.sub1_1 = self.create_subscription(Image, '/camera/realsense2_camera/color/image_raw', self.image_data,10)
+        self.sub1_1 = self.create_subscription(Image, '/sonar/image', self.image_data,10)
         
         self.subP=self.create_subscription(KfValues,'/P_values',self.P_data,10)
         self.sync_data_P=[]
@@ -79,16 +79,17 @@ class RosbagSync(Node):
             'k_v_3': data.k_v_3,
            })
         data_P = pd.DataFrame(self.sync_data_P)
-        data_P.to_csv(self.path+'P_data_'+self.time+'.csv', index=False)
+        data_P.to_csv(self.path+self.time+'/P_data_'+self.time+'.csv', index=False)
 
     def image_data(self,data):
         timestamp = data.header.stamp
         self.get_logger().info(f"Synchronized data size: {(self.counter)}")
-        
-        img=self.image_bridge.imgmsg_to_cv2(data)
-        img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
+        self.get_logger().info(f"{len(data.data)}")
+        #img=self.image_bridge.imgmsg_to_cv2(data,desired_encoding="mono8")
+        #img=cv2.cvtColor(img,cv2.COLOR_BGR2RGB)
         #cv2.imwrite("/home/saab/Desktop/output/"+str(timestamp.sec + timestamp.nanosec * 1e-9)+".png",img)
-        cv2.imwrite(self.path+"output_"+self.time+"/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
+        #cv2.imwrite(self.path+"output_"+self.time+"/"+f"{self.counter:03d}"+".png",cv2.flip(img, 0) )
+        np.save(self.path+"output_"+self.time+"/"+f"{self.counter:03d}"+".npy",data.data)
         self.counter+=1
     
     def log_sonar_data(self, data2,data1):
@@ -106,7 +107,7 @@ class RosbagSync(Node):
             'Confidence_3_dev': data1.confidence_3,
             'Confidence_3': data2.confidence_3})
         synchronized_df = pd.DataFrame(self.synchronized_data_sonar)
-        synchronized_df.to_csv(self.path+'confidence_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv(self.path+self.time+'/confidence_case_'+self.time+'.csv', index=False)
 
     def log_sonar_data(self, data2,data1):
         timestamp = data1.header.stamp
@@ -123,7 +124,7 @@ class RosbagSync(Node):
             'Confidence_3_dev': data1.confidence_3,
             'Confidence_3': data2.confidence_3})
         synchronized_df = pd.DataFrame(self.synchronized_data_sonar)
-        synchronized_df.to_csv(self.path+'confidence_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv(self.path+self.time+'/confidence_case_'+self.time+'.csv', index=False)
 
     #def log_acceleration_data(self, data):
     #    self.get_logger().info(f"Received IMU acceleration data: x: {data.vector.x}")
@@ -176,7 +177,7 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data)
-        synchronized_df.to_csv(self.path+'output_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv(self.path+self.time+'/output_case_'+self.time+'.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
     '''
     def callback_pred(self, data1):
@@ -245,7 +246,7 @@ class RosbagSync(Node):
         # self.counter+=1
         # # Save to CSV file
         synchronized_df = pd.DataFrame(self.synchronized_data_imu)
-        synchronized_df.to_csv(self.path+'output_IMU_case_'+self.time+'.csv', index=False)
+        synchronized_df.to_csv(self.path+self.time+'/output_IMU_case_'+self.time+'.csv', index=False)
         self.get_logger().info('Data written to CSV file!')
 
 def main(args=None):

@@ -9,18 +9,18 @@ def generate_launch_description():
             name='kf',
             output='screen',
             parameters=[
-                {'csv_path': '/home/saab/Desktop/2024_UWR/Analysis/case_13thNov_1302_best_Ptn_only_'},
+                {'csv_path': '/home/saab/Desktop/12Feb_test/rosbag2_2025_02_12-11_06_50_'},
                 {'imu_topic': '/imu/data'},
-                {'sonar_topic': '/sonar'},
+                {'sonar_topic': '/sbs'},
                 {'angle': 0.0},
                 {'without_measurement': False},
                 {'bias_override': True},
                 {'expected_difference_x':0.05},
                 {'expected_difference_y':0.1},
                 {'expected_difference_z':0.05},
-                {'tolerance_x':50.0},
-                {'tolerance_y':50.0},
-                {'tolerance_z':50.0},
+                {'tolerance_x':80.0},
+                {'tolerance_y':80.0},
+                {'tolerance_z':80.0},
                 {'covar_low_x':1.0}, #0.01,0.001,0.0001
                 {'covar_low_y':1.0}, #0.01,0.001,0.0001
                 {'covar_low_z':1.0}, #0.01,0.001,0.0001
