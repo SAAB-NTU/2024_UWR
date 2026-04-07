@@ -46,7 +46,7 @@ class RosbagSync(Node):
             'Confidence_2': data.confidence_2,
             'Sonar_Distance_3': data.distance_3,})
         synchronized_df = pd.DataFrame(self.synchronized_data)
-        synchronized_df.to_csv('/home/saab/Desktop/20250212_181120.csv', index=False)
+        synchronized_df.to_csv('/home/saab/Desktop/20250219_201502.csv', index=False)
 
     #def log_acceleration_data(self, data):
     #    self.get_logger().info(f"Received IMU acceleration data: x: {data.vector.x}")

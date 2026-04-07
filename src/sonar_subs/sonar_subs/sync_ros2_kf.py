@@ -18,8 +18,8 @@ import numpy as np
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="not_straight_wall_3_IMU_only_2025_07_07_13_09_14.bag"
-        self.path="/home/saab/SAAB-Experiment/exp7/data/"
+        self.time="Condition15_2026_04_02_16_13_14.bag"
+        self.path="/home/saab/Desktop/2024_UWR/Analysis/2026_article/1302_Thruster/"
         os.makedirs(self.path+self.time,exist_ok=True)
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
@@ -92,23 +92,6 @@ class RosbagSync(Node):
         np.save(self.path+"output_"+self.time+"/"+f"{self.counter:03d}"+".npy",data.data)
         self.counter+=1
     
-    def log_sonar_data(self, data2,data1):
-        timestamp = data1.header.stamp
-        self.get_logger().info("In loop")
-        self.synchronized_data_sonar.append({
-            'Timestamp': timestamp.sec + timestamp.nanosec * 1e-9,
-            'Sonar_distance_1': data1.distance_1,
-            'Confidence_1_dev': data1.confidence_1,
-            'Confidence_1': data2.confidence_1,
-            'Sonar_distance_2': data1.distance_2,
-            'Confidence_2_dev': data1.confidence_2,
-            'Confidence_2': data2.confidence_2,
-            'Sonar_distance_3': data1.distance_3,
-            'Confidence_3_dev': data1.confidence_3,
-            'Confidence_3': data2.confidence_3})
-        synchronized_df = pd.DataFrame(self.synchronized_data_sonar)
-        synchronized_df.to_csv(self.path+self.time+'/confidence_case_'+self.time+'.csv', index=False)
-
     def log_sonar_data(self, data2,data1):
         timestamp = data1.header.stamp
         self.get_logger().info("In loop")

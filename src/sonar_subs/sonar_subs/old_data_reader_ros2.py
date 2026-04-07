@@ -19,6 +19,7 @@ class DataPublisher(Node):
         self.sonar_pub = self.create_publisher(ThreeSonarDepth, '/sbs', 10)
         #self.depth_pub = self.create_publisher(Float64, '/depth_msg', 10)
         self.df = pd.read_csv(self.path)
+        self.get_logger().info(self.path)
         self.get_logger().info(str(self.df["sonar_distance_1"][:5]))
         self.df["time"] -= self.df.iloc[0]["time"]
         sec, nsec = self.get_clock().now().seconds_nanoseconds()

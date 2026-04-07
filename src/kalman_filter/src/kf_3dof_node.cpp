@@ -305,7 +305,7 @@ public:
                if (!bias) {
 
 
-           auv.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.z);
+           auv.set_accel_bias(-aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
             //auv.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.z);
             
             bias = true;
@@ -313,7 +313,7 @@ public:
         }
              //RCLCPP_INFO(this->get_logger(),"Hi");
             //auv_accel=auv.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.y);
-            auv_accel=auv.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.z);
+            auv_accel=auv.set_accel(-aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
             state_p=auv.prediction((predict_time_now - predict_time).seconds());
 
 
@@ -491,6 +491,7 @@ public:
             {
                 delay_x=true;
                 covar_surge=covar_high_x;
+                persist_x_now++;
                 // if(discard_x)
                 // {
                 //     auv.moving_avg_surge.clear_last_entry();
@@ -500,14 +501,16 @@ public:
             if(c1.confidence_2>tolerance_y && ((persist_y_now==0)||(persist_y_now>persist_y)))
             {
                 covar_sway=covar_low_y;
-                delay_y=false;
+                //delay_y=false;
+                RCLCPP_INFO(this->get_logger(),"Resetting");
                 persist_y_now=0;
             }
             else
             {
-                delay_y=true;
+                //delay_y=true;
                 covar_sway=covar_high_y; //Add delay -->flag
-                 RCLCPP_INFO(this->get_logger(),"Persisting %f",persist_y_now);
+                 RCLCPP_INFO(this->get_logger(),"Persisting %f",state_p(2,0));
+                persist_y_now++;
                 // if(discard_y && persist_y_now<persist_y)
                 // {
                 //     auv.moving_avg_sway.clear_last_entry();
@@ -524,6 +527,7 @@ public:
                 covar_heave=covar_low_z;
                 delay_z=false;
                 persist_z_now=0;
+                persist_z_now++;
             }
             else
             {
@@ -537,7 +541,7 @@ public:
                 // }
                 
             }
-
+            /*
             if(delay_x==true)
             {
                 persist_x_now++;
@@ -552,7 +556,7 @@ public:
             {
                 persist_z_now++;
             }
-            
+            */
             //covar_surge=slope*e1.first+intercept;
             //covar_sway=slope*e2.first+intercept;
             //covar_heave=slope*e3.first+intercept;
@@ -622,7 +626,7 @@ public:
             //e2=std::abs(1-(std::abs(diff_sway))/0.1);
             //e3=std::abs(1-(std::abs(diff_heave))/0.1);
 
-            auto e1_1=auv.m_avg_sway_high.CalculateConfidenceLevelsVariation2(expected_difference_y);
+    
             //RCLCPP_INFO(this->get_logger(),"R_sway %f", covar_sway);
             //RCLCPP_INFO(this->get_logger(),"Scalar: %f", e1_1.second);
             //RCLCPP_INFO(this->get_logger(),"Distance: %f", state_u(2,0));

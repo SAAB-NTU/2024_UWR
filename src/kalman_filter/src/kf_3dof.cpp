@@ -1,8 +1,8 @@
 #include "../include/kalman_filter.h"
 
-KalmanFilter_3dof::KalmanFilter_3dof(): moving_avg_surge(5),moving_avg_sway(5),
-moving_avg_heave(5),moving_avg_vel(10),moving_avg_time(10),
-m_avg_surge_high(20),m_avg_sway_high(20),m_avg_heave_high(20)
+KalmanFilter_3dof::KalmanFilter_3dof(): moving_avg_surge(15),moving_avg_sway(15),
+moving_avg_heave(15),moving_avg_vel(15),moving_avg_time(15),
+m_avg_surge_high(15),m_avg_sway_high(15),m_avg_heave_high(15)
 {
      
 
@@ -18,17 +18,17 @@ x << 0,0,0,0,0,0; //6x1 state variable
          0, 0, 0, 0, 0, 1; //6x6 covariancematrix; so no covariance between state variables
     Q << 1, 0, 0, 0, 0, 0,
          0, 1, 0, 0, 0, 0,
-         0, 0, 1, 0, 0, 0,
-         0, 0, 0, 1, 0, 0,
+         0, 0, 0.001, 0, 0, 0,
+         0, 0, 0, 0.001, 0, 0,
          0, 0, 0, 0, 1, 0,
          0, 0, 0, 0, 0, 1; 
 
-    R<< 0.01, 0, 0, 0, 0, 0,
-         0,  0.01, 0, 0, 0, 0,
+    R<< 1, 0, 0, 0, 0, 0,
+         0,  1, 0, 0, 0, 0,
          0, 0,  1, 0, 0, 0,
          0, 0, 0, 1, 0, 0,
-         0, 0, 0, 0,  0.01, 0,
-         0, 0, 0, 0, 0,  0.01; //6x6 process noise
+         0, 0, 0, 0,  1, 0,
+         0, 0, 0, 0, 0,  1; //6x6 process noise
     
     H << 1, 0, 0, 0, 0, 0,
          0, 1, 0, 0, 0, 0,
