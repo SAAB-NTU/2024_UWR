@@ -1,0 +1,234 @@
+[0.000000] (-) TimerEvent: {}
+[0.000477] (-) JobUnselected: {'identifier': 'adnav-driver'}
+[0.000516] (-) JobUnselected: {'identifier': 'ntrip'}
+[0.000534] (-) JobUnselected: {'identifier': 'sonar_msgs'}
+[0.000550] (-) JobUnselected: {'identifier': 'sonar_subs'}
+[0.000565] (-) JobUnselected: {'identifier': 'xsens_mti_ros2_driver'}
+[0.000582] (kalman_filter) JobQueued: {'identifier': 'kalman_filter', 'dependencies': OrderedDict([('sonar_msgs', '/home/saab/2024_UWR/install/sonar_msgs')])}
+[0.000602] (kalman_filter) JobStarted: {'identifier': 'kalman_filter'}
+[0.007450] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'cmake'}
+[0.007904] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'build'}
+[0.008293] (kalman_filter) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/saab/2024_UWR/build/kalman_filter', '--', '-j24', '-l24'], 'cwd': '/home/saab/2024_UWR/build/kalman_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'saab'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/saab/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/saab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/saab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3129025'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/saab/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'saab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'saab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/saab/.android/emulator:/home/saab/.android/tools:/home/saab/.android/tools/bin:/home/saab/.android/platform-tools:/opt/ros/humble/bin:/home/saab/anaconda3/condabin:/home/saab/.local/bin:/opt/adoptium/jdk-11.0.26+4-jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.5/bin:/snap/bin:/home/saab/.dotnet/tools'), ('SESSION_MANAGER', 'local/saab-asrockx570:@/tmp/.ICE-unix/3128996,unix/saab-asrockx570:/tmp/.ICE-unix/3128996'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/90439776_73f8_4ef8_a2b3_d9e34151e94d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('DOTNET_BUNDLE_EXTRACT_BASE_DIR', '/home/saab/.cache/dotnet_bundle_extract'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.209'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/sonar_subs:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/saab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ANDROID_SDK_ROOT', '/home/saab/.android'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/opt/adoptium/jdk-11.0.26+4-jre'), ('PWD', '/home/saab/2024_UWR/build/kalman_filter'), ('SDK', '/home/saab/.android'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/saab/anaconda3/bin/conda'), ('ANDROID_HOME', '/home/saab/.android'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/saab/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/saab/2024_UWR/build/sonar_subs:/home/saab/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/saab/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/saab/anaconda3/pkgs/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/home/saab/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.043756] (kalman_filter) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target kf_3dof\x1b[0m\n'}
+[0.049133] (kalman_filter) StdoutLine: {'line': b'[ 10%] Built target imu_topic\n'}
+[0.049878] (kalman_filter) StdoutLine: {'line': b'[ 21%] Built target gd_conf\n'}
+[0.057831] (kalman_filter) StdoutLine: {'line': b'[ 47%] Built target kf\n'}
+[0.058093] (kalman_filter) StdoutLine: {'line': b'[ 73%] Built target kf_v4\n'}
+[0.074246] (kalman_filter) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o\x1b[0m\n'}
+[0.099827] (-) TimerEvent: {}
+[0.199986] (-) TimerEvent: {}
+[0.300129] (-) TimerEvent: {}
+[0.400270] (-) TimerEvent: {}
+[0.500403] (-) TimerEvent: {}
+[0.600546] (-) TimerEvent: {}
+[0.700712] (-) TimerEvent: {}
+[0.800911] (-) TimerEvent: {}
+[0.901066] (-) TimerEvent: {}
+[1.001217] (-) TimerEvent: {}
+[1.101369] (-) TimerEvent: {}
+[1.201519] (-) TimerEvent: {}
+[1.301673] (-) TimerEvent: {}
+[1.401804] (-) TimerEvent: {}
+[1.501934] (-) TimerEvent: {}
+[1.602064] (-) TimerEvent: {}
+[1.702196] (-) TimerEvent: {}
+[1.802326] (-) TimerEvent: {}
+[1.902426] (-) TimerEvent: {}
+[2.002554] (-) TimerEvent: {}
+[2.102683] (-) TimerEvent: {}
+[2.202812] (-) TimerEvent: {}
+[2.302959] (-) TimerEvent: {}
+[2.403375] (-) TimerEvent: {}
+[2.503572] (-) TimerEvent: {}
+[2.603747] (-) TimerEvent: {}
+[2.703920] (-) TimerEvent: {}
+[2.804111] (-) TimerEvent: {}
+[2.904289] (-) TimerEvent: {}
+[3.004462] (-) TimerEvent: {}
+[3.104646] (-) TimerEvent: {}
+[3.205363] (-) TimerEvent: {}
+[3.305546] (-) TimerEvent: {}
+[3.405718] (-) TimerEvent: {}
+[3.505908] (-) TimerEvent: {}
+[3.606099] (-) TimerEvent: {}
+[3.656969] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.657130] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:190:65:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.657208] (kalman_filter) StderrLine: {'line': b'  190 |    void sonar_callback2(\x1b[01;35m\x1b[Kconst sonar_msgs::msg::ThreeSonarDepth& msg\x1b[m\x1b[K)\n'}
+[3.657271] (kalman_filter) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[3.669593] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.669703] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.669786] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.669858] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.670034] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.670097] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.670152] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.670211] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.670269] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.670323] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.670375] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.670440] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[3.670500] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid kf_node::imu_callback(const Imu&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.670557] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:300:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%f\x1b[m\x1b[K\xe2\x80\x99 expects a matching \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 argument [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.670613] (kalman_filter) StderrLine: {'line': b'  300 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K"Quaternion: %f, %f, %f, % f"\x1b[m\x1b[K,q_orig.x(), q_orig.w());\n'}
+[3.670665] (kalman_filter) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.670717] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:300:67:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[3.670794] (kalman_filter) StderrLine: {'line': b'  300 |             RCLCPP_INFO(this->get_logger(), "Quaternion: %f, %f, \x1b[01;36m\x1b[K%f\x1b[m\x1b[K, % f",q_orig.x(), q_orig.w());\n'}
+[3.670847] (kalman_filter) StderrLine: {'line': b'      |                                                                  \x1b[01;36m\x1b[K~^\x1b[m\x1b[K\n'}
+[3.670899] (kalman_filter) StderrLine: {'line': b'      |                                                                   \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[3.670959] (kalman_filter) StderrLine: {'line': b'      |                                                                   \x1b[01;36m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[3.671015] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.671068] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.671122] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.671175] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.671227] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.671281] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.671333] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.671385] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.671447] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.671518] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.671575] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.671631] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[3.671695] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:300:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kformat \xe2\x80\x98\x1b[01m\x1b[K%f\x1b[m\x1b[K\xe2\x80\x99 expects a matching \xe2\x80\x98\x1b[01m\x1b[Kdouble\x1b[m\x1b[K\xe2\x80\x99 argument [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.671751] (kalman_filter) StderrLine: {'line': b'  300 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K"Quaternion: %f, %f, %f, % f"\x1b[m\x1b[K,q_orig.x(), q_orig.w());\n'}
+[3.671804] (kalman_filter) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.671857] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:300:72:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[3.671910] (kalman_filter) StderrLine: {'line': b'  300 |             RCLCPP_INFO(this->get_logger(), "Quaternion: %f, %f, %f, \x1b[01;36m\x1b[K% f\x1b[m\x1b[K",q_orig.x(), q_orig.w());\n'}
+[3.671963] (kalman_filter) StderrLine: {'line': b'      |                                                                      \x1b[01;36m\x1b[K~~^\x1b[m\x1b[K\n'}
+[3.672025] (kalman_filter) StderrLine: {'line': b'      |                                                                        \x1b[01;36m\x1b[K|\x1b[m\x1b[K\n'}
+[3.672077] (kalman_filter) StderrLine: {'line': b'      |                                                                        \x1b[01;36m\x1b[Kdouble\x1b[m\x1b[K\n'}
+[3.672129] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.672180] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.672232] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.672283] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.672333] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.672383] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.672444] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.672500] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.672552] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.672602] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.672653] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.672709] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[3.672774] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:318:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunknown conversion type character \xe2\x80\x98\x1b[01m\x1b[Kb\x1b[m\x1b[K\xe2\x80\x99 in format [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=\x07-Wformat=\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.672838] (kalman_filter) StderrLine: {'line': b'  318 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K"Bias %b"\x1b[m\x1b[K,bias);\n'}
+[3.672891] (kalman_filter) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.672942] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:318:52:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kformat string is defined here\n'}
+[3.672992] (kalman_filter) StderrLine: {'line': b'  318 |             RCLCPP_INFO(this->get_logger(), "Bias %\x1b[01;36m\x1b[Kb\x1b[m\x1b[K",bias);\n'}
+[3.673042] (kalman_filter) StderrLine: {'line': b'      |                                                    \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[3.673093] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[3.673144] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[3.673195] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[3.673245] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[3.673306] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[3.673357] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[3.673414] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[3.673482] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[3.673535] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[3.673595] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[3.673647] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[3.673705] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[3.673756] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:318:45:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Ktoo many arguments for format [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args\x07-Wformat-extra-args\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.673809] (kalman_filter) StderrLine: {'line': b'  318 |             RCLCPP_INFO(this->get_logger(), \x1b[01;35m\x1b[K"Bias %b"\x1b[m\x1b[K,bias);\n'}
+[3.673860] (kalman_filter) StderrLine: {'line': b'      |                                             \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.706481] (-) TimerEvent: {}
+[3.806651] (-) TimerEvent: {}
+[3.906822] (-) TimerEvent: {}
+[4.006991] (-) TimerEvent: {}
+[4.107163] (-) TimerEvent: {}
+[4.207333] (-) TimerEvent: {}
+[4.307518] (-) TimerEvent: {}
+[4.407688] (-) TimerEvent: {}
+[4.507864] (-) TimerEvent: {}
+[4.608122] (-) TimerEvent: {}
+[4.708300] (-) TimerEvent: {}
+[4.808502] (-) TimerEvent: {}
+[4.908660] (-) TimerEvent: {}
+[5.008803] (-) TimerEvent: {}
+[5.108949] (-) TimerEvent: {}
+[5.209095] (-) TimerEvent: {}
+[5.309243] (-) TimerEvent: {}
+[5.409394] (-) TimerEvent: {}
+[5.509539] (-) TimerEvent: {}
+[5.609685] (-) TimerEvent: {}
+[5.709831] (-) TimerEvent: {}
+[5.809977] (-) TimerEvent: {}
+[5.910124] (-) TimerEvent: {}
+[6.010271] (-) TimerEvent: {}
+[6.110438] (-) TimerEvent: {}
+[6.210610] (-) TimerEvent: {}
+[6.310781] (-) TimerEvent: {}
+[6.410937] (-) TimerEvent: {}
+[6.511108] (-) TimerEvent: {}
+[6.611282] (-) TimerEvent: {}
+[6.711470] (-) TimerEvent: {}
+[6.811665] (-) TimerEvent: {}
+[6.911839] (-) TimerEvent: {}
+[7.011999] (-) TimerEvent: {}
+[7.112484] (-) TimerEvent: {}
+[7.212638] (-) TimerEvent: {}
+[7.312794] (-) TimerEvent: {}
+[7.412942] (-) TimerEvent: {}
+[7.513441] (-) TimerEvent: {}
+[7.613587] (-) TimerEvent: {}
+[7.713736] (-) TimerEvent: {}
+[7.813883] (-) TimerEvent: {}
+[7.914469] (-) TimerEvent: {}
+[8.014641] (-) TimerEvent: {}
+[8.114812] (-) TimerEvent: {}
+[8.214983] (-) TimerEvent: {}
+[8.315153] (-) TimerEvent: {}
+[8.415323] (-) TimerEvent: {}
+[8.515510] (-) TimerEvent: {}
+[8.615694] (-) TimerEvent: {}
+[8.715894] (-) TimerEvent: {}
+[8.816068] (-) TimerEvent: {}
+[8.916264] (-) TimerEvent: {}
+[9.016446] (-) TimerEvent: {}
+[9.116636] (-) TimerEvent: {}
+[9.216810] (-) TimerEvent: {}
+[9.316982] (-) TimerEvent: {}
+[9.417509] (-) TimerEvent: {}
+[9.517686] (-) TimerEvent: {}
+[9.617870] (-) TimerEvent: {}
+[9.718181] (-) TimerEvent: {}
+[9.818353] (-) TimerEvent: {}
+[9.918536] (-) TimerEvent: {}
+[9.958378] (kalman_filter) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking CXX executable kf_3dof\x1b[0m\n'}
+[10.018619] (-) TimerEvent: {}
+[10.119139] (-) TimerEvent: {}
+[10.219310] (-) TimerEvent: {}
+[10.319589] (-) TimerEvent: {}
+[10.399874] (kalman_filter) StdoutLine: {'line': b'[100%] Built target kf_3dof\n'}
+[10.408557] (kalman_filter) CommandEnded: {'returncode': 0}
+[10.409080] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'install'}
+[10.414956] (kalman_filter) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/saab/2024_UWR/build/kalman_filter'], 'cwd': '/home/saab/2024_UWR/build/kalman_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'saab'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/saab/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/saab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/saab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3129025'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/saab/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'saab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'saab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/saab/.android/emulator:/home/saab/.android/tools:/home/saab/.android/tools/bin:/home/saab/.android/platform-tools:/opt/ros/humble/bin:/home/saab/anaconda3/condabin:/home/saab/.local/bin:/opt/adoptium/jdk-11.0.26+4-jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.5/bin:/snap/bin:/home/saab/.dotnet/tools'), ('SESSION_MANAGER', 'local/saab-asrockx570:@/tmp/.ICE-unix/3128996,unix/saab-asrockx570:/tmp/.ICE-unix/3128996'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/90439776_73f8_4ef8_a2b3_d9e34151e94d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('DOTNET_BUNDLE_EXTRACT_BASE_DIR', '/home/saab/.cache/dotnet_bundle_extract'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.209'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/sonar_subs:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/saab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ANDROID_SDK_ROOT', '/home/saab/.android'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/opt/adoptium/jdk-11.0.26+4-jre'), ('PWD', '/home/saab/2024_UWR/build/kalman_filter'), ('SDK', '/home/saab/.android'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/saab/anaconda3/bin/conda'), ('ANDROID_HOME', '/home/saab/.android'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/saab/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/saab/2024_UWR/build/sonar_subs:/home/saab/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/saab/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/saab/anaconda3/pkgs/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/home/saab/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[10.419653] (-) TimerEvent: {}
+[10.421038] (kalman_filter) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[10.421379] (kalman_filter) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[10.421650] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter//launch/imu_launch.py\n'}
+[10.421741] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_0_1.py\n'}
+[10.421844] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_0_5.py\n'}
+[10.421935] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_3dof.py\n'}
+[10.421994] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter//launch/launch_3dof_stepper.py\n'}
+[10.422096] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/lib/kalman_filter/kf\n'}
+[10.422240] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_v4\n'}
+[10.422381] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/lib/kalman_filter/kf_3dof\n'}
+[10.422537] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/lib/kalman_filter/gd_conf\n'}
+[10.422676] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/lib/kalman_filter/imu_topic\n'}
+[10.422795] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/ament_index/resource_index/package_run_dependencies/kalman_filter\n'}
+[10.422905] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/ament_index/resource_index/parent_prefix_path/kalman_filter\n'}
+[10.423013] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.sh\n'}
+[10.423111] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/environment/ament_prefix_path.dsv\n'}
+[10.423210] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.sh\n'}
+[10.423304] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/environment/path.dsv\n'}
+[10.423394] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.bash\n'}
+[10.423496] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.sh\n'}
+[10.423586] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.zsh\n'}
+[10.423676] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/local_setup.dsv\n'}
+[10.423738] (kalman_filter) StdoutLine: {'line': b'-- Symlinking: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/package.dsv\n'}
+[10.429793] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/ament_index/resource_index/packages/kalman_filter\n'}
+[10.429905] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig.cmake\n'}
+[10.429989] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/cmake/kalman_filterConfig-version.cmake\n'}
+[10.430078] (kalman_filter) StdoutLine: {'line': b'-- Up-to-date symlink: /home/saab/2024_UWR/install/kalman_filter/share/kalman_filter/package.xml\n'}
+[10.431344] (kalman_filter) CommandEnded: {'returncode': 0}
+[10.447865] (kalman_filter) JobEnded: {'identifier': 'kalman_filter', 'rc': 0}
+[10.448553] (-) EventReactorShutdown: {}

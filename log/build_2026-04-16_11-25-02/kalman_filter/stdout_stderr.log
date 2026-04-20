@@ -1,0 +1,107 @@
+[35m[1mConsolidate compiler generated dependencies of target kf_3dof[0m
+[ 10%] Built target gd_conf
+[ 21%] Built target imu_topic
+[ 47%] Built target kf
+[ 73%] Built target kf_v4
+[ 78%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o[0m
+[ 84%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof.cpp.o[0m
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof.cpp:[m[K In member function ‘[01m[KEigen::Vector3d KalmanFilter_3dof::set_dist(double, double, double)[m[K’:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof.cpp:202:60:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kdist_x_f[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  202 |     double dist_x1,dist_y1,dist_z1,dist_x2,dist_y2,dist_z2,[01;35m[Kdist_x_f[m[K,dist_y_f,dist_z_f;
+      |                                                            [01;35m[K^~~~~~~~[m[K
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof.cpp:202:69:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kdist_y_f[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  202 |     double dist_x1,dist_y1,dist_z1,dist_x2,dist_y2,dist_z2,dist_x_f,[01;35m[Kdist_y_f[m[K,dist_z_f;
+      |                                                                     [01;35m[K^~~~~~~~[m[K
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof.cpp:202:78:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kdist_z_f[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  202 |     double dist_x1,dist_y1,dist_z1,dist_x2,dist_y2,dist_z2,dist_x_f,dist_y_f,[01;35m[Kdist_z_f[m[K;
+      |                                                                              [01;35m[K^~~~~~~~[m[K
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:194:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  194 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(const Imu&)[m[K’:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:304:45:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects a matching ‘[01m[Kdouble[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  304 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"Quaternion: %f, %f, %f, % f"[m[K,q_orig.x(), q_orig.w());
+      |                                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:304:67:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  304 |             RCLCPP_INFO(this->get_logger(), "Quaternion: %f, %f, [01;36m[K%f[m[K, % f",q_orig.x(), q_orig.w());
+      |                                                                  [01;36m[K~^[m[K
+      |                                                                   [01;36m[K|[m[K
+      |                                                                   [01;36m[Kdouble[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:304:45:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%f[m[K’ expects a matching ‘[01m[Kdouble[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  304 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"Quaternion: %f, %f, %f, % f"[m[K,q_orig.x(), q_orig.w());
+      |                                             [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:304:72:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  304 |             RCLCPP_INFO(this->get_logger(), "Quaternion: %f, %f, %f, [01;36m[K% f[m[K",q_orig.x(), q_orig.w());
+      |                                                                      [01;36m[K~~^[m[K
+      |                                                                        [01;36m[K|[m[K
+      |                                                                        [01;36m[Kdouble[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:322:45:[m[K [01;35m[Kwarning: [m[Kunknown conversion type character ‘[01m[Kb[m[K’ in format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  322 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"Bias %b"[m[K,bias);
+      |                                             [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:322:52:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  322 |             RCLCPP_INFO(this->get_logger(), "Bias %[01;36m[Kb[m[K",bias);
+      |                                                    [01;36m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:322:45:[m[K [01;35m[Kwarning: [m[Ktoo many arguments for format [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat-extra-args-Wformat-extra-args]8;;[m[K]
+  322 |             RCLCPP_INFO(this->get_logger(), [01;35m[K"Bias %b"[m[K,bias);
+      |                                             [01;35m[K^~~~~~~~~[m[K
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:330:53:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Krclcpp::Duration[m[K’ to ‘[01m[Kconst double&[m[K’
+  330 |             state_p=auv.prediction([01;31m[Kpredict_time_now - predict_time[m[K).seconds());
+      |                                    [01;31m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~[m[K
+      |                                                     [01;31m[K|[m[K
+      |                                                     [01;31m[Krclcpp::Duration[m[K
+In file included from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:4[m[K:
+[01m[K/home/saab/2024_UWR/src/kalman_filter/src/../include/kalman_filter.h:106:58:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[KEigen::Matrix<double, 6, 1> KalmanFilter_3dof::prediction(const double&)[m[K’
+  106 |     Eigen::Matrix<double, 6, 1> prediction([01;36m[Kconst double& dt[m[K);
+      |                                            [01;36m[K~~~~~~~~~~~~~~^~[m[K
+gmake[2]: *** [CMakeFiles/kf_3dof.dir/build.make:76: CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/kf_3dof.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

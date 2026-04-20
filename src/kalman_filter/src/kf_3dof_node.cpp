@@ -147,15 +147,30 @@ public:
 
         //imu_subscriber_ = this->create_subscription<geometry_msgs::msg::Vector3Stamped>(
         //imu_param, 1, std::bind(&kf_node::imu_callback2, this, std::placeholders::_1));
-
+        
+   /*     
+        rclcpp::QoS qos(rclcpp::KeepLast(10));
+       qos.best_effort();
+       imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
+    imu_param,
+    qos,
+    std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
+    
+ 
+    
+    imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
+    imu_param,
+    rclcpp::SensorDataQoS(),
+    std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
+   */
         imu_subscriber_ = this->create_subscription<sensor_msgs::msg::Imu>(
         imu_param, 1, std::bind(&kf_node::imu_callback, this, std::placeholders::_1));
 
-       sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+      sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
      sonar_param, 1, std::bind(&kf_node::sonar_callback, this, std::placeholders::_1));
 	
 	//sonar_subscriber_ = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
-    //  sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
+     // sonar_param, 1, std::bind(&kf_node::sonar_callback2, this, std::placeholders::_1));
 
 	
         // Create a bag file name using the bag_create_file function
@@ -186,99 +201,10 @@ public:
 {
     
     if(override)
-    {bias=false;RCLCPP_INFO(this->get_logger(), "Callback triggered!");}
+    {bias=false;RCLCPP_INFO(this->get_logger(), "Callback triggered!");start=true;}
 }
 
-    void imu_callback2(const geometry_msgs::msg::Vector3Stamped& imu_msg) 
-    
-    {
-        
-        
-        try {
-        bef_rotate<<imu_msg.vector.x,(imu_msg.vector.y),1;
-        aft_rotate=rot_matrix*bef_rotate;
-        predict_time_now = this->now();
-        // if(!rot_bias)
-        // {
-        //     tf2::convert(imu_msg.orientation, q_orig);
-        //     //tf2::convert(imu_msg.orientation, world_to_inertial_transform.transform.rotation);
-        //     //world_to_inertial_transform.transform.rotation=tf2::toMsg(q_orig);
-        //     //transformStamped.transform.rotation=tf2::toMsg(q_orig);
-        //     //ROS_INFO("w: %f",transformStamped.transform.rotation.w);
-        //     rot_bias=true;
-        // }
-        
-
-        if (start) {
-
-               if (!bias) {
-
-            auv.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);
-            
-            bias = true;
-        }
-             //RCLCPP_INFO(this->get_logger(),"Hi");
-            auv_accel=auv.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);
-            state_p=auv.prediction((predict_time_now - predict_time).seconds());
-
-
-            predict_time = predict_time_now;
-
-            geometry_msgs::msg::Vector3Stamped vector3_msg, vel_msg;
-            geometry_msgs::msg::PoseStamped pose_msg;
-
-            vector3_msg.header.stamp = imu_msg.header.stamp;
-            vector3_msg.vector.x = auv_accel(0);
-            vector3_msg.vector.y = auv_accel(1);
-            vector3_msg.vector.z = auv_accel(2);
-
-            vel_msg.header.stamp = imu_msg.header.stamp;
-            vel_msg.vector.x = state_p(1,0);
-            vel_msg.vector.y = state_p(3,0);
-            vel_msg.vector.z = state_p(5,0);
-
-            pose_msg.header.stamp = imu_msg.header.stamp;
-            pose_msg.pose.position.x = state_p(0,0);
-            pose_msg.pose.position.y = state_p(2,0);
-            pose_msg.pose.position.z = state_p(4,0);
-            //tf2::convert(imu_msg.orientation, q_new);
-            pose_msg.pose.orientation = tf2::toMsg(q_new * q_orig);
-
-            //transformStamped.header.stamp = imu_msg.header.stamp;
-            //transformStamped.transform.translation.x = surge_state_p(0);
-            // transformStamped.transform.translation.y = sway_state_p(0);
-           // transformStamped.transform.translation.z = heave_state_p(0);
-           // transformStamped.transform.rotation = tf2::toMsg(q_new);
-
-            writer_->write(imu_msg, "IMU_raw", predict_time_now);
-            writer_->write(vector3_msg, "IMU_filtered", predict_time_now);
-            writer_->write(vel_msg, "IMU_vel", predict_time_now);
-            writer_->write(pose_msg, "Pose", predict_time_now);
-            //tf2::doTransform(transformStamped, world_to_inertial_transform, transformStamped);
-            /*
-
-            */
-            //writer_->write(transformStamped, "Transform", "std_msgs/msg/String", time_stamp);
-
-            //bag.write("IMU_raw", predict_time_now, imu_msg);
-            //bag.write("IMU_filtered", predict_time_now, vector3_msg);
-            //bag.write("IMU_vel", predict_time_now, vel_msg);
-            //bag.write("Pose", predict_time_now, pose_msg);
-            //bag.write("Transform",predict_time_now,transformStamped);
-            
-           
-            pose_pub->publish(pose_msg);
-            //pub_transform->publish(transformStamped);
-         
-            
-        }
-    } catch (const std::exception& e) {
-        RCLCPP_ERROR(this->get_logger(), "error in imu-callback: %s", e.what());
-    }
-        
-
-        }
-    void imu_callback(const sensor_msgs::msg::Imu& imu_msg) 
+        void imu_callback(const sensor_msgs::msg::Imu& imu_msg) 
     
     {
         
@@ -288,6 +214,7 @@ public:
         //bef_rotate<<(imu_msg.linear_acceleration.z),-(imu_msg.linear_acceleration.x),1;
         aft_rotate=rot_matrix*bef_rotate;
         predict_time_now = this->now();
+        //predict_time_now=imu_msg.header.stamp;
         if(!rot_bias)
         {
             tf2::convert(imu_msg.orientation, q_orig);
@@ -303,21 +230,27 @@ public:
         if (start) {
 
                if (!bias) {
+            
 
-
-           auv.set_accel_bias(-aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
-            //auv.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.z);
+          //auv.set_accel_bias(-aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
+            auv.set_accel_bias(-aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
             
             bias = true;
             RCLCPP_INFO(this->get_logger(), "Bias %b",bias);
         }
-             //RCLCPP_INFO(this->get_logger(),"Hi");
-            //auv_accel=auv.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.y);
-            auv_accel=auv.set_accel(-aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
-            state_p=auv.prediction((predict_time_now - predict_time).seconds());
-
+        RCLCPP_INFO(this->get_logger(), "Time: %lf",(predict_time_now - predict_time).seconds());
+        if((predict_time_now - predict_time).seconds()>3||((predict_time_now - predict_time).seconds()>0.02 && (predict_time_now - predict_time).seconds()<0.03))
+		//if((predict_time_now - predict_time).seconds()>0.04)
+             {//RCLCPP_INFO(this->get_logger(),"Hi");
+            //auv_accel=auv.set_accel(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
+            auv_accel=auv.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.linear_acceleration.z);
+            
+            state_p=auv.prediction((predict_time_now - predict_time).seconds()/2);
+          
+	   //state_p=auv.prediction(0.1);
 
             predict_time = predict_time_now;
+            //predict_time=imu_msg.header.stamp;
 
             geometry_msgs::msg::Vector3Stamped vector3_msg, vel_msg;
             geometry_msgs::msg::PoseStamped pose_msg;
@@ -357,9 +290,13 @@ public:
             writer_->write(P_vals,"P_values",predict_time_now);
 
             writer_->write(imu_msg, "IMU_raw", predict_time_now);
+            
+            
             writer_->write(vector3_msg, "IMU_filtered", predict_time_now);
             writer_->write(vel_msg, "IMU_vel", predict_time_now);
             writer_->write(pose_msg, "Pose", predict_time_now);
+            
+            RCLCPP_INFO(this->get_logger(), "test_imu_bag %lf",vector3_msg.vector.x);
             //tf2::doTransform(transformStamped, world_to_inertial_transform, transformStamped);
             /*
 
@@ -372,8 +309,21 @@ public:
             //bag.write("Pose", predict_time_now, pose_msg);
             //bag.write("Transform",predict_time_now,transformStamped);
             
-           
+           	
             pose_pub->publish(pose_msg);
+            
+            if(iterator_var<sample_size)
+            { 
+            	iterator_var++;
+		}
+		
+		else
+		{
+			iterator_var=0;
+			bias=false;
+			}
+         
+            }
             //pub_transform->publish(transformStamped);
             
         }
@@ -387,85 +337,28 @@ public:
     void sonar_callback(const sonar_msgs::msg::ThreeSonarDepth& msg) 
     
     {
-        //static tf2_ros::Buffer tfBuffer;
-    //static tf2_ros::TransformBroadcaster tf_broadcaster;
-    //static tf2_ros::StaticTransformBroadcaster static_broadcaster;
-   
+    try 
+    	{
+        
+        measure_time_now=this->now();
 
-    
-    try {
-        //RCLCPP_INFO(this->get_logger(),"%s",start.c_str());
-        measure_time_now = this->now();
-        //surge.set_dist(msg.distance_1 / 1000);
-        //heave.set_dist(msg.depth);
-        //sway.set_dist(msg.distance_2 / 1000);
-        //if (!start && rot_bias) {
         if (!start) 
         {
         auv.set_dist_init(msg.distance_1/ 1000,msg.distance_2/1000,msg.distance_3/1000);
   
-            // /*if (msg.confidence_1 == 100.0) {
-            //     //surge.set_dist_init(msg.distance_1 / 1000);
-            //     world_to_inertial_transform.transform.translation.x = msg.distance_1 / 1000;
-                
     
-            // }
-            // if (msg.confidence_2 == 100.0) {
-            //     //sway.set_dist_init(msg.distance_2 / 1000);
-            //     world_to_inertial_transform.transform.translation.y = msg.distance_2 / 1000;
-            // } */
-            // //heave.set_dist_init(msg.depth);
-            // //world_to_inertial_transform.transform.translation.z = msg.depth;
-            // //ROS_INFO("Child: %s", world_to_inertial_transform.child_frame_id.c_str());
-            // //world_to_inertial_transform.header.stamp=measure_time_now;
-            // //transformStamped.header.stamp=measure_time_now;
-            
-            // //tf_broadcaster.sendTransform(transformStamped);
-            // //static_broadcaster.sendTransform(world_to_inertial_transform);
             measure_time = measure_time_now;
             predict_time = measure_time_now;
             start = true;
             RCLCPP_INFO(this->get_logger(), "%f",msg.distance_2/1000);
             RCLCPP_INFO(this->get_logger(), "%f",auv.get_state()(0,0));
             RCLCPP_INFO(this->get_logger(), "Measurements started");
-        } else {
+        }
+         else {
 
-            //sbs_frame_before.transform.translation.x = msg.distance_1 / 1000;
-            //sbs_frame_before.transform.translation.y = msg.distance_2 / 1000;
-            //sbs_frame_before.transform.translation.z = msg.depth;
-
-            //tf2::doTransform(sbs_frame_before,world_to_inertial_transform,sbs_frame_after);
-
-            //sbs_frame_after.header=msg.header;
             
-            //surge_dist=sbs_frame_after.transform.translation.x;
-            //sway_dist=sbs_frame_after.transform.translation.y;
-            //heave_dist=sbs_frame_after.transform.translation.z;
             auv.set_dist(msg.distance_1/ 1000,msg.distance_2/1000,msg.distance_3/1000);
-            //diff<<auv.residual();
-
-          //  RCLCPP_INFO(this->get_logger(),"Before: %f", sbs_frame_before.transform.translation.x);
-
-
-            //ROS_INFO("Sigmas Away: %f", surge.moving_avg.debug.first);
-            //ROS_INFO("Adjusted Std: %f", surge.moving_avg.debug.second);
-            /*Update moving average and confidence levels
-            double raw_measurement = msg.distance_1 / 1000; // Example using distance_1, apply similarly for others
-            surge.moving_avg.MovingAvg(raw_measurement);
-            double confidence = surge.moving_avg.output.first;
-            double scalar = surge.moving_avg.output.second;
-
-            ROS_INFO("Confidence: %f", confidence);
-            ROS_INFO("Scalar: %f", scalar);
-
-            std_msgs::Float64 confidence_msg;
-            std_msgs::Float64 scalar_msg;
-
-            confidence_msg.data = confidence;
-            scalar_msg.data = scalar;
-
-            confidence_pub->publish(confidence_msg);
-            scalar_pub->publish(scalar_msg);*/
+            
             
             auto e1=auv.moving_avg_surge.CalculateConfidenceLevelsVariation2(expected_difference_x);
             auto e2=auv.moving_avg_sway.CalculateConfidenceLevelsVariation2(expected_difference_y);
@@ -492,74 +385,43 @@ public:
                 delay_x=true;
                 covar_surge=covar_high_x;
                 persist_x_now++;
-                // if(discard_x)
-                // {
-                //     auv.moving_avg_surge.clear_last_entry();
-                // }
+        
                 
             }
             if(c1.confidence_2>tolerance_y && ((persist_y_now==0)||(persist_y_now>persist_y)))
             {
                 covar_sway=covar_low_y;
                 //delay_y=false;
-                RCLCPP_INFO(this->get_logger(),"Resetting");
+                RCLCPP_INFO(this->get_logger(),"Resetting %f",c1.scalar_2);
                 persist_y_now=0;
             }
             else
             {
                 //delay_y=true;
                 covar_sway=covar_high_y; //Add delay -->flag
-                 RCLCPP_INFO(this->get_logger(),"Persisting %f",state_p(2,0));
-                persist_y_now++;
-                // if(discard_y && persist_y_now<persist_y)
-                // {
-                //     auv.moving_avg_sway.clear_last_entry();
-                   
-                // }
-                // else
-                // {
-                //     RCLCPP_INFO(this->get_logger(),"Taking in %f",c1.confidence_2);
-                // }
+                 RCLCPP_INFO(this->get_logger(),"Persisting %f",c1.scalar_2);
+  
                 
             }
             if(c1.confidence_3>tolerance_z && ((persist_z_now==0)||(persist_z_now>persist_z)))
             {
                 covar_heave=covar_low_z;
+                RCLCPP_INFO(this->get_logger(),"Correct %f",msg.distance_3/1000);
                 delay_z=false;
                 persist_z_now=0;
-                persist_z_now++;
+                
             }
             else
             {
-                
+            	persist_z_now++;
+                RCLCPP_INFO(this->get_logger(),"Wrong %f",tolerance_z);
                 delay_z=true;
                 covar_heave=covar_high_z; //Add delay
 
-                // if(discard_z)
-                // {
-                //     auv.moving_avg_heave.clear_last_entry();
-                // }
+
                 
             }
-            /*
-            if(delay_x==true)
-            {
-                persist_x_now++;
-            }
-
-            if(delay_y==true)
-            {
-                persist_y_now++;
-            }
-
-            if(delay_z==true)
-            {
-                persist_z_now++;
-            }
-            */
-            //covar_surge=slope*e1.first+intercept;
-            //covar_sway=slope*e2.first+intercept;
-            //covar_heave=slope*e3.first+intercept;
+            
             
          R << covar_surge, 0, 0, 0, 0, 0,
                 0, covar_surge, 0, 0, 0, 0,
@@ -686,11 +548,20 @@ public:
             auv.set_prev_dist();
             
         }
-    } catch (const std::exception& e) {
+    } 
+    catch (const std::exception& e) {
         RCLCPP_ERROR(this->get_logger(), "error in sonar-callback: %s", e.what());
     }
+    }
+        //static tf2_ros::Buffer tfBuffer;
+    //static tf2_ros::TransformBroadcaster tf_broadcaster;
+    //static tf2_ros::StaticTransformBroadcaster static_broadcaster;
+   
+
     
-        }
+    
+    
+       
 
 
 private:
@@ -704,7 +575,7 @@ private:
     rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr imu_subscriber_;
     
 
-    int sample_size;
+    int sample_size,iterator_var;
     double expected_difference_x,expected_difference_y,expected_difference_z;
 
     double tolerance_x,tolerance_y,tolerance_z;
@@ -762,10 +633,14 @@ int main(int argc, char* argv[]) {
     auto node = std::make_shared<kf_node>();
 
     // Subscribing to a topic in the main function
-
-
-    rclcpp::spin(node);
-    rclcpp::shutdown();
+	rclcpp::executors::MultiThreadedExecutor executor(
+    	rclcpp::ExecutorOptions(),  // default options
+    		2                            // number of threads (IMPORTANT)
+		);
+	executor.add_node(node);
+	executor.spin();
+   //rclcpp::spin(node);
+    //rclcpp::shutdown();
  
     
     //transformStamped.header.frame_id = "kf_frame";  // Parent frame (fixed frame)

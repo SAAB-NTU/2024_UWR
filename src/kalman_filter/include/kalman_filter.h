@@ -103,7 +103,7 @@ class KalmanFilter_3dof
 {
 public:
     KalmanFilter_3dof();
-    Eigen::Matrix<double, 6, 1> prediction(const float& dt);
+    Eigen::Matrix<double, 6, 1> prediction(const double& dt);
     Eigen::Matrix<double, 6, 1> update(),update(Eigen::Matrix<double,6,6> external_R);
     Eigen::Matrix<double, 6, 1> residual();
     Eigen::Matrix<double, 6, 6> Q, R,K;

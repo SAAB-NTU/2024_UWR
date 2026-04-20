@@ -1,0 +1,705 @@
+[0.010s] Invoking command in '/home/saab/2024_UWR/build/kalman_filter': CMAKE_PREFIX_PATH=/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/home/saab/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/2024_UWR/build/kalman_filter -- -j24 -l24
+[0.047s] [35m[1mConsolidate compiler generated dependencies of target kf_3dof[0m
+[0.053s] [ 10%] Built target imu_topic
+[0.054s] [ 21%] Built target gd_conf
+[0.062s] [ 47%] Built target kf
+[0.062s] [ 73%] Built target kf_v4
+[0.078s] [ 78%] [32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o[0m
+[3.726s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:810:2:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K}[m[K’ at end of input
+[3.726s]   810 | }
+[3.726s]       |  [01;31m[K^[m[K
+[3.726s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:58:1:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K{[m[K’
+[3.726s]    58 | [01;36m[K{[m[K
+[3.726s]       | [01;36m[K^[m[K
+[3.733s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In constructor ‘[01m[Kkf_node::kf_node()[m[K’:
+[3.733s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:63:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ was not declared in this scope
+[3.733s]    63 |         [01;31m[Kpose_pub[m[K = this->create_publisher<geometry_msgs::msg::PoseStamped>("pose_topic", 10);
+[3.733s]       |         [01;31m[K^~~~~~~~[m[K
+[3.743s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:64:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kconfidence_pub[m[K’ was not declared in this scope
+[3.743s]    64 |         [01;31m[Kconfidence_pub[m[K = this->create_publisher<sonar_msgs::msg::ConfScal>("confidence_topic", 10);
+[3.743s]       |         [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.750s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:65:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kk_vals_pub[m[K’ was not declared in this scope
+[3.750s]    65 |         [01;31m[Kk_vals_pub[m[K = this->create_publisher<sonar_msgs::msg::KfValues>("k_vals_topic", 10);
+[3.750s]       |         [01;31m[K^~~~~~~~~~[m[K
+[3.757s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:68:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcurrent_time[m[K’ was not declared in this scope
+[3.757s]    68 |         [01;31m[Kcurrent_time[m[K = this->now();
+[3.757s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.764s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:69:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpredict_time[m[K’ was not declared in this scope
+[3.764s]    69 |         [01;31m[Kpredict_time[m[K = this->now();
+[3.764s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.769s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:70:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmeasure_time[m[K’ was not declared in this scope
+[3.770s]    70 |         [01;31m[Kmeasure_time[m[K = this->now();
+[3.770s]       |         [01;31m[K^~~~~~~~~~~~[m[K
+[3.775s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:73:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_param[m[K’ was not declared in this scope
+[3.775s]    73 |         this->get_parameter("csv_path", [01;31m[Kpath_param[m[K);
+[3.775s]       |                                         [01;31m[K^~~~~~~~~~[m[K
+[3.782s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:106:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_param[m[K’ was not declared in this scope
+[3.782s]   106 |         this->get_parameter("imu_topic", [01;31m[Kimu_param[m[K);
+[3.782s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[3.786s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:107:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ksonar_param[m[K’ was not declared in this scope
+[3.786s]   107 |         this->get_parameter("sonar_topic", [01;31m[Ksonar_param[m[K);
+[3.786s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[3.787s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:108:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle[m[K’ was not declared in this scope; did you mean ‘[01m[Ktf2::angle[m[K’?
+[3.787s]   108 |         this->get_parameter("angle", [01;31m[Kangle[m[K);
+[3.787s]       |                                      [01;31m[K^~~~~[m[K
+[3.787s]       |                                      [32m[Ktf2::angle[m[K
+[3.787s] In file included from [01m[K/opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.h:19[m[K,
+[3.787s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:18[m[K:
+[3.787s] [01m[K/opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.hpp:449:1:[m[K [01;36m[Knote: [m[K‘[01m[Ktf2::angle[m[K’ declared here
+[3.787s]   449 | [01;36m[Kangle[m[K(const Quaternion& q1, const Quaternion& q2)
+[3.787s]       | [01;36m[K^~~~~[m[K
+[3.790s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:109:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+[3.790s]   109 |         this->get_parameter("without_measurement", [01;31m[Kstart[m[K);
+[3.790s]       |                                                    [01;31m[K^~~~~[m[K
+[3.794s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:110:46:[m[K [01;31m[Kerror: [m[K‘[01m[Koverride[m[K’ was not declared in this scope
+[3.794s]   110 |         this->get_parameter("bias_override", [01;31m[Koverride[m[K);
+[3.794s]       |                                              [01;31m[K^~~~~~~~[m[K
+[3.801s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:112:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference_x[m[K’ was not declared in this scope
+[3.801s]   112 |         this->get_parameter("expected_difference_x", [01;31m[Kexpected_difference_x[m[K);
+[3.801s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[3.809s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:113:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference_y[m[K’ was not declared in this scope
+[3.809s]   113 |         this->get_parameter("expected_difference_y", [01;31m[Kexpected_difference_y[m[K);
+[3.809s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[3.816s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:114:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference_z[m[K’ was not declared in this scope
+[3.816s]   114 |         this->get_parameter("expected_difference_z", [01;31m[Kexpected_difference_z[m[K);
+[3.816s]       |                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[3.821s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:116:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktolerance_x[m[K’ was not declared in this scope
+[3.821s]   116 |         this->get_parameter("tolerance_x", [01;31m[Ktolerance_x[m[K);
+[3.821s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[3.826s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:117:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktolerance_y[m[K’ was not declared in this scope
+[3.826s]   117 |         this->get_parameter("tolerance_y", [01;31m[Ktolerance_y[m[K);
+[3.826s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[3.830s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:118:44:[m[K [01;31m[Kerror: [m[K‘[01m[Ktolerance_z[m[K’ was not declared in this scope
+[3.830s]   118 |         this->get_parameter("tolerance_z", [01;31m[Ktolerance_z[m[K);
+[3.831s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[3.835s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:120:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_low_x[m[K’ was not declared in this scope
+[3.835s]   120 |         this->get_parameter("covar_low_x", [01;31m[Kcovar_low_x[m[K);
+[3.835s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[3.839s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:121:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_low_y[m[K’ was not declared in this scope
+[3.839s]   121 |         this->get_parameter("covar_low_y", [01;31m[Kcovar_low_y[m[K);
+[3.839s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[3.844s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:122:44:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_low_z[m[K’ was not declared in this scope
+[3.844s]   122 |         this->get_parameter("covar_low_z", [01;31m[Kcovar_low_z[m[K);
+[3.844s]       |                                            [01;31m[K^~~~~~~~~~~[m[K
+[3.848s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:124:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_high_x[m[K’ was not declared in this scope
+[3.848s]   124 |         this->get_parameter("covar_high_x", [01;31m[Kcovar_high_x[m[K);
+[3.848s]       |                                             [01;31m[K^~~~~~~~~~~~[m[K
+[3.853s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:125:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_high_y[m[K’ was not declared in this scope
+[3.853s]   125 |         this->get_parameter("covar_high_y", [01;31m[Kcovar_high_y[m[K);
+[3.853s]       |                                             [01;31m[K^~~~~~~~~~~~[m[K
+[3.858s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:126:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_high_z[m[K’ was not declared in this scope
+[3.858s]   126 |         this->get_parameter("covar_high_z", [01;31m[Kcovar_high_z[m[K);
+[3.858s]       |                                             [01;31m[K^~~~~~~~~~~~[m[K
+[3.862s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:128:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_x[m[K’ was not declared in this scope
+[3.862s]   128 |         this->get_parameter("persist_x", [01;31m[Kpersist_x[m[K);
+[3.862s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[3.867s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:129:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_y[m[K’ was not declared in this scope
+[3.867s]   129 |         this->get_parameter("persist_y", [01;31m[Kpersist_y[m[K);
+[3.867s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[3.871s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:130:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_z[m[K’ was not declared in this scope
+[3.871s]   130 |         this->get_parameter("persist_z", [01;31m[Kpersist_z[m[K);
+[3.871s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[3.875s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:132:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kdiscard_x[m[K’ was not declared in this scope
+[3.875s]   132 |         this->get_parameter("discard_x", [01;31m[Kdiscard_x[m[K);
+[3.875s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[3.879s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:133:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kdiscard_y[m[K’ was not declared in this scope
+[3.879s]   133 |         this->get_parameter("discard_y", [01;31m[Kdiscard_y[m[K);
+[3.879s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[3.883s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:134:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kdiscard_z[m[K’ was not declared in this scope
+[3.883s]   134 |         this->get_parameter("discard_z", [01;31m[Kdiscard_z[m[K);
+[3.883s]       |                                          [01;31m[K^~~~~~~~~[m[K
+[3.887s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:136:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kangle_rad[m[K’ was not declared in this scope
+[3.887s]   136 |         [01;31m[Kangle_rad[m[K=angle*M_PI/180;
+[3.887s]       |         [01;31m[K^~~~~~~~~[m[K
+[3.891s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:138:9:[m[K [01;31m[Kerror: [m[K‘[01m[Krot_matrix[m[K’ was not declared in this scope
+[3.891s]   138 |         [01;31m[Krot_matrix[m[K<<cos(angle_rad),-sin((angle_rad)),0,sin((angle_rad)),cos((angle_rad)),0,0,0,1;
+[3.891s]       |         [01;31m[K^~~~~~~~~~[m[K
+[3.895s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:141:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_size[m[K’ was not declared in this scope
+[3.895s]   141 |         [01;31m[Ksample_size[m[K = 10; // Define the sample size here
+[3.895s]       |         [01;31m[K^~~~~~~~~~~[m[K
+[3.898s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:144:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv[m[K’ was not declared in this scope
+[3.898s]   144 |        [01;31m[Kauv[m[K=KalmanFilter_3dof();
+[3.898s]       |        [01;31m[K^~~[m[K
+[3.905s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:154:8:[m[K [01;31m[Kerror: [m[K‘[01m[Kimu_subscriber_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_subscribers[m[K’?
+[3.905s]   154 |        [01;31m[Kimu_subscriber_[m[K = this->create_subscription<sensor_msgs::msg::Imu>(
+[3.905s]       |        [01;31m[K^~~~~~~~~~~~~~~[m[K
+[3.905s]       |        [32m[Kcount_subscribers[m[K
+[3.914s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:163:8:[m[K [01;31m[Kerror: [m[K‘[01m[Ksonar_subscriber_[m[K’ was not declared in this scope; did you mean ‘[01m[Kcount_subscribers[m[K’?
+[3.914s]   163 |        [01;31m[Ksonar_subscriber_[m[K = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(
+[3.914s]       |        [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[3.914s]       |        [32m[Kcount_subscribers[m[K
+[3.914s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:164:42:[m[K [01;31m[Kerror: [m[K‘[01m[Ksonar_callback[m[K’ is not a member of ‘[01m[Kkf_node[m[K’
+[3.915s]   164 |      sonar_param, 1, std::bind(&kf_node::[01;31m[Ksonar_callback[m[K, this, std::placeholders::_1));
+[3.915s]       |                                          [01;31m[K^~~~~~~~~~~~~~[m[K
+[3.920s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:174:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstorage_options_[m[K’ was not declared in this scope; did you mean ‘[01m[Knode_options_[m[K’?
+[3.920s]   174 |         [01;31m[Kstorage_options_[m[K.uri = bag_file_name;  // The name of the bag file
+[3.920s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.920s]       |         [32m[Knode_options_[m[K
+[3.927s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:178:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kconverter_options_[m[K’ was not declared in this scope
+[3.927s]   178 |         [01;31m[Kconverter_options_[m[K.input_serialization_format = "cdr";
+[3.927s]       |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[3.930s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:182:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kwriter_[m[K’ was not declared in this scope; did you mean ‘[01m[Kwrite[m[K’?
+[3.930s]   182 |         [01;31m[Kwriter_[m[K = std::make_shared<rosbag2_cpp::Writer>();
+[3.930s]       |         [01;31m[K^~~~~~~[m[K
+[3.930s]       |         [32m[Kwrite[m[K
+[3.935s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:189:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kslope[m[K’ was not declared in this scope
+[3.936s]   189 |         [01;31m[Kslope[m[K=(1-1000)/(100-0);
+[3.936s]       |         [01;31m[K^~~~~[m[K
+[3.940s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:190:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kintercept[m[K’ was not declared in this scope
+[3.940s]   190 |         [01;31m[Kintercept[m[K=1000;
+[3.940s]       |         [01;31m[K^~~~~~~~~[m[K
+[3.944s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)[m[K’:
+[3.944s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:197:8:[m[K [01;31m[Kerror: [m[K‘[01m[Koverride[m[K’ was not declared in this scope
+[3.944s]   197 |     if([01;31m[Koverride[m[K)
+[3.944s]       |        [01;31m[K^~~~~~~~[m[K
+[3.947s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:198:6:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias[m[K’ was not declared in this scope
+[3.947s]   198 |     {[01;31m[Kbias[m[K=false;RCLCPP_INFO(this->get_logger(), "Callback triggered!");}
+[3.947s]       |      [01;31m[K^~~~[m[K
+[3.947s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:194:65:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kmsg[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[3.947s]   194 |    void sonar_callback2([01;35m[Kconst sonar_msgs::msg::ThreeSonarDepth& msg[m[K)
+[3.947s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~[m[K
+[3.951s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback2(const Vector3Stamped&)[m[K’:
+[3.951s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:207:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbef_rotate[m[K’ was not declared in this scope
+[3.951s]   207 |         [01;31m[Kbef_rotate[m[K<<imu_msg.vector.x,(imu_msg.vector.y),1;
+[3.952s]       |         [01;31m[K^~~~~~~~~~[m[K
+[3.955s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:208:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kaft_rotate[m[K’ was not declared in this scope
+[3.955s]   208 |         [01;31m[Kaft_rotate[m[K=rot_matrix*bef_rotate;
+[3.956s]       |         [01;31m[K^~~~~~~~~~[m[K
+[3.960s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:208:20:[m[K [01;31m[Kerror: [m[K‘[01m[Krot_matrix[m[K’ was not declared in this scope
+[3.960s]   208 |         aft_rotate=[01;31m[Krot_matrix[m[K*bef_rotate;
+[3.960s]       |                    [01;31m[K^~~~~~~~~~[m[K
+[3.965s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:209:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpredict_time_now[m[K’ was not declared in this scope
+[3.965s]   209 |         [01;31m[Kpredict_time_now[m[K = this->now();
+[3.965s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[3.969s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:221:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+[3.969s]   221 |         if ([01;31m[Kstart[m[K) {
+[3.969s]       |             [01;31m[K^~~~~[m[K
+[3.973s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:223:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias[m[K’ was not declared in this scope
+[3.973s]   223 |                if (![01;31m[Kbias[m[K) {
+[3.973s]       |                     [01;31m[K^~~~[m[K
+[3.976s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:225:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv[m[K’ was not declared in this scope
+[3.976s]   225 |             [01;31m[Kauv[m[K.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);
+[3.976s]       |             [01;31m[K^~~[m[K
+[3.980s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:230:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv_accel[m[K’ was not declared in this scope
+[3.980s]   230 |             [01;31m[Kauv_accel[m[K=auv.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);
+[3.980s]       |             [01;31m[K^~~~~~~~~[m[K
+[3.983s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:230:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv[m[K’ was not declared in this scope
+[3.983s]   230 |             auv_accel=[01;31m[Kauv[m[K.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);
+[3.983s]       |                       [01;31m[K^~~[m[K
+[3.986s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:231:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_p[m[K’ was not declared in this scope
+[3.986s]   231 |             [01;31m[Kstate_p[m[K=auv.prediction((predict_time_now - predict_time).seconds());
+[3.986s]       |             [01;31m[K^~~~~~~[m[K
+[3.991s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:231:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kpredict_time[m[K’ was not declared in this scope
+[3.991s]   231 |             state_p=auv.prediction((predict_time_now - [01;31m[Kpredict_time[m[K).seconds());
+[3.991s]       |                                                        [01;31m[K^~~~~~~~~~~~[m[K
+[3.994s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:254:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_new[m[K’ was not declared in this scope
+[3.994s]   254 |             pose_msg.pose.orientation = tf2::toMsg([01;31m[Kq_new[m[K * q_orig);
+[3.994s]       |                                                    [01;31m[K^~~~~[m[K
+[3.998s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:254:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_orig[m[K’ was not declared in this scope
+[3.998s]   254 |             pose_msg.pose.orientation = tf2::toMsg(q_new * [01;31m[Kq_orig[m[K);
+[3.998s]       |                                                            [01;31m[K^~~~~~[m[K
+[4.001s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:262:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwriter_[m[K’ was not declared in this scope; did you mean ‘[01m[Kwrite[m[K’?
+[4.001s]   262 |             [01;31m[Kwriter_[m[K->write(imu_msg, "IMU_raw", predict_time_now);
+[4.001s]       |             [01;31m[K^~~~~~~[m[K
+[4.001s]       |             [32m[Kwrite[m[K
+[4.004s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:279:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ was not declared in this scope
+[4.004s]   279 |             [01;31m[Kpose_pub[m[K->publish(pose_msg);
+[4.004s]       |             [01;31m[K^~~~~~~~[m[K
+[4.010s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K In member function ‘[01m[Kvoid kf_node::imu_callback(const Imu&)[m[K’:
+[4.010s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:295:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kbef_rotate[m[K’ was not declared in this scope
+[4.010s]   295 |         [01;31m[Kbef_rotate[m[K<<(imu_msg.linear_acceleration.x),(imu_msg.linear_acceleration.y),1;
+[4.010s]       |         [01;31m[K^~~~~~~~~~[m[K
+[4.015s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:298:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kaft_rotate[m[K’ was not declared in this scope
+[4.015s]   298 |         [01;31m[Kaft_rotate[m[K=rot_matrix*bef_rotate;
+[4.015s]       |         [01;31m[K^~~~~~~~~~[m[K
+[4.020s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:298:20:[m[K [01;31m[Kerror: [m[K‘[01m[Krot_matrix[m[K’ was not declared in this scope
+[4.020s]   298 |         aft_rotate=[01;31m[Krot_matrix[m[K*bef_rotate;
+[4.020s]       |                    [01;31m[K^~~~~~~~~~[m[K
+[4.027s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:299:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kpredict_time_now[m[K’ was not declared in this scope
+[4.027s]   299 |         [01;31m[Kpredict_time_now[m[K = this->now();
+[4.027s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.031s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:301:13:[m[K [01;31m[Kerror: [m[K‘[01m[Krot_bias[m[K’ was not declared in this scope
+[4.031s]   301 |         if(![01;31m[Krot_bias[m[K)
+[4.031s]       |             [01;31m[K^~~~~~~~[m[K
+[4.035s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:303:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_orig[m[K’ was not declared in this scope
+[4.035s]   303 |             tf2::convert(imu_msg.orientation, [01;31m[Kq_orig[m[K);
+[4.036s]       |                                               [01;31m[K^~~~~~[m[K
+[4.039s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:313:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+[4.039s]   313 |         if ([01;31m[Kstart[m[K) {
+[4.039s]       |             [01;31m[K^~~~~[m[K
+[4.042s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:315:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias[m[K’ was not declared in this scope
+[4.042s]   315 |                if (![01;31m[Kbias[m[K) {
+[4.042s]       |                     [01;31m[K^~~~[m[K
+[4.045s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:319:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv[m[K’ was not declared in this scope
+[4.045s]   319 |             [01;31m[Kauv[m[K.set_accel_bias(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
+[4.045s]       |             [01;31m[K^~~[m[K
+[4.050s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.050s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.050s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[4.050s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:324:73:[m[K [01;31m[Kerror: [m[K‘[01m[Kpredict_time[m[K’ was not declared in this scope
+[4.050s]   324 |         RCLCPP_INFO(this->get_logger(), "Time: %lf",(predict_time_now - [01;31m[Kpredict_time[m[K).seconds());
+[4.050s]       |                                                                         [01;31m[K^~~~~~~~~~~~[m[K
+[4.054s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:325:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kpredict_time[m[K’ was not declared in this scope
+[4.054s]   325 |                 if((predict_time_now - [01;31m[Kpredict_time[m[K).seconds()>0.04)
+[4.054s]       |                                        [01;31m[K^~~~~~~~~~~~[m[K
+[4.058s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:327:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv_accel[m[K’ was not declared in this scope
+[4.058s]   327 |             [01;31m[Kauv_accel[m[K=auv.set_accel(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
+[4.058s]       |             [01;31m[K^~~~~~~~~[m[K
+[4.061s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:327:23:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv[m[K’ was not declared in this scope
+[4.061s]   327 |             auv_accel=[01;31m[Kauv[m[K.set_accel(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);
+[4.061s]       |                       [01;31m[K^~~[m[K
+[4.064s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:330:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_p[m[K’ was not declared in this scope
+[4.064s]   330 |             [01;31m[Kstate_p[m[K=auv.prediction(0.025);
+[4.064s]       |             [01;31m[K^~~~~~~[m[K
+[4.067s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:354:47:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_new[m[K’ was not declared in this scope
+[4.067s]   354 |             tf2::convert(imu_msg.orientation, [01;31m[Kq_new[m[K);
+[4.067s]       |                                               [01;31m[K^~~~~[m[K
+[4.071s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:355:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_orig[m[K’ was not declared in this scope
+[4.071s]   355 |             pose_msg.pose.orientation = tf2::toMsg(q_new * [01;31m[Kq_orig[m[K);
+[4.071s]       |                                                            [01;31m[K^~~~~~[m[K
+[4.075s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:363:13:[m[K [01;31m[Kerror: [m[K‘[01m[KP_vals[m[K’ was not declared in this scope
+[4.075s]   363 |             [01;31m[KP_vals[m[K.header.stamp= imu_msg.header.stamp;
+[4.075s]       |             [01;31m[K^~~~~~[m[K
+[4.079s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:364:13:[m[K [01;31m[Kerror: [m[K‘[01m[KP_matrix_1[m[K’ was not declared in this scope
+[4.079s]   364 |             [01;31m[KP_matrix_1[m[K=auv.get_P();
+[4.080s]       |             [01;31m[K^~~~~~~~~~[m[K
+[4.083s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:372:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwriter_[m[K’ was not declared in this scope; did you mean ‘[01m[Kwrite[m[K’?
+[4.083s]   372 |             [01;31m[Kwriter_[m[K->write(P_vals,"P_values",predict_time_now);
+[4.083s]       |             [01;31m[K^~~~~~~[m[K
+[4.083s]       |             [32m[Kwrite[m[K
+[4.087s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:391:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ was not declared in this scope
+[4.087s]   391 |             [01;31m[Kpose_pub[m[K->publish(pose_msg);
+[4.087s]       |             [01;31m[K^~~~~~~~[m[K
+[4.087s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:393:16:[m[K [01;31m[Kerror: [m[K‘[01m[Kiterator[m[K’ was not declared in this scope
+[4.087s]   393 |             if([01;31m[Kiterator[m[K<sample_size)
+[4.087s]       |                [01;31m[K^~~~~~~~[m[K
+[4.087s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:393:16:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[4.087s] In file included from [01m[K/usr/include/c++/11/bits/stl_algobase.h:65[m[K,
+[4.087s]                  from [01m[K/usr/include/c++/11/memory:63[m[K,
+[4.087s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153[m[K,
+[4.087s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[4.087s] [01m[K/usr/include/c++/11/bits/stl_iterator_base_types.h:127:12:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd::iterator[m[K’
+[4.087s]   127 |     struct [01;36m[Kiterator[m[K
+[4.087s]       |            [01;36m[K^~~~~~~~[m[K
+[4.087s] In file included from [01m[K/usr/include/yaml-cpp/node/node.h:16[m[K,
+[4.087s]                  from [01m[K/usr/include/yaml-cpp/yaml.h:16[m[K,
+[4.087s]                  from [01m[K/opt/ros/humble/include/rosbag2_storage/rosbag2_storage/yaml.hpp:27[m[K,
+[4.087s]                  from [01m[K/opt/ros/humble/include/rosbag2_storage/rosbag2_storage/storage_options.hpp:22[m[K,
+[4.088s]                  from [01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer_interfaces/base_writer_interface.hpp:25[m[K,
+[4.088s]                  from [01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writers/sequential_writer.hpp:31[m[K,
+[4.088s]                  from [01m[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:31[m[K,
+[4.088s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:47[m[K:
+[4.088s] [01m[K/usr/include/yaml-cpp/node/detail/iterator_fwd.h:23:7:[m[K [01;36m[Knote: [m[K  ‘[01m[KYAML::iterator[m[K’
+[4.088s]    23 | using [01;36m[Kiterator[m[K = detail::iterator_base<detail::iterator_value>;
+[4.088s]       |       [01;36m[K^~~~~~~~[m[K
+[4.091s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:393:25:[m[K [01;31m[Kerror: [m[K‘[01m[Ksample_size[m[K’ was not declared in this scope
+[4.091s]   393 |             if(iterator<[01;31m[Ksample_size[m[K)
+[4.091s]       |                         [01;31m[K^~~~~~~~~~~[m[K
+[4.094s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:400:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kbias[m[K’ was not declared in this scope
+[4.094s]   400 |                 [01;31m[Kbias[m[K=false;
+[4.094s]       |                 [01;31m[K^~~~[m[K
+[4.094s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:405:7:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kcatch[m[K’
+[4.095s]   405 |     } [01;31m[Kcatch[m[K (const std::exception& e) {
+[4.095s]       |       [01;31m[K^~~~~[m[K
+[4.095s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[Kcatch[m[K’ before ‘[01m[Ksonar_callback[m[K’
+[4.095s]   412 |     void [01;31m[Ksonar_callback[m[K(const sonar_msgs::msg::ThreeSonarDepth& msg)
+[4.095s]       |          [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.095s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[Ksonar_callback[m[K’
+[4.095s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:[m[K [01;31m[Kerror: [m[Kexpected type-specifier before ‘[01m[Ksonar_callback[m[K’
+[4.095s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:414:5:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K)[m[K’ before ‘[01m[K{[m[K’ token
+[4.095s]   414 |     [01;31m[K{[m[K
+[4.095s]       |     [01;31m[K^[m[K
+[4.095s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:[m[K [01;36m[Knote: [m[Kto match this ‘[01m[K([m[K’
+[4.095s]   412 |     void [01;36m[Ksonar_callback[m[K(const sonar_msgs::msg::ThreeSonarDepth& msg)
+[4.095s]       |          [01;36m[K^~~~~~~~~~~~~~[m[K
+[4.100s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:424:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kmeasure_time_now[m[K’ was not declared in this scope
+[4.100s]   424 |         [01;31m[Kmeasure_time_now[m[K=msg.header.stamp;
+[4.100s]       |         [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[4.100s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:424:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg[m[K’ was not declared in this scope
+[4.100s]   424 |         measure_time_now=[01;31m[Kmsg[m[K.header.stamp;
+[4.100s]       |                          [01;31m[K^~~[m[K
+[4.101s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:424:26:[m[K [01;36m[Knote: [m[Ksuggested alternatives:
+[4.101s] In file included from [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:33[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.101s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.101s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[4.102s] [01m[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:28:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kbuiltin_interfaces::msg[m[K’
+[4.102s]    28 | namespace [01;36m[Kmsg[m[K
+[4.102s]       |           [01;36m[K^~~[m[K
+[4.102s] In file included from [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.102s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[4.102s] [01m[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:28:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Krcl_interfaces::msg[m[K’
+[4.102s]    28 | namespace [01;36m[Kmsg[m[K
+[4.102s]       |           [01;36m[K^~~[m[K
+[4.102s] In file included from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:24[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50[m[K,
+[4.102s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.103s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[4.103s] [01m[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:28:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstatistics_msgs::msg[m[K’
+[4.103s]    28 | namespace [01;36m[Kmsg[m[K
+[4.103s]       |           [01;36m[K^~~[m[K
+[4.103s] In file included from [01m[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.hpp:21[m[K,
+[4.103s]                  from [01m[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.hpp:7[m[K,
+[4.103s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:8[m[K:
+[4.103s] [01m[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:32:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kstd_msgs::msg[m[K’
+[4.103s]    32 | namespace [01;36m[Kmsg[m[K
+[4.103s]       |           [01;36m[K^~~[m[K
+[4.103s] In file included from [01m[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.hpp:7[m[K,
+[4.103s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:8[m[K:
+[4.103s] [01m[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.hpp:32:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksonar_msgs::msg[m[K’
+[4.103s]    32 | namespace [01;36m[Kmsg[m[K
+[4.103s]       |           [01;36m[K^~~[m[K
+[4.103s] In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:23[m[K,
+[4.103s]                  from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7[m[K,
+[4.103s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:13[m[K:
+[4.103s] [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:28:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Kgeometry_msgs::msg[m[K’
+[4.104s]    28 | namespace [01;36m[Kmsg[m[K
+[4.104s]       |           [01;36m[K^~~[m[K
+[4.104s] In file included from [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7[m[K,
+[4.104s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:13[m[K:
+[4.104s] [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:37:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ksensor_msgs::msg[m[K’
+[4.104s]    37 | namespace [01;36m[Kmsg[m[K
+[4.104s]       |           [01;36m[K^~~[m[K
+[4.104s] In file included from [01m[K/opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/tf_message.hpp:7[m[K,
+[4.104s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.hpp:45[m[K,
+[4.104s]                  from [01m[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.h:36[m[K,
+[4.104s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:34[m[K:
+[4.104s] [01m[K/opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__struct.hpp:32:11:[m[K [01;36m[Knote: [m[K  ‘[01m[Ktf2_msgs::msg[m[K’
+[4.104s]    32 | namespace [01;36m[Kmsg[m[K
+[4.104s]       |           [01;36m[K^~~[m[K
+[4.104s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:429:14:[m[K [01;31m[Kerror: [m[K‘[01m[Kstart[m[K’ was not declared in this scope
+[4.104s]   429 |         if (![01;31m[Kstart[m[K)
+[4.104s]       |              [01;31m[K^~~~~[m[K
+[4.106s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:431:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv[m[K’ was not declared in this scope
+[4.106s]   431 |         [01;31m[Kauv[m[K.set_dist_init(msg.distance_1/ 1000,msg.distance_2/1000,msg.distance_3/1000);
+[4.106s]       |         [01;31m[K^~~[m[K
+[4.111s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:451:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kmeasure_time[m[K’ was not declared in this scope
+[4.111s]   451 |             [01;31m[Kmeasure_time[m[K = measure_time_now;
+[4.111s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[4.116s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:452:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpredict_time[m[K’ was not declared in this scope
+[4.116s]   452 |             [01;31m[Kpredict_time[m[K = measure_time_now;
+[4.116s]       |             [01;31m[K^~~~~~~~~~~~[m[K
+[4.120s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:470:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kauv[m[K’ was not declared in this scope
+[4.120s]   470 |             [01;31m[Kauv[m[K.set_dist(msg.distance_1/ 1000,msg.distance_2/1000,msg.distance_3/1000);
+[4.121s]       |             [01;31m[K^~~[m[K
+[4.128s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:496:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference_x[m[K’ was not declared in this scope
+[4.128s]   496 |             auto e1=auv.moving_avg_surge.CalculateConfidenceLevelsVariation2([01;31m[Kexpected_difference_x[m[K);
+[4.129s]       |                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.136s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:497:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference_y[m[K’ was not declared in this scope
+[4.136s]   497 |             auto e2=auv.moving_avg_sway.CalculateConfidenceLevelsVariation2([01;31m[Kexpected_difference_y[m[K);
+[4.136s]       |                                                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.144s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:498:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kexpected_difference_z[m[K’ was not declared in this scope
+[4.144s]   498 |             auto e3=auv.moving_avg_heave.CalculateConfidenceLevelsVariation2([01;31m[Kexpected_difference_z[m[K);
+[4.144s]       |                                                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.147s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:499:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kc1[m[K’ was not declared in this scope; did you mean ‘[01m[Ky1[m[K’?
+[4.147s]   499 |             [01;31m[Kc1[m[K.header.stamp = msg.header.stamp;
+[4.147s]       |             [01;31m[K^~[m[K
+[4.147s]       |             [32m[Ky1[m[K
+[4.152s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:510:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktolerance_x[m[K’ was not declared in this scope
+[4.152s]   510 |             if(c1.confidence_1>[01;31m[Ktolerance_x[m[K && ((persist_x_now==0)||(persist_x_now>persist_x)))
+[4.152s]       |                                [01;31m[K^~~~~~~~~~~[m[K
+[4.157s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:510:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_x_now[m[K’ was not declared in this scope
+[4.157s]   510 |             if(c1.confidence_1>tolerance_x && (([01;31m[Kpersist_x_now[m[K==0)||(persist_x_now>persist_x)))
+[4.157s]       |                                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[4.161s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:510:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_x[m[K’ was not declared in this scope
+[4.161s]   510 |             if(c1.confidence_1>tolerance_x && ((persist_x_now==0)||(persist_x_now>[01;31m[Kpersist_x[m[K)))
+[4.161s]       |                                                                                   [01;31m[K^~~~~~~~~[m[K
+[4.165s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:512:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_surge[m[K’ was not declared in this scope
+[4.165s]   512 |                 [01;31m[Kcovar_surge[m[K=covar_low_x;
+[4.165s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[4.170s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:512:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_low_x[m[K’ was not declared in this scope
+[4.170s]   512 |                 covar_surge=[01;31m[Kcovar_low_x[m[K;
+[4.170s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[4.173s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:513:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kdelay_x[m[K’ was not declared in this scope
+[4.173s]   513 |                 [01;31m[Kdelay_x[m[K=false;
+[4.173s]       |                 [01;31m[K^~~~~~~[m[K
+[4.177s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:518:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kdelay_x[m[K’ was not declared in this scope
+[4.177s]   518 |                 [01;31m[Kdelay_x[m[K=true;
+[4.177s]       |                 [01;31m[K^~~~~~~[m[K
+[4.182s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:519:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_surge[m[K’ was not declared in this scope
+[4.182s]   519 |                 [01;31m[Kcovar_surge[m[K=covar_high_x;
+[4.182s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[4.187s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:519:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_high_x[m[K’ was not declared in this scope
+[4.187s]   519 |                 covar_surge=[01;31m[Kcovar_high_x[m[K;
+[4.187s]       |                             [01;31m[K^~~~~~~~~~~~[m[K
+[4.192s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:527:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktolerance_y[m[K’ was not declared in this scope
+[4.192s]   527 |             if(c1.confidence_2>[01;31m[Ktolerance_y[m[K && ((persist_y_now==0)||(persist_y_now>persist_y)))
+[4.192s]       |                                [01;31m[K^~~~~~~~~~~[m[K
+[4.197s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:527:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_y_now[m[K’ was not declared in this scope
+[4.197s]   527 |             if(c1.confidence_2>tolerance_y && (([01;31m[Kpersist_y_now[m[K==0)||(persist_y_now>persist_y)))
+[4.197s]       |                                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[4.201s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:527:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_y[m[K’ was not declared in this scope
+[4.201s]   527 |             if(c1.confidence_2>tolerance_y && ((persist_y_now==0)||(persist_y_now>[01;31m[Kpersist_y[m[K)))
+[4.201s]       |                                                                                   [01;31m[K^~~~~~~~~[m[K
+[4.205s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:529:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_sway[m[K’ was not declared in this scope
+[4.205s]   529 |                 [01;31m[Kcovar_sway[m[K=covar_low_y;
+[4.206s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[4.210s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:529:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_low_y[m[K’ was not declared in this scope
+[4.210s]   529 |                 covar_sway=[01;31m[Kcovar_low_y[m[K;
+[4.210s]       |                            [01;31m[K^~~~~~~~~~~[m[K
+[4.214s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:537:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_sway[m[K’ was not declared in this scope
+[4.214s]   537 |                 [01;31m[Kcovar_sway[m[K=covar_high_y; //Add delay -->flag
+[4.214s]       |                 [01;31m[K^~~~~~~~~~[m[K
+[4.219s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:537:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_high_y[m[K’ was not declared in this scope
+[4.219s]   537 |                 covar_sway=[01;31m[Kcovar_high_y[m[K; //Add delay -->flag
+[4.219s]       |                            [01;31m[K^~~~~~~~~~~~[m[K
+[4.224s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:551:32:[m[K [01;31m[Kerror: [m[K‘[01m[Ktolerance_z[m[K’ was not declared in this scope
+[4.224s]   551 |             if(c1.confidence_3>[01;31m[Ktolerance_z[m[K && ((persist_z_now==0)||(persist_z_now>persist_z)))
+[4.224s]       |                                [01;31m[K^~~~~~~~~~~[m[K
+[4.229s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:551:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_z_now[m[K’ was not declared in this scope
+[4.229s]   551 |             if(c1.confidence_3>tolerance_z && (([01;31m[Kpersist_z_now[m[K==0)||(persist_z_now>persist_z)))
+[4.229s]       |                                                 [01;31m[K^~~~~~~~~~~~~[m[K
+[4.233s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:551:83:[m[K [01;31m[Kerror: [m[K‘[01m[Kpersist_z[m[K’ was not declared in this scope
+[4.234s]   551 |             if(c1.confidence_3>tolerance_z && ((persist_z_now==0)||(persist_z_now>[01;31m[Kpersist_z[m[K)))
+[4.234s]       |                                                                                   [01;31m[K^~~~~~~~~[m[K
+[4.238s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:553:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_heave[m[K’ was not declared in this scope
+[4.238s]   553 |                 [01;31m[Kcovar_heave[m[K=covar_low_z;
+[4.238s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[4.243s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:553:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_low_z[m[K’ was not declared in this scope
+[4.243s]   553 |                 covar_heave=[01;31m[Kcovar_low_z[m[K;
+[4.243s]       |                             [01;31m[K^~~~~~~~~~~[m[K
+[4.247s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:555:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kdelay_z[m[K’ was not declared in this scope
+[4.247s]   555 |                 [01;31m[Kdelay_z[m[K=false;
+[4.247s]       |                 [01;31m[K^~~~~~~[m[K
+[4.250s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:563:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kdelay_z[m[K’ was not declared in this scope
+[4.251s]   563 |                 [01;31m[Kdelay_z[m[K=true;
+[4.251s]       |                 [01;31m[K^~~~~~~[m[K
+[4.255s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:564:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_heave[m[K’ was not declared in this scope
+[4.255s]   564 |                 [01;31m[Kcovar_heave[m[K=covar_high_z; //Add delay
+[4.255s]       |                 [01;31m[K^~~~~~~~~~~[m[K
+[4.259s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:564:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_high_z[m[K’ was not declared in this scope
+[4.259s]   564 |                 covar_heave=[01;31m[Kcovar_high_z[m[K; //Add delay
+[4.260s]       |                             [01;31m[K^~~~~~~~~~~~[m[K
+[4.262s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:592:10:[m[K [01;31m[Kerror: [m[K‘[01m[KR[m[K’ was not declared in this scope
+[4.262s]   592 |          [01;31m[KR[m[K << covar_surge, 0, 0, 0, 0, 0,
+[4.262s]       |          [01;31m[K^[m[K
+[4.266s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:592:15:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_surge[m[K’ was not declared in this scope
+[4.266s]   592 |          R << [01;31m[Kcovar_surge[m[K, 0, 0, 0, 0, 0,
+[4.266s]       |               [01;31m[K^~~~~~~~~~~[m[K
+[4.270s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:594:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_sway[m[K’ was not declared in this scope
+[4.271s]   594 |                  0, 0, [01;31m[Kcovar_sway[m[K, 0, 0, 0,
+[4.271s]       |                        [01;31m[K^~~~~~~~~~[m[K
+[4.275s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:596:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kcovar_heave[m[K’ was not declared in this scope
+[4.275s]   596 |                         0, 0, 0, 0, [01;31m[Kcovar_heave[m[K, 0,
+[4.275s]       |                                     [01;31m[K^~~~~~~~~~~[m[K
+[4.279s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:630:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kmeasure_time[m[K’ was not declared in this scope
+[4.279s]   630 |                 auv.set_vel((measure_time_now - [01;31m[Kmeasure_time[m[K).seconds());
+[4.279s]       |                                                 [01;31m[K^~~~~~~~~~~~[m[K
+[4.283s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:632:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kstate_u[m[K’ was not declared in this scope
+[4.283s]   632 |                 [01;31m[Kstate_u[m[K = auv.update(R);
+[4.283s]       |                 [01;31m[K^~~~~~~[m[K
+[4.287s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:635:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kk_vals[m[K’ was not declared in this scope
+[4.287s]   635 |             [01;31m[Kk_vals[m[K.header.stamp= msg.header.stamp;
+[4.287s]       |             [01;31m[K^~~~~~[m[K
+[4.291s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:643:13:[m[K [01;31m[Kerror: [m[K‘[01m[KP_vals[m[K’ was not declared in this scope
+[4.291s]   643 |             [01;31m[KP_vals[m[K.header.stamp= msg.header.stamp;
+[4.291s]       |             [01;31m[K^~~~~~[m[K
+[4.295s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:644:13:[m[K [01;31m[Kerror: [m[K‘[01m[KP_matrix_2[m[K’ was not declared in this scope
+[4.295s]   644 |             [01;31m[KP_matrix_2[m[K=auv.get_P();
+[4.295s]       |             [01;31m[K^~~~~~~~~~[m[K
+[4.299s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.299s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.299s]                  from [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1[m[K:
+[4.299s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:667:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_new[m[K’ was not declared in this scope
+[4.299s]   667 |             RCLCPP_INFO(this->get_logger(), "Quaternion: %f", [01;31m[Kq_new[m[K.w());
+[4.299s]       |                                                               [01;31m[K^~~~~[m[K
+[4.302s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:668:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_new[m[K’ was not declared in this scope
+[4.302s]   668 |             pose_msg.pose.orientation = tf2::toMsg([01;31m[Kq_new[m[K * q_orig);
+[4.302s]       |                                                    [01;31m[K^~~~~[m[K
+[4.305s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:668:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kq_orig[m[K’ was not declared in this scope
+[4.305s]   668 |             pose_msg.pose.orientation = tf2::toMsg(q_new * [01;31m[Kq_orig[m[K);
+[4.305s]       |                                                            [01;31m[K^~~~~~[m[K
+[4.308s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:673:36:[m[K [01;31m[Kerror: [m[K‘[01m[Kdist[m[K’ was not declared in this scope
+[4.308s]   673 |             vector3_msg.vector.x = [01;31m[Kdist[m[K(0);
+[4.308s]       |                                    [01;31m[K^~~~[m[K
+[4.311s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:689:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kwriter_[m[K’ was not declared in this scope; did you mean ‘[01m[Kwrite[m[K’?
+[4.311s]   689 |             [01;31m[Kwriter_[m[K->write(vector3_msg,"SONAR_filtered", measure_time_now);
+[4.311s]       |             [01;31m[K^~~~~~~[m[K
+[4.311s]       |             [32m[Kwrite[m[K
+[4.315s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:706:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kpose_pub[m[K’ was not declared in this scope
+[4.315s]   706 |             [01;31m[Kpose_pub[m[K->publish(pose_msg);
+[4.315s]       |             [01;31m[K^~~~~~~~[m[K
+[4.320s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:707:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kconfidence_pub[m[K’ was not declared in this scope
+[4.320s]   707 |             [01;31m[Kconfidence_pub[m[K->publish(c1);
+[4.320s]       |             [01;31m[K^~~~~~~~~~~~~~[m[K
+[4.324s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:712:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kk_vals_pub[m[K’ was not declared in this scope
+[4.324s]   712 |             [01;31m[Kk_vals_pub[m[K->publish(k_vals);
+[4.324s]       |             [01;31m[K^~~~~~~~~~[m[K
+[4.325s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:724:1:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[Kprivate[m[K’
+[4.325s]   724 | [01;31m[Kprivate[m[K:
+[4.325s]       | [01;31m[K^~~~~~~[m[K
+[4.388s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:735:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ksample_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.388s]   735 |     int [01;35m[Ksample_size[m[K,iterator;
+[4.388s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[4.388s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:735:21:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kiterator[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.388s]   735 |     int sample_size,[01;35m[Kiterator[m[K;
+[4.388s]       |                     [01;35m[K^~~~~~~~[m[K
+[4.388s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:736:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kexpected_difference_x[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.388s]   736 |     double [01;35m[Kexpected_difference_x[m[K,expected_difference_y,expected_difference_z;
+[4.388s]       |            [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.388s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:736:34:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kexpected_difference_y[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.388s]   736 |     double expected_difference_x,[01;35m[Kexpected_difference_y[m[K,expected_difference_z;
+[4.388s]       |                                  [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.388s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:736:56:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kexpected_difference_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.388s]   736 |     double expected_difference_x,expected_difference_y,[01;35m[Kexpected_difference_z[m[K;
+[4.388s]       |                                                        [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[4.388s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:738:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktolerance_x[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.388s]   738 |     double [01;35m[Ktolerance_x[m[K,tolerance_y,tolerance_z;
+[4.388s]       |            [01;35m[K^~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:738:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktolerance_y[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.389s]   738 |     double tolerance_x,[01;35m[Ktolerance_y[m[K,tolerance_z;
+[4.389s]       |                        [01;35m[K^~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:738:36:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktolerance_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.389s]   738 |     double tolerance_x,tolerance_y,[01;35m[Ktolerance_z[m[K;
+[4.389s]       |                                    [01;35m[K^~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_low_x[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.389s]   740 |     double [01;35m[Kcovar_low_x[m[K,covar_low_y,covar_low_z,covar_high_x,covar_high_y,covar_high_z;
+[4.389s]       |            [01;35m[K^~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_low_y[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.389s]   740 |     double covar_low_x,[01;35m[Kcovar_low_y[m[K,covar_low_z,covar_high_x,covar_high_y,covar_high_z;
+[4.389s]       |                        [01;35m[K^~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:36:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_low_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.389s]   740 |     double covar_low_x,covar_low_y,[01;35m[Kcovar_low_z[m[K,covar_high_x,covar_high_y,covar_high_z;
+[4.389s]       |                                    [01;35m[K^~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:48:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_high_x[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.389s]   740 |     double covar_low_x,covar_low_y,covar_low_z,[01;35m[Kcovar_high_x[m[K,covar_high_y,covar_high_z;
+[4.389s]       |                                                [01;35m[K^~~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:61:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_high_y[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.389s]   740 |     double covar_low_x,covar_low_y,covar_low_z,covar_high_x,[01;35m[Kcovar_high_y[m[K,covar_high_z;
+[4.389s]       |                                                             [01;35m[K^~~~~~~~~~~~[m[K
+[4.389s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:74:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_high_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.390s]   740 |     double covar_low_x,covar_low_y,covar_low_z,covar_high_x,covar_high_y,[01;35m[Kcovar_high_z[m[K;
+[4.390s]       |                                                                          [01;35m[K^~~~~~~~~~~~[m[K
+[4.390s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:9:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpersist_x[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.390s]   745 |     int [01;35m[Kpersist_x[m[K,persist_y,persist_z,persist_x_now,persist_y_now,persist_z_now;
+[4.390s]       |         [01;35m[K^~~~~~~~~[m[K
+[4.390s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:19:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpersist_y[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.390s]   745 |     int persist_x,[01;35m[Kpersist_y[m[K,persist_z,persist_x_now,persist_y_now,persist_z_now;
+[4.390s]       |                   [01;35m[K^~~~~~~~~[m[K
+[4.390s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:29:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpersist_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.390s]   745 |     int persist_x,persist_y,[01;35m[Kpersist_z[m[K,persist_x_now,persist_y_now,persist_z_now;
+[4.390s]       |                             [01;35m[K^~~~~~~~~[m[K
+[4.390s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:39:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpersist_x_now[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.390s]   745 |     int persist_x,persist_y,persist_z,[01;35m[Kpersist_x_now[m[K,persist_y_now,persist_z_now;
+[4.390s]       |                                       [01;35m[K^~~~~~~~~~~~~[m[K
+[4.390s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:53:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpersist_y_now[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.390s]   745 |     int persist_x,persist_y,persist_z,persist_x_now,[01;35m[Kpersist_y_now[m[K,persist_z_now;
+[4.390s]       |                                                     [01;35m[K^~~~~~~~~~~~~[m[K
+[4.391s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:67:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kpersist_z_now[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.391s]   745 |     int persist_x,persist_y,persist_z,persist_x_now,persist_y_now,[01;35m[Kpersist_z_now[m[K;
+[4.391s]       |                                                                   [01;35m[K^~~~~~~~~~~~~[m[K
+[4.391s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:757:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.391s]   757 |     double [01;35m[Kangle[m[K,angle_rad;
+[4.391s]       |            [01;35m[K^~~~~[m[K
+[4.391s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:757:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kangle_rad[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.391s]   757 |     double angle,[01;35m[Kangle_rad[m[K;
+[4.391s]       |                  [01;35m[K^~~~~~~~~[m[K
+[4.391s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbias[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.391s]   758 |     bool [01;35m[Kbias[m[K = false, start = false,rot_bias=false,override=false,flag1,flag2;
+[4.391s]       |          [01;35m[K^~~~[m[K
+[4.391s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kstart[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.391s]   758 |     bool bias = false, [01;35m[Kstart[m[K = false,rot_bias=false,override=false,flag1,flag2;
+[4.391s]       |                        [01;35m[K^~~~~[m[K
+[4.391s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:38:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Krot_bias[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.391s]   758 |     bool bias = false, start = false,[01;35m[Krot_bias[m[K=false,override=false,flag1,flag2;
+[4.391s]       |                                      [01;35m[K^~~~~~~~[m[K
+[4.392s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:53:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Koverride[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.392s]   758 |     bool bias = false, start = false,rot_bias=false,[01;35m[Koverride[m[K=false,flag1,flag2;
+[4.392s]       |                                                     [01;35m[K^~~~~~~~[m[K
+[4.392s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:68:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag1[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.392s]   758 |     bool bias = false, start = false,rot_bias=false,override=false,[01;35m[Kflag1[m[K,flag2;
+[4.392s]       |                                                                    [01;35m[K^~~~~[m[K
+[4.392s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:74:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kflag2[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.392s]   758 |     bool bias = false, start = false,rot_bias=false,override=false,flag1,[01;35m[Kflag2[m[K;
+[4.392s]       |                                                                          [01;35m[K^~~~~[m[K
+[4.392s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:10:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelay_x[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.392s]   759 |     bool [01;35m[Kdelay_x[m[K,delay_y,delay_z,discard_x,discard_y,discard_z;
+[4.392s]       |          [01;35m[K^~~~~~~[m[K
+[4.392s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:18:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelay_y[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.392s]   759 |     bool delay_x,[01;35m[Kdelay_y[m[K,delay_z,discard_x,discard_y,discard_z;
+[4.392s]       |                  [01;35m[K^~~~~~~[m[K
+[4.392s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:26:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdelay_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.392s]   759 |     bool delay_x,delay_y,[01;35m[Kdelay_z[m[K,discard_x,discard_y,discard_z;
+[4.392s]       |                          [01;35m[K^~~~~~~[m[K
+[4.392s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:34:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdiscard_x[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.392s]   759 |     bool delay_x,delay_y,delay_z,[01;35m[Kdiscard_x[m[K,discard_y,discard_z;
+[4.393s]       |                                  [01;35m[K^~~~~~~~~[m[K
+[4.393s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:44:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdiscard_y[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.393s]   759 |     bool delay_x,delay_y,delay_z,discard_x,[01;35m[Kdiscard_y[m[K,discard_z;
+[4.393s]       |                                            [01;35m[K^~~~~~~~~[m[K
+[4.393s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:54:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kdiscard_z[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.393s]   759 |     bool delay_x,delay_y,delay_z,discard_x,discard_y,[01;35m[Kdiscard_z[m[K;
+[4.393s]       |                                                      [01;35m[K^~~~~~~~~[m[K
+[4.393s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_surge[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.393s]   765 |     double [01;35m[Kcovar_surge[m[K,covar_sway,covar_heave,slope,intercept;
+[4.393s]       |            [01;35m[K^~~~~~~~~~~[m[K
+[4.393s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:24:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_sway[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.393s]   765 |     double covar_surge,[01;35m[Kcovar_sway[m[K,covar_heave,slope,intercept;
+[4.393s]       |                        [01;35m[K^~~~~~~~~~[m[K
+[4.393s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:35:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kcovar_heave[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.393s]   765 |     double covar_surge,covar_sway,[01;35m[Kcovar_heave[m[K,slope,intercept;
+[4.393s]       |                                   [01;35m[K^~~~~~~~~~~[m[K
+[4.393s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:47:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kslope[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.393s]   765 |     double covar_surge,covar_sway,covar_heave,[01;35m[Kslope[m[K,intercept;
+[4.393s]       |                                               [01;35m[K^~~~~[m[K
+[4.393s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:53:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kintercept[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[4.394s]   765 |     double covar_surge,covar_sway,covar_heave,slope,[01;35m[Kintercept[m[K;
+[4.394s]       |                                                     [01;35m[K^~~~~~~~~[m[K
+[4.394s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:[m[K At global scope:
+[4.394s] [01m[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:810:2:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id at end of input
+[4.394s]   810 | }
+[4.394s]       |  [01;31m[K^[m[K
+[5.096s] gmake[2]: *** [CMakeFiles/kf_3dof.dir/build.make:76: CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o] Error 1
+[5.096s] gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/kf_3dof.dir/all] Error 2
+[5.097s] gmake: *** [Makefile:146: all] Error 2
+[5.100s] Invoked command in '/home/saab/2024_UWR/build/kalman_filter' returned '2': CMAKE_PREFIX_PATH=/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/home/saab/2024_UWR/install/sonar_subs:/opt/ros/humble LD_LIBRARY_PATH=/home/saab/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/saab/2024_UWR/build/kalman_filter -- -j24 -l24

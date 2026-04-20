@@ -1,0 +1,768 @@
+[0.000000] (-) TimerEvent: {}
+[0.000290] (-) JobUnselected: {'identifier': 'adnav-driver'}
+[0.000312] (-) JobUnselected: {'identifier': 'ntrip'}
+[0.000331] (-) JobUnselected: {'identifier': 'sonar_msgs'}
+[0.000489] (-) JobUnselected: {'identifier': 'sonar_subs'}
+[0.000503] (-) JobUnselected: {'identifier': 'xsens_mti_ros2_driver'}
+[0.000518] (kalman_filter) JobQueued: {'identifier': 'kalman_filter', 'dependencies': OrderedDict([('sonar_msgs', '/home/saab/2024_UWR/install/sonar_msgs')])}
+[0.000539] (kalman_filter) JobStarted: {'identifier': 'kalman_filter'}
+[0.008179] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'cmake'}
+[0.008629] (kalman_filter) JobProgress: {'identifier': 'kalman_filter', 'progress': 'build'}
+[0.009103] (kalman_filter) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/saab/2024_UWR/build/kalman_filter', '--', '-j24', '-l24'], 'cwd': '/home/saab/2024_UWR/build/kalman_filter', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_SG:en'), ('USER', 'saab'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/saab/2024_UWR/install/sonar_msgs/lib:/usr/lib/x86_64-linux-gnu:/home/saab/2024_UWR/install/xsens_mti_ros2_driver/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/saab'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/saab'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('SYSTEMD_EXEC_PID', '3129025'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/saab/2024_UWR/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'saab'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'saab'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/saab/.android/emulator:/home/saab/.android/tools:/home/saab/.android/tools/bin:/home/saab/.android/platform-tools:/opt/ros/humble/bin:/home/saab/anaconda3/condabin:/home/saab/.local/bin:/opt/adoptium/jdk-11.0.26+4-jre/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/usr/local/cuda-11.5/bin:/snap/bin:/home/saab/.dotnet/tools'), ('SESSION_MANAGER', 'local/saab-asrockx570:@/tmp/.ICE-unix/3128996,unix/saab-asrockx570:/tmp/.ICE-unix/3128996'), ('XDG_MENU_PREFIX', 'gnome-'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/90439776_73f8_4ef8_a2b3_d9e34151e94d'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('DOTNET_BUNDLE_EXTRACT_BASE_DIR', '/home/saab/.cache/dotnet_bundle_extract'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.209'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/sonar_subs:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/saab/anaconda3/bin/python'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('ANDROID_SDK_ROOT', '/home/saab/.android'), ('QT_IM_MODULE', 'ibus'), ('JAVA_HOME', '/opt/adoptium/jdk-11.0.26+4-jre'), ('PWD', '/home/saab/2024_UWR/build/kalman_filter'), ('SDK', '/home/saab/.android'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/saab/anaconda3/bin/conda'), ('ANDROID_HOME', '/home/saab/.android'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/saab/2024_UWR/install/xsens_mti_ros2_driver/local/lib/python3.10/dist-packages:/home/saab/2024_UWR/build/sonar_subs:/home/saab/2024_UWR/install/sonar_subs/lib/python3.10/site-packages:/home/saab/2024_UWR/install/sonar_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages:/home/saab/anaconda3/pkgs/'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/saab/2024_UWR/install/sonar_msgs:/home/saab/2024_UWR/install/xsens_mti_ros2_driver:/home/saab/2024_UWR/install/kalman_filter:/home/saab/2024_UWR/install/ntrip:/home/saab/2024_UWR/install/adnav-driver:/home/saab/2024_UWR/install/sonar_subs:/opt/ros/humble')]), 'shell': False}
+[0.047314] (kalman_filter) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target kf_3dof\x1b[0m\n'}
+[0.053534] (kalman_filter) StdoutLine: {'line': b'[ 10%] Built target imu_topic\n'}
+[0.054757] (kalman_filter) StdoutLine: {'line': b'[ 21%] Built target gd_conf\n'}
+[0.062261] (kalman_filter) StdoutLine: {'line': b'[ 47%] Built target kf\n'}
+[0.062634] (kalman_filter) StdoutLine: {'line': b'[ 73%] Built target kf_v4\n'}
+[0.078171] (kalman_filter) StdoutLine: {'line': b'[ 78%] \x1b[32mBuilding CXX object CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o\x1b[0m\n'}
+[0.099605] (-) TimerEvent: {}
+[0.199891] (-) TimerEvent: {}
+[0.300172] (-) TimerEvent: {}
+[0.400451] (-) TimerEvent: {}
+[0.500823] (-) TimerEvent: {}
+[0.601278] (-) TimerEvent: {}
+[0.701551] (-) TimerEvent: {}
+[0.801841] (-) TimerEvent: {}
+[0.902098] (-) TimerEvent: {}
+[1.002403] (-) TimerEvent: {}
+[1.102664] (-) TimerEvent: {}
+[1.202929] (-) TimerEvent: {}
+[1.303198] (-) TimerEvent: {}
+[1.403556] (-) TimerEvent: {}
+[1.503852] (-) TimerEvent: {}
+[1.604191] (-) TimerEvent: {}
+[1.704462] (-) TimerEvent: {}
+[1.804705] (-) TimerEvent: {}
+[1.904953] (-) TimerEvent: {}
+[2.005197] (-) TimerEvent: {}
+[2.105464] (-) TimerEvent: {}
+[2.205705] (-) TimerEvent: {}
+[2.305948] (-) TimerEvent: {}
+[2.406192] (-) TimerEvent: {}
+[2.506457] (-) TimerEvent: {}
+[2.606707] (-) TimerEvent: {}
+[2.706970] (-) TimerEvent: {}
+[2.807240] (-) TimerEvent: {}
+[2.907518] (-) TimerEvent: {}
+[3.007767] (-) TimerEvent: {}
+[3.108012] (-) TimerEvent: {}
+[3.208256] (-) TimerEvent: {}
+[3.308523] (-) TimerEvent: {}
+[3.408788] (-) TimerEvent: {}
+[3.509055] (-) TimerEvent: {}
+[3.609293] (-) TimerEvent: {}
+[3.709542] (-) TimerEvent: {}
+[3.726359] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:810:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K}\x1b[m\x1b[K\xe2\x80\x99 at end of input\n'}
+[3.726519] (kalman_filter) StderrLine: {'line': b'  810 | }\n'}
+[3.726573] (kalman_filter) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[3.726620] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:58:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.726666] (kalman_filter) StderrLine: {'line': b'   58 | \x1b[01;36m\x1b[K{\x1b[m\x1b[K\n'}
+[3.726708] (kalman_filter) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^\x1b[m\x1b[K\n'}
+[3.733151] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kkf_node::kf_node()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.733237] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:63:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.733282] (kalman_filter) StderrLine: {'line': b'   63 |         \x1b[01;31m\x1b[Kpose_pub\x1b[m\x1b[K = this->create_publisher<geometry_msgs::msg::PoseStamped>("pose_topic", 10);\n'}
+[3.733331] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.743212] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:64:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconfidence_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.743300] (kalman_filter) StderrLine: {'line': b'   64 |         \x1b[01;31m\x1b[Kconfidence_pub\x1b[m\x1b[K = this->create_publisher<sonar_msgs::msg::ConfScal>("confidence_topic", 10);\n'}
+[3.743361] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.750344] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:65:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kk_vals_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.750418] (kalman_filter) StderrLine: {'line': b'   65 |         \x1b[01;31m\x1b[Kk_vals_pub\x1b[m\x1b[K = this->create_publisher<sonar_msgs::msg::KfValues>("k_vals_topic", 10);\n'}
+[3.750463] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.757511] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:68:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcurrent_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.757589] (kalman_filter) StderrLine: {'line': b'   68 |         \x1b[01;31m\x1b[Kcurrent_time\x1b[m\x1b[K = this->now();\n'}
+[3.757635] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.764303] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:69:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpredict_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.764437] (kalman_filter) StderrLine: {'line': b'   69 |         \x1b[01;31m\x1b[Kpredict_time\x1b[m\x1b[K = this->now();\n'}
+[3.764487] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.769947] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:70:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmeasure_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.770019] (kalman_filter) StderrLine: {'line': b'   70 |         \x1b[01;31m\x1b[Kmeasure_time\x1b[m\x1b[K = this->now();\n'}
+[3.770062] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.775295] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:73:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpath_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.775363] (kalman_filter) StderrLine: {'line': b'   73 |         this->get_parameter("csv_path", \x1b[01;31m\x1b[Kpath_param\x1b[m\x1b[K);\n'}
+[3.775410] (kalman_filter) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.782536] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:106:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.782591] (kalman_filter) StderrLine: {'line': b'  106 |         this->get_parameter("imu_topic", \x1b[01;31m\x1b[Kimu_param\x1b[m\x1b[K);\n'}
+[3.782642] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.786879] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:107:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksonar_param\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.786932] (kalman_filter) StderrLine: {'line': b'  107 |         this->get_parameter("sonar_topic", \x1b[01;31m\x1b[Ksonar_param\x1b[m\x1b[K);\n'}
+[3.786973] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.787326] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:108:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kangle\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktf2::angle\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.787380] (kalman_filter) StderrLine: {'line': b'  108 |         this->get_parameter("angle", \x1b[01;31m\x1b[Kangle\x1b[m\x1b[K);\n'}
+[3.787420] (kalman_filter) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.787458] (kalman_filter) StderrLine: {'line': b'      |                                      \x1b[32m\x1b[Ktf2::angle\x1b[m\x1b[K\n'}
+[3.787496] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.h:19\x1b[m\x1b[K,\n'}
+[3.787534] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:18\x1b[m\x1b[K:\n'}
+[3.787581] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.hpp:449:1:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktf2::angle\x1b[m\x1b[K\xe2\x80\x99 declared here\n'}
+[3.787622] (kalman_filter) StderrLine: {'line': b'  449 | \x1b[01;36m\x1b[Kangle\x1b[m\x1b[K(const Quaternion& q1, const Quaternion& q2)\n'}
+[3.787669] (kalman_filter) StderrLine: {'line': b'      | \x1b[01;36m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.790350] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:109:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.790415] (kalman_filter) StderrLine: {'line': b'  109 |         this->get_parameter("without_measurement", \x1b[01;31m\x1b[Kstart\x1b[m\x1b[K);\n'}
+[3.790459] (kalman_filter) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.794190] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:110:46:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Koverride\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.794244] (kalman_filter) StderrLine: {'line': b'  110 |         this->get_parameter("bias_override", \x1b[01;31m\x1b[Koverride\x1b[m\x1b[K);\n'}
+[3.794285] (kalman_filter) StderrLine: {'line': b'      |                                              \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.801496] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:112:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.801570] (kalman_filter) StderrLine: {'line': b'  112 |         this->get_parameter("expected_difference_x", \x1b[01;31m\x1b[Kexpected_difference_x\x1b[m\x1b[K);\n'}
+[3.801616] (kalman_filter) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.809241] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:113:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.809328] (kalman_filter) StderrLine: {'line': b'  113 |         this->get_parameter("expected_difference_y", \x1b[01;31m\x1b[Kexpected_difference_y\x1b[m\x1b[K);\n'}
+[3.809386] (kalman_filter) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.809593] (-) TimerEvent: {}
+[3.816607] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:114:54:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.816680] (kalman_filter) StderrLine: {'line': b'  114 |         this->get_parameter("expected_difference_z", \x1b[01;31m\x1b[Kexpected_difference_z\x1b[m\x1b[K);\n'}
+[3.816727] (kalman_filter) StderrLine: {'line': b'      |                                                      \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.821671] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:116:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktolerance_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.821767] (kalman_filter) StderrLine: {'line': b'  116 |         this->get_parameter("tolerance_x", \x1b[01;31m\x1b[Ktolerance_x\x1b[m\x1b[K);\n'}
+[3.821837] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.826404] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:117:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktolerance_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.826480] (kalman_filter) StderrLine: {'line': b'  117 |         this->get_parameter("tolerance_y", \x1b[01;31m\x1b[Ktolerance_y\x1b[m\x1b[K);\n'}
+[3.826527] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.830905] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:118:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktolerance_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.830975] (kalman_filter) StderrLine: {'line': b'  118 |         this->get_parameter("tolerance_z", \x1b[01;31m\x1b[Ktolerance_z\x1b[m\x1b[K);\n'}
+[3.831021] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.835383] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:120:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_low_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.835438] (kalman_filter) StderrLine: {'line': b'  120 |         this->get_parameter("covar_low_x", \x1b[01;31m\x1b[Kcovar_low_x\x1b[m\x1b[K);\n'}
+[3.835481] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.839813] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:121:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_low_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.839874] (kalman_filter) StderrLine: {'line': b'  121 |         this->get_parameter("covar_low_y", \x1b[01;31m\x1b[Kcovar_low_y\x1b[m\x1b[K);\n'}
+[3.839918] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.844223] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:122:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_low_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.844280] (kalman_filter) StderrLine: {'line': b'  122 |         this->get_parameter("covar_low_z", \x1b[01;31m\x1b[Kcovar_low_z\x1b[m\x1b[K);\n'}
+[3.844331] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.848836] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:124:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_high_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.848891] (kalman_filter) StderrLine: {'line': b'  124 |         this->get_parameter("covar_high_x", \x1b[01;31m\x1b[Kcovar_high_x\x1b[m\x1b[K);\n'}
+[3.848933] (kalman_filter) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.853442] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:125:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_high_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.853497] (kalman_filter) StderrLine: {'line': b'  125 |         this->get_parameter("covar_high_y", \x1b[01;31m\x1b[Kcovar_high_y\x1b[m\x1b[K);\n'}
+[3.853540] (kalman_filter) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.858057] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:126:45:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_high_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.858117] (kalman_filter) StderrLine: {'line': b'  126 |         this->get_parameter("covar_high_z", \x1b[01;31m\x1b[Kcovar_high_z\x1b[m\x1b[K);\n'}
+[3.858161] (kalman_filter) StderrLine: {'line': b'      |                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.862520] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:128:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.862604] (kalman_filter) StderrLine: {'line': b'  128 |         this->get_parameter("persist_x", \x1b[01;31m\x1b[Kpersist_x\x1b[m\x1b[K);\n'}
+[3.862647] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.867028] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:129:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.867098] (kalman_filter) StderrLine: {'line': b'  129 |         this->get_parameter("persist_y", \x1b[01;31m\x1b[Kpersist_y\x1b[m\x1b[K);\n'}
+[3.867142] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.871216] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:130:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.871272] (kalman_filter) StderrLine: {'line': b'  130 |         this->get_parameter("persist_z", \x1b[01;31m\x1b[Kpersist_z\x1b[m\x1b[K);\n'}
+[3.871314] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.875299] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:132:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdiscard_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.875367] (kalman_filter) StderrLine: {'line': b'  132 |         this->get_parameter("discard_x", \x1b[01;31m\x1b[Kdiscard_x\x1b[m\x1b[K);\n'}
+[3.875412] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.879290] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:133:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdiscard_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.879350] (kalman_filter) StderrLine: {'line': b'  133 |         this->get_parameter("discard_y", \x1b[01;31m\x1b[Kdiscard_y\x1b[m\x1b[K);\n'}
+[3.879405] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.883255] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:134:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdiscard_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.883308] (kalman_filter) StderrLine: {'line': b'  134 |         this->get_parameter("discard_z", \x1b[01;31m\x1b[Kdiscard_z\x1b[m\x1b[K);\n'}
+[3.883358] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.887306] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:136:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kangle_rad\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.887362] (kalman_filter) StderrLine: {'line': b'  136 |         \x1b[01;31m\x1b[Kangle_rad\x1b[m\x1b[K=angle*M_PI/180;\n'}
+[3.887406] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.891478] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:138:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krot_matrix\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.891538] (kalman_filter) StderrLine: {'line': b'  138 |         \x1b[01;31m\x1b[Krot_matrix\x1b[m\x1b[K<<cos(angle_rad),-sin((angle_rad)),0,sin((angle_rad)),cos((angle_rad)),0,0,0,1;\n'}
+[3.891583] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.895813] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:141:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksample_size\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.895879] (kalman_filter) StderrLine: {'line': b'  141 |         \x1b[01;31m\x1b[Ksample_size\x1b[m\x1b[K = 10; // Define the sample size here\n'}
+[3.895922] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.898507] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:144:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.898564] (kalman_filter) StderrLine: {'line': b'  144 |        \x1b[01;31m\x1b[Kauv\x1b[m\x1b[K=KalmanFilter_3dof();\n'}
+[3.898606] (kalman_filter) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.905223] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:154:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kimu_subscriber_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcount_subscribers\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.905308] (kalman_filter) StderrLine: {'line': b'  154 |        \x1b[01;31m\x1b[Kimu_subscriber_\x1b[m\x1b[K = this->create_subscription<sensor_msgs::msg::Imu>(\n'}
+[3.905371] (kalman_filter) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.905416] (kalman_filter) StderrLine: {'line': b'      |        \x1b[32m\x1b[Kcount_subscribers\x1b[m\x1b[K\n'}
+[3.909659] (-) TimerEvent: {}
+[3.914765] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:163:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksonar_subscriber_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kcount_subscribers\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.914849] (kalman_filter) StderrLine: {'line': b'  163 |        \x1b[01;31m\x1b[Ksonar_subscriber_\x1b[m\x1b[K = this->create_subscription<sonar_msgs::msg::ThreeSonarDepth>(\n'}
+[3.914898] (kalman_filter) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.914942] (kalman_filter) StderrLine: {'line': b'      |        \x1b[32m\x1b[Kcount_subscribers\x1b[m\x1b[K\n'}
+[3.914984] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:164:42:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksonar_callback\x1b[m\x1b[K\xe2\x80\x99 is not a member of \xe2\x80\x98\x1b[01m\x1b[Kkf_node\x1b[m\x1b[K\xe2\x80\x99\n'}
+[3.915028] (kalman_filter) StderrLine: {'line': b'  164 |      sonar_param, 1, std::bind(&kf_node::\x1b[01;31m\x1b[Ksonar_callback\x1b[m\x1b[K, this, std::placeholders::_1));\n'}
+[3.915069] (kalman_filter) StderrLine: {'line': b'      |                                          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.920330] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:174:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstorage_options_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Knode_options_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.920400] (kalman_filter) StderrLine: {'line': b'  174 |         \x1b[01;31m\x1b[Kstorage_options_\x1b[m\x1b[K.uri = bag_file_name;  // The name of the bag file\n'}
+[3.920453] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.920502] (kalman_filter) StderrLine: {'line': b'      |         \x1b[32m\x1b[Knode_options_\x1b[m\x1b[K\n'}
+[3.927093] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:178:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconverter_options_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.927165] (kalman_filter) StderrLine: {'line': b'  178 |         \x1b[01;31m\x1b[Kconverter_options_\x1b[m\x1b[K.input_serialization_format = "cdr";\n'}
+[3.927223] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.930567] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:182:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwriter_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwrite\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[3.930625] (kalman_filter) StderrLine: {'line': b'  182 |         \x1b[01;31m\x1b[Kwriter_\x1b[m\x1b[K = std::make_shared<rosbag2_cpp::Writer>();\n'}
+[3.930676] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.930718] (kalman_filter) StderrLine: {'line': b'      |         \x1b[32m\x1b[Kwrite\x1b[m\x1b[K\n'}
+[3.935979] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:189:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kslope\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.936035] (kalman_filter) StderrLine: {'line': b'  189 |         \x1b[01;31m\x1b[Kslope\x1b[m\x1b[K=(1-1000)/(100-0);\n'}
+[3.936077] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.940014] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:190:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kintercept\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.940073] (kalman_filter) StderrLine: {'line': b'  190 |         \x1b[01;31m\x1b[Kintercept\x1b[m\x1b[K=1000;\n'}
+[3.940116] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.944600] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid kf_node::sonar_callback2(const ThreeSonarDepth&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.944655] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:197:8:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Koverride\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.944697] (kalman_filter) StderrLine: {'line': b'  197 |     if(\x1b[01;31m\x1b[Koverride\x1b[m\x1b[K)\n'}
+[3.944738] (kalman_filter) StderrLine: {'line': b'      |        \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[3.947569] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:198:6:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbias\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.947623] (kalman_filter) StderrLine: {'line': b'  198 |     {\x1b[01;31m\x1b[Kbias\x1b[m\x1b[K=false;RCLCPP_INFO(this->get_logger(), "Callback triggered!");}\n'}
+[3.947666] (kalman_filter) StderrLine: {'line': b'      |      \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.947822] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:194:65:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[3.947870] (kalman_filter) StderrLine: {'line': b'  194 |    void sonar_callback2(\x1b[01;35m\x1b[Kconst sonar_msgs::msg::ThreeSonarDepth& msg\x1b[m\x1b[K)\n'}
+[3.947911] (kalman_filter) StderrLine: {'line': b'      |                         \x1b[01;35m\x1b[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\x1b[m\x1b[K\n'}
+[3.951892] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid kf_node::imu_callback2(const Vector3Stamped&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[3.951960] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:207:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbef_rotate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.952005] (kalman_filter) StderrLine: {'line': b'  207 |         \x1b[01;31m\x1b[Kbef_rotate\x1b[m\x1b[K<<imu_msg.vector.x,(imu_msg.vector.y),1;\n'}
+[3.952056] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.955947] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:208:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaft_rotate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.956008] (kalman_filter) StderrLine: {'line': b'  208 |         \x1b[01;31m\x1b[Kaft_rotate\x1b[m\x1b[K=rot_matrix*bef_rotate;\n'}
+[3.956051] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.960116] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:208:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krot_matrix\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.960171] (kalman_filter) StderrLine: {'line': b'  208 |         aft_rotate=\x1b[01;31m\x1b[Krot_matrix\x1b[m\x1b[K*bef_rotate;\n'}
+[3.960213] (kalman_filter) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.965843] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:209:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpredict_time_now\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.965896] (kalman_filter) StderrLine: {'line': b'  209 |         \x1b[01;31m\x1b[Kpredict_time_now\x1b[m\x1b[K = this->now();\n'}
+[3.965938] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.969754] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:221:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.969858] (kalman_filter) StderrLine: {'line': b'  221 |         if (\x1b[01;31m\x1b[Kstart\x1b[m\x1b[K) {\n'}
+[3.969905] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.973274] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:223:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbias\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.973350] (kalman_filter) StderrLine: {'line': b'  223 |                if (!\x1b[01;31m\x1b[Kbias\x1b[m\x1b[K) {\n'}
+[3.973399] (kalman_filter) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[3.976347] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:225:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.976420] (kalman_filter) StderrLine: {'line': b'  225 |             \x1b[01;31m\x1b[Kauv\x1b[m\x1b[K.set_accel_bias(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);\n'}
+[3.976466] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.980630] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:230:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv_accel\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.980687] (kalman_filter) StderrLine: {'line': b'  230 |             \x1b[01;31m\x1b[Kauv_accel\x1b[m\x1b[K=auv.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);\n'}
+[3.980738] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[3.983468] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:230:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.983522] (kalman_filter) StderrLine: {'line': b'  230 |             auv_accel=\x1b[01;31m\x1b[Kauv\x1b[m\x1b[K.set_accel(aft_rotate(0),aft_rotate(1),imu_msg.vector.z);\n'}
+[3.983563] (kalman_filter) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[3.986888] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:231:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstate_p\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.986941] (kalman_filter) StderrLine: {'line': b'  231 |             \x1b[01;31m\x1b[Kstate_p\x1b[m\x1b[K=auv.prediction((predict_time_now - predict_time).seconds());\n'}
+[3.986983] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[3.991463] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:231:56:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpredict_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.991522] (kalman_filter) StderrLine: {'line': b'  231 |             state_p=auv.prediction((predict_time_now - \x1b[01;31m\x1b[Kpredict_time\x1b[m\x1b[K).seconds());\n'}
+[3.991566] (kalman_filter) StderrLine: {'line': b'      |                                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[3.994810] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:254:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.994877] (kalman_filter) StderrLine: {'line': b'  254 |             pose_msg.pose.orientation = tf2::toMsg(\x1b[01;31m\x1b[Kq_new\x1b[m\x1b[K * q_orig);\n'}
+[3.994922] (kalman_filter) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[3.998039] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:254:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_orig\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[3.998094] (kalman_filter) StderrLine: {'line': b'  254 |             pose_msg.pose.orientation = tf2::toMsg(q_new * \x1b[01;31m\x1b[Kq_orig\x1b[m\x1b[K);\n'}
+[3.998136] (kalman_filter) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.001171] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:262:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwriter_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwrite\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.001233] (kalman_filter) StderrLine: {'line': b'  262 |             \x1b[01;31m\x1b[Kwriter_\x1b[m\x1b[K->write(imu_msg, "IMU_raw", predict_time_now);\n'}
+[4.001276] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.001322] (kalman_filter) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kwrite\x1b[m\x1b[K\n'}
+[4.004780] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:279:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.004852] (kalman_filter) StderrLine: {'line': b'  279 |             \x1b[01;31m\x1b[Kpose_pub\x1b[m\x1b[K->publish(pose_msg);\n'}
+[4.004894] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.009740] (-) TimerEvent: {}
+[4.010073] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid kf_node::imu_callback(const Imu&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[4.010199] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:295:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbef_rotate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.010257] (kalman_filter) StderrLine: {'line': b'  295 |         \x1b[01;31m\x1b[Kbef_rotate\x1b[m\x1b[K<<(imu_msg.linear_acceleration.x),(imu_msg.linear_acceleration.y),1;\n'}
+[4.010307] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.015246] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:298:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kaft_rotate\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.015350] (kalman_filter) StderrLine: {'line': b'  298 |         \x1b[01;31m\x1b[Kaft_rotate\x1b[m\x1b[K=rot_matrix*bef_rotate;\n'}
+[4.015402] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.020714] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:298:20:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krot_matrix\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.020807] (kalman_filter) StderrLine: {'line': b'  298 |         aft_rotate=\x1b[01;31m\x1b[Krot_matrix\x1b[m\x1b[K*bef_rotate;\n'}
+[4.020857] (kalman_filter) StderrLine: {'line': b'      |                    \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.027384] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:299:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpredict_time_now\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.027458] (kalman_filter) StderrLine: {'line': b'  299 |         \x1b[01;31m\x1b[Kpredict_time_now\x1b[m\x1b[K = this->now();\n'}
+[4.027505] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.031798] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:301:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Krot_bias\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.031854] (kalman_filter) StderrLine: {'line': b'  301 |         if(!\x1b[01;31m\x1b[Krot_bias\x1b[m\x1b[K)\n'}
+[4.031896] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.035914] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:303:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_orig\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.035985] (kalman_filter) StderrLine: {'line': b'  303 |             tf2::convert(imu_msg.orientation, \x1b[01;31m\x1b[Kq_orig\x1b[m\x1b[K);\n'}
+[4.036028] (kalman_filter) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.039292] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:313:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.039354] (kalman_filter) StderrLine: {'line': b'  313 |         if (\x1b[01;31m\x1b[Kstart\x1b[m\x1b[K) {\n'}
+[4.039411] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.042349] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:315:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbias\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.042409] (kalman_filter) StderrLine: {'line': b'  315 |                if (!\x1b[01;31m\x1b[Kbias\x1b[m\x1b[K) {\n'}
+[4.042452] (kalman_filter) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[4.045094] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:319:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.045147] (kalman_filter) StderrLine: {'line': b'  319 |             \x1b[01;31m\x1b[Kauv\x1b[m\x1b[K.set_accel_bias(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);\n'}
+[4.045187] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.050055] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[4.050108] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[4.050149] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[4.050189] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[4.050228] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[4.050266] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.050305] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.050354] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[4.050404] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[4.050445] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.050483] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[4.050529] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[4.050568] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:324:73:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpredict_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.050608] (kalman_filter) StderrLine: {'line': b'  324 |         RCLCPP_INFO(this->get_logger(), "Time: %lf",(predict_time_now - \x1b[01;31m\x1b[Kpredict_time\x1b[m\x1b[K).seconds());\n'}
+[4.050646] (kalman_filter) StderrLine: {'line': b'      |                                                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.054571] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:325:40:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpredict_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.054624] (kalman_filter) StderrLine: {'line': b'  325 |                 if((predict_time_now - \x1b[01;31m\x1b[Kpredict_time\x1b[m\x1b[K).seconds()>0.04)\n'}
+[4.054674] (kalman_filter) StderrLine: {'line': b'      |                                        \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.058525] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:327:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv_accel\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.058584] (kalman_filter) StderrLine: {'line': b'  327 |             \x1b[01;31m\x1b[Kauv_accel\x1b[m\x1b[K=auv.set_accel(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);\n'}
+[4.058626] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.061208] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:327:23:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.061260] (kalman_filter) StderrLine: {'line': b'  327 |             auv_accel=\x1b[01;31m\x1b[Kauv\x1b[m\x1b[K.set_accel(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);\n'}
+[4.061301] (kalman_filter) StderrLine: {'line': b'      |                       \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.064544] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:330:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstate_p\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.064597] (kalman_filter) StderrLine: {'line': b'  330 |             \x1b[01;31m\x1b[Kstate_p\x1b[m\x1b[K=auv.prediction(0.025);\n'}
+[4.064638] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.067811] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:354:47:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.067862] (kalman_filter) StderrLine: {'line': b'  354 |             tf2::convert(imu_msg.orientation, \x1b[01;31m\x1b[Kq_new\x1b[m\x1b[K);\n'}
+[4.067902] (kalman_filter) StderrLine: {'line': b'      |                                               \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.071025] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:355:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_orig\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.071080] (kalman_filter) StderrLine: {'line': b'  355 |             pose_msg.pose.orientation = tf2::toMsg(q_new * \x1b[01;31m\x1b[Kq_orig\x1b[m\x1b[K);\n'}
+[4.071121] (kalman_filter) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.075126] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:363:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KP_vals\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.075220] (kalman_filter) StderrLine: {'line': b'  363 |             \x1b[01;31m\x1b[KP_vals\x1b[m\x1b[K.header.stamp= imu_msg.header.stamp;\n'}
+[4.075263] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.079921] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:364:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KP_matrix_1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.079996] (kalman_filter) StderrLine: {'line': b'  364 |             \x1b[01;31m\x1b[KP_matrix_1\x1b[m\x1b[K=auv.get_P();\n'}
+[4.080043] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.083292] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:372:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwriter_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwrite\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.083359] (kalman_filter) StderrLine: {'line': b'  372 |             \x1b[01;31m\x1b[Kwriter_\x1b[m\x1b[K->write(P_vals,"P_values",predict_time_now);\n'}
+[4.083407] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.083449] (kalman_filter) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kwrite\x1b[m\x1b[K\n'}
+[4.087029] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:391:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.087084] (kalman_filter) StderrLine: {'line': b'  391 |             \x1b[01;31m\x1b[Kpose_pub\x1b[m\x1b[K->publish(pose_msg);\n'}
+[4.087126] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.087316] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:393:16:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kiterator\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.087381] (kalman_filter) StderrLine: {'line': b'  393 |             if(\x1b[01;31m\x1b[Kiterator\x1b[m\x1b[K<sample_size)\n'}
+[4.087440] (kalman_filter) StderrLine: {'line': b'      |                \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.087487] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:393:16:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[4.087612] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/c++/11/bits/stl_algobase.h:65\x1b[m\x1b[K,\n'}
+[4.087657] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/c++/11/memory:63\x1b[m\x1b[K,\n'}
+[4.087698] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:153\x1b[m\x1b[K,\n'}
+[4.087739] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[4.087778] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/c++/11/bits/stl_iterator_base_types.h:127:12:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd::iterator\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.087818] (kalman_filter) StderrLine: {'line': b'  127 |     struct \x1b[01;36m\x1b[Kiterator\x1b[m\x1b[K\n'}
+[4.087856] (kalman_filter) StderrLine: {'line': b'      |            \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.087899] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/usr/include/yaml-cpp/node/node.h:16\x1b[m\x1b[K,\n'}
+[4.087939] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/usr/include/yaml-cpp/yaml.h:16\x1b[m\x1b[K,\n'}
+[4.087977] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rosbag2_storage/rosbag2_storage/yaml.hpp:27\x1b[m\x1b[K,\n'}
+[4.088015] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rosbag2_storage/rosbag2_storage/storage_options.hpp:22\x1b[m\x1b[K,\n'}
+[4.088054] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer_interfaces/base_writer_interface.hpp:25\x1b[m\x1b[K,\n'}
+[4.088092] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writers/sequential_writer.hpp:31\x1b[m\x1b[K,\n'}
+[4.088130] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rosbag2_cpp/rosbag2_cpp/writer.hpp:31\x1b[m\x1b[K,\n'}
+[4.088175] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:47\x1b[m\x1b[K:\n'}
+[4.088215] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/usr/include/yaml-cpp/node/detail/iterator_fwd.h:23:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[KYAML::iterator\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.088254] (kalman_filter) StderrLine: {'line': b'   23 | using \x1b[01;36m\x1b[Kiterator\x1b[m\x1b[K = detail::iterator_base<detail::iterator_value>;\n'}
+[4.088293] (kalman_filter) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.091827] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:393:25:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksample_size\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.091883] (kalman_filter) StderrLine: {'line': b'  393 |             if(iterator<\x1b[01;31m\x1b[Ksample_size\x1b[m\x1b[K)\n'}
+[4.091925] (kalman_filter) StderrLine: {'line': b'      |                         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.094779] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:400:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kbias\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.094903] (kalman_filter) StderrLine: {'line': b'  400 |                 \x1b[01;31m\x1b[Kbias\x1b[m\x1b[K=false;\n'}
+[4.094950] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[4.094994] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:405:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[Kcatch\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.095036] (kalman_filter) StderrLine: {'line': b'  405 |     } \x1b[01;31m\x1b[Kcatch\x1b[m\x1b[K (const std::exception& e) {\n'}
+[4.095077] (kalman_filter) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.095116] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[Kcatch\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Ksonar_callback\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.095156] (kalman_filter) StderrLine: {'line': b'  412 |     void \x1b[01;31m\x1b[Ksonar_callback\x1b[m\x1b[K(const sonar_msgs::msg::ThreeSonarDepth& msg)\n'}
+[4.095194] (kalman_filter) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.095233] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Ksonar_callback\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.095273] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected type-specifier before \xe2\x80\x98\x1b[01m\x1b[Ksonar_callback\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.095312] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:414:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K)\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[K{\x1b[m\x1b[K\xe2\x80\x99 token\n'}
+[4.095363] (kalman_filter) StderrLine: {'line': b'  414 |     \x1b[01;31m\x1b[K{\x1b[m\x1b[K\n'}
+[4.095406] (kalman_filter) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.095445] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:412:10:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kto match this \xe2\x80\x98\x1b[01m\x1b[K(\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.095493] (kalman_filter) StderrLine: {'line': b'  412 |     void \x1b[01;36m\x1b[Ksonar_callback\x1b[m\x1b[K(const sonar_msgs::msg::ThreeSonarDepth& msg)\n'}
+[4.095534] (kalman_filter) StderrLine: {'line': b'      |          \x1b[01;36m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.100669] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:424:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmeasure_time_now\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.100726] (kalman_filter) StderrLine: {'line': b'  424 |         \x1b[01;31m\x1b[Kmeasure_time_now\x1b[m\x1b[K=msg.header.stamp;\n'}
+[4.100775] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.100888] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:424:26:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmsg\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.100946] (kalman_filter) StderrLine: {'line': b'  424 |         measure_time_now=\x1b[01;31m\x1b[Kmsg\x1b[m\x1b[K.header.stamp;\n'}
+[4.100998] (kalman_filter) StderrLine: {'line': b'      |                          \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.101049] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:424:26:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Ksuggested alternatives:\n'}
+[4.101167] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/duration.hpp:7\x1b[m\x1b[K,\n'}
+[4.101219] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/duration.hpp:20\x1b[m\x1b[K,\n'}
+[4.101264] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/qos.hpp:20\x1b[m\x1b[K,\n'}
+[4.101308] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_graph_interface.hpp:33\x1b[m\x1b[K,\n'}
+[4.101560] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:42\x1b[m\x1b[K,\n'}
+[4.101616] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[4.101658] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[4.101698] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[4.101737] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.101776] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.101816] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[4.101856] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[4.101896] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.101935] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[4.101975] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[4.102021] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/duration__struct.hpp:28:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kbuiltin_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.102062] (kalman_filter) StderrLine: {'line': b'   28 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.102100] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.102138] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/set_parameters_result.hpp:7\x1b[m\x1b[K,\n'}
+[4.102176] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:28\x1b[m\x1b[K,\n'}
+[4.102215] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription_options.hpp:30\x1b[m\x1b[K,\n'}
+[4.102253] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:45\x1b[m\x1b[K,\n'}
+[4.102292] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[4.102337] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[4.102385] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.102425] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.102464] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[4.102502] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[4.102540] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.102578] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[4.102616] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[4.102653] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:28:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Krcl_interfaces::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.102691] (kalman_filter) StderrLine: {'line': b'   28 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.102728] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.102766] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/metrics_message__struct.hpp:24\x1b[m\x1b[K,\n'}
+[4.102804] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/metrics_message.hpp:7\x1b[m\x1b[K,\n'}
+[4.102843] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:21\x1b[m\x1b[K,\n'}
+[4.102892] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:23\x1b[m\x1b[K,\n'}
+[4.102936] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:50\x1b[m\x1b[K,\n'}
+[4.102980] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:25\x1b[m\x1b[K,\n'}
+[4.103018] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[4.103055] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.103093] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.103130] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[4.103168] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[4.103206] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.103243] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[4.103280] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[4.103317] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:28:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstatistics_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.103366] (kalman_filter) StderrLine: {'line': b'   28 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.103408] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.103446] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.hpp:21\x1b[m\x1b[K,\n'}
+[4.103484] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.hpp:7\x1b[m\x1b[K,\n'}
+[4.103522] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:8\x1b[m\x1b[K:\n'}
+[4.103559] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:32:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kstd_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.103597] (kalman_filter) StderrLine: {'line': b'   32 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.103634] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.103671] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/three_sonar_depth.hpp:7\x1b[m\x1b[K,\n'}
+[4.103709] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:8\x1b[m\x1b[K:\n'}
+[4.103746] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/install/sonar_msgs/include/sonar_msgs/sonar_msgs/msg/detail/three_sonar_depth__struct.hpp:32:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksonar_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.103784] (kalman_filter) StderrLine: {'line': b'   32 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.103821] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.103858] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:23\x1b[m\x1b[K,\n'}
+[4.103903] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7\x1b[m\x1b[K,\n'}
+[4.103943] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:13\x1b[m\x1b[K:\n'}
+[4.103981] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/quaternion__struct.hpp:28:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.104024] (kalman_filter) StderrLine: {'line': b'   28 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.104065] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.104106] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/imu.hpp:7\x1b[m\x1b[K,\n'}
+[4.104147] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:13\x1b[m\x1b[K:\n'}
+[4.104188] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/imu__struct.hpp:37:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ksensor_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.104230] (kalman_filter) StderrLine: {'line': b'   37 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.104271] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.104312] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/tf_message.hpp:7\x1b[m\x1b[K,\n'}
+[4.104394] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.hpp:45\x1b[m\x1b[K,\n'}
+[4.104438] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/tf2_ros/tf2_ros/transform_broadcaster.h:36\x1b[m\x1b[K,\n'}
+[4.104485] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:34\x1b[m\x1b[K:\n'}
+[4.104526] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/opt/ros/humble/include/tf2_msgs/tf2_msgs/msg/detail/tf_message__struct.hpp:32:11:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Ktf2_msgs::msg\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.104572] (kalman_filter) StderrLine: {'line': b'   32 | namespace \x1b[01;36m\x1b[Kmsg\x1b[m\x1b[K\n'}
+[4.104612] (kalman_filter) StderrLine: {'line': b'      |           \x1b[01;36m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.104650] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:429:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.104695] (kalman_filter) StderrLine: {'line': b'  429 |         if (!\x1b[01;31m\x1b[Kstart\x1b[m\x1b[K)\n'}
+[4.104736] (kalman_filter) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.106772] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:431:9:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.106834] (kalman_filter) StderrLine: {'line': b'  431 |         \x1b[01;31m\x1b[Kauv\x1b[m\x1b[K.set_dist_init(msg.distance_1/ 1000,msg.distance_2/1000,msg.distance_3/1000);\n'}
+[4.106878] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.109795] (-) TimerEvent: {}
+[4.111287] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:451:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmeasure_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.111362] (kalman_filter) StderrLine: {'line': b'  451 |             \x1b[01;31m\x1b[Kmeasure_time\x1b[m\x1b[K = measure_time_now;\n'}
+[4.111409] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.116448] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:452:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpredict_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.116560] (kalman_filter) StderrLine: {'line': b'  452 |             \x1b[01;31m\x1b[Kpredict_time\x1b[m\x1b[K = measure_time_now;\n'}
+[4.116609] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.120882] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:470:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kauv\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.120968] (kalman_filter) StderrLine: {'line': b'  470 |             \x1b[01;31m\x1b[Kauv\x1b[m\x1b[K.set_dist(msg.distance_1/ 1000,msg.distance_2/1000,msg.distance_3/1000);\n'}
+[4.121015] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~\x1b[m\x1b[K\n'}
+[4.128900] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:496:78:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.128981] (kalman_filter) StderrLine: {'line': b'  496 |             auto e1=auv.moving_avg_surge.CalculateConfidenceLevelsVariation2(\x1b[01;31m\x1b[Kexpected_difference_x\x1b[m\x1b[K);\n'}
+[4.129030] (kalman_filter) StderrLine: {'line': b'      |                                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.136551] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:497:77:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.136626] (kalman_filter) StderrLine: {'line': b'  497 |             auto e2=auv.moving_avg_sway.CalculateConfidenceLevelsVariation2(\x1b[01;31m\x1b[Kexpected_difference_y\x1b[m\x1b[K);\n'}
+[4.136673] (kalman_filter) StderrLine: {'line': b'      |                                                                             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.144274] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:498:78:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.144356] (kalman_filter) StderrLine: {'line': b'  498 |             auto e3=auv.moving_avg_heave.CalculateConfidenceLevelsVariation2(\x1b[01;31m\x1b[Kexpected_difference_z\x1b[m\x1b[K);\n'}
+[4.144406] (kalman_filter) StderrLine: {'line': b'      |                                                                              \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.147193] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:499:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kc1\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ky1\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.147259] (kalman_filter) StderrLine: {'line': b'  499 |             \x1b[01;31m\x1b[Kc1\x1b[m\x1b[K.header.stamp = msg.header.stamp;\n'}
+[4.147305] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~\x1b[m\x1b[K\n'}
+[4.147357] (kalman_filter) StderrLine: {'line': b'      |             \x1b[32m\x1b[Ky1\x1b[m\x1b[K\n'}
+[4.152033] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:510:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktolerance_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.152099] (kalman_filter) StderrLine: {'line': b'  510 |             if(c1.confidence_1>\x1b[01;31m\x1b[Ktolerance_x\x1b[m\x1b[K && ((persist_x_now==0)||(persist_x_now>persist_x)))\n'}
+[4.152145] (kalman_filter) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.157149] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:510:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_x_now\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.157213] (kalman_filter) StderrLine: {'line': b'  510 |             if(c1.confidence_1>tolerance_x && ((\x1b[01;31m\x1b[Kpersist_x_now\x1b[m\x1b[K==0)||(persist_x_now>persist_x)))\n'}
+[4.157258] (kalman_filter) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.161218] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:510:83:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.161289] (kalman_filter) StderrLine: {'line': b'  510 |             if(c1.confidence_1>tolerance_x && ((persist_x_now==0)||(persist_x_now>\x1b[01;31m\x1b[Kpersist_x\x1b[m\x1b[K)))\n'}
+[4.161340] (kalman_filter) StderrLine: {'line': b'      |                                                                                   \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.165589] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:512:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_surge\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.165646] (kalman_filter) StderrLine: {'line': b'  512 |                 \x1b[01;31m\x1b[Kcovar_surge\x1b[m\x1b[K=covar_low_x;\n'}
+[4.165690] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.170023] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:512:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_low_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.170086] (kalman_filter) StderrLine: {'line': b'  512 |                 covar_surge=\x1b[01;31m\x1b[Kcovar_low_x\x1b[m\x1b[K;\n'}
+[4.170132] (kalman_filter) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.173613] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:513:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdelay_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.173675] (kalman_filter) StderrLine: {'line': b'  513 |                 \x1b[01;31m\x1b[Kdelay_x\x1b[m\x1b[K=false;\n'}
+[4.173718] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.177177] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:518:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdelay_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.177233] (kalman_filter) StderrLine: {'line': b'  518 |                 \x1b[01;31m\x1b[Kdelay_x\x1b[m\x1b[K=true;\n'}
+[4.177276] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.182317] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:519:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_surge\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.182455] (kalman_filter) StderrLine: {'line': b'  519 |                 \x1b[01;31m\x1b[Kcovar_surge\x1b[m\x1b[K=covar_high_x;\n'}
+[4.182506] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.187480] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:519:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_high_x\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.187543] (kalman_filter) StderrLine: {'line': b'  519 |                 covar_surge=\x1b[01;31m\x1b[Kcovar_high_x\x1b[m\x1b[K;\n'}
+[4.187589] (kalman_filter) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.192141] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:527:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktolerance_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.192196] (kalman_filter) StderrLine: {'line': b'  527 |             if(c1.confidence_2>\x1b[01;31m\x1b[Ktolerance_y\x1b[m\x1b[K && ((persist_y_now==0)||(persist_y_now>persist_y)))\n'}
+[4.192240] (kalman_filter) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.197493] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:527:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_y_now\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.197568] (kalman_filter) StderrLine: {'line': b'  527 |             if(c1.confidence_2>tolerance_y && ((\x1b[01;31m\x1b[Kpersist_y_now\x1b[m\x1b[K==0)||(persist_y_now>persist_y)))\n'}
+[4.197616] (kalman_filter) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.201640] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:527:83:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.201701] (kalman_filter) StderrLine: {'line': b'  527 |             if(c1.confidence_2>tolerance_y && ((persist_y_now==0)||(persist_y_now>\x1b[01;31m\x1b[Kpersist_y\x1b[m\x1b[K)))\n'}
+[4.201745] (kalman_filter) StderrLine: {'line': b'      |                                                                                   \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.205919] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:529:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_sway\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.205982] (kalman_filter) StderrLine: {'line': b'  529 |                 \x1b[01;31m\x1b[Kcovar_sway\x1b[m\x1b[K=covar_low_y;\n'}
+[4.206027] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.209858] (-) TimerEvent: {}
+[4.210348] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:529:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_low_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.210411] (kalman_filter) StderrLine: {'line': b'  529 |                 covar_sway=\x1b[01;31m\x1b[Kcovar_low_y\x1b[m\x1b[K;\n'}
+[4.210457] (kalman_filter) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.214869] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:537:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_sway\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.214933] (kalman_filter) StderrLine: {'line': b'  537 |                 \x1b[01;31m\x1b[Kcovar_sway\x1b[m\x1b[K=covar_high_y; //Add delay -->flag\n'}
+[4.214976] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.219602] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:537:28:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_high_y\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.219684] (kalman_filter) StderrLine: {'line': b'  537 |                 covar_sway=\x1b[01;31m\x1b[Kcovar_high_y\x1b[m\x1b[K; //Add delay -->flag\n'}
+[4.219731] (kalman_filter) StderrLine: {'line': b'      |                            \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.224284] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:551:32:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktolerance_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.224354] (kalman_filter) StderrLine: {'line': b'  551 |             if(c1.confidence_3>\x1b[01;31m\x1b[Ktolerance_z\x1b[m\x1b[K && ((persist_z_now==0)||(persist_z_now>persist_z)))\n'}
+[4.224401] (kalman_filter) StderrLine: {'line': b'      |                                \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.229769] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:551:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_z_now\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.229833] (kalman_filter) StderrLine: {'line': b'  551 |             if(c1.confidence_3>tolerance_z && ((\x1b[01;31m\x1b[Kpersist_z_now\x1b[m\x1b[K==0)||(persist_z_now>persist_z)))\n'}
+[4.229879] (kalman_filter) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.233969] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:551:83:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpersist_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.234035] (kalman_filter) StderrLine: {'line': b'  551 |             if(c1.confidence_3>tolerance_z && ((persist_z_now==0)||(persist_z_now>\x1b[01;31m\x1b[Kpersist_z\x1b[m\x1b[K)))\n'}
+[4.234080] (kalman_filter) StderrLine: {'line': b'      |                                                                                   \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.238514] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:553:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_heave\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.238594] (kalman_filter) StderrLine: {'line': b'  553 |                 \x1b[01;31m\x1b[Kcovar_heave\x1b[m\x1b[K=covar_low_z;\n'}
+[4.238644] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.243024] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:553:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_low_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.243085] (kalman_filter) StderrLine: {'line': b'  553 |                 covar_heave=\x1b[01;31m\x1b[Kcovar_low_z\x1b[m\x1b[K;\n'}
+[4.243128] (kalman_filter) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.247129] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:555:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdelay_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.247215] (kalman_filter) StderrLine: {'line': b'  555 |                 \x1b[01;31m\x1b[Kdelay_z\x1b[m\x1b[K=false;\n'}
+[4.247264] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.250968] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:563:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdelay_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.251024] (kalman_filter) StderrLine: {'line': b'  563 |                 \x1b[01;31m\x1b[Kdelay_z\x1b[m\x1b[K=true;\n'}
+[4.251068] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.255301] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:564:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_heave\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.255363] (kalman_filter) StderrLine: {'line': b'  564 |                 \x1b[01;31m\x1b[Kcovar_heave\x1b[m\x1b[K=covar_high_z; //Add delay\n'}
+[4.255408] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.259912] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:564:29:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_high_z\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.259973] (kalman_filter) StderrLine: {'line': b'  564 |                 covar_heave=\x1b[01;31m\x1b[Kcovar_high_z\x1b[m\x1b[K; //Add delay\n'}
+[4.260016] (kalman_filter) StderrLine: {'line': b'      |                             \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.262472] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:592:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KR\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.262534] (kalman_filter) StderrLine: {'line': b'  592 |          \x1b[01;31m\x1b[KR\x1b[m\x1b[K << covar_surge, 0, 0, 0, 0, 0,\n'}
+[4.262577] (kalman_filter) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.266797] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:592:15:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_surge\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.266859] (kalman_filter) StderrLine: {'line': b'  592 |          R << \x1b[01;31m\x1b[Kcovar_surge\x1b[m\x1b[K, 0, 0, 0, 0, 0,\n'}
+[4.266904] (kalman_filter) StderrLine: {'line': b'      |               \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.270996] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:594:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_sway\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.271050] (kalman_filter) StderrLine: {'line': b'  594 |                  0, 0, \x1b[01;31m\x1b[Kcovar_sway\x1b[m\x1b[K, 0, 0, 0,\n'}
+[4.271092] (kalman_filter) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.275315] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:596:37:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kcovar_heave\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.275385] (kalman_filter) StderrLine: {'line': b'  596 |                         0, 0, 0, 0, \x1b[01;31m\x1b[Kcovar_heave\x1b[m\x1b[K, 0,\n'}
+[4.275429] (kalman_filter) StderrLine: {'line': b'      |                                     \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.279776] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:630:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kmeasure_time\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.279853] (kalman_filter) StderrLine: {'line': b'  630 |                 auv.set_vel((measure_time_now - \x1b[01;31m\x1b[Kmeasure_time\x1b[m\x1b[K).seconds());\n'}
+[4.279898] (kalman_filter) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.283581] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:632:17:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kstate_u\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.283693] (kalman_filter) StderrLine: {'line': b'  632 |                 \x1b[01;31m\x1b[Kstate_u\x1b[m\x1b[K = auv.update(R);\n'}
+[4.283748] (kalman_filter) StderrLine: {'line': b'      |                 \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.287419] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:635:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kk_vals\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.287497] (kalman_filter) StderrLine: {'line': b'  635 |             \x1b[01;31m\x1b[Kk_vals\x1b[m\x1b[K.header.stamp= msg.header.stamp;\n'}
+[4.287547] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.291052] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:643:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KP_vals\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.291115] (kalman_filter) StderrLine: {'line': b'  643 |             \x1b[01;31m\x1b[KP_vals\x1b[m\x1b[K.header.stamp= msg.header.stamp;\n'}
+[4.291160] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.295479] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:644:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KP_matrix_2\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.295534] (kalman_filter) StderrLine: {'line': b'  644 |             \x1b[01;31m\x1b[KP_matrix_2\x1b[m\x1b[K=auv.get_P();\n'}
+[4.295578] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.299026] (kalman_filter) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24\x1b[m\x1b[K,\n'}
+[4.299084] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40\x1b[m\x1b[K,\n'}
+[4.299127] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24\x1b[m\x1b[K,\n'}
+[4.299167] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20\x1b[m\x1b[K,\n'}
+[4.299207] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25\x1b[m\x1b[K,\n'}
+[4.299246] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18\x1b[m\x1b[K,\n'}
+[4.299286] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20\x1b[m\x1b[K,\n'}
+[4.299333] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37\x1b[m\x1b[K,\n'}
+[4.299381] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25\x1b[m\x1b[K,\n'}
+[4.299423] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21\x1b[m\x1b[K,\n'}
+[4.299481] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155\x1b[m\x1b[K,\n'}
+[4.299522] (kalman_filter) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:1\x1b[m\x1b[K:\n'}
+[4.299561] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:667:63:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.299601] (kalman_filter) StderrLine: {'line': b'  667 |             RCLCPP_INFO(this->get_logger(), "Quaternion: %f", \x1b[01;31m\x1b[Kq_new\x1b[m\x1b[K.w());\n'}
+[4.299640] (kalman_filter) StderrLine: {'line': b'      |                                                               \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.302207] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:668:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_new\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.302261] (kalman_filter) StderrLine: {'line': b'  668 |             pose_msg.pose.orientation = tf2::toMsg(\x1b[01;31m\x1b[Kq_new\x1b[m\x1b[K * q_orig);\n'}
+[4.302303] (kalman_filter) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.305433] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:668:60:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kq_orig\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.305487] (kalman_filter) StderrLine: {'line': b'  668 |             pose_msg.pose.orientation = tf2::toMsg(q_new * \x1b[01;31m\x1b[Kq_orig\x1b[m\x1b[K);\n'}
+[4.305529] (kalman_filter) StderrLine: {'line': b'      |                                                            \x1b[01;31m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[4.308241] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:673:36:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdist\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.308304] (kalman_filter) StderrLine: {'line': b'  673 |             vector3_msg.vector.x = \x1b[01;31m\x1b[Kdist\x1b[m\x1b[K(0);\n'}
+[4.308359] (kalman_filter) StderrLine: {'line': b'      |                                    \x1b[01;31m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[4.309920] (-) TimerEvent: {}
+[4.311390] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:689:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kwriter_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kwrite\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[4.311453] (kalman_filter) StderrLine: {'line': b'  689 |             \x1b[01;31m\x1b[Kwriter_\x1b[m\x1b[K->write(vector3_msg,"SONAR_filtered", measure_time_now);\n'}
+[4.311505] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.311548] (kalman_filter) StderrLine: {'line': b'      |             \x1b[32m\x1b[Kwrite\x1b[m\x1b[K\n'}
+[4.315009] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:706:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kpose_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.315063] (kalman_filter) StderrLine: {'line': b'  706 |             \x1b[01;31m\x1b[Kpose_pub\x1b[m\x1b[K->publish(pose_msg);\n'}
+[4.315105] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.320347] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:707:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kconfidence_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.320408] (kalman_filter) StderrLine: {'line': b'  707 |             \x1b[01;31m\x1b[Kconfidence_pub\x1b[m\x1b[K->publish(c1);\n'}
+[4.320450] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.324871] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:712:13:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kk_vals_pub\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[4.324944] (kalman_filter) StderrLine: {'line': b'  712 |             \x1b[01;31m\x1b[Kk_vals_pub\x1b[m\x1b[K->publish(k_vals);\n'}
+[4.324992] (kalman_filter) StderrLine: {'line': b'      |             \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.325144] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:724:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected primary-expression before \xe2\x80\x98\x1b[01m\x1b[Kprivate\x1b[m\x1b[K\xe2\x80\x99\n'}
+[4.325191] (kalman_filter) StderrLine: {'line': b'  724 | \x1b[01;31m\x1b[Kprivate\x1b[m\x1b[K:\n'}
+[4.325233] (kalman_filter) StderrLine: {'line': b'      | \x1b[01;31m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.387846] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:735:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ksample_size\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388263] (kalman_filter) StderrLine: {'line': b'  735 |     int \x1b[01;35m\x1b[Ksample_size\x1b[m\x1b[K,iterator;\n'}
+[4.388320] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.388385] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:735:21:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kiterator\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388431] (kalman_filter) StderrLine: {'line': b'  735 |     int sample_size,\x1b[01;35m\x1b[Kiterator\x1b[m\x1b[K;\n'}
+[4.388474] (kalman_filter) StderrLine: {'line': b'      |                     \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.388528] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:736:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_x\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388575] (kalman_filter) StderrLine: {'line': b'  736 |     double \x1b[01;35m\x1b[Kexpected_difference_x\x1b[m\x1b[K,expected_difference_y,expected_difference_z;\n'}
+[4.388617] (kalman_filter) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.388658] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:736:34:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388710] (kalman_filter) StderrLine: {'line': b'  736 |     double expected_difference_x,\x1b[01;35m\x1b[Kexpected_difference_y\x1b[m\x1b[K,expected_difference_z;\n'}
+[4.388750] (kalman_filter) StderrLine: {'line': b'      |                                  \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.388798] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:736:56:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kexpected_difference_z\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388839] (kalman_filter) StderrLine: {'line': b'  736 |     double expected_difference_x,expected_difference_y,\x1b[01;35m\x1b[Kexpected_difference_z\x1b[m\x1b[K;\n'}
+[4.388879] (kalman_filter) StderrLine: {'line': b'      |                                                        \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.388920] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:738:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktolerance_x\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.388959] (kalman_filter) StderrLine: {'line': b'  738 |     double \x1b[01;35m\x1b[Ktolerance_x\x1b[m\x1b[K,tolerance_y,tolerance_z;\n'}
+[4.388999] (kalman_filter) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389050] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:738:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktolerance_y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.389105] (kalman_filter) StderrLine: {'line': b'  738 |     double tolerance_x,\x1b[01;35m\x1b[Ktolerance_y\x1b[m\x1b[K,tolerance_z;\n'}
+[4.389151] (kalman_filter) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389193] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:738:36:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Ktolerance_z\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.389235] (kalman_filter) StderrLine: {'line': b'  738 |     double tolerance_x,tolerance_y,\x1b[01;35m\x1b[Ktolerance_z\x1b[m\x1b[K;\n'}
+[4.389275] (kalman_filter) StderrLine: {'line': b'      |                                    \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389315] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_low_x\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.389368] (kalman_filter) StderrLine: {'line': b'  740 |     double \x1b[01;35m\x1b[Kcovar_low_x\x1b[m\x1b[K,covar_low_y,covar_low_z,covar_high_x,covar_high_y,covar_high_z;\n'}
+[4.389409] (kalman_filter) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389447] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_low_y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.389487] (kalman_filter) StderrLine: {'line': b'  740 |     double covar_low_x,\x1b[01;35m\x1b[Kcovar_low_y\x1b[m\x1b[K,covar_low_z,covar_high_x,covar_high_y,covar_high_z;\n'}
+[4.389534] (kalman_filter) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389572] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:36:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_low_z\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.389619] (kalman_filter) StderrLine: {'line': b'  740 |     double covar_low_x,covar_low_y,\x1b[01;35m\x1b[Kcovar_low_z\x1b[m\x1b[K,covar_high_x,covar_high_y,covar_high_z;\n'}
+[4.389659] (kalman_filter) StderrLine: {'line': b'      |                                    \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389700] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:48:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_high_x\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.389747] (kalman_filter) StderrLine: {'line': b'  740 |     double covar_low_x,covar_low_y,covar_low_z,\x1b[01;35m\x1b[Kcovar_high_x\x1b[m\x1b[K,covar_high_y,covar_high_z;\n'}
+[4.389815] (kalman_filter) StderrLine: {'line': b'      |                                                \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389869] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:61:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_high_y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.389912] (kalman_filter) StderrLine: {'line': b'  740 |     double covar_low_x,covar_low_y,covar_low_z,covar_high_x,\x1b[01;35m\x1b[Kcovar_high_y\x1b[m\x1b[K,covar_high_z;\n'}
+[4.389953] (kalman_filter) StderrLine: {'line': b'      |                                                             \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.389993] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:740:74:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_high_z\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.390040] (kalman_filter) StderrLine: {'line': b'  740 |     double covar_low_x,covar_low_y,covar_low_z,covar_high_x,covar_high_y,\x1b[01;35m\x1b[Kcovar_high_z\x1b[m\x1b[K;\n'}
+[4.390082] (kalman_filter) StderrLine: {'line': b'      |                                                                          \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.390122] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:9:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpersist_x\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.390165] (kalman_filter) StderrLine: {'line': b'  745 |     int \x1b[01;35m\x1b[Kpersist_x\x1b[m\x1b[K,persist_y,persist_z,persist_x_now,persist_y_now,persist_z_now;\n'}
+[4.390206] (kalman_filter) StderrLine: {'line': b'      |         \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.390254] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:19:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpersist_y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.390310] (kalman_filter) StderrLine: {'line': b'  745 |     int persist_x,\x1b[01;35m\x1b[Kpersist_y\x1b[m\x1b[K,persist_z,persist_x_now,persist_y_now,persist_z_now;\n'}
+[4.390364] (kalman_filter) StderrLine: {'line': b'      |                   \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.390407] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:29:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpersist_z\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.390449] (kalman_filter) StderrLine: {'line': b'  745 |     int persist_x,persist_y,\x1b[01;35m\x1b[Kpersist_z\x1b[m\x1b[K,persist_x_now,persist_y_now,persist_z_now;\n'}
+[4.390488] (kalman_filter) StderrLine: {'line': b'      |                             \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.390529] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:39:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpersist_x_now\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.390571] (kalman_filter) StderrLine: {'line': b'  745 |     int persist_x,persist_y,persist_z,\x1b[01;35m\x1b[Kpersist_x_now\x1b[m\x1b[K,persist_y_now,persist_z_now;\n'}
+[4.390618] (kalman_filter) StderrLine: {'line': b'      |                                       \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.390663] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpersist_y_now\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.390713] (kalman_filter) StderrLine: {'line': b'  745 |     int persist_x,persist_y,persist_z,persist_x_now,\x1b[01;35m\x1b[Kpersist_y_now\x1b[m\x1b[K,persist_z_now;\n'}
+[4.390756] (kalman_filter) StderrLine: {'line': b'      |                                                     \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.391045] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:745:67:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kpersist_z_now\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.391122] (kalman_filter) StderrLine: {'line': b'  745 |     int persist_x,persist_y,persist_z,persist_x_now,persist_y_now,\x1b[01;35m\x1b[Kpersist_z_now\x1b[m\x1b[K;\n'}
+[4.391166] (kalman_filter) StderrLine: {'line': b'      |                                                                   \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.391209] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:757:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kangle\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.391256] (kalman_filter) StderrLine: {'line': b'  757 |     double \x1b[01;35m\x1b[Kangle\x1b[m\x1b[K,angle_rad;\n'}
+[4.391304] (kalman_filter) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.391378] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:757:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kangle_rad\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.391456] (kalman_filter) StderrLine: {'line': b'  757 |     double angle,\x1b[01;35m\x1b[Kangle_rad\x1b[m\x1b[K;\n'}
+[4.391504] (kalman_filter) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.391545] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kbias\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.391588] (kalman_filter) StderrLine: {'line': b'  758 |     bool \x1b[01;35m\x1b[Kbias\x1b[m\x1b[K = false, start = false,rot_bias=false,override=false,flag1,flag2;\n'}
+[4.391629] (kalman_filter) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~\x1b[m\x1b[K\n'}
+[4.391710] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kstart\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.391786] (kalman_filter) StderrLine: {'line': b'  758 |     bool bias = false, \x1b[01;35m\x1b[Kstart\x1b[m\x1b[K = false,rot_bias=false,override=false,flag1,flag2;\n'}
+[4.391828] (kalman_filter) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.391868] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:38:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Krot_bias\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.391939] (kalman_filter) StderrLine: {'line': b'  758 |     bool bias = false, start = false,\x1b[01;35m\x1b[Krot_bias\x1b[m\x1b[K=false,override=false,flag1,flag2;\n'}
+[4.392002] (kalman_filter) StderrLine: {'line': b'      |                                      \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.392042] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Koverride\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.392083] (kalman_filter) StderrLine: {'line': b'  758 |     bool bias = false, start = false,rot_bias=false,\x1b[01;35m\x1b[Koverride\x1b[m\x1b[K=false,flag1,flag2;\n'}
+[4.392122] (kalman_filter) StderrLine: {'line': b'      |                                                     \x1b[01;35m\x1b[K^~~~~~~~\x1b[m\x1b[K\n'}
+[4.392183] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:68:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kflag1\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.392270] (kalman_filter) StderrLine: {'line': b'  758 |     bool bias = false, start = false,rot_bias=false,override=false,\x1b[01;35m\x1b[Kflag1\x1b[m\x1b[K,flag2;\n'}
+[4.392313] (kalman_filter) StderrLine: {'line': b'      |                                                                    \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.392379] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:758:74:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kflag2\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.392459] (kalman_filter) StderrLine: {'line': b'  758 |     bool bias = false, start = false,rot_bias=false,override=false,flag1,\x1b[01;35m\x1b[Kflag2\x1b[m\x1b[K;\n'}
+[4.392543] (kalman_filter) StderrLine: {'line': b'      |                                                                          \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.392585] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:10:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdelay_x\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.392628] (kalman_filter) StderrLine: {'line': b'  759 |     bool \x1b[01;35m\x1b[Kdelay_x\x1b[m\x1b[K,delay_y,delay_z,discard_x,discard_y,discard_z;\n'}
+[4.392669] (kalman_filter) StderrLine: {'line': b'      |          \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.392708] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:18:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdelay_y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.392749] (kalman_filter) StderrLine: {'line': b'  759 |     bool delay_x,\x1b[01;35m\x1b[Kdelay_y\x1b[m\x1b[K,delay_z,discard_x,discard_y,discard_z;\n'}
+[4.392789] (kalman_filter) StderrLine: {'line': b'      |                  \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.392830] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:26:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdelay_z\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.392872] (kalman_filter) StderrLine: {'line': b'  759 |     bool delay_x,delay_y,\x1b[01;35m\x1b[Kdelay_z\x1b[m\x1b[K,discard_x,discard_y,discard_z;\n'}
+[4.392912] (kalman_filter) StderrLine: {'line': b'      |                          \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[4.392952] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:34:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdiscard_x\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.392999] (kalman_filter) StderrLine: {'line': b'  759 |     bool delay_x,delay_y,delay_z,\x1b[01;35m\x1b[Kdiscard_x\x1b[m\x1b[K,discard_y,discard_z;\n'}
+[4.393044] (kalman_filter) StderrLine: {'line': b'      |                                  \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.393104] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:44:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdiscard_y\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.393170] (kalman_filter) StderrLine: {'line': b'  759 |     bool delay_x,delay_y,delay_z,discard_x,\x1b[01;35m\x1b[Kdiscard_y\x1b[m\x1b[K,discard_z;\n'}
+[4.393246] (kalman_filter) StderrLine: {'line': b'      |                                            \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.393308] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:759:54:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kdiscard_z\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.393400] (kalman_filter) StderrLine: {'line': b'  759 |     bool delay_x,delay_y,delay_z,discard_x,discard_y,\x1b[01;35m\x1b[Kdiscard_z\x1b[m\x1b[K;\n'}
+[4.393461] (kalman_filter) StderrLine: {'line': b'      |                                                      \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.393512] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_surge\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.393555] (kalman_filter) StderrLine: {'line': b'  765 |     double \x1b[01;35m\x1b[Kcovar_surge\x1b[m\x1b[K,covar_sway,covar_heave,slope,intercept;\n'}
+[4.393595] (kalman_filter) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.393634] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_sway\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.393675] (kalman_filter) StderrLine: {'line': b'  765 |     double covar_surge,\x1b[01;35m\x1b[Kcovar_sway\x1b[m\x1b[K,covar_heave,slope,intercept;\n'}
+[4.393713] (kalman_filter) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.393752] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:35:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kcovar_heave\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.393798] (kalman_filter) StderrLine: {'line': b'  765 |     double covar_surge,covar_sway,\x1b[01;35m\x1b[Kcovar_heave\x1b[m\x1b[K,slope,intercept;\n'}
+[4.393839] (kalman_filter) StderrLine: {'line': b'      |                                   \x1b[01;35m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.393883] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:47:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kslope\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.393925] (kalman_filter) StderrLine: {'line': b'  765 |     double covar_surge,covar_sway,covar_heave,\x1b[01;35m\x1b[Kslope\x1b[m\x1b[K,intercept;\n'}
+[4.393965] (kalman_filter) StderrLine: {'line': b'      |                                               \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[4.394005] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:765:53:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Kintercept\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[4.394052] (kalman_filter) StderrLine: {'line': b'  765 |     double covar_surge,covar_sway,covar_heave,slope,\x1b[01;35m\x1b[Kintercept\x1b[m\x1b[K;\n'}
+[4.394090] (kalman_filter) StderrLine: {'line': b'      |                                                     \x1b[01;35m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[4.394129] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:\x1b[m\x1b[K At global scope:\n'}
+[4.394169] (kalman_filter) StderrLine: {'line': b'\x1b[01m\x1b[K/home/saab/2024_UWR/src/kalman_filter/src/kf_3dof_node.cpp:810:2:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected unqualified-id at end of input\n'}
+[4.394210] (kalman_filter) StderrLine: {'line': b'  810 | }\n'}
+[4.394250] (kalman_filter) StderrLine: {'line': b'      |  \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[4.410000] (-) TimerEvent: {}
+[4.510215] (-) TimerEvent: {}
+[4.610490] (-) TimerEvent: {}
+[4.710751] (-) TimerEvent: {}
+[4.811007] (-) TimerEvent: {}
+[4.911265] (-) TimerEvent: {}
+[5.011538] (-) TimerEvent: {}
+[5.096367] (kalman_filter) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/kf_3dof.dir/build.make:76: CMakeFiles/kf_3dof.dir/src/kf_3dof_node.cpp.o] Error 1\n'}
+[5.096735] (kalman_filter) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:197: CMakeFiles/kf_3dof.dir/all] Error 2\n'}
+[5.097031] (kalman_filter) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[5.100231] (kalman_filter) CommandEnded: {'returncode': 2}
+[5.108353] (kalman_filter) JobEnded: {'identifier': 'kalman_filter', 'rc': 2}
+[5.111599] (-) TimerEvent: {}
+[5.118678] (-) EventReactorShutdown: {}

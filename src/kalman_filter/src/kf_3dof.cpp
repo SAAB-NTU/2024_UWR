@@ -1,8 +1,8 @@
 #include "../include/kalman_filter.h"
 
-KalmanFilter_3dof::KalmanFilter_3dof(): moving_avg_surge(15),moving_avg_sway(15),
-moving_avg_heave(15),moving_avg_vel(15),moving_avg_time(15),
-m_avg_surge_high(15),m_avg_sway_high(15),m_avg_heave_high(15)
+KalmanFilter_3dof::KalmanFilter_3dof(): moving_avg_surge(10),moving_avg_sway(10),
+moving_avg_heave(5),moving_avg_vel(25),moving_avg_time(25),
+m_avg_surge_high(25),m_avg_sway_high(25),m_avg_heave_high(25)
 {
      
 
@@ -18,8 +18,8 @@ x << 0,0,0,0,0,0; //6x1 state variable
          0, 0, 0, 0, 0, 1; //6x6 covariancematrix; so no covariance between state variables
     Q << 1, 0, 0, 0, 0, 0,
          0, 1, 0, 0, 0, 0,
-         0, 0, 0.001, 0, 0, 0,
-         0, 0, 0, 0.001, 0, 0,
+         0, 0, 1, 0, 0, 0,
+         0, 0, 0, 1, 0, 0,
          0, 0, 0, 0, 1, 0,
          0, 0, 0, 0, 0, 1; 
 
@@ -43,10 +43,10 @@ x << 0,0,0,0,0,0; //6x1 state variable
     vel<<0,0,0;
     dist<<0,0,0;
     
-    cutoff_frequency_surge=1.28;
-    cutoff_frequency_sway=1.28; //Dominant direction
-    cutoff_frequency_heave=1.28;
-    samplingrate=128; //2* topic frequency
+    cutoff_frequency_surge=1.8;
+    cutoff_frequency_sway=1.8; //Dominant direction
+    cutoff_frequency_heave=1.8;
+    samplingrate=180; //2* topic frequency 80 for Nov 2024 expt, 98 for stepper aligned, 90 for not aligned
     bias_reset=false;
     //moving_avg_surge=SonarProcess(5);
     //moving_avg_sway=SonarProcess(5);
@@ -107,7 +107,7 @@ x << 0,0,0,0,0,0; //6x1 state variable
 }
 */
 
-Eigen::Matrix<double,6,1> KalmanFilter_3dof::prediction(const float& dt)
+Eigen::Matrix<double,6,1> KalmanFilter_3dof::prediction(const double& dt)
 {
     
     // x_k = F_k * x_k-1 + B_k*u_k

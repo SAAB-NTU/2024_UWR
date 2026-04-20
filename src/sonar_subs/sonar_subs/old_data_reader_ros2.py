@@ -16,7 +16,7 @@ class DataPublisher(Node):
         self.paths = sorted(glob("/home/saab/SAAB-Experiment/exp7/data/*.csv"))
         self.path = self.paths[csv_path_idx]
         self.imu_pub = self.create_publisher(Imu, '/imu/data_raw', 10)
-        self.sonar_pub = self.create_publisher(ThreeSonarDepth, '/sbs', 10)
+        self.sonar_pub = self.create_publisher(ThreeSonarDepth, '/sonar', 10)
         #self.depth_pub = self.create_publisher(Float64, '/depth_msg', 10)
         self.df = pd.read_csv(self.path)
         self.get_logger().info(self.path)
