@@ -18,8 +18,8 @@ import numpy as np
 class RosbagSync(Node):
     def __init__(self):
         super().__init__('rosbag_time_sync')
-        self.time="Condition_1_2026_04_20_17_34_03.bag"
-        self.path="/home/saab/2024_UWR/Analysis/2026_article/Stepper_aligned/"
+        self.time="Condition_22026_05_10_11_42_00.bag"
+        self.path="/home/saab/2024_UWR/Analysis/2026_article/PCD_data/"
         os.makedirs(self.path+self.time,exist_ok=True)
         # Define subscribers
         self.get_logger().info('Initializing subscribers...')
@@ -63,7 +63,7 @@ class RosbagSync(Node):
         # Quaternion input should be [x, y, z, w] for scipy
         q = [quaternion.x, quaternion.y, quaternion.z, quaternion.w]
         r = R.from_quat(q)  # Create a rotation object
-        euler = r.as_euler('xyz', degrees=False)  # Convert to Euler angles (ZYX convention)
+        euler = r.as_euler('xyz', degrees=False)  # Convert to Euler angles (ZYX convention)Condition_1_IMU_only2026_05_10_11_27_03.bag
         return euler
     
     def P_data(self,data):

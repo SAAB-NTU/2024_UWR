@@ -43,10 +43,10 @@ x << 0,0,0,0,0,0; //6x1 state variable
     vel<<0,0,0;
     dist<<0,0,0;
     
-    cutoff_frequency_surge=1.8;
-    cutoff_frequency_sway=1.8; //Dominant direction
-    cutoff_frequency_heave=1.8;
-    samplingrate=180; //2* topic frequency 80 for Nov 2024 expt, 98 for stepper aligned, 90 for not aligned
+    cutoff_frequency_surge=0.7;
+    cutoff_frequency_sway=0.7; //Dominant direction
+    cutoff_frequency_heave=0.7;
+    samplingrate=70; //2* topic frequency 80 for Nov 2024 expt, 98 for stepper aligned, 90 for not aligned
     bias_reset=false;
     //moving_avg_surge=SonarProcess(5);
     //moving_avg_sway=SonarProcess(5);

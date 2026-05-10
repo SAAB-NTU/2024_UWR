@@ -239,7 +239,7 @@ public:
             RCLCPP_INFO(this->get_logger(), "Bias %b",bias);
         }
         RCLCPP_INFO(this->get_logger(), "Time: %lf",(predict_time_now - predict_time).seconds());
-        if((predict_time_now - predict_time).seconds()>3||((predict_time_now - predict_time).seconds()>0.02 && (predict_time_now - predict_time).seconds()<0.03))
+        if((predict_time_now - predict_time).seconds()>1||((predict_time_now - predict_time).seconds()>0.02 && (predict_time_now - predict_time).seconds()<0.3))
 		//if((predict_time_now - predict_time).seconds()>0.04)
              {//RCLCPP_INFO(this->get_logger(),"Hi");
             //auv_accel=auv.set_accel(aft_rotate(0),-aft_rotate(1),imu_msg.linear_acceleration.z);

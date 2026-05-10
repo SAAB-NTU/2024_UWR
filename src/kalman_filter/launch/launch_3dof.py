@@ -9,9 +9,9 @@ def generate_launch_description():
             name='kf',
             output='screen',
             parameters=[
-                {'csv_path': '/home/saab/2024_UWR/Analysis/2026_article/Stepper_not_aligned/Condition_1_'},
+                {'csv_path': '/home/saab/2024_UWR/Analysis/2026_article/PCD_data/Condition_2'},
                 {'imu_topic': '/imu/data'},
-                {'sonar_topic': '/sonar'},
+                {'sonar_topic': '/sbs'},
                 {'angle': 0.0},
                 {'without_measurement': False},
                 {'bias_override': True},
