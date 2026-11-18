@@ -1,15 +1,25 @@
+import os
+
 from launch import LaunchDescription
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
 from launch_ros.actions import Node
 
 def generate_launch_description():
     return LaunchDescription([
+        # Prefix for the output bag name (timestamp + .bag is appended).
+        # End it with '/' to write inside a directory.
+        DeclareLaunchArgument(
+            'csv_path',
+            default_value=os.path.join(os.getcwd(), 'kf_runs', ''),
+        ),
         Node(
             package='kalman_filter',
             executable='kf_3dof',
             name='kf',
             output='screen',
             parameters=[
-                {'csv_path': '/home/saab/2024_UWR/Analysis/2026_article/PCD_data/Condition_2'},
+                {'csv_path': LaunchConfiguration('csv_path')},
                 {'imu_topic': '/imu/data'},
                 {'sonar_topic': '/sbs'},
                 {'angle': 0.0},

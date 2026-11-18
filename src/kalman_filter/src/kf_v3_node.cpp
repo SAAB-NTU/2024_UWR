@@ -121,7 +121,7 @@ public:
 
         // Set up the storage options for rosbag2
         storage_options_.uri = bag_file_name;  // The name of the bag file
-        storage_options_.storage_id = "sqlite3"; // Backend storage type (e.g., SQLite)
+        storage_options_.storage_id = "mcap"; // MCAP embeds message definitions, so Foxglove can decode sonar_msgs
 
         // Set up the converter options for rosbag2
         converter_options_.input_serialization_format = "cdr";

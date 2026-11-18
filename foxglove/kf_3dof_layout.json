@@ -1,0 +1,615 @@
+{
+  "configById": {
+    "Plot!kf1": {
+      "foxglovePanelTitle": "P diagonal: position",
+      "paths": [
+        {
+          "value": "\"P_values\".k_d_1",
+          "label": "axis 1",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"P_values\".k_d_2",
+          "label": "axis 2",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"P_values\".k_d_3",
+          "label": "axis 3",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf2": {
+      "foxglovePanelTitle": "P diagonal: velocity",
+      "paths": [
+        {
+          "value": "\"P_values\".k_v_1",
+          "label": "axis 1",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"P_values\".k_v_2",
+          "label": "axis 2",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"P_values\".k_v_3",
+          "label": "axis 3",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf3": {
+      "foxglovePanelTitle": "z (heave) position [m]: KF vs sonar 3",
+      "paths": [
+        {
+          "value": "\"Pose\".pose.position.z",
+          "label": "KF",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/studio_script/sonar_m.distance_3",
+          "label": "sonar 3",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf4": {
+      "foxglovePanelTitle": "Gyro [rad/s]",
+      "paths": [
+        {
+          "value": "\"IMU_raw\".angular_velocity.x",
+          "label": "x",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"IMU_raw\".angular_velocity.y",
+          "label": "y",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"IMU_raw\".angular_velocity.z",
+          "label": "z",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "3D!kf3d": {
+      "followTf": "world",
+      "followMode": "follow-none",
+      "cameraState": {
+        "perspective": true,
+        "distance": 12,
+        "phi": 55,
+        "thetaOffset": -60,
+        "targetOffset": [
+          0.7,
+          3.9,
+          0
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.01,
+        "far": 5000
+      },
+      "scene": {},
+      "transforms": {},
+      "layers": {
+        "grid": {
+          "layerId": "foxglove.Grid",
+          "instanceId": "grid",
+          "label": "Grid",
+          "visible": true,
+          "frameId": "world",
+          "size": 10,
+          "divisions": 20,
+          "lineWidth": 1,
+          "color": "#8080807f",
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "rotation": [
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "topics": {
+        "/studio_script/kf_path": {
+          "visible": true,
+          "type": "line",
+          "lineWidth": 0.03,
+          "gradient": [
+            "#d62728ff",
+            "#d62728ff"
+          ]
+        },
+        "/studio_script/kf_pose": {
+          "visible": true,
+          "type": "arrow",
+          "color": "#d62728ff",
+          "arrowScale": [
+            0.4,
+            0.08,
+            0.08
+          ]
+        },
+        "/studio_script/sonar_path": {
+          "visible": true,
+          "type": "line",
+          "lineWidth": 0.02,
+          "gradient": [
+            "#1f77b4ff",
+            "#1f77b4ff"
+          ]
+        }
+      }
+    },
+    "Plot!kf5": {
+      "foxglovePanelTitle": "y position [m]: KF vs sonar 2",
+      "paths": [
+        {
+          "value": "\"Pose\".pose.position.y",
+          "label": "KF",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/studio_script/sonar_m.distance_2",
+          "label": "sonar 2",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf6": {
+      "foxglovePanelTitle": "x position [m]: KF vs sonar 1",
+      "paths": [
+        {
+          "value": "\"Pose\".pose.position.x",
+          "label": "KF",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/studio_script/sonar_m.distance_1",
+          "label": "sonar 1",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf7": {
+      "foxglovePanelTitle": "y position [m]: KF vs sonar 2",
+      "paths": [
+        {
+          "value": "\"Pose\".pose.position.y",
+          "label": "KF",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/studio_script/sonar_m.distance_2",
+          "label": "sonar 2",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf8": {
+      "foxglovePanelTitle": "y Kalman gain",
+      "paths": [
+        {
+          "value": "\"K_values\".k_d_2",
+          "label": "k_d (position)",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"K_values\".k_v_2",
+          "label": "k_v (velocity)",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf9": {
+      "foxglovePanelTitle": "y confidence",
+      "paths": [
+        {
+          "value": "\"SONAR_raw\".confidence_2",
+          "label": "sonar ping",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"Confidence_SONAR\".confidence_2",
+          "label": "KF metric",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf10": {
+      "foxglovePanelTitle": "y velocity [m/s]",
+      "paths": [
+        {
+          "value": "\"IMU_vel\".vector.y",
+          "label": "after predict",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"SONAR_vel\".vector.y",
+          "label": "after update",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf11": {
+      "foxglovePanelTitle": "y accel [m/s^2]",
+      "paths": [
+        {
+          "value": "\"IMU_raw\".linear_acceleration.y",
+          "label": "raw",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"IMU_filtered\".vector.y",
+          "label": "KF input",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf12": {
+      "foxglovePanelTitle": "x position [m]: KF vs sonar 1",
+      "paths": [
+        {
+          "value": "\"Pose\".pose.position.x",
+          "label": "KF",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "/studio_script/sonar_m.distance_1",
+          "label": "sonar 1",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf13": {
+      "foxglovePanelTitle": "x Kalman gain",
+      "paths": [
+        {
+          "value": "\"K_values\".k_d_1",
+          "label": "k_d (position)",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"K_values\".k_v_1",
+          "label": "k_v (velocity)",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf14": {
+      "foxglovePanelTitle": "x confidence",
+      "paths": [
+        {
+          "value": "\"SONAR_raw\".confidence_1",
+          "label": "sonar ping",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"Confidence_SONAR\".confidence_1",
+          "label": "KF metric",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf15": {
+      "foxglovePanelTitle": "x velocity [m/s]",
+      "paths": [
+        {
+          "value": "\"IMU_vel\".vector.x",
+          "label": "after predict",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"SONAR_vel\".vector.x",
+          "label": "after update",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!kf16": {
+      "foxglovePanelTitle": "x accel [m/s^2]",
+      "paths": [
+        {
+          "value": "\"IMU_raw\".linear_acceleration.x",
+          "label": "raw",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        },
+        {
+          "value": "\"IMU_filtered\".vector.x",
+          "label": "KF input",
+          "enabled": true,
+          "timestampMethod": "receiveTime"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Tab!kfmain": {
+      "activeTabIdx": 0,
+      "tabs": [
+        {
+          "title": "3D trajectory",
+          "layout": {
+            "first": "3D!kf3d",
+            "second": {
+              "first": "Plot!kf5",
+              "second": "Plot!kf6",
+              "direction": "column",
+              "splitPercentage": 50.0
+            },
+            "direction": "row",
+            "splitPercentage": 65
+          }
+        },
+        {
+          "title": "Sway (y)",
+          "layout": {
+            "first": "Plot!kf7",
+            "second": {
+              "first": "Plot!kf8",
+              "second": {
+                "first": "Plot!kf9",
+                "second": {
+                  "first": "Plot!kf10",
+                  "second": "Plot!kf11",
+                  "direction": "column",
+                  "splitPercentage": 50.0
+                },
+                "direction": "column",
+                "splitPercentage": 33.333333333333336
+              },
+              "direction": "column",
+              "splitPercentage": 25.0
+            },
+            "direction": "column",
+            "splitPercentage": 20.0
+          }
+        },
+        {
+          "title": "Surge (x)",
+          "layout": {
+            "first": "Plot!kf12",
+            "second": {
+              "first": "Plot!kf13",
+              "second": {
+                "first": "Plot!kf14",
+                "second": {
+                  "first": "Plot!kf15",
+                  "second": "Plot!kf16",
+                  "direction": "column",
+                  "splitPercentage": 50.0
+                },
+                "direction": "column",
+                "splitPercentage": 33.333333333333336
+              },
+              "direction": "column",
+              "splitPercentage": 25.0
+            },
+            "direction": "column",
+            "splitPercentage": 20.0
+          }
+        },
+        {
+          "title": "Covariance / Heave",
+          "layout": {
+            "first": "Plot!kf1",
+            "second": {
+              "first": "Plot!kf2",
+              "second": {
+                "first": "Plot!kf3",
+                "second": "Plot!kf4",
+                "direction": "column",
+                "splitPercentage": 50.0
+              },
+              "direction": "column",
+              "splitPercentage": 33.333333333333336
+            },
+            "direction": "column",
+            "splitPercentage": 25.0
+          }
+        }
+      ]
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {
+    "kf-sonar-m": {
+      "name": "sonar_mm_to_m",
+      "sourceCode": "// SONAR_raw distances are in mm; convert to m to plot next to Pose.\nimport { Input } from \"./types\";\n\ntype Output = { distance_1: number; distance_2: number; distance_3: number };\n\nexport const inputs = [\"SONAR_raw\"];\nexport const output = \"/studio_script/sonar_m\";\n\nexport default function script(event: Input<\"SONAR_raw\">): Output {\n  const m = event.message;\n  return {\n    distance_1: m.distance_1 / 1000,\n    distance_2: m.distance_2 / 1000,\n    distance_3: m.distance_3 / 1000,\n  };\n}\n"
+    },
+    "kf-path": {
+      "name": "kf_path",
+      "sourceCode": "// KF estimate (Pose) accumulated into a trail in the \"world\" frame for the 3D panel.\nimport { Input, Message } from \"./types\";\n\ntype Output = Message<\"foxglove.PosesInFrame\">;\n\nexport const inputs = [\"Pose\"];\nexport const output = \"/studio_script/kf_path\";\n\nconst MAX_POSES = 20000;\nlet poses: Output[\"poses\"] = [];\nlet lastNs = -1;\n\nfunction append(t: { sec: number; nsec: number }, x: number, y: number, z: number): Output {\n  const ns = t.sec * 1e9 + t.nsec;\n  if (ns < lastNs) {\n    poses = []; // seeked backwards: restart the trail\n  }\n  lastNs = ns;\n  poses.push({ position: { x, y, z }, orientation: { x: 0, y: 0, z: 0, w: 1 } });\n  if (poses.length > MAX_POSES) {\n    poses.shift();\n  }\n  return { timestamp: t, frame_id: \"world\", poses: poses.slice() };\n}\n\nexport default function script(event: Input<\"Pose\">): Output {\n  const p = event.message.pose.position;\n  return append(event.receiveTime, p.x, p.y, p.z);\n}\n"
+    },
+    "kf-pose": {
+      "name": "kf_pose",
+      "sourceCode": "// Current KF pose in the \"world\" frame (arrow in the 3D panel).\n// Orientation is the IMU attitude logged by kf_3dof; the KF itself does not estimate it.\nimport { Input, Message } from \"./types\";\n\ntype Output = Message<\"foxglove.PoseInFrame\">;\n\nexport const inputs = [\"Pose\"];\nexport const output = \"/studio_script/kf_pose\";\n\nexport default function script(event: Input<\"Pose\">): Output {\n  const p = event.message.pose;\n  return {\n    timestamp: event.receiveTime,\n    frame_id: \"world\",\n    pose: {\n      position: { x: p.position.x, y: p.position.y, z: p.position.z },\n      orientation: { x: p.orientation.x, y: p.orientation.y, z: p.orientation.z, w: p.orientation.w },\n    },\n  };\n}\n"
+    },
+    "kf-sonar-path": {
+      "name": "sonar_path",
+      "sourceCode": "// Raw sonar ranges (mm) as a position trail in m, same axes as the KF state.\nimport { Input, Message } from \"./types\";\n\ntype Output = Message<\"foxglove.PosesInFrame\">;\n\nexport const inputs = [\"SONAR_raw\"];\nexport const output = \"/studio_script/sonar_path\";\n\nconst MAX_POSES = 20000;\nlet poses: Output[\"poses\"] = [];\nlet lastNs = -1;\n\nfunction append(t: { sec: number; nsec: number }, x: number, y: number, z: number): Output {\n  const ns = t.sec * 1e9 + t.nsec;\n  if (ns < lastNs) {\n    poses = []; // seeked backwards: restart the trail\n  }\n  lastNs = ns;\n  poses.push({ position: { x, y, z }, orientation: { x: 0, y: 0, z: 0, w: 1 } });\n  if (poses.length > MAX_POSES) {\n    poses.shift();\n  }\n  return { timestamp: t, frame_id: \"world\", poses: poses.slice() };\n}\n\nexport default function script(event: Input<\"SONAR_raw\">): Output {\n  const m = event.message;\n  return append(event.receiveTime, m.distance_1 / 1000, m.distance_2 / 1000, m.distance_3 / 1000);\n}\n"
+    }
+  },
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": "Tab!kfmain"
+}

@@ -1,0 +1,59 @@
+[workspace]
+name = "uwr"
+channels = ["robostack-jazzy", "conda-forge"]
+platforms = ["linux-64"]
+
+[dependencies]
+# ROS 2 + Gazebo
+ros-jazzy-desktop = "*"
+ros-jazzy-ros-gz = "*"
+ros-jazzy-xacro = "*"
+ros-jazzy-tf2-geometry-msgs = "*"
+ros-jazzy-message-filters = "*"
+ros-jazzy-mavros-msgs = "*"
+ros-jazzy-nmea-msgs = "*"
+ros-jazzy-rmw-cyclonedds-cpp = "*"
+
+# Build tools
+colcon-common-extensions = "*"
+compilers = "*"
+cmake = "*"
+ninja = "*"
+make = "*"
+pkg-config = "*"
+
+# C++ libraries used by kalman_filter
+eigen = "*"
+armadillo = "*"
+
+# Python / analysis
+python = "3.12.*"
+numpy = "*"
+scipy = "*"
+pandas = "*"
+matplotlib = "*"
+jupyterlab = "*"
+pyserial = "*"
+opencv = "*"
+
+[pypi-dependencies]
+bluerobotics-ping = "*"   # brping, used by sonar_subs
+
+[activation]
+# Overlay this repo's colcon install/ so `pixi run ros2 ...` finds our packages
+scripts = ["scripts/source_ws.sh"]
+
+[activation.env]
+# Fast DDS (the Jazzy default) can't discover nodes under WSL's
+# networkingMode=mirrored; CycloneDDS works.
+RMW_IMPLEMENTATION = "rmw_cyclonedds_cpp"
+LIBGL_ALWAYS_SOFTWARE = "1"  # Force software rendering for OpenGL
+
+[tasks]
+# Xsens SDK static libs must exist before colcon builds xsens_mti_ros2_driver
+xspublic = { cmd = "make -C src/xsens_mti_ros2_driver/lib/xspublic -j", outputs = ["src/xsens_mti_ros2_driver/lib/xspublic/xscontroller/libxscontroller.a"] }
+build = { cmd = "colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release", depends-on = ["xspublic"] }
+gz-test = "gz sim shapes.sdf"
+daemon = "ros2 daemon stop; ros2 daemon start"
+# Convert old .db3 KF bags to .mcap for Foxglove: pixi run to-mcap Analysis/2026_article
+to-mcap = "scripts/bag_to_mcap.sh"

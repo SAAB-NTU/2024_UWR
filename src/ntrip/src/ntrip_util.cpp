@@ -22,6 +22,7 @@
 
 #include "ntrip_util.h"
 
+#include <cstdint>
 #include <math.h>
 #include <string.h>
 #include <time.h>
