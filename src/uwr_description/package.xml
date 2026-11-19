@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>uwr_description</name>
+  <version>0.0.0</version>
+  <description>URDF/xacro description of the UWR sensor platform: frame, three Ping1D single-beam echosounders and Xsens MTi IMU, with Gazebo sensor tags.</description>
+  <maintainer email="liuchuany6@gmail.com">chuanhua</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>xacro</exec_depend>                  <!-- expands .xacro to URDF -->
+  <exec_depend>robot_state_publisher</exec_depend>  <!-- publishes /tf from the URDF -->
+  <exec_depend>rviz2</exec_depend>                  <!-- display.launch.py -->
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

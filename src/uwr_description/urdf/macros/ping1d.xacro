@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="ping1d" params="name parent *origin
+                                    topic:=''
+                                    half_angle:=0.1745 max_range:=30.0 rate:=20">
+
+    <joint name="${name}_joint" type="fixed">
+      <parent link="${parent}"/>
+      <child link="${name}_link"/>
+      <xacro:insert_block name="origin"/>
+    </joint>
+
+    <link name="${name}_link">
+      <visual>
+        <!-- URDF cylinders lie along z; turn it so it lies along x, the beam direction -->
+        <origin rpy="0 ${pi/2} 0"/>
+        <geometry><cylinder radius="0.025" length="0.07"/></geometry>
+      </visual>
+      <!-- no <collision>: it would add buoyant volume and could block other beams -->
+      <xacro:cylinder_inertia m="0.15" r="0.025" h="0.07"/>
+    </link>                                    
+
+    <gazebo reference="${name}_link">
+      <sensor name="${name}" type="gpu_lidar">
+        <topic>${topic or 'sonar/' + name}</topic>
+        <gz_frame_id>${name}_link</gz_frame_id>
+        <update_rate>${rate}</update_rate>
+        <always_on>true</always_on>
+        <lidar>
+          <scan>
+            <horizontal>
+              <samples>5</samples>
+              <min_angle>${-half_angle}</min_angle>
+              <max_angle>${half_angle}</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>5</samples>
+              <min_angle>${-half_angle}</min_angle>
+              <max_angle>${half_angle}</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.3</min>
+            <max>${max_range}</max>
+          </range>
+          <noise>
+            <type>gaussian</type>
+            <mean>0</mean>
+            <stddev>0.01</stddev>
+          </noise>
+        </lidar>
+      </sensor>
+    </gazebo>
+
+  </xacro:macro>
+
+</robot>

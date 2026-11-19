@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>uwr_gazebo</name>
+  <version>0.0.0</version>
+  <description>Gazebo Harmonic simulation of the UWR platform in a test tank: world, ROS-Gazebo bridge, and a sonar adapter publishing ThreeSonarDepth on /sbs for the Kalman filter.</description>
+  <maintainer email="liuchuany6@gmail.com">chuanhua</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>uwr_description</exec_depend>        <!-- the URDF -->
+  <exec_depend>ros_gz_sim</exec_depend>             <!-- gz_sim.launch.py -->
+  <exec_depend>ros_gz_bridge</exec_depend>          <!-- parameter_bridge -->
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>xacro</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <!-- used by sonar_adapter.py -->
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>            <!-- LaserScan in -->
+  <exec_depend>sonar_msgs</exec_depend>             <!-- ThreeSonarDepth out -->
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
