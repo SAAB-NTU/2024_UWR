@@ -28,14 +28,16 @@ else()
     GIT_REPOSITORY https://github.com/berndporr/iir1.git
     GIT_TAG 1.9.5
   )
-  set(IIR1_BUILD_TESTING OFF CACHE BOOL "" FORCE)
-  set(IIR1_BUILD_DEMO OFF CACHE BOOL "" FORCE)
-  set(IIR1_INSTALL_STATIC OFF CACHE BOOL "" FORCE)
   FetchContent_GetProperties(iir1)
   if(NOT iir1_POPULATED)
     FetchContent_Populate(iir1)
-    add_subdirectory(${iir1_SOURCE_DIR} ${iir1_BINARY_DIR} EXCLUDE_FROM_ALL)
   endif()
+  # Build iir1's sources directly instead of add_subdirectory(): its own
+  # CMakeLists installs an iirConfig.cmake without the targets file, which
+  # a later find_package(iir) then picks up from our install/ and fails on.
+  file(GLOB IIR1_SOURCES ${iir1_SOURCE_DIR}/iir/*.cpp)
+  add_library(iir_static STATIC ${IIR1_SOURCES})
+  target_include_directories(iir_static PUBLIC ${iir1_SOURCE_DIR})
   set_target_properties(iir_static PROPERTIES POSITION_INDEPENDENT_CODE ON)
   set(IIR_LIB iir_static)
 endif()
