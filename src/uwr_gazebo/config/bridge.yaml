@@ -1,0 +1,32 @@
+# Simulation clock: lets ROS nodes with use_sim_time follow Gazebo's time
+- ros_topic_name: /clock
+  gz_topic_name: /clock
+  ros_type_name: rosgraph_msgs/msg/Clock
+  gz_type_name: gz.msgs.Clock
+  direction: GZ_TO_ROS
+
+# IMU: renamed to /imu/data, which is what your KF subscribes to
+- ros_topic_name: /imu/data
+  gz_topic_name: /imu
+  ros_type_name: sensor_msgs/msg/Imu
+  gz_type_name: gz.msgs.IMU
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /sonar/sonar_surge
+  gz_topic_name: /sonar/sonar_surge
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: gz.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+
+- ros_topic_name: /sonar/sonar_sway
+  gz_topic_name: /sonar/sonar_sway
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: gz.msgs.LaserScan
+  direction: GZ_TO_ROS
+
+- ros_topic_name: /sonar/sonar_heave
+  gz_topic_name: /sonar/sonar_heave
+  ros_type_name: sensor_msgs/msg/LaserScan
+  gz_type_name: gz.msgs.LaserScan
+  direction: GZ_TO_ROS
