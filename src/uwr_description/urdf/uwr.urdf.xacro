@@ -1,18 +1,22 @@
 <?xml version="1.0"?>
 <robot name="uwr" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <material name="orange"><color rgba="1.0 0.5 0.1 1"/></material>
+  <material name="black"><color rgba="0.1 0.1 0.1 1"/></material>
+  <material name="blue"><color rgba="0.2 0.4 0.9 1"/></material>
   <xacro:include filename="macros/inertia.xacro"/>
   <xacro:include filename="macros/ping1d.xacro"/>
   <xacro:include filename="macros/mti_imu.xacro"/>
   <xacro:property name="L" value="0.3"/>    <!-- length along x (m) -->
   <xacro:property name="W" value="0.3"/>    <!-- width along y (m) -->
-  <xacro:property name="H" value="0.3"/>    <!-- height along z (m) -->
-  <xacro:property name="mass" value="13.5"/> 
+  <xacro:property name="H" value="0.05"/>    <!-- height along z (m) -->
+  <xacro:property name="mass" value="${0.5 * 1000 * L * W * H - 0.5}"/> 
 
   <link name="base_link">
     <visual>
       <geometry>
         <box size="${L} ${W} ${H}"/>
       </geometry>
+      <material name="orange"/>
     </visual>
     <collision>
       <geometry>
@@ -35,7 +39,7 @@
   </xacro:ping1d>
 
   <xacro:mti_imu parent="base_link">
-    <origin xyz="0 0 0.16" rpy="0 0 0"/>
+    <origin xyz="0 0 0.035" rpy="0 0 0"/>
   </xacro:mti_imu>
 
 </robot>

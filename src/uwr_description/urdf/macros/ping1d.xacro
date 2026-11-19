@@ -16,6 +16,7 @@
         <!-- URDF cylinders lie along z; turn it so it lies along x, the beam direction -->
         <origin rpy="0 ${pi/2} 0"/>
         <geometry><cylinder radius="0.025" length="0.07"/></geometry>
+        <material name="black"/>
       </visual>
       <!-- no <collision>: it would add buoyant volume and could block other beams -->
       <xacro:cylinder_inertia m="0.15" r="0.025" h="0.07"/>
