@@ -17,8 +17,28 @@ find_package(geometry_msgs REQUIRED)
 find_package(rosbag2_cpp REQUIRED)
 find_package(message_filters REQUIRED)   
 
-# Find the installed iir library (iir1 installed via apt)
-find_library(IIR_LIB NAMES iir)
+# iir1 (Butterworth filters). Not packaged on conda-forge, so use an installed
+# copy if present, otherwise build it from source.
+find_package(iir QUIET)
+if(iir_FOUND)
+  set(IIR_LIB iir::iir_static)
+else()
+  include(FetchContent)
+  FetchContent_Declare(iir1
+    GIT_REPOSITORY https://github.com/berndporr/iir1.git
+    GIT_TAG 1.9.5
+  )
+  set(IIR1_BUILD_TESTING OFF CACHE BOOL "" FORCE)
+  set(IIR1_BUILD_DEMO OFF CACHE BOOL "" FORCE)
+  set(IIR1_INSTALL_STATIC OFF CACHE BOOL "" FORCE)
+  FetchContent_GetProperties(iir1)
+  if(NOT iir1_POPULATED)
+    FetchContent_Populate(iir1)
+    add_subdirectory(${iir1_SOURCE_DIR} ${iir1_BINARY_DIR} EXCLUDE_FROM_ALL)
+  endif()
+  set_target_properties(iir_static PROPERTIES POSITION_INDEPENDENT_CODE ON)
+  set(IIR_LIB iir_static)
+endif()
 
 # Add executable for kalman filter
 add_executable(kf src/kf_v3_node.cpp src/kf.cpp src/kf_v3_bag_processing.cpp src/sonar_processing.cpp)
