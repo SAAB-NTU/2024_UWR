@@ -658,6 +658,7 @@ environments:
       - conda: https://conda.anaconda.org/conda-forge/noarch/wslink-2.6.0-pyhd8ed1ab_0.conda
       - conda: https://conda.anaconda.org/conda-forge/noarch/zipp-4.1.2-pyh5ded981_0.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros-jazzy-desktop-0.11.0-hb0f4dca_25.conda
+      - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros-jazzy-foxglove-bridge-3.6.0-hb0f4dca_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros-jazzy-mavros-msgs-2.16.0-hb0f4dca_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros-jazzy-message-filters-4.11.17-hb0f4dca_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros-jazzy-nmea-msgs-2.1.0-hb0f4dca_25.conda
@@ -758,6 +759,7 @@ environments:
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-fastrtps-2.14.7-np2py312h4c2334c_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-fastrtps-cmake-module-3.6.4-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-foonathan-memory-vendor-1.3.1-np2py312h1bab3cf_25.conda
+      - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-foxglove-bridge-3.6.0-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-geographic-msgs-1.0.6-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-geometry-msgs-5.3.8-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-geometry2-0.36.23-np2py312h1bab3cf_25.conda
@@ -923,6 +925,7 @@ environments:
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rosidl-typesupport-interface-4.6.9-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rosidl-typesupport-introspection-c-4.6.9-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rosidl-typesupport-introspection-cpp-4.6.9-np2py312h1bab3cf_25.conda
+      - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rosx-introspection-2.3.0-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rpyutils-0.4.2-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rqt-action-2.2.1-np2py312h1bab3cf_25.conda
       - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rqt-bag-1.5.6-np2py312h1bab3cf_25.conda
@@ -11752,6 +11755,13 @@ packages:
   - ros2-desktop ==0.11.0
   size: 2013
   timestamp: 1791448599457
+- conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros-jazzy-foxglove-bridge-3.6.0-hb0f4dca_25.conda
+  sha256: 20ea44e90d7cae768c7caabd10049ef28accbca3ccf62eb38141e0d92b08e811
+  md5: 8d7e361c89470619fc85cf202e273dc4
+  depends:
+  - ros2-foxglove-bridge ==3.6.0
+  size: 2047
+  timestamp: 1791441583937
 - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros-jazzy-mavros-msgs-2.16.0-hb0f4dca_25.conda
   sha256: 63eed52333435ef1e20b535b9b3d8f9d187a8aef6c63030a90e61b06b6eca712
   md5: f653ef7942dbb41ca26da348de2218b5
@@ -13587,6 +13597,34 @@ packages:
   license: Apache-2.0 OR Zlib
   size: 19829
   timestamp: 1791429651103
+- conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-foxglove-bridge-3.6.0-np2py312h1bab3cf_25.conda
+  sha256: 870852c9e618c3eceb7b8692ebd9c2151d44183b921ca7272f1f70466a9ebaf9
+  md5: c7d0c0bf3e7405b0019a5a05560c716b
+  depends:
+  - python
+  - ros2-ament-index-cpp
+  - ros2-distro-mutex 0.19.* jazzy_*
+  - ros2-rcl-interfaces
+  - ros2-rclcpp
+  - ros2-rclcpp-components
+  - ros2-rcpputils
+  - ros2-rcutils
+  - ros2-resource-retriever
+  - ros2-ros-workspace
+  - ros2-rosgraph-msgs
+  - ros2-rosidl-typesupport-introspection-cpp
+  - ros2-rosx-introspection
+  - ros2-service-msgs
+  - ros2-std-msgs
+  - libgcc >=15
+  - libstdcxx >=15
+  - __glibc >=2.28,<3.0.a0
+  - python_abi 3.12.* *_cp312
+  - ros2-distro-mutex >=0.19.0,<0.20.0a0
+  - numpy >=1.25,<3
+  license: MIT
+  size: 15904052
+  timestamp: 1791440508440
 - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-geographic-msgs-1.0.6-np2py312h1bab3cf_25.conda
   sha256: 0105e1a920566aa316034d6291bfda13a1f0c3dae257df2e489a1976c2817fff
   md5: 9522096d157526ddf522449ed9fe3ea4
@@ -17379,6 +17417,26 @@ packages:
   license: Apache-2.0
   size: 48835
   timestamp: 1791431503806
+- conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rosx-introspection-2.3.0-np2py312h1bab3cf_25.conda
+  sha256: 9a98c86a2a879261f8cd2cbe5aacbe27de3d7be7ba4622888c0d0abf5201bcd3
+  md5: 86082a737895a8062bf1179cf0a317dd
+  depends:
+  - python
+  - rapidjson
+  - ros2-ament-index-cpp
+  - ros2-distro-mutex 0.19.* jazzy_*
+  - ros2-rclcpp
+  - ros2-ros-workspace
+  - ros2-rosbag2-cpp
+  - libgcc >=15
+  - __glibc >=2.28,<3.0.a0
+  - libstdcxx >=15
+  - numpy >=1.25,<3
+  - python_abi 3.12.* *_cp312
+  - ros2-distro-mutex >=0.19.0,<0.20.0a0
+  license: MIT
+  size: 239381
+  timestamp: 1791439753199
 - conda: https://conda.anaconda.org/robostack-jazzy/linux-64/ros2-rpyutils-0.4.2-np2py312h1bab3cf_25.conda
   sha256: dda206bfb5900e2af1ac5abc2dae3595a13c32ef1510b8f8d7bc5f2005cb42e3
   md5: f1c2268a4aca8425abecb0665c2cce3e

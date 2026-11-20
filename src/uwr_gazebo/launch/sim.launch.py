@@ -37,5 +37,10 @@ def generate_launch_description():
     # the sonar adapter, which turns the three simulated sonars into one ThreeSonarDepth on /sbs
     adapter = Node(package='uwr_gazebo', executable='sonar_adapter', output='screen',
               parameters=[{'use_sim_time': True}])
+    
+    # live connection for Foxglove: ws://localhost:8765
+    foxglove = Node(package='foxglove_bridge', executable='foxglove_bridge', output='screen',
+              parameters=[{'use_sim_time': True}])
 
-    return LaunchDescription([gazebo, rsp, spawn, bridge, adapter])
+
+    return LaunchDescription([gazebo, rsp, spawn, bridge, adapter, foxglove])

@@ -1,0 +1,253 @@
+{
+  "configById": {
+    "Plot!livesurge": {
+      "foxglovePanelTitle": "Surge [m]: KF vs sonar 1",
+      "paths": [
+        { "value": "/pose_topic.pose.position.x", "label": "KF", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/studio_script/sbs_m.distance_1", "label": "sonar 1", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!livesway": {
+      "foxglovePanelTitle": "Sway [m]: KF vs sonar 2",
+      "paths": [
+        { "value": "/pose_topic.pose.position.y", "label": "KF", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/studio_script/sbs_m.distance_2", "label": "sonar 2", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!liveheave": {
+      "foxglovePanelTitle": "Heave [m]: KF vs sonar 3",
+      "paths": [
+        { "value": "/pose_topic.pose.position.z", "label": "KF", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/studio_script/sbs_m.distance_3", "label": "sonar 3", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!liveconf": {
+      "foxglovePanelTitle": "Sonar confidence [%]",
+      "paths": [
+        { "value": "/sbs.confidence_1", "label": "1 surge", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/sbs.confidence_2", "label": "2 sway", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/sbs.confidence_3", "label": "3 heave", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!liveimu": {
+      "foxglovePanelTitle": "IMU linear acceleration [m/s^2] (robot frame)",
+      "paths": [
+        { "value": "/imu/data.linear_acceleration.x", "label": "x (forward)", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/imu/data.linear_acceleration.y", "label": "y (left)", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "3D!sim3d": {
+      "followTf": "world",
+      "followMode": "follow-none",
+      "cameraState": {
+        "perspective": true,
+        "distance": 14,
+        "phi": 50,
+        "thetaOffset": -30,
+        "targetOffset": [0, 0, -1],
+        "target": [0, 0, 0],
+        "targetOrientation": [0, 0, 0, 1],
+        "fovy": 45,
+        "near": 0.01,
+        "far": 5000
+      },
+      "scene": {},
+      "transforms": {},
+      "layers": {
+        "grid": {
+          "layerId": "foxglove.Grid",
+          "instanceId": "grid",
+          "label": "Tank floor (z = -2)",
+          "visible": true,
+          "frameId": "world",
+          "size": 10,
+          "divisions": 20,
+          "lineWidth": 1,
+          "color": "#8080807f",
+          "position": [0, 0, -2],
+          "rotation": [0, 0, 0]
+        },
+        "urdf": {
+          "layerId": "foxglove.Urdf",
+          "instanceId": "urdf",
+          "label": "Robot (true pose)",
+          "visible": true,
+          "sourceType": "topic",
+          "topic": "/robot_description"
+        }
+      },
+      "topics": {
+        "/studio_script/gt_path": {
+          "visible": true,
+          "type": "line",
+          "lineWidth": 0.03,
+          "gradient": ["#2ca02cff", "#2ca02cff"]
+        },
+        "/studio_script/kf_pool_path": {
+          "visible": true,
+          "type": "line",
+          "lineWidth": 0.03,
+          "gradient": ["#d62728ff", "#d62728ff"]
+        }
+      }
+    },
+    "Plot!simy": {
+      "foxglovePanelTitle": "Pool y [m] (robot forward): truth vs KF",
+      "paths": [
+        { "value": "/pose_topic_gt.pose.pose.position.y", "label": "truth", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/kf/pool_pose.pose.position.y", "label": "KF", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!simx": {
+      "foxglovePanelTitle": "Pool x [m] (robot right): truth vs KF",
+      "paths": [
+        { "value": "/pose_topic_gt.pose.pose.position.x", "label": "truth", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/kf/pool_pose.pose.position.x", "label": "KF", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!simerr": {
+      "foxglovePanelTitle": "KF error [m] (KF - truth)",
+      "paths": [
+        { "value": "/studio_script/kf_error.x", "label": "x", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/studio_script/kf_error.y", "label": "y", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/studio_script/kf_error.z", "label": "z", "enabled": true, "timestampMethod": "receiveTime" },
+        { "value": "/studio_script/kf_error.dist", "label": "|error|", "enabled": true, "timestampMethod": "receiveTime" }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": true,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Tab!livemain": {
+      "activeTabIdx": 0,
+      "tabs": [
+        {
+          "title": "Live (sim + real)",
+          "layout": {
+            "first": {
+              "first": "Plot!livesurge",
+              "second": {
+                "first": "Plot!livesway",
+                "second": "Plot!liveheave",
+                "direction": "column",
+                "splitPercentage": 50.0
+              },
+              "direction": "column",
+              "splitPercentage": 33.333333333333336
+            },
+            "second": {
+              "first": "Plot!liveconf",
+              "second": "Plot!liveimu",
+              "direction": "column",
+              "splitPercentage": 50.0
+            },
+            "direction": "row",
+            "splitPercentage": 60
+          }
+        },
+        {
+          "title": "Sim: truth vs KF",
+          "layout": {
+            "first": "3D!sim3d",
+            "second": {
+              "first": "Plot!simy",
+              "second": {
+                "first": "Plot!simx",
+                "second": "Plot!simerr",
+                "direction": "column",
+                "splitPercentage": 50.0
+              },
+              "direction": "column",
+              "splitPercentage": 33.333333333333336
+            },
+            "direction": "row",
+            "splitPercentage": 55
+          }
+        }
+      ]
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {
+    "live-sbs-m": {
+      "name": "sbs_mm_to_m",
+      "sourceCode": "// /sbs distances are in mm; convert to m to plot next to the KF state (/pose_topic).\nimport { Input } from \"./types\";\n\ntype Output = { distance_1: number; distance_2: number; distance_3: number };\n\nexport const inputs = [\"/sbs\"];\nexport const output = \"/studio_script/sbs_m\";\n\nexport default function script(event: Input<\"/sbs\">): Output {\n  const m = event.message;\n  return {\n    distance_1: m.distance_1 / 1000,\n    distance_2: m.distance_2 / 1000,\n    distance_3: m.distance_3 / 1000,\n  };\n}\n"
+    },
+    "sim-kf-error": {
+      "name": "kf_error",
+      "sourceCode": "// SIM ONLY. KF estimate minus ground truth, both in the pool (world) frame.\n// Truth arrives at 20 Hz and the KF at up to 100 Hz, so each KF sample is compared with\n// the latest truth: up to 50 ms old, i.e. ~5 mm at 0.1 m/s.\nimport { Input } from \"./types\";\n\ntype Output = { x: number; y: number; z: number; dist: number };\n\nexport const inputs = [\"/kf/pool_pose\", \"/pose_topic_gt\"];\nexport const output = \"/studio_script/kf_error\";\n\nlet truth: { x: number; y: number; z: number } | undefined;\n\nexport default function script(\n  event: Input<\"/kf/pool_pose\"> | Input<\"/pose_topic_gt\">,\n): Output | undefined {\n  if (event.topic === \"/pose_topic_gt\") {\n    const p = (event as Input<\"/pose_topic_gt\">).message.pose.pose.position;\n    truth = { x: p.x, y: p.y, z: p.z };\n    return undefined;\n  }\n  if (!truth) {\n    return undefined;\n  }\n  const p = (event as Input<\"/kf/pool_pose\">).message.pose.position;\n  const e = { x: p.x - truth.x, y: p.y - truth.y, z: p.z - truth.z };\n  return { ...e, dist: Math.hypot(e.x, e.y, e.z) };\n}\n"
+    },
+    "sim-gt-path": {
+      "name": "gt_path",
+      "sourceCode": "// SIM ONLY. Ground-truth trail (green) in the world frame for the 3D panel.\nimport { Input, Message } from \"./types\";\n\ntype Output = Message<\"foxglove.PosesInFrame\">;\n\nexport const inputs = [\"/pose_topic_gt\"];\nexport const output = \"/studio_script/gt_path\";\n\nconst MAX_POSES = 20000;\nlet poses: Output[\"poses\"] = [];\nlet lastNs = -1;\n\nexport default function script(event: Input<\"/pose_topic_gt\">): Output {\n  const t = event.receiveTime;\n  const ns = t.sec * 1e9 + t.nsec;\n  if (ns < lastNs) {\n    poses = []; // seeked backwards: restart the trail\n  }\n  lastNs = ns;\n  const p = event.message.pose.pose.position;\n  poses.push({ position: { x: p.x, y: p.y, z: p.z }, orientation: { x: 0, y: 0, z: 0, w: 1 } });\n  if (poses.length > MAX_POSES) {\n    poses.shift();\n  }\n  return { timestamp: t, frame_id: \"world\", poses: poses.slice() };\n}\n"
+    },
+    "sim-kf-path": {
+      "name": "kf_pool_path",
+      "sourceCode": "// SIM ONLY. KF estimate trail (red) in the world frame for the 3D panel.\nimport { Input, Message } from \"./types\";\n\ntype Output = Message<\"foxglove.PosesInFrame\">;\n\nexport const inputs = [\"/kf/pool_pose\"];\nexport const output = \"/studio_script/kf_pool_path\";\n\nconst MAX_POSES = 20000;\nlet poses: Output[\"poses\"] = [];\nlet lastNs = -1;\n\nexport default function script(event: Input<\"/kf/pool_pose\">): Output {\n  const t = event.receiveTime;\n  const ns = t.sec * 1e9 + t.nsec;\n  if (ns < lastNs) {\n    poses = []; // seeked backwards: restart the trail\n  }\n  lastNs = ns;\n  const p = event.message.pose.position;\n  poses.push({ position: { x: p.x, y: p.y, z: p.z }, orientation: { x: 0, y: 0, z: 0, w: 1 } });\n  if (poses.length > MAX_POSES) {\n    poses.shift();\n  }\n  return { timestamp: t, frame_id: \"world\", poses: poses.slice() };\n}\n"
+    }
+  },
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": "Tab!livemain"
+}
