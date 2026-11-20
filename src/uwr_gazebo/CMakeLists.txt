@@ -20,6 +20,12 @@ install(PROGRAMS scripts/sonar_adapter.py
   RENAME sonar_adapter
 )
 
+install(PROGRAMS scripts/kf_to_pool.py
+  DESTINATION lib/${PROJECT_NAME}
+  RENAME kf_to_pool
+)
+
+
 if(BUILD_TESTING)
   find_package(ament_lint_auto REQUIRED)
   # the following line skips the linter which checks for copyrights

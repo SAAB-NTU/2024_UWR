@@ -51,11 +51,20 @@ LIBGL_ALWAYS_SOFTWARE = "1"  # Force software rendering for OpenGL
 
 [tasks]
 # Xsens SDK static libs must exist before colcon builds xsens_mti_ros2_driver
-xspublic = { cmd = "make -C src/xsens_mti_ros2_driver/lib/xspublic -j", outputs = ["src/xsens_mti_ros2_driver/lib/xspublic/xscontroller/libxscontroller.a"] }
-build = { cmd = "colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release", depends-on = ["xspublic"] }
-gz-test = "gz sim shapes.sdf"
-daemon = "ros2 daemon stop; ros2 daemon start"
+xspublic = { cmd = "make -C src/xsens_mti_ros2_driver/lib/xspublic -j", outputs = ["src/xsens_mti_ros2_driver/lib/xspublic/xscontroller/libxscontroller.a"], description = "Build the vendored Xsens SDK static libraries" }
+build = { cmd = "colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=Release", depends-on = ["xspublic"], description = "Build the whole colcon workspace (Release)" }
+gz-test = { cmd = "gz sim shapes.sdf", description = "Open Gazebo's demo world to check that Gazebo renders" }
+daemon = { cmd = "ros2 daemon stop; ros2 daemon start", description = "Restart the ROS 2 daemon (fixes stale topic/node lists)" }
 # Convert old .db3 KF bags to .mcap for Foxglove: pixi run to-mcap Analysis/2026_article
-to-mcap = "scripts/bag_to_mcap.sh"
-sim = "ros2 launch uwr_gazebo sim.launch.py"
-kf-sim = "ros2 launch uwr_gazebo kf_sim.launch.py csv_path:=$PIXI_PROJECT_ROOT/kf_runs/sim_"
+to-mcap = { cmd = "scripts/bag_to_mcap.sh", description = "Convert .db3 KF bags in a folder to .mcap for Foxglove" }
+sim = { cmd = "ros2 launch uwr_gazebo sim.launch.py", description = "Start the Gazebo tank sim: robot, bridge, sonar adapter" }
+kf-sim = { cmd = "ros2 launch uwr_gazebo kf_sim.launch.py csv_path:=$PIXI_PROJECT_ROOT/kf_runs/sim_", description = "Run kf_3dof on the sim (sim time) plus kf_to_pool; bag in kf_runs/sim_*" }
+record-sim = { cmd = "ros2 bag record -s mcap -o $PIXI_PROJECT_ROOT/kf_runs/truth_$(date +%Y_%m_%d_%H_%M_%S) --topics /pose_topic_gt /kf/pool_pose /pose_topic /sbs /imu/data /tf /tf_static", description = "Record ground truth, KF output and sensors to kf_runs/truth_*" }
+# Push the simulated robot with a constant 1 N force (~0.1 m/s with the URDF's drag).
+# Directions are the robot's, for the default spawn (yaw 90 deg, facing pool +y);
+# the force itself is in pool coordinates. Stop with push-stop.
+push-fwd = { cmd = '''gz topic -t /world/tank/wrench/persistent -m gz.msgs.EntityWrench -p 'entity: {name: "uwr::base_link", type: LINK}, wrench: {force: {y: 1.0}}' ''', description = "Push robot forward (pool +y), 1 N" }
+push-back = { cmd = '''gz topic -t /world/tank/wrench/persistent -m gz.msgs.EntityWrench -p 'entity: {name: "uwr::base_link", type: LINK}, wrench: {force: {y: -1.0}}' ''', description = "Push robot backward (pool -y), 1 N" }
+push-left = { cmd = '''gz topic -t /world/tank/wrench/persistent -m gz.msgs.EntityWrench -p 'entity: {name: "uwr::base_link", type: LINK}, wrench: {force: {x: -1.0}}' ''', description = "Push robot to its left (pool -x), 1 N" }
+push-right = { cmd = '''gz topic -t /world/tank/wrench/persistent -m gz.msgs.EntityWrench -p 'entity: {name: "uwr::base_link", type: LINK}, wrench: {force: {x: 1.0}}' ''', description = "Push robot to its right (pool +x), 1 N" }
+push-stop = { cmd = '''gz topic -t /world/tank/wrench/clear -m gz.msgs.Entity -p 'name: "uwr::base_link", type: LINK' ''', description = "Remove all pushing forces" }
