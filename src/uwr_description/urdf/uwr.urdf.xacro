@@ -42,4 +42,20 @@
     <origin xyz="0 0 0.035" rpy="0 0 0"/>
   </xacro:mti_imu>
 
+  <!-- water drag: force = coefficient x velocity. Only the linear terms are used:
+      xU/yV/zW for movement (N per m/s), kP/mQ/nR for rotation. 0 = off. -->
+  <gazebo>
+    <plugin filename="gz-sim-hydrodynamics-system" name="gz::sim::systems::Hydrodynamics">
+      <link_name>base_link</link_name>
+      <xDotU>0</xDotU><yDotV>0</yDotV><zDotW>0</zDotW>
+      <kDotP>0</kDotP><mDotQ>0</mDotQ><nDotR>0</nDotR>
+      <xUabsU>0</xUabsU><yVabsV>0</yVabsV><zWabsW>0</zWabsW>
+      <kPabsP>0</kPabsP><mQabsQ>0</mQabsQ><nRabsR>0</nRabsR>
+      <xU>-10</xU><yV>-10</yV><zW>-10</zW>
+      <kP>-1</kP><mQ>-1</mQ><nR>-1</nR>
+    </plugin>
+  </gazebo>
+
+
+
 </robot>

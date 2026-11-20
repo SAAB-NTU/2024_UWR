@@ -17,6 +17,7 @@ install(DIRECTORY launch worlds config
 
 install(PROGRAMS scripts/sonar_adapter.py
   DESTINATION lib/${PROJECT_NAME}
+  RENAME sonar_adapter
 )
 
 if(BUILD_TESTING)

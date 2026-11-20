@@ -57,3 +57,5 @@ gz-test = "gz sim shapes.sdf"
 daemon = "ros2 daemon stop; ros2 daemon start"
 # Convert old .db3 KF bags to .mcap for Foxglove: pixi run to-mcap Analysis/2026_article
 to-mcap = "scripts/bag_to_mcap.sh"
+sim = "ros2 launch uwr_gazebo sim.launch.py"
+kf-sim = "ros2 launch uwr_gazebo kf_sim.launch.py csv_path:=$PIXI_PROJECT_ROOT/kf_runs/sim_"
