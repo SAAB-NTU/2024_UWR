@@ -111,7 +111,8 @@ public:
 
 	
         // Create a bag file name using the bag_create_file function
-        std::string bag_file_name = bag_create_file(path_param, this->now());
+        // file name uses wall-clock time even under use_sim_time (sim time is 0 at startup)
+        std::string bag_file_name = bag_create_file(path_param, rclcpp::Clock(RCL_SYSTEM_TIME).now());
 
         // Set up the storage options for rosbag2
         storage_options_.uri = bag_file_name;  // The name of the bag file
